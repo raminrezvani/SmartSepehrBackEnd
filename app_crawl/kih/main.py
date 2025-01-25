@@ -122,7 +122,7 @@ class TourCollector:
     def get_single_data(self, source, target, start_date, use_cache):
         print(f"Processing data for date: {start_date}")
         print("-" * 40)
-
+        # AJABA
         # Initialize all instances
         providers = [
             ("Booking", Booking(source, target, start_date, self.night_count, adults=self.adults)),
