@@ -119,14 +119,14 @@ class TourCollector:
 
 
 
-    def get_single_data(self, source, target, start_date, use_cache):
+    def get_single_data(self, source, target, start_date, use_cache,iter):
         print(f"Processing data for date: {start_date}")
         print("-" * 40)
         # AJABA
         # Initialize all instances
         providers = [
-            ("Booking", Booking(source, target, start_date, self.night_count, adults=self.adults)),
-            ("Jimbo", Jimbo(source, target, start_date, self.night_count, adults=self.adults)),
+            ("Booking", Booking(source, target, start_date, self.night_count, adults=self.adults,iter=iter)),
+            ("Jimbo", Jimbo(source, target, start_date, self.night_count, adults=self.adults,iter=iter)),
             ("Dayan",Sepehr(source, target, start_date, self.night_count, cookie_data.DAYAN, "dayan", adults=self.adults)),
             ("Deltaban", Deltaban(start_date, self.night_count, source, target, adults=self.adults)),
             ("Sepid Parvaz",Sepehr(source, target, start_date, self.night_count, cookie_data.SEPID_PARVAZ, "sepid_parvaz",adults=self.adults)),
@@ -572,7 +572,7 @@ class TourCollector:
         return {'data': result, "providers": providers}
 
 
-    def get_single_result(self, source, target,start_date=None, show_providers=False, use_cache=True):
+    def get_single_result(self, source, target,start_date=None, show_providers=False, use_cache=True,iter=1):
         if start_date:
             start_date = start_date
         else:
@@ -593,7 +593,7 @@ class TourCollector:
         #++++++++++++++++++++++++++++++++++++++++++
 
 
-        data = self.get_single_data(source, target,start_date,use_cache)
+        data = self.get_single_data(source, target,start_date,use_cache,iter)
         result = self.get_result(data['data'])
         # ---
         #print('Statit Caching....')
@@ -614,7 +614,15 @@ class TourCollector:
         # sami_result = self.executor.map(self.get_single_result, date_range)
 
         #===instead ====
-        futures = [self.executor_analysis.submit(self.get_single_result,source, target, date,False,True) for date in date_range]
+        # futures = [self.executor_analysis.submit(self.get_single_result,source, target, date,False,True) for date in date_range]
+        futures = [
+            self.executor_analysis.submit(self.get_single_result, source, target, date, False, True, iter)
+            for iter, date in enumerate(date_range)
+        ]
+
+
+
+
         sami_result = []
         s_t=datetime.now()
         for future in as_completed(futures):

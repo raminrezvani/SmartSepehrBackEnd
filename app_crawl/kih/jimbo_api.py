@@ -9,7 +9,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 class Jimbo:
-    def __init__(self,source,target, start_date, night_count, adults=2):
+    def __init__(self,source,target, start_date, night_count, adults=2,iter=1):
         self.start_date = start_date
         date_obj = datetime.strptime(self.start_date, "%Y-%m-%d")
         next_day = date_obj - timedelta(days=1)
@@ -17,8 +17,7 @@ class Jimbo:
 
         end_date = (datetime.strptime(self.start_date, "%Y-%m-%d").date() + timedelta(days=night_count)).strftime("%Y-%m-%d")
 
-
-
+        self.call_count = iter  # Initialize call counter
         self.source=source
         self.target=target
 
@@ -123,7 +122,17 @@ class Jimbo:
     def get_result(self):
         try:
             #==========ssssssssss
-            urll = "http://45.149.76.168:5021/jimbo_tours"
+
+            self.call_count+=1
+
+            if (self.call_count<=3):
+                #==========ssssssssss
+                urll = "http://45.149.76.168:5021/jimbo_tours"
+            else:
+                urll = "http://130.185.77.24:5021/jimbo_tours"
+
+
+            # urll = "http://45.149.76.168:5021/jimbo_tours"
             params = {
                 'start_date': self.start_date,
                 'night_count': self.night_count,

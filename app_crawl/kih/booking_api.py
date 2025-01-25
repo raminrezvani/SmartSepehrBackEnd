@@ -9,7 +9,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 class Booking:
-    def __init__(self,source,target, start_date, night_count, adults=2):
+    def __init__(self,source,target, start_date, night_count, adults=2,iter=iter):
         self.start_date = start_date
         date_obj = datetime.strptime(self.start_date, "%Y-%m-%d")
         next_day = date_obj - timedelta(days=1)
@@ -17,8 +17,7 @@ class Booking:
 
         end_date = (datetime.strptime(self.start_date, "%Y-%m-%d").date() + timedelta(days=night_count)).strftime("%Y-%m-%d")
 
-
-
+        self.call_count = iter  # Initialize call counter
         self.source=source
         self.target=target
 
@@ -122,8 +121,16 @@ class Booking:
 
     def get_result(self):
         try:
-            #==========ssssssssss
-            urll = "http://45.149.76.168:5001/booking_tours"
+
+            self.call_count+=1
+
+            if (self.call_count<=3):
+                #==========ssssssssss
+                urll = "http://45.149.76.168:5001/booking_tours"
+            else:
+                urll = "http://130.185.77.24:5001/booking_tours"
+
+
             params = {
                 'start_date': self.start_date,
                 'night_count': self.night_count,
@@ -136,6 +143,7 @@ class Booking:
             data=response.json()
 
             #=============
+
 
 
 
