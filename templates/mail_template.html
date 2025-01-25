@@ -1,0 +1,126 @@
+<html lang="{{ LANG }}">
+<body>
+<table style="direction:{{ DIRECTION }};width: 100%; background: #f4f4f4;padding: 50px">
+    <tr>
+        <td>
+            <div style="max-width: 600px; margin:10px auto;">
+                <div style="padding: 10px 20px; background: #0e1437; color: #FCD468; border-radius: 10px;">
+                    <table style="width: 100%">
+                        <tr>
+                            <td>
+                                <img style="width: 150px" alt="{{ COMPANY }}"
+                                     src="{{ LOGO }}">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="margin-bottom: 25px;">
+                    <h1 style="">{{ SUBJECT }}</h1>
+                    <div class="sub-title" style="margin-top: 16px; text-align: justify;font-size: 17px;">
+                        {{ MESSAGE }}
+                    </div>
+                </div>
+            </div>
+            <div style="max-width: 600px; margin:0 auto; text-align: center;font-size: 16px;background: #0e1437; border-radius: 10px">
+                <a href="{{ SITE_URL }}" style="
+                    background: #0e1437;
+                    padding: 15px 0;
+                    display: block;
+                    color: #FCD468;
+                    text-decoration: none;
+                    border-radius: 10px;
+                ">{{ COMPANY }}</a>
+            </div>
+            <table style="max-width: 600px; margin:10px auto;border-spacing: 20px 0;">
+                <tr>
+                    {% for social_media in SOCIAL_MEDIA %}
+                        <!-- ---- INSTAGRAM ---- -->
+                        {% if social_media.social_media == 1 %}
+                            <td>
+                                <a target="_blank" href="{{ social_media.profile }}" style="color: #0e1437;">
+                                    <img src="{{ IMAGE_URL }}/static/image/social_media_icons/instagram.png"
+                                         style="width: 100%"
+                                         alt="INSTAGRAM">
+                                </a>
+                            </td>
+                            <!-- ---- YOUTUBE ---- -->
+                        {% elif social_media.social_media == 2 %}
+                            <td>
+                                <a target="_blank" href="{{ social_media.profile }}" style="color: #0e1437;">
+                                    <img src="{{ IMAGE_URL }}/static/image/social_media_icons/youtube.png"
+                                         style="width: 100%"
+                                         alt="YOUTUBE">
+                                </a>
+                            </td>
+                            <!-- ---- TELEGRAM ---- -->
+                        {% elif social_media.social_media == 3 %}
+                            <td>
+                                <a target="_blank" href="{{ social_media.profile }}" style="color: #0e1437;">
+                                    <img src="{{ IMAGE_URL }}/static/image/social_media_icons/telegram.png"
+                                         style="width: 100%"
+                                         alt="TELEGRAM">
+                                </a>
+                            </td>
+                            <!-- ---- WHATSAPP ---- -->
+                        {% elif social_media.social_media == 4 %}
+                            <td>
+                                <a target="_blank" href="{{ social_media.profile }}" style="color: #0e1437;">
+                                    <img src="{{ IMAGE_URL }}/static/image/social_media_icons/whatsapp.png"
+                                         style="width: 100%"
+                                         alt="WHATSAPP">
+                                </a>
+                            </td>
+                            <!-- ---- TWITTER ---- -->
+                        {% elif social_media.social_media == 5 %}
+                            <td>
+                                <a target="_blank" href="{{ social_media.profile }}" style="color: #0e1437;">
+                                    <img src="{{ IMAGE_URL }}/static/image/social_media_icons/twitter.png"
+                                         style="width: 100%"
+                                         alt="TWITTER">
+                                </a>
+                            </td>
+                            <!-- ---- FACEBOOK ---- -->
+                        {% elif social_media.social_media == 6 %}
+                            <td>
+                                <a target="_blank" href="{{ social_media.profile }}" style="color: #0e1437;">
+                                    <img src="{{ IMAGE_URL }}/static/image/social_media_icons/facebook.png"
+                                         style="width: 100%"
+                                         alt="FACEBOOK">
+                                </a>
+                            </td>
+                            <!-- ---- LINKEDIN ---- -->
+                        {% elif social_media.social_media == 7 %}
+                            <td>
+                                <a target="_blank" href="{{ social_media.profile }}" style="color: #0e1437;">
+                                    <img src="{{ IMAGE_URL }}/static/image/social_media_icons/linkedin.png"
+                                         style="width: 100%"
+                                         alt="LINKEDIN">
+                                </a>
+                            </td>
+                            <!-- ---- DRIBBLE ---- -->
+                        {% elif social_media.social_media == 8 %}
+                            <td>
+                                <a target="_blank" href="{{ social_media.profile }}" style="color: #0e1437;">
+                                    <img src="{{ IMAGE_URL }}/static/image/social_media_icons/dribble.png"
+                                         style="width: 100%"
+                                         alt="DRIBBLE">
+                                </a>
+                            </td>
+                            <!-- ---- BECANCE ---- -->
+                        {% elif social_media.social_media == 9 %}
+                            <td>
+                                <a target="_blank" href="{{ social_media.profile }}" style="color: #0e1437;">
+                                    <img src="{{ IMAGE_URL }}/static/image/social_media_icons/becance.png"
+                                         style="width: 100%"
+                                         alt="BECANCE">
+                                </a>
+                            </td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

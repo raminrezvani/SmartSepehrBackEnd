@@ -1,0 +1,3 @@
+app_crawl/chromedriver
+*/migrations/
+db.sqlite3

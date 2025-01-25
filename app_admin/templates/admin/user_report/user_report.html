@@ -1,0 +1,33 @@
+{% extends 'admin/base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    <h1>user report</h1>
+{% endblock %}
+
+{% block content_title %}{% trans 'User Report' %}{% endblock %}
+
+{% block breadcrumbs %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin/">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item"><a href="/admin/app_user/user/">{% trans 'User' %}</a></li>
+        <li class="breadcrumb-item active">{% trans 'Detail' %}</li>
+    </ol>
+{% endblock %}
+
+{% block page_actions %}
+    <div>
+
+    </div>
+{% endblock %}
+
+{% block extrahead %}
+    <style>
+    </style>
+{% endblock %}
+
+{% block extrajs %}
+
+    </script>
+{% endblock %}
+
