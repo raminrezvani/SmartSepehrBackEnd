@@ -130,7 +130,7 @@ class BuildTourAnalysis():
 
     def get_analysis(self,start_date,end_date,range_number=7,use_cache=True):
 
-        return {}
+        # return {}
 
         #
         #========== a simple result (OK hast)

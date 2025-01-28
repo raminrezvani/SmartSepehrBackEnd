@@ -31,6 +31,14 @@ class SepehrHotel:
 
     def get_data(self):
         cookies = self.cookies['hotel'][self.target]['cookie']
+
+
+        #---
+        if (cookies == {}):
+            return False
+        #---
+
+
         rnd = random.randint(1550000000000000, 1560000000000009)
 
         headers = {
