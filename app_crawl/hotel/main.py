@@ -22,7 +22,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from concurrent.futures import ThreadPoolExecutor
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, wait
-
+from datetime import datetime
 
 import traceback
 import time
@@ -42,7 +42,69 @@ class Hotel:
     from concurrent.futures import ThreadPoolExecutor
     from collections import defaultdict
 
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    from collections import defaultdict
+    import traceback
+
     def read_data_ALLDestination(self, data):
+        print('start mapping .....')
+        ds = DNS_mapping(self.target)
+        result = defaultdict(lambda: {"rooms": []})  # Avoid KeyErrors
+
+        def process_hotel(hotel):
+            try:
+                hotelname, hotelStar = ds.check_hotelName(hotel['hotel_name'], self.target)
+                if not hotelname:
+                    return None  # Skip if no valid hotel name
+
+                default_data = {
+                    "hotel_name": hotelname,
+                    "hotel_star": hotelStar,
+                    "min_price": float('inf'),
+                    "rooms": [],
+                    "provider": hotel['provider']
+                }
+
+                hotel_name = hotelname.strip()
+                hotel_rooms = []
+                for room in hotel['rooms']:
+                    try:
+                        room['price'] = int(room['price'])
+                    except:
+                        room['price'] = 999999999  # Avoid JSON float error
+
+                    hotel_rooms.append(room)
+
+                return hotel_name, default_data, hotel_rooms
+            except Exception as e:
+                # print(f"Traceback details:\n{traceback.format_exc()}")
+
+                return None
+
+        with ThreadPoolExecutor(max_workers=40) as executor:
+            futures = {executor.submit(process_hotel, hotel): hotel for hotel_list in data for hotel in hotel_list}
+
+            for future in as_completed(futures):
+                result_data = future.result()
+                if result_data:
+                    hotel_name, default_data, hotel_rooms = result_data
+                    if hotel_name not in result:
+                        result[hotel_name].update(default_data)
+                    result[hotel_name]['rooms'].extend(hotel_rooms)
+
+        # Calculate min price for each hotel
+        for hotel_name, hotel_data in result.items():
+            min_price = min((float(room['price']) for room in hotel_data['rooms']), default=999999999)
+            hotel_data['min_price'] = min_price
+
+        # Sort hotels by min_price
+        sorted_hotels = sorted(result.items(), key=lambda x: x[1]['min_price'])
+        return [hotel[1] for hotel in sorted_hotels]
+
+
+
+    def read_data_ALLDestination_old(self, data):
+        data=data[0]
         print('start mapping .....')
         ds = DNS_mapping(self.target)
         result = defaultdict(lambda: {"rooms": []})  # Use defaultdict to avoid KeyErrors
@@ -53,16 +115,17 @@ class Hotel:
                 if not hotelname:
                     return None  # Skip if no valid hotel name
 
-                if (hotelname=="هتل آريا باستان کيش"):
-                    print(f' Found ==========   {hotel["hotel_name"]}')
-                    print('asdasdadsasdasdasdasd')
-                default_data = {
-                    "hotel_name": hotelname,
-                    "hotel_star": hotelStar,
-                    "min_price": hotel['rooms'][0].get('price', 999999999),
-                    "rooms": [],
-                    "provider": hotel['provider']
-                }
+
+                try:
+                    default_data = {
+                        "hotel_name": hotelname,
+                        "hotel_star": hotelStar,
+                        "min_price": hotel['rooms'][0].get('price', 999999999),
+                        "rooms": [],
+                        "provider": hotel['provider']
+                    }
+                except:
+                    return None
 
                 hotel_name = hotelname.strip()
                 hotel_rooms = []
@@ -85,7 +148,10 @@ class Hotel:
 
                 # Update result with the default data and rooms
                 return hotel_name, default_data, hotel_rooms
-            except:
+            except Exception as e:
+                tb = traceback.format_exc()  # Get the full traceback as a string
+                print(f"Traceback details:\n{tb}")
+
                 return None
 
         # with ThreadPoolExecutor(max_workers=40) as executor:
@@ -903,12 +969,68 @@ class Hotel:
     #     print('Finish Services ..........')
     #     result_read=self.read_data_ALLDestination(results)
     #     return result_read
+    #
+    def get_ALLDestination_data(self,iter):
+        try:
+            results = []
+            hotel_tasks = {
+                "darvishi": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DARVISHI, 'darvishi'),
+                "moeindarbari": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, MOEINDARBARI,'moeindarbari'),
+                "deltaban": Deltaban(self.target, self.start_date, self.end_date, self.adults),
+                # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults),
+                # "snapp": Snapp(self.target, self.start_date, self.end_date, self.adults),
+                "alaedin": Alaedin(self.target, self.start_date, self.end_date, self.adults),
+                "eghamat": Eghamat24(self.target, self.start_date, self.end_date, self.adults),
+                "booking": Booking(self.target, self.start_date, self.end_date, self.adults,iter),
+                "jimboo": Jimbo(self.target, self.start_date, self.end_date, self.adults,iter),
+                "rahbal": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, RAHBAL, 'rahbal'),
+                "hrc": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HRC, 'hrc'),
+                "dayan": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DAYAN, 'dayan'),
+                "omid_oj": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, OMID_OJ, 'omid_oj'),
+                "sepid_parvaz": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SEPID_PARVAZ,'sepid_parvaz'),
+                "parmis": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, PARMIS, 'parmis'),
+                "mehrab": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, MEHRAB, 'mehrab'),
+                "hamsafar": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HAMSAFAR, 'hamsafar'),
+                "tak_setareh": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, TAK_SETAREH,'tak_setareh'),
+                "kimiya": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, TOURISTKISH, 'kimiya'),
+                "eram2mhd": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, ERAM2MHD, 'eram2mhd'),
+                "shayan_gasht": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SHAYAN_GASHT,'shayan_gasht'),
+                "iman": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, IMAN, 'iman'),
+                "flamingo": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, FLAMINGO, 'flamingo'),
+                "yegane_fard": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, YEGANE_FARD,'yegane_fard'),
+                "hamood": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HAMOOD, 'hamood'),
+                "safiran": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SAFIRAN, 'safiran'),
+                "dolfin": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DOLFIN, 'dolfin')
+            }
+            provider_status = {}
+            startTime = datetime.now()
+            with ThreadPoolExecutor(max_workers=85) as executor:
+                futures = {executor.submit(task.get_result): key for key, task in hotel_tasks.items()}
+
+                for future in as_completed(futures):
+                    key = futures[future]
+                    try:
+                        result=future.result(timeout=1000000)
+                        results.append(result)
+                        spendTime = (datetime.now() - startTime).total_seconds()
+                        print(f'{key} ----- > spend:  {spendTime}')
 
 
+                    except Exception as e:
+                        print(f"Error in {key}: {e}")
+                        results.append([])
 
-    def get_ALLDestination_data(self):
+            return self.read_data_ALLDestination(results)
 
+        except Exception as e:
+            # Log the error and the line number
+            print(f"An error occurred: {e}")
+            tb = traceback.format_exc()  # Get the full traceback as a string
+            print(f"Traceback details:\n{tb}")
 
+            return []
+
+    def get_ALLDestination_data_old(self):
         try:
             # #=== read from disk
             # import json
@@ -1358,7 +1480,7 @@ class Hotel:
 
 
 
-    def get_result(self):
+    def get_result(self,iter):
 
         # #----- read --
         # import json
@@ -1413,7 +1535,7 @@ class Hotel:
             #     result = self.get_ALLDestination_data()
 
 
-            result = self.get_ALLDestination_data()
+            result = self.get_ALLDestination_data(iter)
             #== Multi Thread ===
             print('start caching ..........')
             if len(result):

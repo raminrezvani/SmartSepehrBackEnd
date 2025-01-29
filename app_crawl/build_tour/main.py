@@ -1,5 +1,5 @@
-import json
-
+﻿import json
+import traceback
 from app_crawl.hotel.main import Hotel
 from app_crawl.flight.main import Flight
 from concurrent.futures import ThreadPoolExecutor,as_completed
@@ -19,88 +19,93 @@ class BuildTour:
                         one_way=False)
         return flight.get_result()
 
-    def get_hotel(self,use_cache):
+    def get_hotel(self,use_cache,iter):
         hotel = Hotel(source=self.source, target=self.target, start_date=self.start_date, end_date=self.end_date,
                       adults=self.adults,use_cache=use_cache)
-        return hotel.get_result()
+        return hotel.get_result(iter)
 
-    def get_result(self, use_cache=True):
+    def get_result(self, use_cache=True,iter=1):
+        try:
+            # # ===return empty results===
+            # flight = {'go_flight': [], "return_flight": []}
+            # hotel_result = []
+            # result = {
+            #     "flight": flight,
+            #     "hotel": hotel_result,
+            #     'providers':{}
+            #
+            # }
+            # return result
+            # # ==========
 
-        # # ===return empty results===
-        # flight = {'go_flight': [], "return_flight": []}
-        # hotel_result = []
-        # result = {
-        #     "flight": flight,
-        #     "hotel": hotel_result,
-        #     'providers':{}
-        #
-        # }
-        # return result
-        # # ==========
 
+            # redis_key = f"build_{self.start_date}_{self.end_date}"
+            redis_key = f"build_tour_{self.source}_{self.target}_{self.start_date}_{self.end_date}" #?????
+            # redis_key = f"build_tour_{self.source}_{self.target}_{start_date}_{end_date}" #?????
 
-        # redis_key = f"build_{self.start_date}_{self.end_date}"
-        redis_key = f"build_tour_{self.source}_{self.target}_{self.start_date}_{self.end_date}" #?????
-        # redis_key = f"build_tour_{self.source}_{self.target}_{start_date}_{end_date}" #?????
-
-        # # # --- check from redis
-        if has_key_cache(key=redis_key) and use_cache:
-            return get_cache(key=redis_key)
-
-        #--- consider also Pending caches ---
-        pending=0
-        if use_cache:
-            if has_key_cache(key=redis_key):
+            # # # --- check from redis
+            if has_key_cache(key=redis_key) and use_cache:
                 return get_cache(key=redis_key)
-            else:
-                pending=1
-        # # # ---
 
-        executor = ThreadPoolExecutor(max_workers=10)
-        # ---
-        flight = executor.submit(self.get_flight)
-        hotel = executor.submit(self.get_hotel,use_cache)
-        # ---
-        try:
-            # 120
-            flight = flight.result(timeout=220000)
-        except:
-            print("--------------------------------")
-            print("flight time out")
-            flight = {'go_flight': [], "return_flight": []}
-        try:
-            # 130
-            hotel_result = hotel.result(timeout=2200000)
+            #--- consider also Pending caches ---
+            pending=0
+            if use_cache:
+                if has_key_cache(key=redis_key):
+                    return get_cache(key=redis_key)
+                else:
+                    pending=1
+            # # # ---
+
+            executor = ThreadPoolExecutor(max_workers=10)
+            # ---
+            flight = executor.submit(self.get_flight)
+            hotel = executor.submit(self.get_hotel,use_cache,iter)
+            # ---
+            try:
+                # 120
+                flight = flight.result(timeout=220000)
+            except:
+                print("--------------------------------")
+                print("flight time out")
+                flight = {'go_flight': [], "return_flight": []}
+            try:
+                # 130
+                hotel_result = hotel.result(timeout=2200000)
+            except Exception as e:
+                print("--------------------------------")
+                print("hotel time out")
+                print(str(e))
+                hotel_result = []
+            # ---
+            result = {
+                "flight": flight,
+                "hotel": hotel_result,
+                'providers':{}
+
+            }
+            #==== get provider lists ===
+            providers={}
+            for item in hotel_result:
+                for porov in set([a['provider'] for a in item['rooms']]):
+                    if (porov not in providers.keys()):
+                        providers[porov]= {
+                            'length':0,
+                            'message':'اتمام زمان',
+                            'url':''
+                        }
+                    providers[porov]['length']=providers[porov]['length']+1
+                    providers[porov]['message']=''
+
+            result['providers']=providers
+            #=====
+            #===== Disbale Caching ===
+            add_cache(redis_key, result)
+            #============
         except Exception as e:
-            print("--------------------------------")
-            print("hotel time out")
-            print(str(e))
-            hotel_result = []
-        # ---
-        result = {
-            "flight": flight,
-            "hotel": hotel_result,
-            'providers':{}
+            tb = traceback.format_exc()  # Get the full traceback as a string
+            print(f"Traceback details:\n{tb}")
+            return []
 
-        }
-        #==== get provider lists ===
-        providers={}
-        for item in hotel_result:
-            for porov in set([a['provider'] for a in item['rooms']]):
-                if (porov not in providers.keys()):
-                    providers[porov]= {
-                        'length':0,
-                        'message':'اتمام زمان',
-                        'url':''
-                    }
-                providers[porov]['length']=providers[porov]['length']+1
-                providers[porov]['message']=''
-
-        result['providers']=providers
-        #=====
-        #===== Disbale Caching ===
-        add_cache(redis_key, result)
-        #============
 
         return result
 
@@ -123,10 +128,10 @@ class BuildTourAnalysis():
                         one_way=False)
         return flight.get_result()
 
-    def get_hotel(self,start_date,end_date,use_cache):
+    def get_hotel(self,start_date,end_date,use_cache,iter):
         hotel = Hotel(source=self.source, target=self.target, start_date=start_date, end_date=end_date,
                       adults=self.adults,use_cache=use_cache)
-        return hotel.get_result()
+        return hotel.get_result(iter)
 
     def get_analysis(self,start_date,end_date,range_number=7,use_cache=True):
 
@@ -193,8 +198,8 @@ class BuildTourAnalysis():
 
         # Submit tasks and map each future to its start_date
         futures_to_dates = {
-            self.executor_analysis.submit(self.get_result, start_date, use_cache): start_date
-            for start_date in date_range
+            self.executor_analysis.submit(self.get_result, start_date, use_cache,iter): start_date
+            for iter,start_date in enumerate(date_range)
         }
 
         # Initialize an empty dictionary to store results with their corresponding start_date
@@ -333,7 +338,7 @@ class BuildTourAnalysis():
 
 
 
-    def get_result(self,start_date,use_cache):
+    def get_result(self,start_date,use_cache,iter):
 
         start_date_obj = datetime.strptime(start_date, "%Y-%m-%d").date()
         end_date = str(start_date_obj + timedelta(days=self.night_count))
@@ -350,7 +355,7 @@ class BuildTourAnalysis():
 
         # ---
         flight = self.executor.submit(self.get_flight,start_date, end_date)
-        hotel = self.executor.submit(self.get_hotel,start_date,end_date,use_cache)
+        hotel = self.executor.submit(self.get_hotel,start_date,end_date,use_cache,iter)
         # ---
         try:
             # 120
@@ -365,7 +370,8 @@ class BuildTourAnalysis():
         except Exception as e:
             print("--------------------------------")
             print("hotel time out")
-            print(str(e))
+            tb = traceback.format_exc()  # Get the full traceback as a string
+            print(f"Traceback details:\n{tb}")
             hotel_result = []
         # ---
         result = {

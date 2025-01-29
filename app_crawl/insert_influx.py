@@ -49,7 +49,7 @@ class Influxdb():
         # Write the point to InfluxDB
         try:
             self.write_api.write(bucket=provider, org=self.INFLUXDB_ORG, record=point)
-            print(f"Data written: count_call={count_call}%, provider={provider}% ")
+            # print(f"Data written: count_call={count_call}%, provider={provider}% ")
         except Exception as e:
             print(f"Failed to write data to InfluxDB: {e}")
 
