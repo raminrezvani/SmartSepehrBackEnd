@@ -1539,7 +1539,7 @@ class Hotel:
             #== Multi Thread ===
             print('start caching ..........')
             if len(result):
-                with ThreadPoolExecutor(max_workers=10) as executorr:
+                with ThreadPoolExecutor(max_workers=50) as executorr:
                     executorr.submit(add_dict_to_redis, redis_key, result, self.redis_expire)  # bayad doing ha delete shavad!! (OK)
             #=====
             #

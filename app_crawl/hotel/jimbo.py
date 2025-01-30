@@ -6,7 +6,7 @@ import urllib3
 import requests
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
+import random
 
 class Jimbo:
     def __init__(self, target, start_date, end_date, adults,iterr=1):
@@ -30,9 +30,15 @@ class Jimbo:
 
             self.call_count+=1
 
-            if (self.call_count<=3):
+            if (self.call_count<=5):
                 #==========ssssssssss
-                urll = "http://45.149.76.168:5020/Jimbo_hotels"
+                # ports =  [5020,5021]
+                ports = [5050,5051]
+                # Use round-robin selection
+                selected_port = ports[self.call_count % len(ports)]
+
+                urll = f"http://45.149.76.168:{selected_port}/Jimbo_hotels"
+
             else:
                 urll = "http://130.185.77.24:5020/Jimbo_hotels"
 

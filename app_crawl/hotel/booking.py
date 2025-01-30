@@ -7,7 +7,7 @@ import requests
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-
+import random
 class Booking:
     def __init__(self, target, start_date, end_date, adults,iterr=1):
         self.target = target
@@ -31,9 +31,14 @@ class Booking:
 
             self.call_count+=1
 
-            if (self.call_count<=3):
+            if (self.call_count<=5):
                 #==========ssssssssss
-                urll = "http://45.149.76.168:5002/booking_hotels"
+                ports =  [5040,5041]
+                # Use round-robin selection
+                selected_port = ports[self.call_count % len(ports)]
+
+                urll = f"http://45.149.76.168:{selected_port}/booking_hotels"
+
             else:
                 urll = "http://130.185.77.24:5002/booking_hotels"
 

@@ -5,6 +5,12 @@ from app_crawl.flight.main import Flight
 from concurrent.futures import ThreadPoolExecutor,as_completed
 from app_crawl.cache.cache import add_cache, get_cache, has_key_cache
 from datetime import (datetime, timedelta)
+
+from concurrent.futures import as_completed
+from datetime import datetime, timedelta
+import traceback
+
+
 # from monitoring import influx_grafana
 class BuildTour:
     def __init__(self, source, target, start_date, end_date, adults):
@@ -121,7 +127,7 @@ class BuildTourAnalysis():
         # self.stay = stay
         self.executor_analysis = ThreadPoolExecutor(max_workers=50)
 
-        self.executor = ThreadPoolExecutor(max_workers=50)
+        self.executor = ThreadPoolExecutor(max_workers=100)
 
     def get_flight(self,start_date,end_date):
         flight = Flight(start_date=start_date, end_date=end_date, source=self.source, target=self.target,
@@ -338,7 +344,53 @@ class BuildTourAnalysis():
 
 
 
-    def get_result(self,start_date,use_cache,iter):
+    def get_result(self, start_date, use_cache, iter):
+        start_date_obj = datetime.strptime(start_date, "%Y-%m-%d").date()
+        end_date = str(start_date_obj + timedelta(days=self.night_count))
+        redis_key = f"build_tour_{self.source}_{self.target}_{start_date}_{end_date}"
+
+        # === Check Redis Cache First ===
+        if use_cache and has_key_cache(redis_key):
+            return get_cache(redis_key)
+
+        # === Submit Tasks Asynchronously ===
+        futures = {
+            self.executor.submit(self.get_flight, start_date, end_date): "flight",
+            self.executor.submit(self.get_hotel, start_date, end_date, use_cache, iter): "hotel"
+        }
+
+        results = {"flight": None, "hotel": None, "providers": {}}
+
+        # === Process Completed Tasks ===
+        for future in as_completed(futures, timeout=220):  # Adjust timeout if needed
+            task_type = futures[future]
+            try:
+                results[task_type] = future.result()
+            except Exception as e:
+                print(f"--------------------------------\n{task_type} time out or error\n{traceback.format_exc()}")
+                results[task_type] = {'go_flight': [], "return_flight": []} if task_type == "flight" else []
+
+        # === Process Providers Efficiently ===
+        results["providers"] = self.process_providers(results["hotel"])
+
+        # === Submit Cache Update Asynchronously ===
+        self.executor.submit(add_cache, redis_key, results)
+
+        return results
+
+    def process_providers(self, hotel_result):
+        """ Optimized provider extraction """
+        providers = {}
+        for item in hotel_result:
+            for provider in {a['provider'] for a in item['rooms']}:
+                providers.setdefault(provider, {'length': 0, 'message': 'اتمام زمان', 'url': ''})
+                providers[provider]['length'] += 1
+                providers[provider]['message'] = ''
+        return providers
+
+
+
+    def get_result_old(self,start_date,use_cache,iter):
 
         start_date_obj = datetime.strptime(start_date, "%Y-%m-%d").date()
         end_date = str(start_date_obj + timedelta(days=self.night_count))
