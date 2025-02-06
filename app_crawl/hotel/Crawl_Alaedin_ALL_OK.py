@@ -12,13 +12,16 @@ import jdatetime
 from lxml import etree
 from io import StringIO
 import requests
+from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 
 class Alaedin:
-    def __init__(self, target, start_date, end_date, adults):
+    def __init__(self, target, start_date, end_date, adults,isAnalysis=False):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
         self.adults = adults
+        self.isAnalysis=isAnalysis
+
         self.executor = ThreadPoolExecutor(max_workers=50)
 
         self.cookies = []
@@ -65,6 +68,8 @@ class Alaedin:
 
         # Send a GET request to the API
         response = requests.get("http://45.149.76.168:5003/Alaedin_rooms", params=params,timeout=3600)
+
+
         json_data = json.loads(response.text)
         rooms = []
         for i in range(len(json_data['room'])):
@@ -90,8 +95,105 @@ class Alaedin:
 
         return rooms
 
-
     def get_result(self):
+        try:
+            # Convert start and end dates
+            start_date = datetime.strptime(self.start_date, "%Y-%m-%d").date()
+            end_date = datetime.strptime(self.end_date, "%Y-%m-%d").date()
+            stay_duration = (end_date - start_date).days
+            shamsi_start_date = jdatetime.date.fromgregorian(date=start_date)
+            shamsi_start_date_hotel = str(shamsi_start_date).replace("-", "")
+
+            # Fetch hotel data
+            url = f"https://www.alaedin.travel/hotels/{self.destin_text[self.target]}/{shamsi_start_date_hotel}/{stay_duration}"
+            response = executeRequest(method="get", url=url)
+            response_data = response.json()
+
+            # Parse HTML response
+            parser = etree.HTMLParser()
+            html_parsed = etree.parse(StringIO(response_data["text"]), parser=parser)
+            lst_hotels = html_parsed.xpath('//div[contains(@class,"hotel-box")]')
+
+            res_lst_hotels = []
+            hotel_futures = {}
+            rooms_futures = {}
+
+            # **Step 1: Parse hotel data in parallel**
+            with ThreadPoolExecutor(max_workers=50) as hotel_executor:
+                for hotel in lst_hotels:
+                    future = hotel_executor.submit(self.parse_hotel, hotel)
+                    hotel_futures[future] = hotel
+
+            parsed_hotels = []
+            for future in as_completed(hotel_futures):
+                hotel_data = future.result()
+                if hotel_data:
+                    parsed_hotels.append(hotel_data)
+
+            # ======== Check for 5-Star hotels
+            if self.isAnalysis:
+                parsed_hotels = [htl for htl in parsed_hotels if htl['hotel_star'] == 5]
+                print(f'Alaedin Analysis')
+            else:
+                print(f'Alaedin RASII')
+
+            # ============
+
+
+            # **Step 2: Fetch rooms in parallel**
+            with ThreadPoolExecutor(max_workers=100) as rooms_executor:
+                for hotel_data in parsed_hotels:
+                    future = rooms_executor.submit(
+                        self.get_rooms, hotel_data["hotel_code"], str(shamsi_start_date), stay_duration
+                    )
+                    rooms_futures[future] = hotel_data
+
+                for future in as_completed(rooms_futures):
+                    hotel_data = rooms_futures[future]
+                    try:
+                        hotel_data["rooms"] = future.result()
+                    except Exception as exc:
+                        print(f"Error fetching rooms for {hotel_data['hotel_name']}: {exc}")
+                        continue
+
+                    # Convert Rial to Toman
+                    for room in hotel_data["rooms"]:
+                        room["price"] = str(int(room["price"]))[:-1]
+
+                    res_lst_hotels.append(hotel_data)
+
+            return res_lst_hotels
+
+        except Exception as e:
+            print(f"Error: {e}")
+            return {"status": False, "data": [], "message": "اتمام زمان"}
+
+    # **Helper Function for Parsing Hotel Data**
+    def parse_hotel(self, hotel):
+        try:
+            hotel_name = hotel.xpath('.//div[@class="hotel-name"]/text()')[0]
+            hotel_star = len(hotel.xpath('.//div[@class="hotel-star"]/i[contains(@class,"ala-color-yellow")]'))
+
+            hotel_code = hotel.xpath('.//input[@class="hotelCode"]')[0].get("value")
+
+            try:
+                hotel_rial = hotel.xpath('.//div[@class="hotel-price text-center"]//small[text()="ریال"]')[0].text
+            except:
+                return None  # Skip hotels without a price
+
+            return {
+                "hotel_name": hotel_name,
+                "hotel_code": hotel_code,
+                "hotel_star": hotel_star,
+                "min_price": "",
+                "provider": "Alaedin",
+                "rooms": [],
+            }
+        except Exception as e:
+            print(f"Error parsing hotel: {e}")
+            return None
+
+    def get_result_OLD(self):
         try:
 
             start_date = datetime.strptime(self.start_date, '%Y-%m-%d').date()
@@ -102,10 +204,14 @@ class Alaedin:
             stay_duration = (end_date - start_date).days
 
             # aa = requests.get('https://www.alaedin.travel/hotels/kish/14030803/3')
-            aa = requests.get(f'https://www.alaedin.travel/hotels/{self.destin_text[self.target]}/{shamsi_start_date_hotel}/{stay_duration}',timeout=3600)
+            # aa = requests.get(f'https://www.alaedin.travel/hotels/{self.destin_text[self.target]}/{shamsi_start_date_hotel}/{stay_duration}',timeout=3600)
+            aa = executeRequest(method='get',
+                url=f'https://www.alaedin.travel/hotels/{self.destin_text[self.target]}/{shamsi_start_date_hotel}/{stay_duration}')
+            aa=aa.json()
+
             # ==parsing
             parser = etree.HTMLParser()
-            htmlparsed = etree.parse(StringIO(aa.text), parser=parser)
+            htmlparsed = etree.parse(StringIO(aa['text']), parser=parser)
             lst_hotels = htmlparsed.xpath('//div[contains(@class,"hotel-box")]')
             res_lst_hotels = list()
             with ThreadPoolExecutor(max_workers=100) as executor:

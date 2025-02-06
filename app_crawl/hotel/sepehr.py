@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent
 
 
 class SepehrHotel:
-    def __init__(self, target, start_date, end_date, adults, cookie, provider_name):
+    def __init__(self, target, start_date, end_date, adults, cookie, provider_name,isAnalysis):
         self.start_date = start_date
         self.end_date = end_date
         self.start_date_persian = convert_gregorian_date_to_persian(start_date, "%Y/%m/%d")['date']
@@ -24,6 +24,7 @@ class SepehrHotel:
         self.adults = adults
         self.cookies = cookie
         self.provider_name = provider_name
+        self.isAnalysis=isAnalysis
         # ---
         self.night_count = (datetime.strptime(end_date, '%Y-%m-%d') - datetime.strptime(start_date, '%Y-%m-%d')).days
         self.influx = Influxdb()
@@ -147,6 +148,9 @@ class SepehrHotel:
 
         hotels = soup.select("table.Table03:has(tr.header)")
 
+
+
+
         for hotel in hotels:
             try:
                 appended_item = {
@@ -182,8 +186,6 @@ class SepehrHotel:
                         # Skipp tamas telefoni
                         #============
                         continue
-
-
 
                     room_price = convert_to_tooman(room_price)
                     room_item = {

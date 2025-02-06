@@ -15,11 +15,12 @@ from io import StringIO
 import requests
 
 class Snapp:
-    def __init__(self, target, start_date, end_date, adults):
+    def __init__(self, target, start_date, end_date, adults,isAnalysis=False):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
         self.adults = adults
+        self.isAnalysis=isAnalysis
         self.executor = ThreadPoolExecutor(max_workers=50)
         self.cookies = []
         self.cityIDs={
@@ -76,6 +77,8 @@ class Snapp:
                 # 'date_to': '2024-11-08',
                 'date_to': end_date,
                 'city_id':  self.city_id,
+                'isAnalysis': '1' if self.isAnalysis else '0',
+
             }
 
             response = requests.get(url, params=params)

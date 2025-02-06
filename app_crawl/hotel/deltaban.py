@@ -8,6 +8,7 @@ import requests
 from requests import request
 from app_crawl.helpers import convert_to_tooman
 import urllib3
+from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 
 from app_crawl.insert_influx import Influxdb
 
@@ -16,11 +17,12 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class Deltaban:
 
-    def __init__(self, target, start_date, end_date, adults):
+    def __init__(self, target, start_date, end_date, adults,isAnalysis=False):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
         self.adults = adults
+        self.isAnalysis=isAnalysis
 
         self.influx = Influxdb()
 
@@ -90,17 +92,24 @@ class Deltaban:
             'Content-Type': 'application/json',
         }
 
-        response = requests.post(url, headers=headers, data=json.dumps(self.login), verify=False)
+        # response = requests.post(url, headers=headers, data=json.dumps(self.login), verify=False)
+        response = executeRequest(method='post',
+                                  url=url,
+                                  headers=headers,
+                                  data=json.dumps(self.login),
+                                  verify=False)
+        response=response.json()
+
         self.influx.capture_logs(1, 'deltaban')
 
-        if response.status_code != 200:
-            print(f"Deltaban Failed to authenticate: {response.status_code}, {response.text}")
+        if response['status_code'] != 200:
+            print(f"Deltaban Failed to authenticate: {response['status_code']}, {response['text']}")
             return ''
 
 
         # Parse the new access token
         # data = response.json()
-        data = json.loads(response.text)
+        data = json.loads(response['text'])
         access_token = f"JWT {data['access_token']}"
 
         # Save the access token to a file
@@ -183,10 +192,16 @@ class Deltaban:
         counter = 0
         result = []
         while counter < 22:
-            req = request("GET", req_url, headers=self.request_header)
+
+
+
+            # req = request("GET", req_url, headers=self.request_header)
+            req = executeRequest(method="GET",url= req_url, headers=self.request_header)
+            req=req.json()
+
             self.influx.capture_logs(1,'deltaban')
 
-            data = json.loads(req.text)
+            data = json.loads(req['text'])
 
             counter += 1
             # ---
@@ -198,10 +213,14 @@ class Deltaban:
 
     def fetch_data(self,req_url, request_header):
         try:
-            req = request("GET", req_url, headers=request_header)
+            # req = request("GET", req_url, headers=request_header)
+            req = executeRequest(method="GET", url=req_url, headers=request_header)
+            req=req.json()
+
+
             self.influx.capture_logs(1, 'deltaban')
 
-            data = json.loads(req.text)
+            data = json.loads(req['text'])
 
             rooms = [
                 {
@@ -260,10 +279,14 @@ class Deltaban:
             while (True):
                 try:
                     while(counter<20):
-                        req = request("GET", req_url, headers=self.request_header)
+                        # req = request("GET", req_url, headers=self.request_header)
+                        req = executeRequest(method="GET",url= req_url, headers=self.request_header)
+                        req=req.json()
+
+
                         self.influx.capture_logs(1, 'deltaban')
 
-                        data = json.loads(req.text)
+                        data = json.loads(req['text'])
 
                         counter += 1
 
@@ -295,16 +318,27 @@ class Deltaban:
                 "provider": "deltaban"
             })
 
+
+        #======== Check for 5-Star hotels
+        if self.isAnalysis:
+            hotels=[htl for htl in hotels if htl['star']==5]
+            print(f'Deltaban Analysis')
+        else:
+            print(f'Deltaban RASII')
+
+        #============
+
+
         #==== More efficient ====
 
         # Determine optimal thread count: min(tasks, max_threads)
-        optimal_threads = min(len(hotels), 10)  # Set a reasonable max limit (e.g., 10)
+        optimal_threads = min(len(hotels), 100) if len(hotels)!=0 else 1  # Set a reasonable max limit (e.g., 10)
 
         with ThreadPoolExecutor(max_workers=optimal_threads) as executor:
             # Submit tasks and collect futures
             futures = {executor.submit(room_handler, hotel): hotel for hotel in hotels}
 
-            timeout_seconds = 10 # Set your desired timeout
+            timeout_seconds = 20 # Set your desired timeout
 
 
             # Wait for tasks to complete and handle results
@@ -314,6 +348,7 @@ class Deltaban:
                     future.result()  # Get result of the task
                     # print(result)
                 except Exception as e:
+                    print('Errrrrorr')
                     print(f"Error processing : {e}")
 
         # print("All tasks are completed.")
