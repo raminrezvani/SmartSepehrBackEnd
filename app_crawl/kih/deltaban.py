@@ -61,6 +61,11 @@ class Deltaban:
         }
 
         response = request("POST", url, headers=headers, data=json.dumps(self.login), verify=False)
+
+        if response.status_code == 502:
+            return ''
+
+
         if response.status_code != 200:
             self.get_authorization()
 
@@ -72,7 +77,13 @@ class Deltaban:
         return access_token
 
     def get_token(self):
-        self.get_authorization()
+        result_token=self.get_authorization()
+
+        #-----
+        if (result_token==''):  # fail in get token
+            return ''
+        #---------
+
         body = json.dumps({
             "flight": {
                 "childs": 0,
@@ -123,6 +134,15 @@ class Deltaban:
 
     def get_data(self):
         token = self.get_token()
+
+        #----
+        if (token==''):
+            return {"status": False, "hotels": [], "go_flights": [],
+                    "return_flights": [] , 'Message':'دریافت توکن مشکل دارد'}
+        #-----
+
+
+
         counter = 0
         went_flight_id = ""
         return_flight_id = ""
@@ -175,7 +195,7 @@ class Deltaban:
                             except:
                                 pass
             elif req.status_code == 401:
-                return {"status": False}
+                return {"status": False,'Message':'خطای 401 '}
             # ---
             counter += 1
             time.sleep(0.2)
@@ -188,35 +208,11 @@ class Deltaban:
         # try:
         data = self.get_data()
         if not data['status']:
-            return {'status': False, "data": [], "message": "اتمام زمان"}
+            return {'status': False, "data": [], "message": data['Message']}
         # except:
         #     return {'status': False, "data": [], "message": "اتمام زمان"}
         # ---
-        # try:
-        #     data1 = self.get_data()
-        #     if not data1['status']:
-        #         return {'status': False, "data": [], "message": "اتمام زمان"}
-        # except:
-        #     return {'status': False, "data": [], "message": "اتمام زمان"}
-        # try:
-        #     data2 = self.get_data()
-        #     if not data2['status']:
-        #         return {'status': False, "data": [], "message": "اتمام زمان"}
-        # except:
-        #     return {'status': False, "data": [], "message": "اتمام زمان"}
-        # try:
-        #     data3 = self.get_data()
-        #     if not data3['status']:
-        #         return {'status': False, "data": [], "message": "اتمام زمان"}
-        # except:
-        #     return {'status': False, "data": [], "message": "اتمام زمان"}
-        # # ---
-        # check_data = {
-        #     len(data1['hotels']): data1,
-        #     len(data2['hotels']): data2,
-        #     len(data3['hotels']): data3,
-        # }
-        # data = check_data[max(list(check_data.keys()))]
+
         # --- calc go flight
         try:
             go_flight = data['go_flights']

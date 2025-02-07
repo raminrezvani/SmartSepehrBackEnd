@@ -100,6 +100,9 @@ class Deltaban:
                                   verify=False)
         response=response.json()
 
+
+
+
         self.influx.capture_logs(1, 'deltaban')
 
         if response['status_code'] != 200:

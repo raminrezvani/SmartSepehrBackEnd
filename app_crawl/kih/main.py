@@ -127,8 +127,9 @@ class TourCollector:
         providers = [
             ("Booking", Booking(source, target, start_date, self.night_count, adults=self.adults,iter=iter)),
             ("Jimbo", Jimbo(source, target, start_date, self.night_count, adults=self.adults,iter=iter)),
-            ("Dayan",Sepehr(source, target, start_date, self.night_count, cookie_data.DAYAN, "dayan", adults=self.adults)),
             ("Deltaban", Deltaban(start_date, self.night_count, source, target, adults=self.adults)),
+
+            ("Dayan",Sepehr(source, target, start_date, self.night_count, cookie_data.DAYAN, "dayan", adults=self.adults)),
             ("Sepid Parvaz",Sepehr(source, target, start_date, self.night_count, cookie_data.SEPID_PARVAZ, "sepid_parvaz",adults=self.adults)),
             ("Mehrab Seir",Sepehr(source, target, start_date, self.night_count, cookie_data.MEHRAB, "mehrab", adults=self.adults)),
             ("Rahbal",Sepehr(source, target, start_date, self.night_count, cookie_data.RAHBAL, "rahbal", adults=self.adults)),
