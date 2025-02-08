@@ -15,12 +15,19 @@ import requests
 from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 
 class Alaedin:
-    def __init__(self, target, start_date, end_date, adults,isAnalysis=False):
+    def __init__(self, target, start_date, end_date, adults,isAnalysiss=False,hotelstarAnalysis=[]):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
         self.adults = adults
-        self.isAnalysis=isAnalysis
+        # self.isAnalysis=isAnalysiss
+        self.isAnalysis=isAnalysiss[0] if isAnalysiss is tuple else isAnalysiss ,
+        self.isAnalysis = self.isAnalysis[0] if isinstance(self.isAnalysis, tuple) else self.isAnalysis
+
+
+        self.hotelstarAnalysis=hotelstarAnalysis
+
+
 
         self.executor = ThreadPoolExecutor(max_workers=50)
 
@@ -132,7 +139,7 @@ class Alaedin:
 
             # ======== Check for 5-Star hotels
             if self.isAnalysis:
-                parsed_hotels = [htl for htl in parsed_hotels if htl['hotel_star'] == 5]
+                parsed_hotels = [htl for htl in parsed_hotels if str(htl['hotel_star']) in self.hotelstarAnalysis]
                 print(f'Alaedin Analysis')
             else:
                 print(f'Alaedin RASII')

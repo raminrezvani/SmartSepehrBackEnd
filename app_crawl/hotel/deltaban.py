@@ -16,13 +16,15 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 class Deltaban:
-
-    def __init__(self, target, start_date, end_date, adults,isAnalysis=False):
+    isAnalysis=False
+    def __init__(self, target, start_date, end_date, adults,isAnalysiss,hotelstarAnalysis=[]):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
         self.adults = adults
-        self.isAnalysis=isAnalysis
+        self.isAnalysis=isAnalysiss[0] if isAnalysiss is tuple else isAnalysiss ,
+        self.isAnalysis = self.isAnalysis[0] if isinstance(self.isAnalysis, tuple) else self.isAnalysis
+        self.hotelstarAnalysis=hotelstarAnalysis
 
         self.influx = Influxdb()
 
@@ -324,7 +326,7 @@ class Deltaban:
 
         #======== Check for 5-Star hotels
         if self.isAnalysis:
-            hotels=[htl for htl in hotels if htl['star']==5]
+            hotels=[htl for htl in hotels if str(htl['star']) in self.hotelstarAnalysis]
             print(f'Deltaban Analysis')
         else:
             print(f'Deltaban RASII')

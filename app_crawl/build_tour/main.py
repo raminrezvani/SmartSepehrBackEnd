@@ -27,7 +27,7 @@ class BuildTour:
 
     def get_hotel(self,use_cache,iter):
         hotel = Hotel(source=self.source, target=self.target, start_date=self.start_date, end_date=self.end_date,
-                      adults=self.adults,use_cache=use_cache,isAnalysis=False)
+                      adults=self.adults,use_cache=use_cache,isAnalysiss=False,hotelstarAnalysis=[])
         return hotel.get_result(iter)
 
     def get_result(self, use_cache=True,iter=1):
@@ -124,6 +124,7 @@ class BuildTourAnalysis():
         self.target = target
         self.adults = adults
         self.night_count = night_count
+
         # self.stay = stay
         self.executor_analysis = ThreadPoolExecutor(max_workers=50)
 
@@ -134,12 +135,12 @@ class BuildTourAnalysis():
                         one_way=False)
         return flight.get_result()
 
-    def get_hotel(self,start_date,end_date,use_cache,iter,isAnalysis):
+    def get_hotel(self,start_date,end_date,use_cache,iter,isAnalysiss,hotelstarAnalysis):
         hotel = Hotel(source=self.source, target=self.target, start_date=start_date, end_date=end_date,
-                      adults=self.adults,use_cache=use_cache,isAnalysis=isAnalysis)
+                      adults=self.adults,use_cache=use_cache,isAnalysiss=isAnalysiss,hotelstarAnalysis=hotelstarAnalysis)
         return hotel.get_result(iter)
 
-    def get_analysis(self,start_date,end_date,range_number=7,use_cache=True):
+    def get_analysis(self,start_date,end_date,range_number=7,use_cache=True,hotelstarAnalysis=[]):
 
         # return {}
 
@@ -204,7 +205,7 @@ class BuildTourAnalysis():
 
         # Submit tasks and map each future to its start_date
         futures_to_dates = {
-            self.executor_analysis.submit(self.get_result, start_date, use_cache,iter,True): start_date
+            self.executor_analysis.submit(self.get_result, start_date, use_cache,iter,True,hotelstarAnalysis): start_date
             for iter,start_date in enumerate(date_range)
         }
 
@@ -344,7 +345,7 @@ class BuildTourAnalysis():
 
 
 
-    def get_result(self, start_date, use_cache, iter,isAnalysis=False):
+    def get_result(self, start_date, use_cache, iter,isAnalysiss=False,hotelstarAnalysis=[]):
         start_date_obj = datetime.strptime(start_date, "%Y-%m-%d").date()
         end_date = str(start_date_obj + timedelta(days=self.night_count))
         redis_key = f"build_tour_{self.source}_{self.target}_{start_date}_{end_date}"
@@ -356,7 +357,7 @@ class BuildTourAnalysis():
         # === Submit Tasks Asynchronously ===
         futures = {
             self.executor.submit(self.get_flight, start_date, end_date): "flight",
-            self.executor.submit(self.get_hotel, start_date, end_date, use_cache, iter,isAnalysis): "hotel"
+            self.executor.submit(self.get_hotel, start_date, end_date, use_cache, iter,isAnalysiss,hotelstarAnalysis): "hotel"
         }
 
         results = {"flight": None, "hotel": None, "providers": {}}

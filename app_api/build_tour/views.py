@@ -123,6 +123,7 @@ class BuildTourAnalysisApi(APIView):
         target = request.data.get('target', None)
         adults = request.data.get('adults', None)
         night_count = request.data.get("night_count", None)
+        hotelstarAnalysis = request.data.get("hotelstarAnalysis", [])
         # stay = request.data.get('stay',None)
         range_number=7
         use_cache = request.data.get('use_cache', True)
@@ -137,7 +138,7 @@ class BuildTourAnalysisApi(APIView):
 
         # ---
         tourAnalysis = BuildTourAnalysis(start_date=start_date,end_date=end_date,source=source, target=target,night_count=night_count, adults=adults)
-        result = tourAnalysis.get_analysis(start_date=start_date,end_date=end_date,range_number=range_number,use_cache=use_cache)
+        result = tourAnalysis.get_analysis(start_date=start_date,end_date=end_date,range_number=range_number,use_cache=use_cache,hotelstarAnalysis=hotelstarAnalysis)
 
         # result = tour_collector.get_analysis(source, target,range_number=range_number, use_cache=use_cache)   # ready_tour
 

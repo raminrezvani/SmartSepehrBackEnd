@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent
 
 
 class SepehrHotel:
-    def __init__(self, target, start_date, end_date, adults, cookie, provider_name,isAnalysis):
+    def __init__(self, target, start_date, end_date, adults, cookie, provider_name,isAnalysiss,hotelstarAnalysis=[]):
         self.start_date = start_date
         self.end_date = end_date
         self.start_date_persian = convert_gregorian_date_to_persian(start_date, "%Y/%m/%d")['date']
@@ -24,7 +24,16 @@ class SepehrHotel:
         self.adults = adults
         self.cookies = cookie
         self.provider_name = provider_name
-        self.isAnalysis=isAnalysis
+        # self.isAnalysis=isAnalysiss
+
+        self.isAnalysis=isAnalysiss[0] if isAnalysiss is tuple else isAnalysiss ,
+        self.isAnalysis = self.isAnalysis[0] if isinstance(self.isAnalysis, tuple) else self.isAnalysis
+
+        self.hotelstarAnalysis=hotelstarAnalysis
+
+
+
+
         # ---
         self.night_count = (datetime.strptime(end_date, '%Y-%m-%d') - datetime.strptime(start_date, '%Y-%m-%d')).days
         self.influx = Influxdb()
@@ -153,9 +162,22 @@ class SepehrHotel:
 
         for hotel in hotels:
             try:
+
+                #---
+                hotel_star=hotel.select_one('img[alt*="ستاره"]').get('alt').replace('ستاره','').replace('هتل','').strip()
+                # ======== Check for 5-Star hotels
+                if self.isAnalysis:
+                    if (str(hotel_star) in self.hotelstarAnalysis):
+                        print('Sepehr Analysis')
+                    else:
+                        continue
+                # ============
+
+
+
                 appended_item = {
                     "hotel_name": hotel.select_one("tr.header td:nth-child(1)").text.strip(),
-                    "hotel_star": 2,
+                    "hotel_star": hotel.select_one('img[alt*="ستاره"]').get('alt').replace('ستاره','').replace('هتل','').strip(),
                     "min_price": None,
                     "rooms": [],
                     "provider": self.provider_name

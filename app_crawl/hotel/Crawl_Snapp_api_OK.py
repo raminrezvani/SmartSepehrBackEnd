@@ -15,12 +15,16 @@ from io import StringIO
 import requests
 
 class Snapp:
-    def __init__(self, target, start_date, end_date, adults,isAnalysis=False):
+    def __init__(self, target, start_date, end_date, adults,isAnalysis=False,hotelstarAnalysis=[]):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
         self.adults = adults
-        self.isAnalysis=isAnalysis
+        # self.isAnalysis=isAnalysiss
+        self.isAnalysis=isAnalysis[0] if isAnalysis is tuple else isAnalysis ,
+        self.isAnalysis = self.isAnalysis[0] if isinstance(self.isAnalysis, tuple) else self.isAnalysis
+
+        self.hotelstarAnalysis=hotelstarAnalysis
         self.executor = ThreadPoolExecutor(max_workers=50)
         self.cookies = []
         self.cityIDs={
@@ -78,6 +82,7 @@ class Snapp:
                 'date_to': end_date,
                 'city_id':  self.city_id,
                 'isAnalysis': '1' if self.isAnalysis else '0',
+                'hotelstarAnalysis':json.dumps(self.hotelstarAnalysis)
 
             }
 

@@ -29,7 +29,7 @@ import time
 executorHotel=ThreadPoolExecutor(max_workers=100)
 
 class Hotel:
-    def __init__(self, source, target, start_date, end_date, adults,use_cache,isAnalysis=False):
+    def __init__(self, source, target, start_date, end_date, adults,use_cache,isAnalysiss=False,hotelstarAnalysis=[]):
         self.source = source
         self.target = target
         self.start_date = start_date
@@ -37,7 +37,12 @@ class Hotel:
         self.adults = adults
         self.redis_expire = 10*60  # 3 minutes
         self.use_cache=use_cache,
-        self.isAnalysis=isAnalysis
+        # self.isAnalysis=isAnalysis[0] if isAnalysis is tuple else isAnalysis ,   # because isAnalysis is a tuple
+        self.isAnalysis=isAnalysiss
+        # self.isAnalysis = isAnalysis[0][0] if isAnalysis is tuple else isAnalysis,  # because isAnalysis is a tuple
+        # self.isAnalysis = self.isAnalysis[0] if self.isAnalysis is tuple else self.isAnalysis,  # because isAnalysis is a tuple
+
+        self.hotelstarAnalysis=hotelstarAnalysis
 
     #==== Threaded version ====
     from concurrent.futures import ThreadPoolExecutor
@@ -976,33 +981,33 @@ class Hotel:
 
             results = []
             hotel_tasks = {
-                # "darvishi": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DARVISHI, 'darvishi',self.isAnalysis),
-                # "moeindarbari": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, MOEINDARBARI,'moeindarbari',self.isAnalysis),
-                "deltaban": Deltaban(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis),
-                # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis),
-                "snapp": Snapp(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis),
-                "alaedin": Alaedin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis),
-                "eghamat": Eghamat24(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis),
-                "booking": Booking(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis),
-                "jimboo": Jimbo(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis),
-                # "rahbal": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, RAHBAL, 'rahbal',self.isAnalysis),
-                # "hrc": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HRC, 'hrc',self.isAnalysis),
-                # "dayan": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DAYAN, 'dayan',self.isAnalysis),
-                # "omid_oj": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, OMID_OJ, 'omid_oj',self.isAnalysis),
-                # "sepid_parvaz": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SEPID_PARVAZ,'sepid_parvaz',self.isAnalysis),
-                # "parmis": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, PARMIS, 'parmis',self.isAnalysis),
-                # "mehrab": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, MEHRAB, 'mehrab',self.isAnalysis),
-                # "hamsafar": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HAMSAFAR, 'hamsafar',self.isAnalysis),
-                # "tak_setareh": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, TAK_SETAREH,'tak_setareh',self.isAnalysis),
-                # "kimiya": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, TOURISTKISH, 'kimiya',self.isAnalysis),
-                # "eram2mhd": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, ERAM2MHD, 'eram2mhd',self.isAnalysis),
-                # "shayan_gasht": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SHAYAN_GASHT,'shayan_gasht',self.isAnalysis),
-                # "iman": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, IMAN, 'iman',self.isAnalysis),
-                # "flamingo": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, FLAMINGO, 'flamingo',self.isAnalysis),
-                # "yegane_fard": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, YEGANE_FARD,'yegane_fard',self.isAnalysis),
-                # "hamood": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HAMOOD, 'hamood',self.isAnalysis),
-                # "safiran": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SAFIRAN, 'safiran',self.isAnalysis),
-                # "dolfin": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DOLFIN, 'dolfin',self.isAnalysis)
+                "darvishi": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DARVISHI, 'darvishi',self.isAnalysis,self.hotelstarAnalysis),
+                "moeindarbari": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, MOEINDARBARI,'moeindarbari',self.isAnalysis,self.hotelstarAnalysis),
+                "deltaban": Deltaban(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
+                # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
+                "snapp": Snapp(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
+                "alaedin": Alaedin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
+                "eghamat": Eghamat24(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
+                "booking": Booking(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis),
+                "jimboo": Jimbo(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis),
+                "rahbal": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, RAHBAL, 'rahbal',self.isAnalysis,self.hotelstarAnalysis),
+                "hrc": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HRC, 'hrc',self.isAnalysis,self.hotelstarAnalysis),
+                "dayan": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DAYAN, 'dayan',self.isAnalysis,self.hotelstarAnalysis),
+                "omid_oj": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, OMID_OJ, 'omid_oj',self.isAnalysis,self.hotelstarAnalysis),
+                "sepid_parvaz": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SEPID_PARVAZ,'sepid_parvaz',self.isAnalysis,self.hotelstarAnalysis),
+                "parmis": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, PARMIS, 'parmis',self.isAnalysis,self.hotelstarAnalysis),
+                "mehrab": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, MEHRAB, 'mehrab',self.isAnalysis,self.hotelstarAnalysis),
+                "hamsafar": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HAMSAFAR, 'hamsafar',self.isAnalysis,self.hotelstarAnalysis),
+                "tak_setareh": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, TAK_SETAREH,'tak_setareh',self.isAnalysis,self.hotelstarAnalysis),
+                "kimiya": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, TOURISTKISH, 'kimiya',self.isAnalysis,self.hotelstarAnalysis),
+                "eram2mhd": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, ERAM2MHD, 'eram2mhd',self.isAnalysis,self.hotelstarAnalysis),
+                "shayan_gasht": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SHAYAN_GASHT,'shayan_gasht',self.isAnalysis,self.hotelstarAnalysis),
+                "iman": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, IMAN, 'iman',self.isAnalysis,self.hotelstarAnalysis),
+                "flamingo": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, FLAMINGO, 'flamingo',self.isAnalysis,self.hotelstarAnalysis),
+                "yegane_fard": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, YEGANE_FARD,'yegane_fard',self.isAnalysis,self.hotelstarAnalysis),
+                "hamood": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HAMOOD, 'hamood',self.isAnalysis,self.hotelstarAnalysis),
+                "safiran": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SAFIRAN, 'safiran',self.isAnalysis,self.hotelstarAnalysis),
+                "dolfin": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DOLFIN, 'dolfin',self.isAnalysis,self.hotelstarAnalysis)
             }
             provider_status = {}
             startTime = datetime.now()
