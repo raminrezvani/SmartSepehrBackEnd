@@ -81,6 +81,7 @@ class Snapp:
                 # 'date_to': '2024-11-08',
                 'date_to': end_date,
                 'city_id':  self.city_id,
+                'target':self.target,
                 'isAnalysis': '1' if self.isAnalysis else '0',
                 'hotelstarAnalysis':json.dumps(self.hotelstarAnalysis)
 
