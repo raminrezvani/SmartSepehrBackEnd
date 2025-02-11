@@ -14,7 +14,25 @@ from io import StringIO
 import requests
 from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 
-destin_text={
+class Alaedin:
+    def __init__(self, target, start_date, end_date, adults,isAnalysiss=False,hotelstarAnalysis=[]):
+        self.target = target
+        self.start_date = start_date
+        self.end_date = end_date
+        self.adults = adults
+        # self.isAnalysis=isAnalysiss
+        self.isAnalysis=isAnalysiss[0] if isAnalysiss is tuple else isAnalysiss ,
+        self.isAnalysis = self.isAnalysis[0] if isinstance(self.isAnalysis, tuple) else self.isAnalysis
+
+
+        self.hotelstarAnalysis=hotelstarAnalysis
+
+
+
+        self.executor = ThreadPoolExecutor(max_workers=50)
+
+        self.cookies = []
+        self.destin_text={
             'KIH':'kish',
             'THR':'tehran',
             'IFN':'isfahan',
@@ -46,26 +64,6 @@ destin_text={
 
 
         }
-
-class Alaedin:
-    def __init__(self, target, start_date, end_date, adults,isAnalysiss=False,hotelstarAnalysis=[]):
-        self.target = target
-        self.start_date = start_date
-        self.end_date = end_date
-        self.adults = adults
-        # self.isAnalysis=isAnalysiss
-        self.isAnalysis=isAnalysiss[0] if isAnalysiss is tuple else isAnalysiss ,
-        self.isAnalysis = self.isAnalysis[0] if isinstance(self.isAnalysis, tuple) else self.isAnalysis
-
-
-        self.hotelstarAnalysis=hotelstarAnalysis
-
-
-
-        self.executor = ThreadPoolExecutor(max_workers=50)
-
-        self.cookies = []
-
     def get_rooms(self,hotelCod, start_date, stay):
         # Define the parameters
         params = {
@@ -104,67 +102,52 @@ class Alaedin:
 
         return rooms
 
-    def get_hotels_info_writeJson(self):
-        # Convert start and end dates
-        start_date = datetime.strptime(self.start_date, "%Y-%m-%d").date()
-        end_date = datetime.strptime(self.end_date, "%Y-%m-%d").date()
-        stay_duration = (end_date - start_date).days
-        shamsi_start_date = jdatetime.date.fromgregorian(date=start_date)
-        shamsi_start_date_hotel = str(shamsi_start_date).replace("-", "")
-
-        # Fetch hotel data
-        url = f"https://www.alaedin.travel/hotels/{destin_text[self.target]}/{shamsi_start_date_hotel}/{stay_duration}"
-        response = executeRequest(method="get", url=url)
-        response_data = response.json()
-
-        # Parse HTML response
-        parser = etree.HTMLParser()
-        html_parsed = etree.parse(StringIO(response_data["text"]), parser=parser)
-        lst_hotels = html_parsed.xpath('//div[contains(@class,"hotel-box")]')
-
-        res_lst_hotels = []
-        hotel_futures = {}
-        rooms_futures = {}
-
-        # **Step 1: Parse hotel data in parallel**
-        with ThreadPoolExecutor(max_workers=50) as hotel_executor:
-            for hotel in lst_hotels:
-                future = hotel_executor.submit(self.parse_hotel, hotel)
-                hotel_futures[future] = hotel
-
-        parsed_hotels = []
-        for future in as_completed(hotel_futures):
-            hotel_data = future.result()
-            if hotel_data:
-                parsed_hotels.append(hotel_data)
-
-        # ------------ save hotesl into file
-
-        if not os.path.exists('Alaedin_hotels'):
-            os.makedirs('Alaedin_hotels')  # Creates the folder
-
-        json.dump(parsed_hotels, open(f'Alaedin_hotels/Alaedin_hotel_info_{self.target}.json', 'w'))
-
-        # --------------
-
-
     def get_result(self):
         try:
-
             # Convert start and end dates
             start_date = datetime.strptime(self.start_date, "%Y-%m-%d").date()
             end_date = datetime.strptime(self.end_date, "%Y-%m-%d").date()
             stay_duration = (end_date - start_date).days
             shamsi_start_date = jdatetime.date.fromgregorian(date=start_date)
             shamsi_start_date_hotel = str(shamsi_start_date).replace("-", "")
+
+            # Fetch hotel data
+            url = f"https://www.alaedin.travel/hotels/{self.destin_text[self.target]}/{shamsi_start_date_hotel}/{stay_duration}"
+            response = executeRequest(method="get", url=url)
+            response_data = response.json()
+
+            # Parse HTML response
+            parser = etree.HTMLParser()
+            html_parsed = etree.parse(StringIO(response_data["text"]), parser=parser)
+            lst_hotels = html_parsed.xpath('//div[contains(@class,"hotel-box")]')
+
             res_lst_hotels = []
             hotel_futures = {}
             rooms_futures = {}
-            #---- Load hotels info from Json
-            with open(f'Alaedin_hotels/Alaedin_hotel_info_{self.target}.json','r') as f:
-                a=f.read()
-                parsed_hotels=json.loads(a)
+
+            # **Step 1: Parse hotel data in parallel**
+            with ThreadPoolExecutor(max_workers=50) as hotel_executor:
+                for hotel in lst_hotels:
+                    future = hotel_executor.submit(self.parse_hotel, hotel)
+                    hotel_futures[future] = hotel
+
+            parsed_hotels = []
+            for future in as_completed(hotel_futures):
+                hotel_data = future.result()
+                if hotel_data:
+                    parsed_hotels.append(hotel_data)
+
+
+            #------------ save hotesl into file
+
+            if not os.path.exists('Alaedin_hotels'):
+                os.makedirs('Alaedin_hotels')  # Creates the folder
+
+            json.dump(parsed_hotels,open(f'Alaedin_hotels/Booking_hotel_info_{self.target}.json','w'))
+
             #--------------
+
+
 
             # ======== Check for 5-Star hotels
             if self.isAnalysis:
@@ -242,7 +225,7 @@ class Alaedin:
             # aa = requests.get('https://www.alaedin.travel/hotels/kish/14030803/3')
             # aa = requests.get(f'https://www.alaedin.travel/hotels/{self.destin_text[self.target]}/{shamsi_start_date_hotel}/{stay_duration}',timeout=3600)
             aa = executeRequest(method='get',
-                url=f'https://www.alaedin.travel/hotels/{destin_text[self.target]}/{shamsi_start_date_hotel}/{stay_duration}')
+                url=f'https://www.alaedin.travel/hotels/{self.destin_text[self.target]}/{shamsi_start_date_hotel}/{stay_duration}')
             aa=aa.json()
 
             # ==parsing
@@ -299,29 +282,8 @@ class Alaedin:
             return {'status': False, "data": [], 'message': "اتمام زمان"}
 
 
-# === for first time = (create hotel info )
-from datetime import datetime,timedelta
-# with open(f'Booking_hotel_info_{self.target}.json','r') as f:
-lst_targets1=list(destin_text.keys())
-start_date1 = datetime.today() + timedelta(days=4)
-start_date1 = start_date1.strftime("%Y-%m-%d")
 
-end_date1 = datetime.today() + timedelta(days=7)
-end_date1 = end_date1.strftime("%Y-%m-%d")
 
-isAnalysiss = False
-adults = '2'
-import concurrent.futures
-
-for tg in lst_targets1:
-    if os.path.exists(f'Alaedin_hotels/Alaedin_hotel_info_{tg}.json'):
-        ''
-    else:
-        ins = Alaedin(tg, start_date1, end_date1, adults, isAnalysiss, hotelstarAnalysis=[])
-        ins.get_hotels_info_writeJson()
-        print(f'Alaedin_hotels/Alaedin_hotel_info_{tg}.json  is created!')
-
-# =================
 
 
 
