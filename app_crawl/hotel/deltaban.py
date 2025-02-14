@@ -14,6 +14,35 @@ from app_crawl.insert_influx import Influxdb
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+hotelIDs = {
+    'THR': '400',
+    'MHD': '401',
+    'IFN': '399',
+    'SYZ': '412',
+    'KIH': '402',
+    'GSM': '448',
+    'AZD': '421',
+    'TBZ': '439',
+
+    'AWZ': '433',
+    'BND': '4792',
+    'KER': '419',
+    'KSH': '427',
+    'RAS': '442',
+    'SRY': '446',
+    'ZBR': '411',
+    'ABD': '428',
+    'BUZ': '437',
+    'GBT': '426',
+    'OMH': '432',
+    'ADU': '409',
+    'HDM': '415',
+    'RZR': '441',
+    'KHD': '440',
+    'NSH': '424',
+
+}
+
 
 class Deltaban:
     isAnalysis=False
@@ -41,36 +70,6 @@ class Deltaban:
         self.get_authorization()
 
 
-
-        self.hotelIDs={
-            'THR':'400',
-            'MHD':'401',
-            'IFN':'399',
-            'SYZ':'412',
-            'KIH':'402',
-            'GSM':'448',
-            'AZD':'421',
-            'TBZ':'439',
-
-
-            'AWZ':'433',
-            'BND':'4792',
-            'KER':'419',
-            'KSH':'427',
-            'RAS':'442',
-            'SRY':'446',
-            'ZBR':'411',
-            'ABD':'428',
-            'BUZ':'437',
-            'GBT':'426',
-            'OMH':'432',
-            'ADU':'409',
-            'HDM':'415',
-            'RZR':'441',
-            'KHD':'440',
-            'NSH':'424',
-
-        }
 
     def get_authorization(self):
         """
@@ -148,7 +147,7 @@ class Deltaban:
 
     def get_token(self):
 
-        req_url = f"https://api.3click.com/api/hotel/core/v1/Hotels/cities/{self.hotelIDs[self.target]}/available"
+        req_url = f"https://api.3click.com/api/hotel/core/v1/Hotels/cities/{hotelIDs[self.target]}/available"
 
         req_body = json.dumps({
             "checkIn": self.start_date,
@@ -245,10 +244,39 @@ class Deltaban:
             print(f"Error occurred: {e}")
             return [], False
 
+    def get_hotels_info_writeJson(self):
+        #---------------------
+        # save results of hotels into folder
+        #--------------
+        hotels = self.get_hotels()
+        lst_res_hotels=[]
+        for htl in hotels:
+            htl_info={}
+            htl_info['hotelId']=htl['hotelId']
+            htl_info['hotel_name']= htl['persianName']
+            htl_info['hotel_star']= htl['star']
+            htl_info['min_price']=convert_to_tooman(htl['minimumPackagePrice'])
+            lst_res_hotels.append(htl_info)
+
+
+        # ------------ save hotesl into file
+        if not os.path.exists('Deltaban_hotels'):
+            os.makedirs('Deltaban_hotels')  # Creates the folder
+
+        json.dump(lst_res_hotels, open(f'Deltaban_hotels/Deltaban_hotels_info_{self.target}.json', 'w'))
+        # --------------
 
 
     def get_result(self):
-        hotels = self.get_hotels()
+
+
+        # ---- Load hotels info from Json
+        with open(f'Deltaban_hotels/Deltaban_hotels_info_{self.target}.json', 'r') as f:
+            a = f.read()
+            hotels = json.loads(a)
+        #---------------------
+
+
 
         result = []
 
@@ -310,15 +338,15 @@ class Deltaban:
                         #     break
                     break
                 except:
-                    time.sleep(1)
+                    # time.sleep(1)
                     continue
             # #=======================================
 
 
             result.append({
-                "hotel_name": hotel['persianName'],
-                "hotel_star": hotel['star'],
-                "min_price": convert_to_tooman(hotel['minimumPackagePrice']),
+                "hotel_name": hotel['hotel_name'],
+                "hotel_star": hotel['hotel_star'],
+                "min_price": hotel['min_price'],
                 "rooms": rooms,
                 "provider": "deltaban"
             })
@@ -388,6 +416,37 @@ def delete_cookies_periodically():
 cookie_deletion_thread = Thread(target=delete_cookies_periodically)
 cookie_deletion_thread.daemon = True  # Daemonize thread to exit when the main program exits
 cookie_deletion_thread.start()
+
+
+
+
+
+# === for first time = (create hotel info )
+from datetime import datetime,timedelta
+# with open(f'Booking_hotel_info_{self.target}.json','r') as f:
+lst_targets1=list(hotelIDs.keys())
+start_date1 = datetime.today() + timedelta(days=4)
+start_date1 = start_date1.strftime("%Y-%m-%d")
+
+end_date1 = datetime.today() + timedelta(days=7)
+end_date1 = end_date1.strftime("%Y-%m-%d")
+
+isAnalysiss = False
+adults = '2'
+import concurrent.futures
+
+
+for tg in lst_targets1:
+    if os.path.exists(f'Deltaban_hotels/Deltaban_hotels_info_{tg}.json'):
+        ''
+    else:
+
+        ins = Deltaban(tg, start_date1, end_date1, adults, isAnalysiss, hotelstarAnalysis=[])
+        ins.get_hotels_info_writeJson()
+        print(f'Deltaban_hotels/Deltaban_hotels_info_{tg}.json  is created!')
+
+# =================
+
 
 
 
