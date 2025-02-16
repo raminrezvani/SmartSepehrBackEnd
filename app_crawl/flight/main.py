@@ -9,6 +9,8 @@ from app_crawl.flight.mojalalsafar_crawler import MojalalSafar
 from app_crawl.helpers import convert_gregorian_date_to_persian
 
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
 import jdatetime
 from datetime import datetime
 def get_Duration(departure_date_str,departure_time_str,return_date_str,return_time_str,
@@ -65,7 +67,7 @@ class Flight:
         self.source = source
         self.target = target
         self.one_way = one_way
-        self.executor = ThreadPoolExecutor(max_workers=50)
+        
 
     def ready_data(self, data):
         if self.one_way:
@@ -164,7 +166,67 @@ class Flight:
             result['return_flight'] = list(result['return_flight'].values())
             return result
 
+
+
+
+
+    #----
+
+
     def get_result(self):
+        tasks = {
+            "sepehr360": Sepehr360(self.start_date, self.end_date, self.source, self.target),
+            "mojalalsafar": MojalalSafar(self.start_date, self.end_date, self.source, self.target),
+            # "flytoday": FlyToDay(self.start_date, self.source, self.target),
+            # "alibaba": Alibaba(self.start_date, self.end_date, self.source, self.target),
+        }
+
+        results = {}
+
+        # Use ThreadPoolExecutor to execute tasks concurrently
+        with ThreadPoolExecutor(max_workers=len(tasks)) as executor:
+            future_to_key = {executor.submit(obj.get_result, self.one_way): key for key, obj in tasks.items()}
+
+            for future in as_completed(future_to_key):
+                key = future_to_key[future]
+                try:
+                    results[key] = future.result()
+                except Exception as e:
+                    print(f"Error in {key}: {e}")
+                    results[key] = []
+
+        # Extract results
+        sepehr360 = results.get("sepehr360", [])
+        mojalalsafar = results.get("mojalalsafar", [])
+        # flytoday = results.get("flytoday", [])
+        # alibaba = results.get("alibaba", [])
+
+        if self.one_way:
+            for item in mojalalsafar:
+                try:
+                    item['return_date'], item['return_time'] = get_Duration(
+                        sepehr360[0]['go_date'], sepehr360[0]['go_time'],
+                        sepehr360[0]['return_date'], sepehr360[0]['return_time'],
+                        item['go_date'], item['go_time']
+                    )
+                except (IndexError, KeyError):
+                    continue
+
+            result = sepehr360 + mojalalsafar  # + flytoday + alibaba
+
+        else:  # Two-way
+            result = {
+                "go_flight": sepehr360.get('go_flight', []) + mojalalsafar.get('go_flight', []),
+                "return_flight": sepehr360.get('return_flight', []) + mojalalsafar.get('return_flight', []),
+            }
+
+        return self.ready_data(result)
+
+    #_--
+
+
+
+    def get_result_old(self):
         # --- sepehr
         sepehr360 = Sepehr360(self.start_date, self.end_date, self.source, self.target)
         sepehr360 = self.executor.submit(sepehr360.get_result, self.one_way)

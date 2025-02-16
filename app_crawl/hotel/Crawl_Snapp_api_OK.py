@@ -25,7 +25,7 @@ class Snapp:
         self.isAnalysis = self.isAnalysis[0] if isinstance(self.isAnalysis, tuple) else self.isAnalysis
 
         self.hotelstarAnalysis=hotelstarAnalysis
-        self.executor = ThreadPoolExecutor(max_workers=50)
+
         self.cookies = []
         self.cityIDs={
             'KIH':'6918',

@@ -269,14 +269,11 @@ class Deltaban:
 
     def get_result(self):
 
-
         # ---- Load hotels info from Json
         with open(f'Deltaban_hotels/Deltaban_hotels_info_{self.target}.json', 'r') as f:
             a = f.read()
             hotels = json.loads(a)
         #---------------------
-
-
 
         result = []
 

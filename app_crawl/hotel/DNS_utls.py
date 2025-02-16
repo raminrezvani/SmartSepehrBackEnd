@@ -904,36 +904,36 @@ class DNS_mapping:
 
 
 
-
-    def check_roomName(self,text):
-        text=self.preprocess_text(text)
-        # if ('(' in  text):
-        #     text=text.split('(')[0]
-        #     # return ""
-
-        text=text.replace('  ',' ')
-
-        if ('اتاق یک تخت' in text):
-            parsed='اتاق یک تخت'
-            parsed=parsed.replace('  ',' ')
-            return parsed
-
-        if ('سوییت' in text or 'سویت' in text):
-            parsed = self.process_sweetRoom(text)
-            parsed = parsed.replace('  ', ' ')
-            return parsed
-
-        if ('ویلا ' in text):
-            parsed = self.process_villaRoom(text)
-            parsed = parsed.replace('  ', ' ')
-            return parsed
-
-
-        # if ('سوییت' not in text or 'کانکت' not in text or 'کابانا' not in text):
-        # if ('سوییت' not in text):
-        parsed=self.process_standardRoom(text)
-        parsed = parsed.replace('  ', ' ')
-        return parsed
+    #
+    # def check_roomName(self,text):
+    #     text=self.preprocess_text(text)
+    #     # if ('(' in  text):
+    #     #     text=text.split('(')[0]
+    #     #     # return ""
+    #
+    #     text=text.replace('  ',' ')
+    #
+    #     if ('اتاق یک تخت' in text):
+    #         parsed='اتاق یک تخت'
+    #         parsed=parsed.replace('  ',' ')
+    #         return parsed
+    #
+    #     if ('سوییت' in text or 'سویت' in text):
+    #         parsed = self.process_sweetRoom(text)
+    #         parsed = parsed.replace('  ', ' ')
+    #         return parsed
+    #
+    #     if ('ویلا ' in text):
+    #         parsed = self.process_villaRoom(text)
+    #         parsed = parsed.replace('  ', ' ')
+    #         return parsed
+    #
+    #
+    #     # if ('سوییت' not in text or 'کانکت' not in text or 'کابانا' not in text):
+    #     # if ('سوییت' not in text):
+    #     parsed=self.process_standardRoom(text)
+    #     parsed = parsed.replace('  ', ' ')
+    #     return parsed
 
 
 #

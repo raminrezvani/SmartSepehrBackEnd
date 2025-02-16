@@ -22,7 +22,7 @@ class Eghamat24:
 
         self.hotelstarAnalysis=hotelstarAnalysis
 
-        self.executor = ThreadPoolExecutor(max_workers=50)
+
         self.header = {
             'Content-Type': 'application/json'
         }

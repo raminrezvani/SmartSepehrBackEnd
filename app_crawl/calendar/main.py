@@ -1,5 +1,6 @@
 from app_crawl.calendar.sepehr import SepehrCalendar
 from app_crawl.calendar.mojalalsafar_crawler_Calendar import MojalalSafarCalendar
+from concurrent.futures import ThreadPoolExecutor
 
 class CalendarData:
     def __init__(self, source, target, skip_month=0):
@@ -7,7 +8,50 @@ class CalendarData:
         self.target = target
         self.skip_month = skip_month
 
+
+
     def get_result(self):
+
+        with ThreadPoolExecutor() as executor:
+            # Execute both tasks in parallel
+            future_sepehr = executor.submit(SepehrCalendar, self.source, self.target, self.skip_month)
+            future_mojalal = executor.submit(MojalalSafarCalendar, self.source, self.target, self.skip_month)
+
+            # Get results
+            sepehrResult = future_sepehr.result().get_result()
+
+            try:
+                mojalalResult = future_mojalal.result().get_result()
+            except:
+                mojalalResult = {"go": [], "return": []}
+
+        # Initialize final result structure
+        final_result = {
+            "go": sepehrResult.get("go", []),
+            "return": sepehrResult.get("return", [])
+        }
+
+        # Replace empty results with Mojalal if necessary
+        final_result["go"] = final_result["go"] or mojalalResult["go"]
+        final_result["return"] = final_result["return"] or mojalalResult["return"]
+
+        # Merge price data efficiently
+        if sepehrResult["go"] and mojalalResult["go"]:
+            final_result["go"] = [
+                {**s, "price": min(int(s["price"]), int(m["price"]))} if s["date"] == m["date"] else s
+                for s, m in zip(sepehrResult["go"], mojalalResult["go"])
+            ]
+
+        if sepehrResult["return"] and mojalalResult["return"]:
+            final_result["return"] = [
+                {**s, "price": min(int(s["price"]), int(m["price"]))} if s["date"] == m["date"] else s
+                for s, m in zip(sepehrResult["return"], mojalalResult["return"])
+            ]
+
+        return final_result
+
+
+    def get_result_old(self):
         sepehr = SepehrCalendar(source=self.source, target=self.target, skip_month=self.skip_month)
         sepehrResult=sepehr.get_result()
         #--- mojalal
@@ -57,3 +101,7 @@ class CalendarData:
 
 
         return final_result
+
+#pip install uvicorn
+#uvicorn myproject.asgi:application --host 0.0.0.0 --port 8000 --workers 4
+

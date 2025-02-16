@@ -23,7 +23,7 @@ class Booking:
         self.hotelstarAnalysis=hotelstarAnalysis
 
         self.call_count = iterr
-        self.executor = ThreadPoolExecutor(max_workers=1000)
+
         self.url = f"https://www.booking.ir/fa/hotel/iran/{target.lower()}/?i={self.start_date}&o={self.end_date}&r=1;&n=ir&d=1640809&lt=1&dt=2&a=2&c=0#/"
         self.header = {
             'Content-Type': 'application/json'

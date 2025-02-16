@@ -62,7 +62,7 @@ class Alaedin:
 
 
 
-        self.executor = ThreadPoolExecutor(max_workers=50)
+
 
         self.cookies = []
 
@@ -177,7 +177,7 @@ class Alaedin:
 
 
             # **Step 2: Fetch rooms in parallel**
-            with ThreadPoolExecutor(max_workers=100) as rooms_executor:
+            with ThreadPoolExecutor(max_workers=min(len(parsed_hotels),50)) as rooms_executor:
                 for hotel_data in parsed_hotels:
                     future = rooms_executor.submit(
                         self.get_rooms, hotel_data["hotel_code"], str(shamsi_start_date), stay_duration
