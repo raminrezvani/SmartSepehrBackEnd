@@ -8,17 +8,33 @@ import redis
 import json
 from webdriver_manager.chrome import ChromeDriverManager
 from django.conf import settings
-
+from selenium.webdriver.chrome.service import Service
 redis_connection = redis.Redis()
 
 
 def get_driver(**kwargs):
+    """
+    Get Selenium driver.
+    :return: driver instance
+    """
+    base_dir = settings.BASE_DIR
+    chrome_path = os.path.join(base_dir, "chromedriver.exe")  # Ensure this path is correct
+
+    service = Service(chrome_path)  # Use Service object for Selenium 4
+    options = kwargs.get("options", webdriver.ChromeOptions())  # Use provided options or create new
+
+    return webdriver.Chrome(service=service, options=options)
+
+def get_driver_old(**kwargs):
     """
     get selenium driver
     :return: driver
     """
     base_dir = settings.BASE_DIR
     chrome_path = os.path.join(base_dir, "chromedriver.exe")
+
+
+
     return webdriver.Chrome(chrome_path, **kwargs)
 
 

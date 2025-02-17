@@ -29,37 +29,37 @@ class GetSepehrCaptcha:
     def get_driver(self, set_cookie=False):
         domain = self.data.get('domain')
         if set_cookie:
-            driver = driver_path()
+            self.driver = driver_path()
             # ===
-            driver.set_page_load_timeout(5)  # Time in seconds
+            self.driver.set_page_load_timeout(5)  # Time in seconds
             # ====
             try:
-                driver.get(f"https://{domain}")
+                self.driver.get(f"https://{domain}")
             except:
-                driver.execute_script("window.stop();")
+                self.driver.execute_script("window.stop();")
 
             # ---
             for key, value in self.data.get('KIH', {}).get('cookie', {}).items():
                 cookie_item = {"name": key, "value": value, 'sameSite': 'Strict'}
                 if "name" in cookie_item.keys() and "value" in cookie_item.keys():
-                    driver.add_cookie(cookie_item)
+                    self.driver.add_cookie(cookie_item)
             # ---
             try:
-                driver.get(f"https://{domain}/Systems/FA/Reservation/Flight_NewReservation_Search.aspx")
+                self.driver.get(f"https://{domain}/Systems/FA/Reservation/Flight_NewReservation_Search.aspx")
             except:
-                driver.execute_script("window.stop();")
+                self.driver.execute_script("window.stop();")
 
-            self.driver = driver
+            self.driver = self.driver
         else:
-            driver = driver_path()
+            self.driver = driver_path()
             # ===
-            driver.set_page_load_timeout(5)  # Time in seconds
+            self.driver.set_page_load_timeout(5)  # Time in seconds
             # ====
             try:
-                driver.get(f'https://{domain}')
+                self.driver.get(f'https://{domain}')
             except:
-                driver.execute_script("window.stop();")
-            self.driver = driver
+                self.driver.execute_script("window.stop();")
+            self.driver = self.driver
 
     def get_validity(self):
         try:
@@ -149,6 +149,10 @@ class GetSepehrCaptcha:
         return image.get_attribute("src")
 
     def login_sepehr(self, recaptcha_value, provider_code, company: Company):
+
+        if (self.driver is None):
+            print('error Driver None')
+
         try:
             qs_provider = Provider.objects.filter(soft_delete=False, code=provider_code)
             if not qs_provider:
