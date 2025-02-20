@@ -15,6 +15,10 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 BASE_DIR = Path(__file__).resolve().parent
 
 
+# def sepehr_get_data(target, start_date, end_date, adults, cookie, provider_name,isAnalysiss,hotelstarAnalysis=[]):
+#
+#     pass
+
 class SepehrHotel:
     def __init__(self, target, start_date, end_date, adults, cookie, provider_name,isAnalysiss,hotelstarAnalysis=[]):
         self.start_date = start_date
@@ -40,7 +44,11 @@ class SepehrHotel:
 
 
     def get_data(self):
-        cookies = self.cookies['hotel'][self.target]['cookie']
+
+        try:
+            cookies = self.cookies['hotel'][self.target]['cookie']
+        except:
+            return False
 
 
         #---
@@ -147,17 +155,20 @@ class SepehrHotel:
             return False
 
     def get_result(self):
+        t1=0
         try:
+            t1=datetime.now()
             data = self.get_data()
+            spendTime = (datetime.now() - t1).total_seconds()
+            print(f'{self.provider_name} ---- GetData_{self.start_date} --- {spendTime}')
 
+            t1 = datetime.now()
             soup = BeautifulSoup(data, 'html.parser')
             result = []
         except:
             return {'status': False, "data": [], 'message': "اتمام زمان"}
 
         hotels = soup.select("table.Table03:has(tr.header)")
-
-
 
 
         for hotel in hotels:
@@ -230,6 +241,10 @@ class SepehrHotel:
             except:
                 print("--------------------------------")
                 print(f"{self.provider_name} hotel wrong")
+
+        spendTime = (datetime.now() - t1).total_seconds()
+        print(f'{self.provider_name} ---- ParseData_{self.start_date} --- {spendTime}')
+
 
         return result
 

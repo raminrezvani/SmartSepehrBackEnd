@@ -8,7 +8,8 @@ from concurrent.futures import ThreadPoolExecutor,as_completed
 from datetime import datetime, timedelta
 import traceback
 from collections import defaultdict
-
+import logging
+logger = logging.getLogger('django')
 # from monitoring import influx_grafana
 class BuildTour:
     def __init__(self, source, target, start_date, end_date, adults):
@@ -62,6 +63,9 @@ class BuildTour:
                 except Exception as e:
                     print(f"Hotel error: {e}")
                     hotel_result = []
+
+                # Ensure all threads are properly closed
+                executor.shutdown(wait=True)
 
             # Prepare provider data
             providers = {}
@@ -206,6 +210,7 @@ class BuildTourAnalysis():
         date_range = [(start_date + timedelta(days=date)).strftime("%Y-%m-%d") for date in range(range_number)]
 
         # Using ThreadPoolExecutor efficiently
+        t1=datetime.now()
         with ThreadPoolExecutor(max_workers=min(len(date_range), 10)) as executor:
             futures = {
                 executor.submit(self.get_result, start_date, use_cache, iter, True, hotelstarAnalysis): start_date
@@ -217,6 +222,11 @@ class BuildTourAnalysis():
                 start_date: future.result() if (future.exception() is None) else []
                 for future, start_date in futures.items()
             }
+
+            # Ensure all threads are properly closed
+            executor.shutdown(wait=True)
+            logger.info(f' time BuildTour get_analysis --- {(datetime.now() - t1).total_seconds()}')
+
 
         return result
 
@@ -439,9 +449,10 @@ class BuildTourAnalysis():
         results = {"flight": None, "hotel": None, "providers": {}}
 
         # === Submit Flight & Hotel Requests Asynchronously ===
+        t1=datetime.now()
         with ThreadPoolExecutor(max_workers=2) as executor:
             futures = {
-                executor.submit(self.get_flight, start_date, end_date): "flight",
+                # executor.submit(self.get_flight, start_date, end_date): "flight",
                 executor.submit(self.get_hotel, start_date, end_date, use_cache, iter, isAnalysiss,
                                 hotelstarAnalysis): "hotel"
             }
@@ -455,10 +466,13 @@ class BuildTourAnalysis():
                     print(f"--------------------------------\n{task_type} time out or error\n{traceback.format_exc()}")
                     results[task_type] = {'go_flight': [], "return_flight": []} if task_type == "flight" else []
 
+        logger.info(f' time BuildTour get_result --- {(datetime.now() - t1).total_seconds()}')
         # === Process Providers Efficiently ===
+        t1=datetime.now()
         if results["hotel"]:
             results["providers"] = self.process_providers(results["hotel"])
 
+        logger.info(f' time BuildTour process_providers --- {(datetime.now() - t1).total_seconds()}')
         # === Cache the Result in the Background ===
         with ThreadPoolExecutor(max_workers=1) as executor:
             executor.submit(add_cache, redis_key, results)

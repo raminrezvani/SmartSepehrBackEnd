@@ -22,12 +22,15 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from concurrent.futures import ThreadPoolExecutor
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, wait
+# from concurrent.futures import ProcessPoolExecutor
 from datetime import datetime
+from app_crawl.hotel.sepehr_standalone import get_result as sepehr_get_result
 
 import traceback
 import time
 # executorHotel=ThreadPoolExecutor(max_workers=100)
-
+import logging
+logger = logging.getLogger('django')
 class Hotel:
     def __init__(self, source, target, start_date, end_date, adults,use_cache,isAnalysiss=False,hotelstarAnalysis=[]):
         self.source = source
@@ -984,57 +987,225 @@ class Hotel:
 
     def get_ALLDestination_data(self,iter):
         try:
-
+            t1 = datetime.now()
             results = []
+
+            #
+            # hotel_tasks = {
+            #     "darvishi": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DARVISHI, 'darvishi',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "moeindarbari": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, MOEINDARBARI,'moeindarbari',self.isAnalysis,self.hotelstarAnalysis),
+            #     "deltaban": Deltaban(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
+            #     # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
+            #     "snapp": Snapp(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
+            #     "alaedin": Alaedin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
+            #     "eghamat": Eghamat24(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
+            #     "booking": Booking(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis),
+            #     "jimboo": Jimbo(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis),
+            #     # "rahbal": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, RAHBAL, 'rahbal',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "hrc": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HRC, 'hrc',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "dayan": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DAYAN, 'dayan',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "omid_oj": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, OMID_OJ, 'omid_oj',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "sepid_parvaz": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SEPID_PARVAZ,'sepid_parvaz',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "parmis": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, PARMIS, 'parmis',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "mehrab": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, MEHRAB, 'mehrab',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "hamsafar": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HAMSAFAR, 'hamsafar',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "tak_setareh": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, TAK_SETAREH,'tak_setareh',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "kimiya": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, TOURISTKISH, 'kimiya',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "eram2mhd": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, ERAM2MHD, 'eram2mhd',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "shayan_gasht": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SHAYAN_GASHT,'shayan_gasht',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "iman": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, IMAN, 'iman',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "flamingo": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, FLAMINGO, 'flamingo',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "yegane_fard": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, YEGANE_FARD,'yegane_fard',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "hamood": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HAMOOD, 'hamood',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "safiran": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SAFIRAN, 'safiran',self.isAnalysis,self.hotelstarAnalysis),
+            #     # "dolfin": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DOLFIN, 'dolfin',self.isAnalysis,self.hotelstarAnalysis)
+            # }
+
             hotel_tasks = {
-                "darvishi": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DARVISHI, 'darvishi',self.isAnalysis,self.hotelstarAnalysis),
-                "moeindarbari": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, MOEINDARBARI,'moeindarbari',self.isAnalysis,self.hotelstarAnalysis),
                 "deltaban": Deltaban(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
-                # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
+                # # # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
                 "snapp": Snapp(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
                 "alaedin": Alaedin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
                 "eghamat": Eghamat24(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
                 "booking": Booking(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis),
                 "jimboo": Jimbo(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis),
-                "rahbal": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, RAHBAL, 'rahbal',self.isAnalysis,self.hotelstarAnalysis),
-                "hrc": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HRC, 'hrc',self.isAnalysis,self.hotelstarAnalysis),
-                "dayan": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DAYAN, 'dayan',self.isAnalysis,self.hotelstarAnalysis),
-                "omid_oj": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, OMID_OJ, 'omid_oj',self.isAnalysis,self.hotelstarAnalysis),
-                "sepid_parvaz": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SEPID_PARVAZ,'sepid_parvaz',self.isAnalysis,self.hotelstarAnalysis),
-                "parmis": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, PARMIS, 'parmis',self.isAnalysis,self.hotelstarAnalysis),
-                "mehrab": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, MEHRAB, 'mehrab',self.isAnalysis,self.hotelstarAnalysis),
-                "hamsafar": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HAMSAFAR, 'hamsafar',self.isAnalysis,self.hotelstarAnalysis),
-                "tak_setareh": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, TAK_SETAREH,'tak_setareh',self.isAnalysis,self.hotelstarAnalysis),
-                "kimiya": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, TOURISTKISH, 'kimiya',self.isAnalysis,self.hotelstarAnalysis),
-                "eram2mhd": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, ERAM2MHD, 'eram2mhd',self.isAnalysis,self.hotelstarAnalysis),
-                "shayan_gasht": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SHAYAN_GASHT,'shayan_gasht',self.isAnalysis,self.hotelstarAnalysis),
-                "iman": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, IMAN, 'iman',self.isAnalysis,self.hotelstarAnalysis),
-                "flamingo": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, FLAMINGO, 'flamingo',self.isAnalysis,self.hotelstarAnalysis),
-                "yegane_fard": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, YEGANE_FARD,'yegane_fard',self.isAnalysis,self.hotelstarAnalysis),
-                "hamood": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, HAMOOD, 'hamood',self.isAnalysis,self.hotelstarAnalysis),
-                "safiran": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, SAFIRAN, 'safiran',self.isAnalysis,self.hotelstarAnalysis),
-                "dolfin": SepehrHotel(self.target, self.start_date, self.end_date, self.adults, DOLFIN, 'dolfin',self.isAnalysis,self.hotelstarAnalysis)
+
+                "darvishi": 1,
+                # "moeindarbari": 1,
+                # "rahbal":1,
+                # "hrc": 1,
+                # "dayan": 1,
+                # "omid_oj": 1,
+                # "sepid_parvaz":1,
+                # "parmis":1,
+                # "mehrab": 1,
+                # "hamsafar":1,
+                # "tak_setareh":1,
+                # "kimiya": 1,
+                # "eram2mhd": 1,
+                # "shayan_gasht": 1,
+                # "iman": 1,
+                # "flamingo": 1,
+                # "yegane_fard": 1,
+                # "hamood": 1,
+                # "safiran": 1,
+                # "dolfin": 1
             }
+
+            # print(f' time Create hotel_tasks --- {(datetime.now()-t1).total_seconds()} ')
+            logger.info(f' time Create hotel_tasks --- {(datetime.now()-t1).total_seconds()}' )
             provider_status = {}
             startTime = datetime.now()
+
+
             with ThreadPoolExecutor(max_workers=min(len(hotel_tasks.keys()), 50)) as executor:
-                futures = {executor.submit(task.get_result): key for key, task in hotel_tasks.items()}
+                fu={}
+                for key , task in hotel_tasks.items():
+                    if key == 'darvishi' and task== 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, DARVISHI, 'darvishi', self.isAnalysis, self.hotelstarAnalysis
+                        )]='darvishi'
+                    elif key == 'moeindarbari' and task==1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, MOEINDARBARI, 'moeindarbari', self.isAnalysis, self.hotelstarAnalysis
+                        )]='moeindarbari'
+                    elif key == 'rahbal' and task==1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, RAHBAL, 'rahbal', self.isAnalysis, self.hotelstarAnalysis
+                        )]='rahbal'
+                    elif key == 'hrc' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, HRC, 'hrc', self.isAnalysis, self.hotelstarAnalysis
+                        )]='hrc'
+                    elif key == 'dayan' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, DAYAN, 'dayan', self.isAnalysis, self.hotelstarAnalysis
+                        )]='dayan'
+                    elif key == 'omid_oj' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, OMID_OJ, 'omid_oj', self.isAnalysis, self.hotelstarAnalysis
+                        )]='omid_oj'
+                    elif key == 'hrc' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, HRC, 'hrc', self.isAnalysis, self.hotelstarAnalysis
+                        )]='hrc'
+                    elif key == 'sepid_parvaz' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, SEPID_PARVAZ, 'sepid_parvaz', self.isAnalysis, self.hotelstarAnalysis
+                        )]='sepid_parvaz'
+                    elif key == 'parmis' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, PARMIS, 'parmis', self.isAnalysis, self.hotelstarAnalysis
+                        )]='parmis'
+                    elif key == 'mehrab' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, MEHRAB, 'mehrab', self.isAnalysis, self.hotelstarAnalysis
+                        )]='mehrab'
+                    elif key == 'hamsafar' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, HAMSAFAR, 'hamsafar', self.isAnalysis, self.hotelstarAnalysis
+                        )]='hamsafar'
+                    elif key == 'tak_setareh' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, TAK_SETAREH, 'tak_setareh', self.isAnalysis, self.hotelstarAnalysis
+                        )]='tak_setareh'
+                    elif key == 'kimiya' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, TOURISTKISH, 'kimiya', self.isAnalysis, self.hotelstarAnalysis
+                        )]='kimiya'
+                    elif key == 'eram2mhd' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, ERAM2MHD, 'eram2mhd', self.isAnalysis, self.hotelstarAnalysis
+                        )]='eram2mhd'
+                    elif key == 'shayan_gasht' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, SHAYAN_GASHT, 'shayan_gasht', self.isAnalysis, self.hotelstarAnalysis
+                        )]='shayan_gasht'
 
-                for future in as_completed(futures):
-                    key = futures[future]
+                    elif key == 'iman' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, IMAN, 'iman', self.isAnalysis, self.hotelstarAnalysis
+                        )]='iman'
+                    elif key == 'flamingo' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, FLAMINGO, 'flamingo', self.isAnalysis, self.hotelstarAnalysis
+                        )]='flamingo'
+                    elif key == 'yegane_fard' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, YEGANE_FARD, 'yegane_fard', self.isAnalysis, self.hotelstarAnalysis
+                        )]='yegane_fard'
+                    elif key == 'hamood' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, HAMOOD, 'hamood', self.isAnalysis, self.hotelstarAnalysis
+                        )]='hamood'
+                    elif key == 'safiran' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, SAFIRAN, 'safiran', self.isAnalysis, self.hotelstarAnalysis
+                        )]='safiran'
+                    elif key == 'dolfin' and task == 1:
+                        fu[executor.submit(
+                            sepehr_get_result, self.target, self.start_date, self.end_date,
+                            self.adults, DOLFIN, 'dolfin', self.isAnalysis, self.hotelstarAnalysis
+                        )]='dolfin'
+
+                        # ??? Complete ??
+                    else:
+                        fu[executor.submit(task.get_result)]=key
+
+                #--- OLD ---
+                # futures = {executor.submit(task.get_result): key for key, task in hotel_tasks.items()}
+                # print(f' time Assign tasks --- {(datetime.now() - startTime).total_seconds()} ')
+                logger.info(f' time Assign tasks --- {(datetime.now() - startTime).total_seconds()}' )
+
+                t1=datetime.now()
+                for future in as_completed(fu):
+                    # key = fu[future]
                     try:
-                        result=future.result(timeout=60)   # Set timeout for each provider
-                        if result:
+                        result=future.result()   # Set timeout for each provider
+                        if  isinstance(result, dict):
+                            if (len(result['data'])!=0):
+                                results.append(result)
+                        else:
                             results.append(result)
+                            logger.info(f' Length hotel results --- {len(result)}')
 
-                        spendTime = (datetime.now() - startTime).total_seconds()
-                        print(f'{key} ----- > spend:  {spendTime}')
+                        logger.info(f' time hotel isinstance(result, dict) --- {(datetime.now() - t1).total_seconds()}')
 
+                        # spendTime = (datetime.now() - startTime).total_seconds()
+                        # print(f'{key} ----- > spend:  {spendTime}')
+                        # logger.info(f'{key} ----- > spend:  {spendTime}')
                     except Exception as e:
-                        print(f"Error in {key}: {e}")
+                        print(f"Error in er: {e}")
                         # results.append([])
+                # executor.shutdown(wait=False)
+                logger.info(f' time hotel as_completed --- {(datetime.now() - t1).total_seconds()}')
 
-            return self.read_data_ALLDestination(results)
+            t1=datetime.now()
+            temp=self.read_data_ALLDestination(results)
+            # print(f' time read_data_ALLDestination --- {(datetime.now() - t1).total_seconds()} ')
+            logger.info(f' time read_data_ALLDestination --- {(datetime.now() - t1).total_seconds()}')
+
+            return temp
 
         except Exception as e:
             # Log the error and the line number
@@ -1496,24 +1667,32 @@ class Hotel:
 
     def get_result(self,iter):
 
+
         redis_key = f"{self.source}_{self.target}_{self.start_date}_{self.end_date}_{self.adults}"
 
+        t1=datetime.now()
         # Check cache first
         if self.use_cache:
             cached_result = get_dict_to_redis(redis_key) if check_redis_key(redis_key) else None
             if cached_result is not None:
                 return cached_result
+        logger.info(f' time hotel redis_cache --- {(datetime.now() - t1).total_seconds()}')
 
+        t1=datetime.now()
         # Fetch new data
         result = self.get_ALLDestination_data(iter)
+        logger.info(f' time hotel get_ALLDestination_data --- {(datetime.now() - t1).total_seconds()}')
 
         # Cache the result asynchronously if valid
         # Optimized Threading: Uses a single worker since Redis operations are I/O bound.
         #Faster Lookups: Only checks Redis once and avoids redundant keys
+        t1 = datetime.now()
         if result:
             print('start caching ..........')
             with ThreadPoolExecutor(max_workers=1) as executor:
                 executor.submit(add_dict_to_redis, redis_key, result, self.redis_expire)
+
+        logger.info(f' time hotel beforeSend --- {(datetime.now() - t1).total_seconds()}')
 
         return result
 

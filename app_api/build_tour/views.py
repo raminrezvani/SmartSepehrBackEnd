@@ -6,7 +6,12 @@ from app_crawl.build_tour.main import BuildTour, BuildTourAnalysis
 from app_report.manager import add_search_report
 from app_utils.validation import check_full_body
 import timeout_decorator
-
+# import gc
+from django.core.signals import request_finished
+#
+# def clean_up_memory(sender, **kwargs):
+#     gc.collect()  # Force memory cleanup
+#
 
 class BuildTourApi(APIView):
     permission_classes = [permissions.IsAuthenticated]
@@ -54,6 +59,11 @@ class BuildTourApi(APIView):
         # ---
         tour = BuildTour(source=source, target=target, start_date=start_date, end_date=end_date, adults=adults)
         result = tour.get_result(use_cache=use_cache)
+        # del tour
+        # import gc
+        # gc.collect()
+        # request_finished.connect(clean_up_memory)
+
         # ---
         report_data = {
             "user_id": request.user.id if request.user.is_authenticated else 1,
@@ -73,7 +83,7 @@ class BuildTourApi(APIView):
         report_data['source']="MHD"
         #+===
 
-        add_search_report.after_response(report_data)
+        # add_search_report.after_response(report_data)
         # ---
         return Response(
             result,
@@ -124,6 +134,7 @@ class BuildTourAnalysisApi(APIView):
         adults = request.data.get('adults', None)
         night_count = request.data.get("night_count", None)
         hotelstarAnalysis = request.data.get("hotelstarAnalysis", [])
+
         # stay = request.data.get('stay',None)
         range_number=7
         use_cache = request.data.get('use_cache', True)
@@ -140,6 +151,15 @@ class BuildTourAnalysisApi(APIView):
         tourAnalysis = BuildTourAnalysis(start_date=start_date,end_date=end_date,source=source, target=target,night_count=night_count, adults=adults)
         result = tourAnalysis.get_analysis(start_date=start_date,end_date=end_date,range_number=range_number,use_cache=use_cache,hotelstarAnalysis=hotelstarAnalysis)
 
+        # tourAnalysis = None
+        # gc.collect()
+
+        # request_finished.connect(clean_up_memory)
+
+
+        # del tourAnalysis
+        # import gc
+        # gc.collect()
         # result = tour_collector.get_analysis(source, target,range_number=range_number, use_cache=use_cache)   # ready_tour
 
 
@@ -163,10 +183,23 @@ class BuildTourAnalysisApi(APIView):
         # report_data['source']="MHD"
         # #+===
 
-        add_search_report.after_response(report_data)
+        # add_search_report.after_response(report_data)
         # ---
         return Response(
             result,
             status=status.HTTP_200_OK
         )
 
+# #-------------- Garbage collector (Bayad optimzie shavad)--------------
+# import gc
+# import threading
+# import time
+# def run_gc():
+#     while True:
+#         gc.collect()
+#         print("Garbage collection completed.")
+#         time.sleep(20)  # Adjust the interval as needed
+#
+# # Start GC in a background thread
+# gc_thread = threading.Thread(target=run_gc, daemon=True)
+# gc_thread.start()
