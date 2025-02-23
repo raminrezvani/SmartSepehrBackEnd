@@ -46,7 +46,7 @@ hotelIDs = {
 
 class Deltaban:
     isAnalysis=False
-    def __init__(self, target, start_date, end_date, adults,isAnalysiss,hotelstarAnalysis=[]):
+    def __init__(self, target, start_date, end_date, adults,isAnalysiss,hotelstarAnalysis=[],priorityTimestamp=1):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
@@ -54,7 +54,7 @@ class Deltaban:
         self.isAnalysis=isAnalysiss[0] if isAnalysiss is tuple else isAnalysiss ,
         self.isAnalysis = self.isAnalysis[0] if isinstance(self.isAnalysis, tuple) else self.isAnalysis
         self.hotelstarAnalysis=hotelstarAnalysis
-
+        self.priorityTimestamp=priorityTimestamp
         self.influx = Influxdb()
 
         # self.executor = ThreadPoolExecutor(max_workers=50)
@@ -98,7 +98,8 @@ class Deltaban:
                                   url=url,
                                   headers=headers,
                                   data=json.dumps(self.login),
-                                  verify=False)
+                                  verify=False,
+                                  priorityTimestamp=self.priorityTimestamp)
         response=response.json()
 
 
@@ -200,7 +201,7 @@ class Deltaban:
 
 
             # req = request("GET", req_url, headers=self.request_header)
-            req = executeRequest(method="GET",url= req_url, headers=self.request_header)
+            req = executeRequest(method="GET",url= req_url, headers=self.request_header,priorityTimestamp=self.priorityTimestamp)
             req=req.json()
 
             self.influx.capture_logs(1,'deltaban')
@@ -218,7 +219,7 @@ class Deltaban:
     def fetch_data(self,req_url, request_header):
         try:
             # req = request("GET", req_url, headers=request_header)
-            req = executeRequest(method="GET", url=req_url, headers=request_header)
+            req = executeRequest(method="GET", url=req_url, headers=request_header,priorityTimestamp=self.priorityTimestamp)
             req=req.json()
 
 
@@ -310,7 +311,7 @@ class Deltaban:
                 try:
                     while(counter<20):
                         # req = request("GET", req_url, headers=self.request_header)
-                        req = executeRequest(method="GET",url= req_url, headers=self.request_header)
+                        req = executeRequest(method="GET",url= req_url, headers=self.request_header,priorityTimestamp=self.priorityTimestamp)
                         req=req.json()
 
 
@@ -351,7 +352,7 @@ class Deltaban:
 
         #======== Check for 5-Star hotels
         if self.isAnalysis:
-            hotels=[htl for htl in hotels if str(htl['star']) in self.hotelstarAnalysis]
+            hotels=[htl for htl in hotels if str(htl['hotel_star']) in self.hotelstarAnalysis]
             print(f'Deltaban Analysis')
         else:
             print(f'Deltaban RASII')

@@ -12,7 +12,7 @@ from django.core.signals import request_finished
 # def clean_up_memory(sender, **kwargs):
 #     gc.collect()  # Force memory cleanup
 #
-
+from datetime import datetime
 class BuildTourApi(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
@@ -134,6 +134,8 @@ class BuildTourAnalysisApi(APIView):
         adults = request.data.get('adults', None)
         night_count = request.data.get("night_count", None)
         hotelstarAnalysis = request.data.get("hotelstarAnalysis", [])
+        priorityTimestamp=datetime.now().timestamp()
+
 
         # stay = request.data.get('stay',None)
         range_number=7
@@ -149,7 +151,7 @@ class BuildTourAnalysisApi(APIView):
 
         # ---
         tourAnalysis = BuildTourAnalysis(start_date=start_date,end_date=end_date,source=source, target=target,night_count=night_count, adults=adults)
-        result = tourAnalysis.get_analysis(start_date=start_date,end_date=end_date,range_number=range_number,use_cache=use_cache,hotelstarAnalysis=hotelstarAnalysis)
+        result = tourAnalysis.get_analysis(start_date=start_date,end_date=end_date,range_number=range_number,use_cache=use_cache,hotelstarAnalysis=hotelstarAnalysis,priorityTimestamp=priorityTimestamp)
 
         # tourAnalysis = None
         # gc.collect()

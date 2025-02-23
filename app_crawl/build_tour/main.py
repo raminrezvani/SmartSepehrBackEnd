@@ -196,15 +196,16 @@ class BuildTourAnalysis():
                         one_way=False)
         return flight.get_result()
 
-    def get_hotel(self,start_date,end_date,use_cache,iter,isAnalysiss,hotelstarAnalysis):
+    def get_hotel(self,start_date,end_date,use_cache,iter,isAnalysiss,hotelstarAnalysis,priorityTimestamp):
         hotel = Hotel(source=self.source, target=self.target, start_date=start_date, end_date=end_date,
-                      adults=self.adults,use_cache=use_cache,isAnalysiss=isAnalysiss,hotelstarAnalysis=hotelstarAnalysis)
+                      adults=self.adults,use_cache=use_cache,isAnalysiss=isAnalysiss,hotelstarAnalysis=hotelstarAnalysis,
+                      priorityTimestamp=priorityTimestamp)
         return hotel.get_result(iter)
 
     from concurrent.futures import ThreadPoolExecutor
     from datetime import datetime, timedelta
 
-    def get_analysis(self, start_date, end_date, range_number=7, use_cache=True, hotelstarAnalysis=[]):
+    def get_analysis(self, start_date, end_date, range_number=7, use_cache=True, hotelstarAnalysis=[],priorityTimestamp=1):
         print(f'Get Analysisssss {hotelstarAnalysis[0]}')
         start_date = datetime.strptime(start_date, "%Y-%m-%d").date()
         date_range = [(start_date + timedelta(days=date)).strftime("%Y-%m-%d") for date in range(range_number)]
@@ -213,7 +214,7 @@ class BuildTourAnalysis():
         t1=datetime.now()
         with ThreadPoolExecutor(max_workers=min(len(date_range), 10)) as executor:
             futures = {
-                executor.submit(self.get_result, start_date, use_cache, iter, True, hotelstarAnalysis): start_date
+                executor.submit(self.get_result, start_date, use_cache, iter, True, hotelstarAnalysis,priorityTimestamp): start_date
                 for iter, start_date in enumerate(date_range)
             }
 
@@ -436,7 +437,7 @@ class BuildTourAnalysis():
         # return {'status': True, "data": result}
 
 
-    def get_result(self, start_date, use_cache, iter, isAnalysiss=False, hotelstarAnalysis=[]):
+    def get_result(self, start_date, use_cache, iter, isAnalysiss=False, hotelstarAnalysis=[],priorityTimestamp=1):
         start_date_obj = datetime.strptime(start_date, "%Y-%m-%d").date()
         end_date_obj = start_date_obj + timedelta(days=self.night_count)
         end_date = end_date_obj.strftime("%Y-%m-%d")
@@ -454,7 +455,7 @@ class BuildTourAnalysis():
             futures = {
                 # executor.submit(self.get_flight, start_date, end_date): "flight",
                 executor.submit(self.get_hotel, start_date, end_date, use_cache, iter, isAnalysiss,
-                                hotelstarAnalysis): "hotel"
+                                hotelstarAnalysis,priorityTimestamp): "hotel"
             }
 
             # === Process Completed Tasks ===

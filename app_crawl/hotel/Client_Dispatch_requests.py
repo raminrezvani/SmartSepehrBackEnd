@@ -17,9 +17,9 @@ import itertools
 
 # Define servers and ports
 servers = [
-    ("mqtt.angizehco.com", [6000, 6001, 6002, 6003, 6004, 6005]),
+    # ("mqtt.angizehco.com", [6000, 6001, 6002, 6003, 6004, 6005]),
     ("45.149.76.168", [6000, 6001, 6002, 6003, 6004, 6005]),
-    ("130.185.77.24", [6000, 6001, 6002, 6003, 6004, 6005]),
+    # ("130.185.77.24", [6000, 6001, 6002, 6003, 6004, 6005]),
 ]
 
 
@@ -52,7 +52,8 @@ def executeRequest(method, url,
                    params=None, cookies=None,
                    headers=None, data=None,
                    json_data=None,
-                   verify=False):
+                   verify=False,
+                   priorityTimestamp=1):
     # Select the next server and port in a round-robin fashion
 
     server, port = next_server().split(':')  # Get next server-port pair
@@ -71,6 +72,7 @@ def executeRequest(method, url,
         'method': method,
         'data': json.dumps(data) if data is not None else '{}',
         'json': json.dumps(json_data) if json_data is not None else '{}',
+        'priorityTimestamp': priorityTimestamp,
     }
 
 

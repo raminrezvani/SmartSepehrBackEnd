@@ -32,7 +32,7 @@ import time
 import logging
 logger = logging.getLogger('django')
 class Hotel:
-    def __init__(self, source, target, start_date, end_date, adults,use_cache,isAnalysiss=False,hotelstarAnalysis=[]):
+    def __init__(self, source, target, start_date, end_date, adults,use_cache,isAnalysiss=False,hotelstarAnalysis=[],priorityTimestamp=1):
         self.source = source
         self.target = target
         self.start_date = start_date
@@ -46,7 +46,7 @@ class Hotel:
         # self.isAnalysis = self.isAnalysis[0] if self.isAnalysis is tuple else self.isAnalysis,  # because isAnalysis is a tuple
 
         self.hotelstarAnalysis=hotelstarAnalysis
-
+        self.priorityTimestamp=priorityTimestamp
     #==== Threaded version ====
     from concurrent.futures import ThreadPoolExecutor
     from collections import defaultdict
@@ -1022,15 +1022,15 @@ class Hotel:
             # }
 
             hotel_tasks = {
-                "deltaban": Deltaban(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
-                # # # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
-                "snapp": Snapp(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
-                "alaedin": Alaedin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
-                "eghamat": Eghamat24(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis),
-                "booking": Booking(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis),
-                "jimboo": Jimbo(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis),
-
-                "darvishi": 1,
+                "deltaban": Deltaban(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp),
+                # # # # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp),
+                # "snapp": Snapp(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp),
+                # "alaedin": Alaedin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp),
+                # "eghamat": Eghamat24(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp),
+                # "booking": Booking(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp),
+                # "jimboo": Jimbo(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp),
+                #
+                # "darvishi": 1,
                 # "moeindarbari": 1,
                 # "rahbal":1,
                 # "hrc": 1,
@@ -1064,108 +1064,108 @@ class Hotel:
                     if key == 'darvishi' and task== 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, DARVISHI, 'darvishi', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, DARVISHI, 'darvishi', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='darvishi'
                     elif key == 'moeindarbari' and task==1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, MOEINDARBARI, 'moeindarbari', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, MOEINDARBARI, 'moeindarbari', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='moeindarbari'
                     elif key == 'rahbal' and task==1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, RAHBAL, 'rahbal', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, RAHBAL, 'rahbal', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='rahbal'
                     elif key == 'hrc' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, HRC, 'hrc', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, HRC, 'hrc', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='hrc'
                     elif key == 'dayan' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, DAYAN, 'dayan', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, DAYAN, 'dayan', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='dayan'
                     elif key == 'omid_oj' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, OMID_OJ, 'omid_oj', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, OMID_OJ, 'omid_oj', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='omid_oj'
                     elif key == 'hrc' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, HRC, 'hrc', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, HRC, 'hrc', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='hrc'
                     elif key == 'sepid_parvaz' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, SEPID_PARVAZ, 'sepid_parvaz', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, SEPID_PARVAZ, 'sepid_parvaz', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='sepid_parvaz'
                     elif key == 'parmis' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, PARMIS, 'parmis', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, PARMIS, 'parmis', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='parmis'
                     elif key == 'mehrab' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, MEHRAB, 'mehrab', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, MEHRAB, 'mehrab', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='mehrab'
                     elif key == 'hamsafar' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, HAMSAFAR, 'hamsafar', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, HAMSAFAR, 'hamsafar', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='hamsafar'
                     elif key == 'tak_setareh' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, TAK_SETAREH, 'tak_setareh', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, TAK_SETAREH, 'tak_setareh', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='tak_setareh'
                     elif key == 'kimiya' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, TOURISTKISH, 'kimiya', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, TOURISTKISH, 'kimiya', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='kimiya'
                     elif key == 'eram2mhd' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, ERAM2MHD, 'eram2mhd', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, ERAM2MHD, 'eram2mhd', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='eram2mhd'
                     elif key == 'shayan_gasht' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, SHAYAN_GASHT, 'shayan_gasht', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, SHAYAN_GASHT, 'shayan_gasht', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='shayan_gasht'
 
                     elif key == 'iman' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, IMAN, 'iman', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, IMAN, 'iman', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='iman'
                     elif key == 'flamingo' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, FLAMINGO, 'flamingo', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, FLAMINGO, 'flamingo', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='flamingo'
                     elif key == 'yegane_fard' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, YEGANE_FARD, 'yegane_fard', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, YEGANE_FARD, 'yegane_fard', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='yegane_fard'
                     elif key == 'hamood' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, HAMOOD, 'hamood', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, HAMOOD, 'hamood', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='hamood'
                     elif key == 'safiran' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, SAFIRAN, 'safiran', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, SAFIRAN, 'safiran', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='safiran'
                     elif key == 'dolfin' and task == 1:
                         fu[executor.submit(
                             sepehr_get_result, self.target, self.start_date, self.end_date,
-                            self.adults, DOLFIN, 'dolfin', self.isAnalysis, self.hotelstarAnalysis
+                            self.adults, DOLFIN, 'dolfin', self.isAnalysis, self.hotelstarAnalysis,self.priorityTimestamp
                         )]='dolfin'
 
                         # ??? Complete ??
