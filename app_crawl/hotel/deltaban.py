@@ -11,7 +11,7 @@ import urllib3
 from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 
 from app_crawl.insert_influx import Influxdb
-
+import traceback
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 hotelIDs = {
@@ -100,7 +100,8 @@ class Deltaban:
                                   data=json.dumps(self.login),
                                   verify=False,
                                   priorityTimestamp=self.priorityTimestamp)
-        response=response.json()
+        # response=response.json()
+        response=json.loads(response)
 
 
 
@@ -202,7 +203,8 @@ class Deltaban:
 
             # req = request("GET", req_url, headers=self.request_header)
             req = executeRequest(method="GET",url= req_url, headers=self.request_header,priorityTimestamp=self.priorityTimestamp)
-            req=req.json()
+            # req=req.json()
+            req = json.loads(req)
 
             self.influx.capture_logs(1,'deltaban')
 
@@ -220,7 +222,8 @@ class Deltaban:
         try:
             # req = request("GET", req_url, headers=request_header)
             req = executeRequest(method="GET", url=req_url, headers=request_header,priorityTimestamp=self.priorityTimestamp)
-            req=req.json()
+            # req=req.json()
+            req = json.loads(req)
 
 
             self.influx.capture_logs(1, 'deltaban')
@@ -312,12 +315,20 @@ class Deltaban:
                     while(counter<20):
                         # req = request("GET", req_url, headers=self.request_header)
                         req = executeRequest(method="GET",url= req_url, headers=self.request_header,priorityTimestamp=self.priorityTimestamp)
-                        req=req.json()
+                        # req=req.json()
+                        req = json.loads(req)
 
 
                         self.influx.capture_logs(1, 'deltaban')
+                        data={}
+                        try:
+                            data = json.loads(req['text'])
+                        except:
+                            # print(f'req ==== {req}')
+                            # counter += 1
+                            break
+                            # continue
 
-                        data = json.loads(req['text'])
 
                         counter += 1
 
@@ -335,7 +346,11 @@ class Deltaban:
                         #     print('ok shod')
                         #     break
                     break
-                except:
+                except Exception as e:
+                    tb = traceback.format_exc()
+                    print(f'Except occured in get_result_deltaban == {str(e)}')
+                    print(f"Traceback details:\n{tb}")
+                    counter += 1
                     # time.sleep(1)
                     continue
             # #=======================================

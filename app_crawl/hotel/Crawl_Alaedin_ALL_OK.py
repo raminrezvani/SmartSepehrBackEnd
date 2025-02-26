@@ -48,7 +48,8 @@ destin_text={
         }
 
 class Alaedin:
-    def __init__(self, target, start_date, end_date, adults,isAnalysiss=False,hotelstarAnalysis=[]):
+    def __init__(self, target, start_date, end_date, adults,isAnalysiss=False,hotelstarAnalysis=[],
+                 priorityTimestamp=1):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
@@ -59,7 +60,7 @@ class Alaedin:
 
 
         self.hotelstarAnalysis=hotelstarAnalysis
-
+        self.priorityTimestamp = priorityTimestamp
 
 
 
@@ -68,39 +69,50 @@ class Alaedin:
 
     def get_rooms(self,hotelCod, start_date, stay):
         # Define the parameters
+
         params = {
             # 'hotelCod': '1006',  # Example hotel code
             'hotelCod': hotelCod,  # Example hotel code
             'start_date': start_date,  # Example Shamsi date in 'yyyyMMdd' format
-            'stay': stay  # Example stay duration in nights
+            'stay': stay,  # Example stay duration in nights
+            'priorityTimestamp':self.priorityTimestamp
         }
 
         # Send a GET request to the API
         response = requests.get("http://45.149.76.168:5003/Alaedin_rooms", params=params,timeout=3600)
 
+        json_data={}
+        try:
+            json_data = json.loads(response.text)['text']
+            json_data=json.loads(json_data)
+            json_data['room']
+        except Exception as e:
+            print(f'in Getting json_data === {str(e)}')
 
-        json_data = json.loads(response.text)
+
         rooms = []
         for i in range(len(json_data['room'])):
+            try:
+                #==== Check karnae list entezar and etc
+                if (hotelCod=='1226'):
+                    print('ssd')
+                if (json_data['room'][i]['isEntezar'] or
+                        json_data['room'][i]['isNorozFr'] or
+                        json_data['room'][i]['isViewPriceBoard']
+                ):
+                    # print(json_data['room'][i]['roomTypeName'])
+                    continue
+                #============
 
-            #==== Check karnae list entezar and etc
-            if (hotelCod=='1226'):
-                print('ssd')
-            if (json_data['room'][i]['isEntezar'] or
-                    json_data['room'][i]['isNorozFr'] or
-                    json_data['room'][i]['isViewPriceBoard']
-            ):
-                # print(json_data['room'][i]['roomTypeName'])
-                continue
-            #============
+                room = {}
+                room['name'] = json_data['room'][i]['roomTypeName']
 
-            room = {}
-            room['name'] = json_data['room'][i]['roomTypeName']
-
-            room['price'] = json_data['room'][i]['sumPrice']
-            room['capacity']=json_data['room'][i]['numMax']
-            room['provider'] = 'Alaedin'
-            rooms.append(room)
+                room['price'] = json_data['room'][i]['sumPrice']
+                room['capacity']=json_data['room'][i]['numMax']
+                room['provider'] = 'Alaedin'
+                rooms.append(room)
+            except Exception as e:
+                print(f'in Getting rooms === {str(e)}')
 
         return rooms
 
@@ -114,8 +126,9 @@ class Alaedin:
 
         # Fetch hotel data
         url = f"https://www.alaedin.travel/hotels/{destin_text[self.target]}/{shamsi_start_date_hotel}/{stay_duration}"
-        response = executeRequest(method="get", url=url)
-        response_data = response.json()
+        response = executeRequest(method="get", url=url,priorityTimestamp=self.priorityTimestamp)
+        # response_data = response.json()
+        response_data = json.loads(response)
 
         # Parse HTML response
         parser = etree.HTMLParser()
@@ -242,8 +255,11 @@ class Alaedin:
             # aa = requests.get('https://www.alaedin.travel/hotels/kish/14030803/3')
             # aa = requests.get(f'https://www.alaedin.travel/hotels/{self.destin_text[self.target]}/{shamsi_start_date_hotel}/{stay_duration}',timeout=3600)
             aa = executeRequest(method='get',
-                url=f'https://www.alaedin.travel/hotels/{destin_text[self.target]}/{shamsi_start_date_hotel}/{stay_duration}')
-            aa=aa.json()
+                url=f'https://www.alaedin.travel/hotels/{destin_text[self.target]}/{shamsi_start_date_hotel}/{stay_duration}',
+                                priorityTimestamp=self.priorityTimestamp)
+            # aa=aa.json()
+            aa = json.loads(aa)
+
 
             # ==parsing
             parser = etree.HTMLParser()
