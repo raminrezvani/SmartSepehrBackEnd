@@ -11,7 +11,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 class Eghamat24:
-    def __init__(self, target, start_date, end_date, adults,isAnalysiss=False,hotelstarAnalysis=[]):
+    def __init__(self, target, start_date, end_date, adults,isAnalysiss=False,hotelstarAnalysis=[],priorityTimestamp=1):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
@@ -21,7 +21,7 @@ class Eghamat24:
         self.isAnalysis = self.isAnalysis[0] if isinstance(self.isAnalysis, tuple) else self.isAnalysis
 
         self.hotelstarAnalysis=hotelstarAnalysis
-
+        self.priorityTimestamp = priorityTimestamp
 
         self.header = {
             'Content-Type': 'application/json'
@@ -44,11 +44,13 @@ class Eghamat24:
                 'startdate': self.start_date,
                 'stay': stay_duration,
                 'isAnalysis': '1' if self.isAnalysis else '0',
-                'hotelstarAnalysis':json.dumps(self.hotelstarAnalysis)
+                'hotelstarAnalysis':json.dumps(self.hotelstarAnalysis),
+                'priorityTimestamp':self.priorityTimestamp
 
             }
             response = requests.get(urll, params=params)
             data=response.json()
+            # data = json.loads(response)
             #=============
 
             if len(data) <= 0:

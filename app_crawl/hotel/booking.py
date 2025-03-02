@@ -9,7 +9,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 import random
 class Booking:
-    def __init__(self, target, start_date, end_date, adults,iterr=1,isAnalysiss=False,hotelstarAnalysis=[]):
+    def __init__(self, target, start_date, end_date, adults,iterr=1,isAnalysiss=False,hotelstarAnalysis=[],priorityTimestamp=1):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
@@ -21,7 +21,7 @@ class Booking:
         self.isAnalysis = self.isAnalysis[0] if isinstance(self.isAnalysis, tuple) else self.isAnalysis
 
         self.hotelstarAnalysis=hotelstarAnalysis
-
+        self.priorityTimestamp=priorityTimestamp
         self.call_count = iterr
 
         self.url = f"https://www.booking.ir/fa/hotel/iran/{target.lower()}/?i={self.start_date}&o={self.end_date}&r=1;&n=ir&d=1640809&lt=1&dt=2&a=2&c=0#/"
@@ -60,10 +60,15 @@ class Booking:
                 'adults':self.adults,
                 'target':self.target,
                 'isAnalysis':'1' if self.isAnalysis else '0',
-                'hotelstarAnalysis': json.dumps(self.hotelstarAnalysis)
+                'hotelstarAnalysis': json.dumps(self.hotelstarAnalysis),
+                'priorityTimestamp':self.priorityTimestamp
+
             }
             response = requests.get(urll, params=params)
-            data=response.json()
+            # data=response.json()
+            data=json.loads(response.text)
+
+
             #=============
 
             if len(data) <= 0:

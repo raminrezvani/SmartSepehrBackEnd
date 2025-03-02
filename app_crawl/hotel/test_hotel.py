@@ -2,7 +2,7 @@ import requests
 import json
 headers = {
     'sec-ch-ua-platform': '"Windows"',
-    'Authorization': 'JWT eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwNjczNzkyLCJpYXQiOjE3NDA1MDA5OTIsImp0aSI6IjU1OGE2ZTM3ZjIzNTRmZWZiOGRkZmE2NWNmNzczYTJhIiwidXNlcl9pZCI6MTN9.E0hY6bhyKuBYMgDTVooeKCu5OTQSyQ2t8KIEUbSDUp3hv9irwa-XZ042R5MZU_Ht8NEUasGY5hjh1exlPfSXMw',
+    'Authorization': 'JWT eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwOTA4NDU1LCJpYXQiOjE3NDA3MzU2NTUsImp0aSI6IjJkOTU5NzBiODZmODQ3YjA5MDE2YTRjNzcwNDZhMmFmIiwidXNlcl9pZCI6MTN9.Njwz0q7p35n4RPJBzRuD3vPHE0a0wD5ESQmdLEhxF6WiO5MOZmEdYpKbGnnHaddJzsumVZVaA9t4wBWftSGBaA',
     'Referer': 'http://localhost:8080/',
     'sec-ch-ua': '"Not(A:Brand";v="99", "Google Chrome";v="133", "Chromium";v="133"',
     'sec-ch-ua-mobile': '?0',
@@ -12,11 +12,11 @@ headers = {
 }
 
 json_data_1 = {
-    'start_date': '2025-03-10',
-    'end_date': '2025-03-13',
-    'night_count': 3,
+    'start_date': '2025-03-12',
+    'end_date': '2025-03-16',
+    'night_count': 4,
     'hotel_star': 5,
-    'source': 'TBZ',
+    'source': 'SYZ',
     'target': 'KIH',
     'adults': 2,
     'use_cache': False,
@@ -25,9 +25,9 @@ json_data_1 = {
     ],
 }
 json_data_2 = {
-    'start_date': '2025-03-10',
-    'end_date': '2025-03-13',
-    'night_count': 3,
+    'start_date': '2025-03-14',
+    'end_date': '2025-03-18',
+    'night_count': 4,
     'hotel_star': 5,
     'source': 'MHD',
     'target': 'KIH',
@@ -38,11 +38,11 @@ json_data_2 = {
     ],
 }
 json_data_3 = {
-    'start_date': '2025-03-10',
-    'end_date': '2025-03-13',
+    'start_date': '2025-03-14',
+    'end_date': '2025-03-17',
     'night_count': 3,
     'hotel_star': 5,
-    'source': 'THR',
+    'source': 'KHD',
     'target': 'KIH',
     'adults': 2,
     'use_cache': False,
@@ -50,19 +50,19 @@ json_data_3 = {
         '5',
     ],
 }
-json_data_4 = {
-    'start_date': '2025-03-10',
-    'end_date': '2025-03-13',
-    'night_count': 3,
-    'hotel_star': 5,
-    'source': 'SYZ',
-    'target': 'KIH',
-    'adults': 2,
-    'use_cache': False,
-    'hotelstarAnalysis': [
-        '5',
-    ],
-}
+# json_data_4 = {
+#     'start_date': '2025-03-15',
+#     'end_date': '2025-03-18',
+#     'night_count': 3,
+#     'hotel_star': 5,
+#     'source': 'SYZ',
+#     'target': 'KIH',
+#     'adults': 2,
+#     'use_cache': False,
+#     'hotelstarAnalysis': [
+#         '5',
+#     ],
+# }
 
 
 def req_to_hotels(json_data):
@@ -73,12 +73,12 @@ futures=[]
 import time
 with ThreadPoolExecutor(max_workers=30) as executor:
     futures.append(executor.submit(req_to_hotels,json_data_1))
-    time.sleep(10)
+    time.sleep(3)
     futures.append(executor.submit(req_to_hotels,json_data_2))
-    time.sleep(10)
+    time.sleep(3)
     futures.append(executor.submit(req_to_hotels,json_data_3))
-    time.sleep(10)
-    # # futures.append(executor.submit(req_to_hotels,json_data_4))
+    time.sleep(3)
+    # futures.append(executor.submit(req_to_hotels,json_data_4))
 
 
     # for i in range(0,20):

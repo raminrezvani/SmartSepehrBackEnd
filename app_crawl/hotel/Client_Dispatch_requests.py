@@ -94,14 +94,13 @@ def executeRequest(method, url,
     #                      'cookies':response['cookies']}  # Fallback in case of non-JSON
 
 
-
-    print(f"Sent request to {full_url} with priority {priorityTimestamp}, Response: {response.status_code}, port=== {selected_port}")
-
-
-    # Cache the response in Redis
-    redis_client.setex(cache_key, 3600, response.text)  # Store JSON directly
-    # redis_client.setex(cache_key, 3600, json.dumps(response))  # Store JSON directly
+    if (response.status_code==200):
+        print(f"Sent request to {full_url} with priority {priorityTimestamp}, Response: {response.status_code}, port=== {selected_port}")
 
 
-
-    return response.text  # Return the response object
+        # Cache the response in Redis
+        redis_client.setex(cache_key, 3600, response.text)  # Store JSON directly
+        # redis_client.setex(cache_key, 3600, json.dumps(response))  # Store JSON directly
+        return response.text  # Return the response object
+    else:
+        return []
