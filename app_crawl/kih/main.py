@@ -616,22 +616,28 @@ class TourCollector:
 
         #===instead ====
         # futures = [self.executor_analysis.submit(self.get_single_result,source, target, date,False,True) for date in date_range]
-        futures = [
-            self.executor_analysis.submit(self.get_single_result, source, target, date, False, True, iter)
+        # Submitting tasks with date included in the future
+        futures = {
+            self.executor_analysis.submit(self.get_single_result, source, target, date, False, use_cache, iter): date
             for iter, date in enumerate(date_range)
-        ]
-
+        }
 
 
 
         sami_result = []
         s_t=datetime.now()
+
+        # Dictionary to store results with their correct dates
+        result = {}
+
         for future in as_completed(futures):
+            date = futures[future]  # Get the original date associated with this future
+
             try:
-                result = future.result()  # This will block until the future is done
+                res = future.result()  # This will block until the future is done
 
                 print(f'future_completed in {(datetime.now()-s_t).total_seconds()}')
-                sami_result.append(result)
+                result[date] = res  # Assign the result to the correct date
             except Exception as e:
                 print(f"An error occurred: {e}")
 
@@ -642,6 +648,6 @@ class TourCollector:
         # sami_result = [
         #     self.get_single_result(start_date=dr, show_providers=False, use_cache=use_cache) for dr in date_range
         # ]
-        result = {date_range[index]: r for index, r in enumerate(sami_result)}
+        # result = {date_range[index]: r for index, r in enumerate(sami_result)}
         # add_dict_to_redis(redis_key, {'status': True, "data": result}, default_redis_expire)
         return {'status': True, "data": result}
