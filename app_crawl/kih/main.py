@@ -650,4 +650,11 @@ class TourCollector:
         # ]
         # result = {date_range[index]: r for index, r in enumerate(sami_result)}
         # add_dict_to_redis(redis_key, {'status': True, "data": result}, default_redis_expire)
-        return {'status': True, "data": result}
+
+        # Sort the result dictionary by date keys
+        sorted_result = {date: result[date] for date in sorted(result.keys())}
+
+        # Return the sorted result
+        return {'status': True, "data": sorted_result}
+
+        # return {'status': True, "data": result}
