@@ -1,0 +1,852 @@
+2025-03-03 13:40:54,010 - INFO - Starting validation cycle...
+2025-03-03 13:40:54,021 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:40:54,023 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:40:54,025 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:40:54,026 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:40:54,027 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:40:54,029 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:40:54,029 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:40:54,032 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:40:54,036 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:40:54,036 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:40:54,038 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:40:54,039 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:40:54,041 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:40:54,041 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:40:54,047 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:40:54,048 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:40:54,051 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:40:54,051 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:40:54,225 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:54,330 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:54,371 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:54,404 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:54,472 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:54,620 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:54,665 - INFO - Provider: hrc, hotel_KIH === False
+2025-03-03 13:40:54,771 - INFO - Provider: dayan, hotel_KIH === False
+2025-03-03 13:40:54,807 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:54,829 - INFO - Provider: hrc, hotel_GSM === False
+2025-03-03 13:40:55,122 - INFO - Provider: dayan, hotel_GSM === False
+2025-03-03 13:40:54,924 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,222 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,294 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,294 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,338 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,298 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,315 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,315 - INFO - Provider: hrc, hotel_MHD === False
+2025-03-03 13:40:55,331 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,331 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,300 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,364 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,364 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,383 - INFO - Provider: dayan, hotel_MHD === False
+2025-03-03 13:40:55,403 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,456 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,471 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,471 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,554 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,523 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,552 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,553 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,489 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,557 - INFO - Provider: hrc, hotel_SYZ === False
+2025-03-03 13:40:55,574 - INFO - Provider: dayan, hotel_SYZ === False
+2025-03-03 13:40:55,611 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,612 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,612 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,625 - INFO - Provider: hrc, hotel_THR === False
+2025-03-03 13:40:55,625 - INFO - Provider: dayan, hotel_THR === False
+2025-03-03 13:40:55,626 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:40:55,627 - INFO - Provider: hrc, hotel_IFN === False
+2025-03-03 13:40:55,627 - INFO - Provider: dayan, hotel_IFN === False
+2025-03-03 13:40:55,628 - INFO - Provider: hrc, hotel_AZD === False
+2025-03-03 13:40:55,628 - INFO - Provider: dayan, hotel_AZD === False
+2025-03-03 13:40:55,628 - INFO - Provider: hrc, hotel_TBZ === False
+2025-03-03 13:40:55,628 - INFO - Provider: dayan, hotel_TBZ === False
+2025-03-03 13:40:55,629 - INFO - Provider: hrc, hotel_AWZ === False
+2025-03-03 13:40:55,629 - INFO - Provider: dayan, hotel_ZBR === False
+2025-03-03 13:40:55,629 - INFO - Provider: hrc, hotel_BND === False
+2025-03-03 13:40:55,629 - INFO - Provider: dayan, hotel_SRY === False
+2025-03-03 13:40:55,629 - INFO - Provider: hrc, hotel_ZBR === False
+2025-03-03 13:40:55,629 - INFO - Provider: dayan, tour_KIH === False
+2025-03-03 13:40:55,630 - INFO - Provider: hrc, hotel_KER === False
+2025-03-03 13:40:55,630 - INFO - Provider: hrc, hotel_KSH === False
+2025-03-03 13:40:55,630 - INFO - Provider: hrc, hotel_RAS === False
+2025-03-03 13:40:55,630 - INFO - Provider: hrc, hotel_SRY === False
+2025-03-03 13:40:55,630 - INFO - Provider: hrc, tour_KIH === False
+2025-03-03 13:40:55,631 - INFO - Provider: hrc, tour_GSM === False
+2025-03-03 13:40:55,631 - INFO - Provider: hrc, tour_MHD === False
+2025-03-03 13:40:55,631 - INFO - Provider: hrc, tour_SYZ === False
+2025-03-03 13:40:55,631 - INFO - Provider: hrc, tour_THR === False
+2025-03-03 13:40:55,631 - INFO - Provider: hrc, tour_TBZ === False
+2025-03-03 13:40:55,632 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:40:55,633 - ERROR - Unexpected error in main loop: name 'time' is not defined
+2025-03-03 13:41:17,546 - INFO - Starting validation cycle...
+2025-03-03 13:41:17,597 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:41:17,598 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:41:17,598 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:41:17,602 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:41:17,603 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:41:17,796 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:41:17,797 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:41:17,798 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:41:17,799 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:41:17,848 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:41:17,850 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:41:17,851 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:41:17,852 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:41:17,852 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:41:17,898 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:41:17,949 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:41:17,959 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:41:17,973 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:41:21,500 - INFO - Provider: dayan, hotel_KIH === True
+2025-03-03 13:41:21,760 - INFO - Provider: dayan, hotel_GSM === True
+2025-03-03 13:41:21,777 - INFO - Provider: hrc, hotel_KIH === True
+2025-03-03 13:41:22,461 - INFO - Provider: hrc, hotel_GSM === True
+2025-03-03 13:41:22,461 - INFO - Provider: hrc, hotel_MHD === True
+2025-03-03 13:41:22,466 - INFO - Provider: hrc, hotel_SYZ === True
+2025-03-03 13:41:23,061 - INFO - Provider: dayan, hotel_MHD === True
+2025-03-03 13:41:23,061 - INFO - Provider: dayan, hotel_SYZ === True
+2025-03-03 13:41:23,061 - INFO - Provider: dayan, hotel_THR === True
+2025-03-03 13:41:23,061 - INFO - Provider: dayan, hotel_IFN === True
+2025-03-03 13:41:23,062 - INFO - Provider: dayan, hotel_AZD === True
+2025-03-03 13:41:23,062 - INFO - Provider: dayan, hotel_TBZ === True
+2025-03-03 13:41:23,062 - INFO - Provider: dayan, hotel_ZBR === True
+2025-03-03 13:41:23,073 - INFO - Provider: hrc, hotel_THR === True
+2025-03-03 13:41:23,074 - INFO - Provider: hrc, hotel_IFN === True
+2025-03-03 13:41:23,152 - INFO - Provider: dayan, hotel_SRY === True
+2025-03-03 13:41:23,152 - INFO - Provider: dayan, tour_KIH === True
+2025-03-03 13:41:25,266 - INFO - Provider: hrc, hotel_AZD === True
+2025-03-03 13:41:25,267 - INFO - Provider: hrc, hotel_TBZ === True
+2025-03-03 13:41:25,267 - INFO - Provider: hrc, hotel_AWZ === True
+2025-03-03 13:41:25,268 - INFO - Provider: hrc, hotel_BND === True
+2025-03-03 13:41:25,268 - INFO - Provider: hrc, hotel_ZBR === True
+2025-03-03 13:41:25,268 - INFO - Provider: hrc, hotel_KER === True
+2025-03-03 13:41:25,269 - INFO - Provider: hrc, hotel_KSH === True
+2025-03-03 13:41:25,269 - INFO - Provider: hrc, hotel_RAS === True
+2025-03-03 13:41:25,269 - INFO - Provider: hrc, hotel_SRY === True
+2025-03-03 13:41:25,269 - INFO - Provider: hrc, tour_KIH === True
+2025-03-03 13:41:25,270 - INFO - Provider: hrc, tour_GSM === True
+2025-03-03 13:41:25,270 - INFO - Provider: hrc, tour_MHD === True
+2025-03-03 13:41:25,270 - INFO - Provider: hrc, tour_SYZ === True
+2025-03-03 13:41:25,271 - INFO - Provider: hrc, tour_THR === True
+2025-03-03 13:41:25,271 - INFO - Provider: hrc, tour_TBZ === True
+2025-03-03 13:41:25,272 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:44:31,628 - INFO - Script terminated by user
+2025-03-03 13:44:54 - INFO - Starting validation cycle...
+2025-03-03 13:44:54 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:44:54 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:44:54 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:44:54 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:44:54 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:44:54 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:44:54 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:44:54 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:44:54 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:44:54 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:44:55 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:44:55 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:44:55 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:44:55 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:44:55 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:44:55 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:44:55 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:44:55 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:44:57 - INFO - Provider: dayan, hotel_KIH === True
+2025-03-03 13:44:57 - INFO - Provider: dayan, hotel_GSM === True
+2025-03-03 13:44:57 - INFO - Provider: dayan, hotel_MHD === True
+2025-03-03 13:44:58 - INFO - Provider: dayan, hotel_SYZ === True
+2025-03-03 13:44:58 - INFO - Provider: dayan, hotel_THR === True
+2025-03-03 13:44:58 - INFO - Provider: dayan, hotel_IFN === True
+2025-03-03 13:44:58 - INFO - Provider: dayan, hotel_AZD === True
+2025-03-03 13:44:58 - INFO - Provider: dayan, hotel_TBZ === True
+2025-03-03 13:44:59 - INFO - Provider: hrc, hotel_KIH === True
+2025-03-03 13:44:59 - INFO - Provider: hrc, hotel_GSM === True
+2025-03-03 13:44:59 - INFO - Provider: hrc, hotel_MHD === True
+2025-03-03 13:44:59 - INFO - Provider: hrc, hotel_SYZ === True
+2025-03-03 13:44:59 - INFO - Provider: hrc, hotel_THR === True
+2025-03-03 13:44:59 - INFO - Provider: hrc, hotel_IFN === True
+2025-03-03 13:44:59 - INFO - Provider: hrc, hotel_AZD === True
+2025-03-03 13:44:59 - INFO - Provider: hrc, hotel_TBZ === True
+2025-03-03 13:44:59 - INFO - Provider: hrc, hotel_AWZ === True
+2025-03-03 13:45:00 - INFO - Provider: dayan, hotel_ZBR === True
+2025-03-03 13:45:00 - INFO - Provider: dayan, hotel_SRY === True
+2025-03-03 13:45:00 - INFO - Provider: dayan, tour_KIH === True
+2025-03-03 13:45:00 - INFO - Provider: hrc, hotel_BND === True
+2025-03-03 13:45:00 - INFO - Provider: hrc, hotel_ZBR === True
+2025-03-03 13:45:00 - INFO - Provider: hrc, hotel_KER === True
+2025-03-03 13:45:00 - INFO - Provider: hrc, hotel_KSH === True
+2025-03-03 13:45:00 - INFO - Provider: hrc, hotel_RAS === True
+2025-03-03 13:45:00 - INFO - Provider: hrc, hotel_SRY === True
+2025-03-03 13:45:00 - INFO - Provider: hrc, tour_KIH === True
+2025-03-03 13:45:00 - INFO - Provider: hrc, tour_GSM === True
+2025-03-03 13:45:00 - INFO - Provider: hrc, tour_MHD === True
+2025-03-03 13:45:00 - INFO - Provider: hrc, tour_SYZ === True
+2025-03-03 13:45:00 - INFO - Provider: hrc, tour_THR === True
+2025-03-03 13:45:00 - INFO - Provider: hrc, tour_TBZ === True
+2025-03-03 13:45:00 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:46:16 - INFO - Script terminated by user
+2025-03-03 13:47:49 - INFO - Starting validation cycle...
+2025-03-03 13:47:49 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:47:49 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:47:52 - INFO - Provider: dayan, hotel_KIH === True
+2025-03-03 13:47:52 - INFO - Provider: hrc, hotel_KIH === True
+2025-03-03 13:47:52 - INFO - Provider: hrc, hotel_GSM === True
+2025-03-03 13:47:52 - INFO - Provider: dayan, hotel_GSM === True
+2025-03-03 13:47:52 - INFO - Provider: dayan, hotel_MHD === True
+2025-03-03 13:47:53 - INFO - Provider: hrc, hotel_MHD === True
+2025-03-03 13:47:53 - INFO - Provider: hrc, hotel_SYZ === True
+2025-03-03 13:47:53 - INFO - Provider: hrc, hotel_THR === True
+2025-03-03 13:47:53 - INFO - Provider: dayan, hotel_SYZ === True
+2025-03-03 13:47:53 - INFO - Provider: dayan, hotel_THR === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, hotel_IFN === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, hotel_AZD === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, hotel_TBZ === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, hotel_AWZ === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, hotel_BND === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, hotel_ZBR === True
+2025-03-03 13:47:54 - INFO - Provider: dayan, hotel_IFN === True
+2025-03-03 13:47:54 - INFO - Provider: dayan, hotel_AZD === True
+2025-03-03 13:47:54 - INFO - Provider: dayan, hotel_TBZ === True
+2025-03-03 13:47:54 - INFO - Provider: dayan, hotel_ZBR === True
+2025-03-03 13:47:54 - INFO - Provider: dayan, hotel_SRY === True
+2025-03-03 13:47:54 - INFO - Provider: dayan, tour_KIH === False
+2025-03-03 13:47:54 - INFO - Provider: hrc, hotel_KER === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, hotel_KSH === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, hotel_RAS === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, hotel_SRY === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, tour_KIH === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, tour_GSM === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, tour_MHD === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, tour_SYZ === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, tour_THR === True
+2025-03-03 13:47:54 - INFO - Provider: hrc, tour_TBZ === True
+2025-03-03 13:47:54 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:49:25 - INFO - Script terminated by user
+2025-03-03 13:49:27 - INFO - Starting validation cycle...
+2025-03-03 13:49:27 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:49:27 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:27 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:49:27 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:27 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:49:27 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:49:27 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:27 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:27 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:27 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:28 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:28 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:28 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:28 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:28 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:28 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:28 - INFO - Provider: dayan, hotel_KIH === False
+2025-03-03 13:49:28 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:28 - INFO - Provider: dayan, hotel_GSM === False
+2025-03-03 13:49:28 - INFO - Provider: dayan, hotel_MHD === False
+2025-03-03 13:49:28 - INFO - Provider: dayan, hotel_SYZ === False
+2025-03-03 13:49:28 - INFO - Provider: dayan, hotel_THR === False
+2025-03-03 13:49:28 - INFO - Provider: dayan, hotel_IFN === False
+2025-03-03 13:49:28 - INFO - Provider: dayan, hotel_AZD === False
+2025-03-03 13:49:28 - INFO - Provider: dayan, hotel_TBZ === False
+2025-03-03 13:49:28 - INFO - Provider: dayan, hotel_ZBR === False
+2025-03-03 13:49:28 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:28 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:28 - INFO - Provider: dayan, hotel_SRY === False
+2025-03-03 13:49:28 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:28 - INFO - Provider: dayan, tour_KIH === False
+2025-03-03 13:49:28 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_KIH === False
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_GSM === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_MHD === False
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_SYZ === False
+2025-03-03 13:49:29 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_THR === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_IFN === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_AZD === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_TBZ === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_AWZ === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_BND === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_ZBR === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_KER === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_KSH === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_RAS === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, hotel_SRY === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, tour_KIH === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, tour_GSM === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, tour_MHD === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, tour_SYZ === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, tour_THR === False
+2025-03-03 13:49:29 - INFO - Provider: hrc, tour_TBZ === False
+2025-03-03 13:49:29 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:49:34 - INFO - Script terminated by user
+2025-03-03 13:49:51 - INFO - Starting validation cycle...
+2025-03-03 13:49:51 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:49:51 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:49:52 - INFO - Provider: dayan, hotel_KIH === True
+2025-03-03 13:49:53 - INFO - Provider: hrc, hotel_KIH === True
+2025-03-03 13:49:53 - INFO - Provider: hrc, hotel_GSM === True
+2025-03-03 13:49:53 - INFO - Provider: hrc, hotel_MHD === True
+2025-03-03 13:49:53 - INFO - Provider: dayan, hotel_GSM === True
+2025-03-03 13:49:53 - INFO - Provider: dayan, hotel_MHD === True
+2025-03-03 13:49:54 - INFO - Provider: hrc, hotel_SYZ === True
+2025-03-03 13:49:54 - INFO - Provider: dayan, hotel_SYZ === True
+2025-03-03 13:49:54 - INFO - Provider: dayan, hotel_THR === True
+2025-03-03 13:49:54 - INFO - Provider: dayan, hotel_IFN === True
+2025-03-03 13:49:54 - INFO - Provider: dayan, hotel_AZD === True
+2025-03-03 13:49:54 - INFO - Provider: dayan, hotel_TBZ === True
+2025-03-03 13:49:54 - INFO - Provider: dayan, hotel_ZBR === True
+2025-03-03 13:49:54 - INFO - Provider: dayan, hotel_SRY === True
+2025-03-03 13:49:54 - INFO - Provider: dayan, tour_KIH === False
+2025-03-03 13:49:54 - INFO - Provider: hrc, hotel_THR === True
+2025-03-03 13:49:54 - INFO - Provider: hrc, hotel_IFN === True
+2025-03-03 13:49:54 - INFO - Provider: hrc, hotel_AZD === True
+2025-03-03 13:49:54 - INFO - Provider: hrc, hotel_TBZ === True
+2025-03-03 13:49:54 - INFO - Provider: hrc, hotel_AWZ === True
+2025-03-03 13:49:54 - INFO - Provider: hrc, hotel_BND === True
+2025-03-03 13:49:54 - INFO - Provider: hrc, hotel_ZBR === True
+2025-03-03 13:49:55 - INFO - Provider: hrc, hotel_KER === True
+2025-03-03 13:49:55 - INFO - Provider: hrc, hotel_KSH === True
+2025-03-03 13:49:55 - INFO - Provider: hrc, hotel_RAS === True
+2025-03-03 13:49:55 - INFO - Provider: hrc, hotel_SRY === True
+2025-03-03 13:49:55 - INFO - Provider: hrc, tour_KIH === True
+2025-03-03 13:49:55 - INFO - Provider: hrc, tour_GSM === True
+2025-03-03 13:49:55 - INFO - Provider: hrc, tour_MHD === True
+2025-03-03 13:49:55 - INFO - Provider: hrc, tour_SYZ === True
+2025-03-03 13:49:55 - INFO - Provider: hrc, tour_THR === True
+2025-03-03 13:49:55 - INFO - Provider: hrc, tour_TBZ === True
+2025-03-03 13:49:55 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:50:31 - INFO - Script terminated by user
+2025-03-03 13:50:32 - INFO - Starting validation cycle...
+2025-03-03 13:50:32 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:50:32 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:50:34 - INFO - Provider: dayan, hotel_KIH === True
+2025-03-03 13:50:34 - INFO - Provider: dayan, hotel_GSM === True
+2025-03-03 13:50:34 - INFO - Provider: dayan, hotel_MHD === True
+2025-03-03 13:50:34 - INFO - Provider: hrc, hotel_KIH === True
+2025-03-03 13:50:35 - INFO - Provider: hrc, hotel_GSM === True
+2025-03-03 13:50:35 - INFO - Provider: hrc, hotel_MHD === True
+2025-03-03 13:50:35 - INFO - Provider: dayan, hotel_SYZ === True
+2025-03-03 13:50:35 - INFO - Provider: dayan, hotel_THR === True
+2025-03-03 13:50:35 - INFO - Provider: dayan, hotel_IFN === True
+2025-03-03 13:50:36 - INFO - Provider: dayan, hotel_AZD === True
+2025-03-03 13:50:36 - INFO - Provider: dayan, hotel_TBZ === True
+2025-03-03 13:50:36 - INFO - Provider: dayan, hotel_ZBR === True
+2025-03-03 13:50:36 - INFO - Provider: dayan, hotel_SRY === True
+2025-03-03 13:50:36 - INFO - Provider: dayan, tour_KIH === False
+2025-03-03 13:50:36 - INFO - Provider: hrc, hotel_SYZ === True
+2025-03-03 13:50:36 - INFO - Provider: hrc, hotel_THR === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, hotel_IFN === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, hotel_AZD === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, hotel_TBZ === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, hotel_AWZ === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, hotel_BND === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, hotel_ZBR === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, hotel_KER === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, hotel_KSH === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, hotel_RAS === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, hotel_SRY === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, tour_KIH === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, tour_GSM === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, tour_MHD === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, tour_SYZ === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, tour_THR === True
+2025-03-03 13:50:37 - INFO - Provider: hrc, tour_TBZ === True
+2025-03-03 13:50:37 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:54:29 - INFO - Script terminated by user
+2025-03-03 13:54:34 - INFO - Starting validation cycle...
+2025-03-03 13:54:34 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:54:34 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - INFO - Provider: dayan, hotel_KIH === False
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - INFO - Provider: hrc, hotel_KIH === False
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - INFO - Provider: dayan, hotel_GSM === False
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:34 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - ERROR - Error in check_validation for domain dayansafar.com: HTTPSConnectionPool(host='dayansafar.com', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_GSM === False
+2025-03-03 13:54:35 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Hotel_NewReservation_Search.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - INFO - Provider: dayan, hotel_MHD === False
+2025-03-03 13:54:35 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_MHD === False
+2025-03-03 13:54:35 - ERROR - Error in check_validation for domain sepehrreservation.iranhrc.ir: HTTPSConnectionPool(host='sepehrreservation.iranhrc.ir', port=443): Max retries exceeded with url: /Tour_NewReservation_Search2.aspx?action=display&rnd=500&action=display&rnd=500 (Caused by ProxyError('Cannot connect to proxy.', FileNotFoundError(2, 'No such file or directory')))
+2025-03-03 13:54:35 - INFO - Provider: dayan, hotel_SYZ === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_SYZ === False
+2025-03-03 13:54:35 - INFO - Provider: dayan, hotel_THR === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_THR === False
+2025-03-03 13:54:35 - INFO - Provider: dayan, hotel_IFN === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_IFN === False
+2025-03-03 13:54:35 - INFO - Provider: dayan, hotel_AZD === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_AZD === False
+2025-03-03 13:54:35 - INFO - Provider: dayan, hotel_TBZ === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_TBZ === False
+2025-03-03 13:54:35 - INFO - Provider: dayan, hotel_ZBR === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_AWZ === False
+2025-03-03 13:54:35 - INFO - Provider: dayan, hotel_SRY === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_BND === False
+2025-03-03 13:54:35 - INFO - Provider: dayan, tour_KIH === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_ZBR === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_KER === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_KSH === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_RAS === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, hotel_SRY === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, tour_KIH === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, tour_GSM === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, tour_MHD === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, tour_SYZ === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, tour_THR === False
+2025-03-03 13:54:35 - INFO - Provider: hrc, tour_TBZ === False
+2025-03-03 13:54:35 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:54:55 - INFO - Starting validation cycle...
+2025-03-03 13:54:55 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:54:55 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:55:02 - INFO - Provider: hrc, hotel_KIH === True
+2025-03-03 13:55:02 - INFO - Provider: hrc, hotel_GSM === True
+2025-03-03 13:55:02 - INFO - Provider: hrc, hotel_MHD === True
+2025-03-03 13:55:02 - INFO - Provider: dayan, hotel_KIH === True
+2025-03-03 13:55:02 - INFO - Provider: dayan, hotel_GSM === True
+2025-03-03 13:55:02 - INFO - Provider: dayan, hotel_MHD === True
+2025-03-03 13:55:02 - INFO - Provider: dayan, hotel_SYZ === True
+2025-03-03 13:55:03 - INFO - Provider: dayan, hotel_THR === True
+2025-03-03 13:55:03 - INFO - Provider: dayan, hotel_IFN === True
+2025-03-03 13:55:03 - INFO - Provider: dayan, hotel_AZD === True
+2025-03-03 13:55:04 - INFO - Provider: hrc, hotel_SYZ === True
+2025-03-03 13:55:04 - INFO - Provider: dayan, hotel_TBZ === True
+2025-03-03 13:55:04 - INFO - Provider: dayan, hotel_ZBR === True
+2025-03-03 13:55:04 - INFO - Provider: dayan, hotel_SRY === True
+2025-03-03 13:55:04 - INFO - Provider: dayan, tour_KIH === False
+2025-03-03 13:55:05 - INFO - Provider: hrc, hotel_THR === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, hotel_IFN === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, hotel_AZD === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, hotel_TBZ === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, hotel_AWZ === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, hotel_BND === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, hotel_ZBR === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, hotel_KER === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, hotel_KSH === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, hotel_RAS === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, hotel_SRY === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, tour_KIH === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, tour_GSM === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, tour_MHD === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, tour_SYZ === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, tour_THR === True
+2025-03-03 13:55:05 - INFO - Provider: hrc, tour_TBZ === True
+2025-03-03 13:55:05 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:55:25 - INFO - Starting validation cycle...
+2025-03-03 13:55:25 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:55:25 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:55:27 - INFO - Provider: dayan, hotel_KIH === True
+2025-03-03 13:55:27 - INFO - Provider: dayan, hotel_GSM === True
+2025-03-03 13:55:27 - INFO - Provider: dayan, hotel_MHD === True
+2025-03-03 13:55:27 - INFO - Provider: dayan, hotel_SYZ === True
+2025-03-03 13:55:27 - INFO - Provider: dayan, hotel_THR === True
+2025-03-03 13:55:27 - INFO - Provider: dayan, hotel_IFN === True
+2025-03-03 13:55:28 - INFO - Provider: dayan, hotel_AZD === True
+2025-03-03 13:55:29 - INFO - Provider: dayan, hotel_TBZ === True
+2025-03-03 13:55:29 - INFO - Provider: dayan, hotel_ZBR === True
+2025-03-03 13:55:29 - INFO - Provider: dayan, hotel_SRY === True
+2025-03-03 13:55:29 - INFO - Provider: dayan, tour_KIH === False
+2025-03-03 13:55:29 - INFO - Provider: hrc, hotel_KIH === True
+2025-03-03 13:55:29 - INFO - Provider: hrc, hotel_GSM === True
+2025-03-03 13:55:29 - INFO - Provider: hrc, hotel_MHD === True
+2025-03-03 13:55:29 - INFO - Provider: hrc, hotel_SYZ === True
+2025-03-03 13:55:29 - INFO - Provider: hrc, hotel_THR === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, hotel_IFN === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, hotel_AZD === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, hotel_TBZ === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, hotel_AWZ === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, hotel_BND === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, hotel_ZBR === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, hotel_KER === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, hotel_KSH === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, hotel_RAS === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, hotel_SRY === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, tour_KIH === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, tour_GSM === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, tour_MHD === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, tour_SYZ === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, tour_THR === True
+2025-03-03 13:55:31 - INFO - Provider: hrc, tour_TBZ === True
+2025-03-03 13:55:31 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:55:51 - INFO - Starting validation cycle...
+2025-03-03 13:55:51 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:55:51 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:55:52 - INFO - Provider: dayan, hotel_KIH === True
+2025-03-03 13:55:52 - INFO - Provider: hrc, hotel_KIH === True
+2025-03-03 13:55:52 - INFO - Provider: hrc, hotel_GSM === True
+2025-03-03 13:55:52 - INFO - Provider: hrc, hotel_MHD === True
+2025-03-03 13:55:52 - INFO - Provider: hrc, hotel_SYZ === True
+2025-03-03 13:55:52 - INFO - Provider: hrc, hotel_THR === True
+2025-03-03 13:55:53 - INFO - Provider: dayan, hotel_GSM === True
+2025-03-03 13:55:53 - INFO - Provider: dayan, hotel_MHD === True
+2025-03-03 13:55:53 - INFO - Provider: dayan, hotel_SYZ === True
+2025-03-03 13:55:54 - INFO - Provider: hrc, hotel_IFN === True
+2025-03-03 13:55:54 - INFO - Provider: hrc, hotel_AZD === True
+2025-03-03 13:55:54 - INFO - Provider: hrc, hotel_TBZ === True
+2025-03-03 13:55:54 - INFO - Provider: hrc, hotel_AWZ === True
+2025-03-03 13:55:54 - INFO - Provider: hrc, hotel_BND === True
+2025-03-03 13:55:54 - INFO - Provider: hrc, hotel_ZBR === True
+2025-03-03 13:55:54 - INFO - Provider: hrc, hotel_KER === True
+2025-03-03 13:55:54 - INFO - Provider: hrc, hotel_KSH === True
+2025-03-03 13:55:54 - INFO - Provider: hrc, hotel_RAS === True
+2025-03-03 13:55:54 - INFO - Provider: hrc, hotel_SRY === True
+2025-03-03 13:55:54 - INFO - Provider: hrc, tour_KIH === True
+2025-03-03 13:55:54 - INFO - Provider: dayan, hotel_THR === True
+2025-03-03 13:55:54 - INFO - Provider: dayan, hotel_IFN === True
+2025-03-03 13:55:54 - INFO - Provider: dayan, hotel_AZD === True
+2025-03-03 13:55:54 - INFO - Provider: dayan, hotel_TBZ === True
+2025-03-03 13:55:54 - INFO - Provider: dayan, hotel_ZBR === True
+2025-03-03 13:55:54 - INFO - Provider: dayan, hotel_SRY === True
+2025-03-03 13:55:54 - INFO - Provider: dayan, tour_KIH === False
+2025-03-03 13:55:55 - INFO - Provider: hrc, tour_GSM === True
+2025-03-03 13:55:55 - INFO - Provider: hrc, tour_MHD === True
+2025-03-03 13:55:55 - INFO - Provider: hrc, tour_SYZ === True
+2025-03-03 13:55:55 - INFO - Provider: hrc, tour_THR === True
+2025-03-03 13:55:55 - INFO - Provider: hrc, tour_TBZ === True
+2025-03-03 13:55:55 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:56:15 - INFO - Starting validation cycle...
+2025-03-03 13:56:15 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:56:15 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:56:17 - INFO - Provider: hrc, hotel_KIH === True
+2025-03-03 13:56:17 - INFO - Provider: hrc, hotel_GSM === True
+2025-03-03 13:56:17 - INFO - Provider: hrc, hotel_MHD === True
+2025-03-03 13:56:17 - INFO - Provider: dayan, hotel_KIH === True
+2025-03-03 13:56:17 - INFO - Provider: dayan, hotel_GSM === True
+2025-03-03 13:56:17 - INFO - Provider: dayan, hotel_MHD === True
+2025-03-03 13:56:17 - INFO - Provider: hrc, hotel_SYZ === True
+2025-03-03 13:56:17 - INFO - Provider: hrc, hotel_THR === True
+2025-03-03 13:56:18 - INFO - Provider: dayan, hotel_SYZ === True
+2025-03-03 13:56:18 - INFO - Provider: dayan, hotel_THR === True
+2025-03-03 13:56:18 - INFO - Provider: dayan, hotel_IFN === True
+2025-03-03 13:56:18 - INFO - Provider: dayan, hotel_AZD === True
+2025-03-03 13:56:18 - INFO - Provider: dayan, hotel_TBZ === True
+2025-03-03 13:56:18 - INFO - Provider: dayan, hotel_ZBR === True
+2025-03-03 13:56:18 - INFO - Provider: dayan, hotel_SRY === True
+2025-03-03 13:56:18 - INFO - Provider: dayan, tour_KIH === False
+2025-03-03 13:56:19 - INFO - Provider: hrc, hotel_IFN === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, hotel_AZD === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, hotel_TBZ === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, hotel_AWZ === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, hotel_BND === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, hotel_ZBR === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, hotel_KER === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, hotel_KSH === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, hotel_RAS === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, hotel_SRY === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, tour_KIH === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, tour_GSM === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, tour_MHD === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, tour_SYZ === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, tour_THR === True
+2025-03-03 13:56:19 - INFO - Provider: hrc, tour_TBZ === True
+2025-03-03 13:56:19 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:56:39 - INFO - Starting validation cycle...
+2025-03-03 13:56:39 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:56:39 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:56:40 - INFO - Provider: hrc, hotel_KIH === True
+2025-03-03 13:56:41 - INFO - Provider: hrc, hotel_GSM === True
+2025-03-03 13:56:41 - INFO - Provider: dayan, hotel_KIH === True
+2025-03-03 13:56:41 - INFO - Provider: dayan, hotel_GSM === True
+2025-03-03 13:56:41 - INFO - Provider: dayan, hotel_MHD === True
+2025-03-03 13:56:42 - INFO - Provider: dayan, hotel_SYZ === True
+2025-03-03 13:56:42 - INFO - Provider: dayan, hotel_THR === True
+2025-03-03 13:56:42 - INFO - Provider: dayan, hotel_IFN === True
+2025-03-03 13:56:42 - INFO - Provider: dayan, hotel_AZD === True
+2025-03-03 13:56:42 - INFO - Provider: dayan, hotel_TBZ === True
+2025-03-03 13:56:42 - INFO - Provider: dayan, hotel_ZBR === True
+2025-03-03 13:56:42 - INFO - Provider: dayan, hotel_SRY === True
+2025-03-03 13:56:42 - INFO - Provider: dayan, tour_KIH === False
+2025-03-03 13:56:44 - INFO - Provider: hrc, hotel_MHD === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, hotel_SYZ === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, hotel_THR === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, hotel_IFN === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, hotel_AZD === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, hotel_TBZ === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, hotel_AWZ === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, hotel_BND === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, hotel_ZBR === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, hotel_KER === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, hotel_KSH === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, hotel_RAS === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, hotel_SRY === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, tour_KIH === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, tour_GSM === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, tour_MHD === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, tour_SYZ === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, tour_THR === True
+2025-03-03 13:56:44 - INFO - Provider: hrc, tour_TBZ === True
+2025-03-03 13:56:44 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:56:54 - INFO - Script terminated by user
+2025-03-03 13:59:18 - INFO - Starting validation cycle...
+2025-03-03 13:59:18 - WARNING - Provider safiran not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider darvishi not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider hamood not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider parmis not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider flamingo not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider dolfin not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider kimiya not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider mehrab not found in Redis
+2025-03-03 13:59:18 - WARNING - Provider rahbal not found in Redis
+2025-03-03 13:59:21 - INFO - Provider: hrc, hotel_KIH === True
+2025-03-03 13:59:22 - INFO - Provider: hrc, hotel_GSM === True
+2025-03-03 13:59:22 - INFO - Provider: dayan, hotel_KIH === True
+2025-03-03 13:59:22 - INFO - Provider: dayan, hotel_GSM === True
+2025-03-03 13:59:22 - INFO - Provider: dayan, hotel_MHD === True
+2025-03-03 13:59:22 - INFO - Provider: dayan, hotel_SYZ === True
+2025-03-03 13:59:22 - INFO - Provider: hrc, hotel_MHD === True
+2025-03-03 13:59:22 - INFO - Provider: hrc, hotel_SYZ === True
+2025-03-03 13:59:22 - INFO - Provider: hrc, hotel_THR === True
+2025-03-03 13:59:23 - INFO - Provider: dayan, hotel_THR === True
+2025-03-03 13:59:23 - INFO - Provider: dayan, hotel_IFN === True
+2025-03-03 13:59:23 - INFO - Provider: dayan, hotel_AZD === True
+2025-03-03 13:59:23 - INFO - Provider: dayan, hotel_TBZ === True
+2025-03-03 13:59:23 - INFO - Provider: dayan, hotel_ZBR === True
+2025-03-03 13:59:23 - INFO - Provider: dayan, hotel_SRY === True
+2025-03-03 13:59:23 - INFO - Provider: dayan, tour_KIH === True
+2025-03-03 13:59:24 - INFO - Provider: hrc, hotel_IFN === True
+2025-03-03 13:59:24 - INFO - Provider: hrc, hotel_AZD === True
+2025-03-03 13:59:24 - INFO - Provider: hrc, hotel_TBZ === True
+2025-03-03 13:59:24 - INFO - Provider: hrc, hotel_AWZ === True
+2025-03-03 13:59:24 - INFO - Provider: hrc, hotel_BND === True
+2025-03-03 13:59:24 - INFO - Provider: hrc, hotel_ZBR === True
+2025-03-03 13:59:24 - INFO - Provider: hrc, hotel_KER === True
+2025-03-03 13:59:24 - INFO - Provider: hrc, hotel_KSH === True
+2025-03-03 13:59:25 - INFO - Provider: hrc, hotel_RAS === True
+2025-03-03 13:59:25 - INFO - Provider: hrc, hotel_SRY === True
+2025-03-03 13:59:25 - INFO - Provider: hrc, tour_KIH === True
+2025-03-03 13:59:25 - INFO - Provider: hrc, tour_GSM === True
+2025-03-03 13:59:25 - INFO - Provider: hrc, tour_MHD === True
+2025-03-03 13:59:25 - INFO - Provider: hrc, tour_SYZ === True
+2025-03-03 13:59:25 - INFO - Provider: hrc, tour_THR === True
+2025-03-03 13:59:25 - INFO - Provider: hrc, tour_TBZ === True
+2025-03-03 13:59:25 - INFO - Validation cycle completed. Sleeping for 1 hour...
+2025-03-03 13:59:35 - INFO - Script terminated by user
+2025-03-03 14:04:14 - INFO - Starting validation cycle...
+2025-03-03 14:04:14 - WARNING - Provider darvishi not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider moeindarbari not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider hamood not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider safiran not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider kimiya not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider eram2mhd not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider sepid_parvaz not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider rahbal not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider mehrab not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider tak_setareh not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider parmis not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider iman_amin not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider omid_oj not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider flamingo not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider hamsafar not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider yegane_fard not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider shayan_gasht not found in Redis
+2025-03-03 14:04:14 - WARNING - Provider dolfin not found in Redis

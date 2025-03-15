@@ -121,7 +121,7 @@ def add_to_file(provider_name, start_date, data):
     except:
         return False
 
-def get_result(target, start_date, end_date, adults, cookie, provider_name, isAnalysis, hotelstarAnalysis=[]):
+def get_result(target, start_date, end_date, adults, cookie, provider_name, isAnalysis, hotelstarAnalysis=[],priorityTimestamp=1):
     t1 = datetime.now()
     try:
         data = get_data(target, start_date, end_date, adults, cookie, provider_name)

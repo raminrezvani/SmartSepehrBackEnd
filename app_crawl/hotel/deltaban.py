@@ -46,7 +46,8 @@ hotelIDs = {
 
 class Deltaban:
     isAnalysis=False
-    def __init__(self, target, start_date, end_date, adults,isAnalysiss,hotelstarAnalysis=[],priorityTimestamp=1):
+    def __init__(self, target, start_date, end_date, adults,isAnalysiss,hotelstarAnalysis=[],priorityTimestamp=1,
+                 use_cache=True):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
@@ -55,6 +56,7 @@ class Deltaban:
         self.isAnalysis = self.isAnalysis[0] if isinstance(self.isAnalysis, tuple) else self.isAnalysis
         self.hotelstarAnalysis=hotelstarAnalysis
         self.priorityTimestamp=priorityTimestamp
+        self.use_cache=use_cache
         self.influx = Influxdb()
 
         # self.executor = ThreadPoolExecutor(max_workers=50)
@@ -99,7 +101,8 @@ class Deltaban:
                                   headers=headers,
                                   data=json.dumps(self.login),
                                   verify=False,
-                                  priorityTimestamp=self.priorityTimestamp)
+                                  priorityTimestamp=self.priorityTimestamp,
+                                  use_cache=self.use_cache)
         # response=response.json()
         response=json.loads(response)
 
@@ -202,7 +205,9 @@ class Deltaban:
 
 
             # req = request("GET", req_url, headers=self.request_header)
-            req = executeRequest(method="GET",url= req_url, headers=self.request_header,priorityTimestamp=self.priorityTimestamp)
+            req = executeRequest(method="GET",url= req_url,
+                                 headers=self.request_header,priorityTimestamp=self.priorityTimestamp,
+                                 use_cache=self.use_cache)
             # req=req.json()
             req = json.loads(req)
 
@@ -221,7 +226,9 @@ class Deltaban:
     def fetch_data(self,req_url, request_header):
         try:
             # req = request("GET", req_url, headers=request_header)
-            req = executeRequest(method="GET", url=req_url, headers=request_header,priorityTimestamp=self.priorityTimestamp)
+            req = executeRequest(method="GET", url=req_url,
+                                 headers=request_header,priorityTimestamp=self.priorityTimestamp,
+                                 use_cache=self.use_cache)
             # req=req.json()
             req = json.loads(req)
 
@@ -314,7 +321,8 @@ class Deltaban:
                 try:
                     while(counter<20):
                         # req = request("GET", req_url, headers=self.request_header)
-                        req = executeRequest(method="GET",url= req_url, headers=self.request_header,priorityTimestamp=self.priorityTimestamp)
+                        req = executeRequest(method="GET",url= req_url, headers=self.request_header,priorityTimestamp=self.priorityTimestamp,
+                                             use_cache=self.use_cache)
                         # req=req.json()
                         req = json.loads(req)
 

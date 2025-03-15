@@ -15,7 +15,9 @@ from io import StringIO
 import requests
 
 class Snapp:
-    def __init__(self, target, start_date, end_date, adults,isAnalysis=False,hotelstarAnalysis=[],priorityTimestamp=1):
+    def __init__(self, target, start_date, end_date, adults,isAnalysis=False,hotelstarAnalysis=[],
+                 priorityTimestamp=1,
+                 use_cache=True):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
@@ -26,7 +28,7 @@ class Snapp:
 
         self.hotelstarAnalysis=hotelstarAnalysis
         self.priorityTimestamp = priorityTimestamp
-
+        self.use_cache=use_cache
         self.cookies = []
         self.cityIDs={
             'KIH':'6918',
@@ -85,7 +87,8 @@ class Snapp:
                 'target':self.target,
                 'isAnalysis': '1' if self.isAnalysis else '0',
                 'hotelstarAnalysis':json.dumps(self.hotelstarAnalysis),
-                'priorityTimestamp': self.priorityTimestamp
+                'priorityTimestamp': self.priorityTimestamp,
+                'use_cache' : self.use_cache
 
             }
 

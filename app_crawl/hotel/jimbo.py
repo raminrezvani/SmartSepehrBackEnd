@@ -9,7 +9,10 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import random
 
 class Jimbo:
-    def __init__(self, target, start_date, end_date, adults,iterr=1,isAnalysiss=False,hotelstarAnalysis=[],priorityTimestamp=1):
+    def __init__(self, target, start_date, end_date,
+                 adults,iterr=1,isAnalysiss=False,
+                 hotelstarAnalysis=[],priorityTimestamp=1,
+                 use_cache=True):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
@@ -21,6 +24,8 @@ class Jimbo:
 
         self.hotelstarAnalysis = hotelstarAnalysis
         self.priorityTimestamp = priorityTimestamp
+        self.use_cache = use_cache
+
 
         self.call_count = iterr
 
@@ -61,7 +66,8 @@ class Jimbo:
                 'target':self.target,
                 'isAnalysis': '1' if self.isAnalysis else '0',
                 'hotelstarAnalysis': json.dumps(self.hotelstarAnalysis),
-                'priorityTimestamp': self.priorityTimestamp
+                'priorityTimestamp': self.priorityTimestamp,
+                'use_cache': self.use_cache
             }
             response = requests.get(urll, params=params)
             # data=response.json()

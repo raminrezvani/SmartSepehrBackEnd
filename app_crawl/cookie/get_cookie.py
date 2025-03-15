@@ -61,8 +61,18 @@ class GetSepehrCaptcha:
                 self.driver.execute_script("window.stop();")
             self.driver = self.driver
 
-    def get_validity(self):
+    def get_validity(self,provider_code):
         try:
+
+            #---- read from redis ---
+            try:
+                self.data=json.loads(self.redis_client.get(provider_code))
+            except:
+                print(f'providerCode  {provider_code} __ not in Redis')
+            #------------
+
+
+
             kih_cookie = self.data.get("KIH", {})
             cookies = kih_cookie.get("cookie", {})
 
@@ -253,7 +263,6 @@ class GetSepehrCaptcha:
         return True
 
     def GetCookie_FromDB(self,provider):
-
 
 
         if (self.redis_client.exists(provider)):

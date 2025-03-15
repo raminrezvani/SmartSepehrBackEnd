@@ -175,7 +175,12 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
     'Authorization'
+
+
 ]
+CORS_ALLOW_CREDENTIALS = True  # Allow cookies/credentials if your frontend sends them
+CORS_ALLOW_ALL_ORIGINS = True  # Allow all origins (for development only)
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

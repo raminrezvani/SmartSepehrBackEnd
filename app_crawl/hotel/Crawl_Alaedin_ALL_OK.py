@@ -49,7 +49,8 @@ destin_text={
 
 class Alaedin:
     def __init__(self, target, start_date, end_date, adults,isAnalysiss=False,hotelstarAnalysis=[],
-                 priorityTimestamp=1):
+                 priorityTimestamp=1,
+                 use_cache=True):
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
@@ -61,7 +62,7 @@ class Alaedin:
 
         self.hotelstarAnalysis=hotelstarAnalysis
         self.priorityTimestamp = priorityTimestamp
-
+        self.use_cache = use_cache
 
 
 
@@ -75,7 +76,8 @@ class Alaedin:
             'hotelCod': hotelCod,  # Example hotel code
             'start_date': start_date,  # Example Shamsi date in 'yyyyMMdd' format
             'stay': stay,  # Example stay duration in nights
-            'priorityTimestamp':self.priorityTimestamp
+            'priorityTimestamp':self.priorityTimestamp,
+            'use_cache' : self.use_cache
         }
 
         # Send a GET request to the API

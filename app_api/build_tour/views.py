@@ -50,14 +50,15 @@ class BuildTourApi(APIView):
         target = request.data.get('target')
         adults = request.data.get('adults')
         use_cache = request.data.get('use_cache', True)
-
+        priorityTimestamp = datetime.now().timestamp()
         # #=== check target ===
         # if (target=="GSM"):
         #     source="THR"
         # #=========
 
         # ---
-        tour = BuildTour(source=source, target=target, start_date=start_date, end_date=end_date, adults=adults)
+        tour = BuildTour(source=source, target=target, start_date=start_date, end_date=end_date, adults=adults,
+                        priorityTimestamp= priorityTimestamp)
         result = tour.get_result(use_cache=use_cache)
         # del tour
         # import gc

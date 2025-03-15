@@ -12,13 +12,14 @@ import logging
 logger = logging.getLogger('django')
 # from monitoring import influx_grafana
 class BuildTour:
-    def __init__(self, source, target, start_date, end_date, adults):
+    def __init__(self, source, target, start_date, end_date, adults,priorityTimestamp):
         self.source = source
         self.target = target
         self.start_date = start_date
         self.end_date = end_date
         self.adults = adults
 
+        self.priorityTimestamp=priorityTimestamp
     def get_flight(self):
         flight = Flight(start_date=self.start_date, end_date=self.end_date, source=self.source, target=self.target,
                         one_way=False)
@@ -26,7 +27,7 @@ class BuildTour:
 
     def get_hotel(self,use_cache,iter):
         hotel = Hotel(source=self.source, target=self.target, start_date=self.start_date, end_date=self.end_date,
-                      adults=self.adults,use_cache=use_cache,isAnalysiss=False,hotelstarAnalysis=[])
+                      adults=self.adults,use_cache=use_cache,isAnalysiss=False,hotelstarAnalysis=[],priorityTimestamp=self.priorityTimestamp)
         return hotel.get_result(iter)
 
     from concurrent.futures import ThreadPoolExecutor, TimeoutError
@@ -209,6 +210,8 @@ class BuildTourAnalysis():
         print(f'Get Analysisssss {hotelstarAnalysis[0]}')
         start_date = datetime.strptime(start_date, "%Y-%m-%d").date()
         date_range = [(start_date + timedelta(days=date)).strftime("%Y-%m-%d") for date in range(range_number)]
+
+
 
         # Using ThreadPoolExecutor efficiently
         t1=datetime.now()
@@ -442,6 +445,8 @@ class BuildTourAnalysis():
         end_date_obj = start_date_obj + timedelta(days=self.night_count)
         end_date = end_date_obj.strftime("%Y-%m-%d")
         redis_key = f"build_tour_{self.source}_{self.target}_{start_date}_{end_date}"
+
+        print(f'TimeStamp_Analysis ==== {priorityTimestamp}')
 
         # === Check Redis Cache First ===
         if use_cache and has_key_cache(redis_key):

@@ -8,6 +8,9 @@ from requests import request
 from app_crawl.helpers import convert_gregorian_date_to_persian, ready_price, convert_to_tooman
 from bs4 import BeautifulSoup
 import urllib3
+import json
+import redis
+
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -24,8 +27,18 @@ class Sepehr:
         self.cookies = cookies
         self.provider_name = provider_name
         self.adults = adults
+        self.redis_client = redis.Redis(host='localhost', port=6379, db=0)
+
+        # ---- read from redis ---
+        try:
+            self.cookies = json.loads(self.redis_client.get(self.provider_name))
+        except:
+            print(f'providerCode  {self.provider_name} __ not in Redis')
+        # ------------
 
     def get_data(self):
+
+
         kih_cookie = self.cookies.get(self.target, {})
         # kih_cookie = self.cookies.get("KIH", {})    # az targe==KIH baraye hamegi target ha estefade mikonim( joda joda nemikonim)
         cookies = kih_cookie.get('cookie', {})
