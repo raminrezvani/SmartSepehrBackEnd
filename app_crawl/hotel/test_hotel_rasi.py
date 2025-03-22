@@ -18,12 +18,12 @@ headers = {
 }
 
 json_data = {
-    'start_date': '2025-04-10',
-    'end_date': '2025-04-13',
-    'night_count': 3,
+    'start_date': '2025-04-19',
+    'end_date': '2025-04-23',
+    'night_count': 4,
     'hotel_star': 5,
-    'source': 'MHD',
-    'target': 'KIH',
+    'source': 'asdsa',
+    'target': 'THR',
     'adults': 2,
     'use_cache': False,
 }

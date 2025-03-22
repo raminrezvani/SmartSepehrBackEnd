@@ -1322,7 +1322,7 @@ class Hotel:
 
 
                 #---New
-
+                result_notExistProviders=[]
                 # Wait for all futures to complete, but only for 60 seconds
                 if (self.isAnalysis==False):
                     completed, pending = wait(fu.keys(), timeout=60)
@@ -1334,9 +1334,18 @@ class Hotel:
                             if isinstance(result, dict):
                                 if len(result['data']) != 0:
                                     results.append(result)
+                                else:
+                                    result_notExistProviders.append({'NotExistProvider': key, 'data': [], 'status': 'اتمام زمان'})
+                                    # print('OLD one')
                             else:
-                                results.append(result)
-                                logger.info(f' Length hotel results --- {len(result)}')
+                                if len(result) != 0:
+                                    results.append(result)
+                                    logger.info(f' Length hotel results --- {len(result)}')
+                                else:
+                                    result_notExistProviders.append(
+                                        {'NotExistProvider': key, 'data': [], 'status': 'اتمام زمان'})
+
+
 
                             logger.info(f' Processed {key} --- {(datetime.now() - t1).total_seconds()}')
                         except Exception as e:
@@ -1348,7 +1357,7 @@ class Hotel:
                         key = fu[future]
                         logger.info(f"Timeout: {key} did not complete within 60 seconds")
                         # Optionally append a timeout result
-                        results.append({'provider': key, 'data': [], 'status': 'timeout'})
+                        # results.append({'provider': key, 'data': [], 'status': 'timeout'})
 
                     logger.info(f' time hotel processing completed --- {(datetime.now() - t1).total_seconds()}')
                     #----
@@ -1384,6 +1393,13 @@ class Hotel:
             temp=self.read_data_ALLDestination(results)
             # print(f' time read_data_ALLDestination --- {(datetime.now() - t1).total_seconds()} ')
             logger.info(f' time read_data_ALLDestination --- {(datetime.now() - t1).total_seconds()}')
+
+
+            #----------------------
+            # add result_notExistProviders
+            temp.extend(result_notExistProviders)
+            #------------------
+
 
             return temp
 

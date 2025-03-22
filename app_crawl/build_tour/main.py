@@ -70,16 +70,26 @@ class BuildTour:
 
             # Prepare provider data
             providers = {}
+            hotel_result_prunned=[]
             for item in hotel_result:
-                for provider in {room['provider'] for room in item['rooms']}:
-                    if provider not in providers:
-                        providers[provider] = {'length': 0, 'message': 'اتمام زمان', 'url': ''}
-                    providers[provider]['length'] += 1
-                    providers[provider]['message'] = ''
+                if 'NotExistProvider' in item:
+                    providers[item['NotExistProvider']]={
+                        'length':0,
+                        'message': 'اتمام زمان',
+                        'url': ''
+                    }
+
+                else:
+                    hotel_result_prunned.append(item)
+                    for provider in {room['provider'] for room in item['rooms']}:
+                        if provider not in providers:
+                            providers[provider] = {'length': 0, 'message': 'اتمام زمان', 'url': ''}
+                        providers[provider]['length'] += 1
+                        providers[provider]['message'] = ''
 
             result = {
                 "flight": flight,
-                "hotel": hotel_result,
+                "hotel": hotel_result_prunned,
                 "providers": providers
             }
 
