@@ -6219,3 +6219,308 @@ IndexError: list index out of range
   time hotel get_ALLDestination_data --- 11.938849
   time hotel beforeSend --- 0.002956
  "POST /build-tour/ HTTP/1.1" 200 166007
+ Unauthorized: /api/v1/user/profile/
+ "GET /api/v1/user/profile/ HTTP/1.1" 401 58
+ "OPTIONS /api/v1/user/login/ HTTP/1.1" 200 0
+ "POST /api/v1/user/login/ HTTP/1.1" 200 708
+ "OPTIONS /get-calendar/ HTTP/1.1" 200 0
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "OPTIONS /build-tour/ HTTP/1.1" 200 0
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 1.198762
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.014925
+  time Assign tasks --- 3.511445
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.000995
+  time hotel isinstance(result, dict) --- 0.001991
+  time hotel isinstance(result, dict) --- 0.002991
+  time hotel isinstance(result, dict) --- 0.002991
+  time hotel isinstance(result, dict) --- 0.002991
+  time hotel isinstance(result, dict) --- 0.003987
+  time hotel isinstance(result, dict) --- 0.003987
+  time hotel isinstance(result, dict) --- 0.003987
+  time hotel isinstance(result, dict) --- 0.003987
+  time hotel isinstance(result, dict) --- 0.004983
+  time hotel isinstance(result, dict) --- 0.004983
+  time hotel isinstance(result, dict) --- 0.004983
+  time hotel isinstance(result, dict) --- 0.004983
+  time hotel isinstance(result, dict) --- 0.005983
+  time hotel isinstance(result, dict) --- 0.005983
+  time hotel isinstance(result, dict) --- 0.005983
+  time hotel isinstance(result, dict) --- 0.006982
+  time hotel isinstance(result, dict) --- 0.006982
+  time hotel isinstance(result, dict) --- 0.006982
+  Length hotel results --- 0
+  time hotel isinstance(result, dict) --- 1.541853
+  time hotel as_completed --- 1.541853
+  time read_data_ALLDestination --- 0.477775
+  time hotel get_ALLDestination_data --- 8.823574
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 72
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.003989
+  time Assign tasks --- 0.016954
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.001036
+  time hotel isinstance(result, dict) --- 0.001036
+  time hotel isinstance(result, dict) --- 0.001036
+  time hotel isinstance(result, dict) --- 0.001036
+  time hotel isinstance(result, dict) --- 0.001036
+  time hotel isinstance(result, dict) --- 0.001036
+  time hotel isinstance(result, dict) --- 0.001036
+  time hotel isinstance(result, dict) --- 0.001036
+  time hotel isinstance(result, dict) --- 0.001036
+  time hotel isinstance(result, dict) --- 0.002041
+  time hotel isinstance(result, dict) --- 0.002041
+  time hotel isinstance(result, dict) --- 0.002995
+  time hotel isinstance(result, dict) --- 0.007022
+  time hotel isinstance(result, dict) --- 0.011969
+  time hotel isinstance(result, dict) --- 0.011969
+  time hotel isinstance(result, dict) --- 0.015998
+  Length hotel results --- 30
+  time hotel isinstance(result, dict) --- 2.514796
+  time hotel as_completed --- 2.514796
+  time read_data_ALLDestination --- 0.110731
+  time hotel get_ALLDestination_data --- 2.647467
+  time hotel beforeSend --- 2.353952
+ "POST /build-tour/ HTTP/1.1" 200 94296
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.003989
+  time Assign tasks --- 0.040891
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.008064
+  time hotel isinstance(result, dict) --- 0.008977
+  time hotel isinstance(result, dict) --- 0.008977
+  time hotel isinstance(result, dict) --- 0.016259
+  time hotel isinstance(result, dict) --- 0.017204
+  time hotel isinstance(result, dict) --- 0.017204
+  Length hotel results --- 30
+  time hotel isinstance(result, dict) --- 1.963467
+  time hotel as_completed --- 1.963467
+  time read_data_ALLDestination --- 0.642285
+  time hotel get_ALLDestination_data --- 2.655619
+  time hotel beforeSend --- 0.006986
+ "POST /build-tour/ HTTP/1.1" 200 96012
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.00402
+  time Assign tasks --- 0.032883
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.001993
+  time hotel isinstance(result, dict) --- 0.001993
+  time hotel isinstance(result, dict) --- 0.001993
+  time hotel isinstance(result, dict) --- 0.001993
+  time hotel isinstance(result, dict) --- 0.001993
+  time hotel isinstance(result, dict) --- 0.00299
+  time hotel isinstance(result, dict) --- 0.00299
+  time hotel isinstance(result, dict) --- 0.00299
+  time hotel isinstance(result, dict) --- 0.00299
+  time hotel isinstance(result, dict) --- 0.00299
+  time hotel isinstance(result, dict) --- 0.00299
+  time hotel isinstance(result, dict) --- 0.005984
+  time hotel isinstance(result, dict) --- 0.006981
+  time hotel isinstance(result, dict) --- 0.006981
+  time hotel isinstance(result, dict) --- 0.006981
+  time hotel isinstance(result, dict) --- 0.006981
+  Length hotel results --- 30
+  time hotel isinstance(result, dict) --- 1.025311
+  time hotel as_completed --- 1.025311
+  time read_data_ALLDestination --- 0.129654
+  time hotel get_ALLDestination_data --- 1.193863
+  time hotel beforeSend --- 0.001994
+ "POST /build-tour/ HTTP/1.1" 200 540140
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.006982
+  time Assign tasks --- 0.030916
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.003987
+  time hotel isinstance(result, dict) --- 0.006978
+  time hotel isinstance(result, dict) --- 0.009971
+  time hotel isinstance(result, dict) --- 0.010969
+  time hotel isinstance(result, dict) --- 0.014958
+  time hotel isinstance(result, dict) --- 0.015956
+  time hotel isinstance(result, dict) --- 0.01795
+  time hotel isinstance(result, dict) --- 0.020942
+  time hotel isinstance(result, dict) --- 0.024931
+  time hotel isinstance(result, dict) --- 0.027923
+  time hotel isinstance(result, dict) --- 0.029918
+  time hotel isinstance(result, dict) --- 0.030915
+  time hotel isinstance(result, dict) --- 0.033907
+  time hotel isinstance(result, dict) --- 0.035902
+  time hotel isinstance(result, dict) --- 0.035902
+  time hotel isinstance(result, dict) --- 0.037898
+  time hotel isinstance(result, dict) --- 0.041888
+  time hotel isinstance(result, dict) --- 0.056845
+  time hotel isinstance(result, dict) --- 0.056845
+  time hotel as_completed --- 95.60941
+  time read_data_ALLDestination --- 0.113693
+  time hotel get_ALLDestination_data --- 95.767992
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 72
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.005984
+  time Assign tasks --- 0.030915
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.000997
+  time hotel isinstance(result, dict) --- 0.001981
+  time hotel isinstance(result, dict) --- 0.001981
+  Length hotel results --- 30
+  time hotel isinstance(result, dict) --- 30.17072
+  time hotel as_completed --- 30.17072
+  time read_data_ALLDestination --- 0.138663
+  time hotel get_ALLDestination_data --- 30.353421
+  time hotel beforeSend --- 0.001441
+ "POST /build-tour/ HTTP/1.1" 200 24490
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.024933
+  time Assign tasks --- 0.079786
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.0
+  time hotel isinstance(result, dict) --- 0.001996
+  time hotel isinstance(result, dict) --- 0.001996
+  time hotel isinstance(result, dict) --- 0.001996
+  time hotel isinstance(result, dict) --- 0.001996
+  time hotel isinstance(result, dict) --- 0.002992
+  time hotel isinstance(result, dict) --- 0.002992
+  time hotel isinstance(result, dict) --- 0.002992
+  time hotel isinstance(result, dict) --- 0.002992
+  time hotel isinstance(result, dict) --- 0.002992
+  time hotel isinstance(result, dict) --- 0.003989
+  time hotel isinstance(result, dict) --- 0.003989
+  time hotel isinstance(result, dict) --- 0.003989
+  time hotel isinstance(result, dict) --- 0.003989
+  time hotel isinstance(result, dict) --- 0.003989
+  time hotel isinstance(result, dict) --- 0.004987
+  time hotel isinstance(result, dict) --- 0.004987
+  time hotel isinstance(result, dict) --- 0.004987
+  Length hotel results --- 30
+  time hotel isinstance(result, dict) --- 9.652946
+  time hotel as_completed --- 9.653945
+  time read_data_ALLDestination --- 0.184746
+  time hotel get_ALLDestination_data --- 9.948433
+  time hotel beforeSend --- 0.000964
+ "POST /build-tour/ HTTP/1.1" 200 54080
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.031915
+  time Assign tasks --- 0.059617
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.004939
+  time Assign tasks --- 0.040385
+  Processed parmis --- 7.982838
+  Processed iman --- 7.982838
+  Processed tak_setareh --- 7.982838
+  Processed mehrab --- 7.982838
+  Processed safiran --- 7.983842
+  Processed rahbal --- 7.983842
+  Processed flamingo --- 7.983842
+  Processed kimiya --- 7.983842
+  Processed dolfin --- 7.983842
+  Processed darvishi --- 7.983842
+  Processed yegane_fard --- 7.983842
+  Processed eram2mhd --- 7.983842
+  Processed hamood --- 7.983842
+  Processed dayan --- 7.983842
+  Processed hrc --- 7.984837
+  Processed moeindarbari --- 7.984837
+  Processed omid_oj --- 7.984837
+  Processed shayan_gasht --- 7.984837
+  Length hotel results --- 30
+  Processed deltaban --- 7.984837
+  Processed sepid_parvaz --- 7.984837
+  Processed hamsafar --- 7.984837
+  time hotel processing completed --- 7.984837
+  time read_data_ALLDestination --- 0.109348
+  time hotel get_ALLDestination_data --- 8.100217
+  time hotel beforeSend --- 0.00233
+ "POST /build-tour/ HTTP/1.1" 200 51317
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.016955
+  time Assign tasks --- 0.07181
+  Processed hamood --- 6.839886
+  Processed tak_setareh --- 6.839886
+  Processed yegane_fard --- 6.839886
+  Processed parmis --- 6.839886
+  Processed shayan_gasht --- 6.839886
+  Length hotel results --- 30
+  Processed deltaban --- 6.840889
+  Processed eram2mhd --- 6.840889
+  Processed moeindarbari --- 6.840889
+  Processed dolfin --- 6.840889
+  Processed omid_oj --- 6.840889
+  Processed safiran --- 6.840889
+  Processed sepid_parvaz --- 6.840889
+  Processed hamsafar --- 6.840889
+  Processed hrc --- 6.841885
+  Processed rahbal --- 6.841885
+  Processed dayan --- 6.841885
+  Processed flamingo --- 6.841885
+  Processed mehrab --- 6.841885
+  Processed darvishi --- 6.841885
+  Processed iman --- 6.841885
+  Processed kimiya --- 6.842882
+  time hotel processing completed --- 6.842882
+  time read_data_ALLDestination --- 0.114865
+  time hotel get_ALLDestination_data --- 6.97769
+  time hotel beforeSend --- 0.002455
+ "POST /build-tour/ HTTP/1.1" 200 51317
+ Unauthorized: /build-tour-analyse/
+ "POST /build-tour-analyse/ HTTP/1.1" 401 183
+ Unauthorized: /build-tour-analyse/
+ "POST /build-tour-analyse/ HTTP/1.1" 401 183
+  time hotel redis_cache --- 0.0
+  time hotel redis_cache --- 0.0
+  time hotel redis_cache --- 0.0
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.585436
+  time Create hotel_tasks --- 0.499663
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.232379
+  time Create hotel_tasks --- 0.753983
+  time Create hotel_tasks --- 0.108709
+  time hotel redis_cache --- 0.0
+  time hotel redis_cache --- 0.0
+  time Assign tasks --- 0.688159
+  time Assign tasks --- 0.825796
+  time Create hotel_tasks --- 0.25931
+  time Assign tasks --- 0.622335
+  time Create hotel_tasks --- 0.392949
+  time Assign tasks --- 0.879648
+  time Assign tasks --- 0.839757
+  time Assign tasks --- 1.026256
+  time Assign tasks --- 1.232704

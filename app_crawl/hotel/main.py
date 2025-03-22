@@ -1164,14 +1164,14 @@ class Hotel:
             # }
 
             hotel_tasks = {
-                # "deltaban": Deltaban(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
-                # # # # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
+                "deltaban": Deltaban(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
+                # # # # # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
                 "snapp" : Snapp(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
                 "alaedin": Alaedin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
                 "eghamat": Eghamat24(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
                 "booking": Booking(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
                 "jimboo": Jimbo(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
-                #
+                # #
                 "darvishi": 1,
                 "moeindarbari": 1,
                 "rahbal":1,
@@ -1319,28 +1319,66 @@ class Hotel:
                 # print(f' time Assign tasks --- {(datetime.now() - startTime).total_seconds()} ')
                 logger.info(f' time Assign tasks --- {(datetime.now() - startTime).total_seconds()}' )
 
-                t1=datetime.now()
-                for future in as_completed(fu):
-                    # key = fu[future]
-                    try:
-                        result=future.result()   # Set timeout for each provider
-                        if  isinstance(result, dict):
-                            if (len(result['data'])!=0):
+
+
+                #---New
+
+                # Wait for all futures to complete, but only for 60 seconds
+                if (self.isAnalysis==False):
+                    completed, pending = wait(fu.keys(), timeout=60)
+                    # Process results from completed futures
+                    for future in completed:
+                        key = fu[future]
+                        try:
+                            result = future.result()  # Get result (no timeout needed here since it's already completed)
+                            if isinstance(result, dict):
+                                if len(result['data']) != 0:
+                                    results.append(result)
+                            else:
                                 results.append(result)
-                        else:
-                            results.append(result)
-                            logger.info(f' Length hotel results --- {len(result)}')
+                                logger.info(f' Length hotel results --- {len(result)}')
 
-                        logger.info(f' time hotel isinstance(result, dict) --- {(datetime.now() - t1).total_seconds()}')
+                            logger.info(f' Processed {key} --- {(datetime.now() - t1).total_seconds()}')
+                        except Exception as e:
+                            print(f"Error in {key}: {e}")
+                            # results.append([])
 
-                        # spendTime = (datetime.now() - startTime).total_seconds()
-                        # print(f'{key} ----- > spend:  {spendTime}')
-                        # logger.info(f'{key} ----- > spend:  {spendTime}')
-                    except Exception as e:
-                        print(f"Error in er: {e}")
-                        # results.append([])
-                # executor.shutdown(wait=False)
-                logger.info(f' time hotel as_completed --- {(datetime.now() - t1).total_seconds()}')
+                    # Log any pending tasks that didn't complete within 60 seconds
+                    for future in pending:
+                        key = fu[future]
+                        logger.info(f"Timeout: {key} did not complete within 60 seconds")
+                        # Optionally append a timeout result
+                        results.append({'provider': key, 'data': [], 'status': 'timeout'})
+
+                    logger.info(f' time hotel processing completed --- {(datetime.now() - t1).total_seconds()}')
+                    #----
+                else:  # self.isAnalysis==True
+                    #---------------
+                    t1=datetime.now()
+                    for future in as_completed(fu):
+                        # key = fu[future]
+                        try:
+                            result=future.result()   # Set timeout for each provider
+                            if  isinstance(result, dict):
+                                if (len(result['data'])!=0):
+                                    results.append(result)
+                            else:
+                                results.append(result)
+                                logger.info(f' Length hotel results --- {len(result)}')
+
+                            logger.info(f' time hotel isinstance(result, dict) --- {(datetime.now() - t1).total_seconds()}')
+
+                            # spendTime = (datetime.now() - startTime).total_seconds()
+                            # print(f'{key} ----- > spend:  {spendTime}')
+                            # logger.info(f'{key} ----- > spend:  {spendTime}')
+                        except Exception as e:
+                            print(f"Error in er: {e}")
+                            # results.append([])
+                    # executor.shutdown(wait=False)
+                    logger.info(f' time hotel as_completed --- {(datetime.now() - t1).total_seconds()}')
+                #--
+
+
 
             t1=datetime.now()
             temp=self.read_data_ALLDestination(results)
