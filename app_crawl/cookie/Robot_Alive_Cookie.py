@@ -222,8 +222,8 @@ def main():
         with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
             executor.map(process_provider, providers)
 
-        logger.info("Validation cycle completed. Sleeping for 1 hour...", extra={'log_color': 'green'})
-        time.sleep(3600)  # Sleep for 1 hour (3600 seconds)
+        logger.info("Validation cycle completed. Sleeping for 5 minutes...", extra={'log_color': 'green'})
+        time.sleep(5*60)  # Sleep for 1 hour (3600 seconds)
 
 
 if __name__ == "__main__":
