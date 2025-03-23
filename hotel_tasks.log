@@ -8290,3 +8290,2617 @@ IndexError: list index out of range
   time hotel beforeSend --- 0.004029
  "POST /build-tour/ HTTP/1.1" 200 161167
  "POST /get-calendar/ HTTP/1.1" 200 11385
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.016955
+  time Assign tasks --- 0.093751
+  Processed eram2mhd --- 60.122343
+  Processed tak_setareh --- 60.122343
+  Processed dolfin --- 60.122343
+  Processed sepid_parvaz --- 60.122343
+  Processed kimiya --- 60.12334
+  Processed flamingo --- 60.12334
+  Processed omid_oj --- 60.12334
+  Processed parmis --- 60.12334
+  Processed safiran --- 60.12334
+  Processed rahbal --- 60.12334
+  Processed shayan_gasht --- 60.12334
+  Processed darvishi --- 60.12334
+  Processed mehrab --- 60.12334
+  Processed dayan --- 60.124338
+  Processed hamsafar --- 60.124338
+  Processed iman --- 60.124338
+  Processed hrc --- 60.124338
+  Length hotel results --- 117
+  Processed eghamat --- 60.124338
+  Length hotel results --- 11
+  Processed deltaban --- 60.124338
+  Processed moeindarbari --- 60.124338
+  Processed hamood --- 60.125336
+  Length hotel results --- 137
+  Processed snapp --- 60.125336
+  Processed yegane_fard --- 60.125336
+ Timeout: booking did not complete within 60 seconds
+ Timeout: alaedin did not complete within 60 seconds
+ Timeout: jimboo did not complete within 60 seconds
+  time hotel processing completed --- 116.120626
+  time read_data_ALLDestination --- 1.429182
+  time hotel get_ALLDestination_data --- 123.976785
+  time hotel beforeSend --- 0.007979
+ "POST /build-tour/ HTTP/1.1" 200 58061
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.012966
+  time Assign tasks --- 0.227392
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.005985
+  time Assign tasks --- 0.087765
+  Processed tak_setareh --- 60.118657
+  Processed dayan --- 60.11966
+  Processed omid_oj --- 60.11966
+  Processed shayan_gasht --- 60.120656
+  Processed yegane_fard --- 60.120656
+  Processed hrc --- 60.120656
+  Processed eram2mhd --- 60.120656
+  Processed parmis --- 60.121648
+  Processed safiran --- 60.121648
+  Length hotel results --- 117
+  Processed eghamat --- 60.122649
+  Processed sepid_parvaz --- 60.122649
+  Processed darvishi --- 60.122649
+  Length hotel results --- 15
+  Processed booking --- 60.123645
+  Length hotel results --- 137
+  Processed snapp --- 60.123645
+  Length hotel results --- 127
+  Processed jimboo --- 60.12464
+  Processed hamsafar --- 60.130625
+  Processed dolfin --- 60.130625
+  Processed mehrab --- 60.131626
+  Processed flamingo --- 60.131626
+  Processed kimiya --- 60.131626
+  Processed rahbal --- 60.131626
+  Processed moeindarbari --- 60.132623
+  Length hotel results --- 11
+  Processed deltaban --- 60.132623
+  Processed hamood --- 60.132623
+  Processed iman --- 60.13362
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.026931
+  time Assign tasks --- 0.424865
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.001994
+  time Assign tasks --- 0.038896
+  Processed parmis --- 3.426852
+  Processed iman --- 3.427849
+  Length hotel results --- 70
+  Processed alaedin --- 3.427849
+  Processed moeindarbari --- 3.427849
+  Processed rahbal --- 3.427849
+  Processed mehrab --- 3.427849
+  Processed darvishi --- 3.427849
+  Processed hamsafar --- 3.427849
+  Processed hrc --- 3.427849
+  Length hotel results --- 127
+  Processed jimboo --- 3.428846
+  Processed dayan --- 3.428846
+  Length hotel results --- 117
+  Processed eghamat --- 3.428846
+  Processed flamingo --- 3.428846
+  Processed omid_oj --- 3.428846
+  Length hotel results --- 15
+  Processed booking --- 3.428846
+  Processed yegane_fard --- 3.428846
+  Length hotel results --- 11
+  Processed deltaban --- 3.429843
+  Processed tak_setareh --- 3.429843
+  Length hotel results --- 137
+  Processed snapp --- 3.429843
+  Processed hamood --- 3.429843
+  Processed kimiya --- 3.429843
+  Processed safiran --- 3.429843
+  Processed eram2mhd --- 3.429843
+  Processed sepid_parvaz --- 3.429843
+  Processed dolfin --- 3.429843
+  Processed shayan_gasht --- 3.429843
+  time hotel processing completed --- 3.429843
+  time read_data_ALLDestination --- 0.693149
+  time hotel get_ALLDestination_data --- 4.125983
+  time hotel beforeSend --- 0.008976
+ "POST /build-tour/ HTTP/1.1" 200 87747
+ "OPTIONS /api/v1/user/login/ HTTP/1.1" 200 0
+ "POST /api/v1/user/login/ HTTP/1.1" 200 708
+ "POST /get-calendar/ HTTP/1.1" 200 11385
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.004989
+  time Assign tasks --- 0.040889
+  Processed mehrab --- 28.542123
+  Processed hamsafar --- 28.542123
+  Length hotel results --- 37
+  Processed jimboo --- 28.542123
+  Length hotel results --- 33
+  Processed booking --- 28.542123
+  Processed kimiya --- 28.542123
+  Processed tak_setareh --- 28.543116
+  Processed sepid_parvaz --- 28.543116
+  Processed moeindarbari --- 28.543116
+  Length hotel results --- 44
+  Processed eghamat --- 28.543116
+  Processed safiran --- 28.543116
+  Processed eram2mhd --- 28.543116
+  Processed omid_oj --- 28.543116
+  Length hotel results --- 30
+  Processed deltaban --- 28.543116
+  Processed shayan_gasht --- 28.544113
+  Processed hamood --- 28.544113
+  Processed iman --- 28.544113
+  Processed parmis --- 28.544113
+  Processed flamingo --- 28.544113
+  Length hotel results --- 32
+  Processed alaedin --- 28.544113
+  Processed yegane_fard --- 28.544113
+  Processed dolfin --- 28.544113
+  Processed snapp --- 28.545111
+  Processed dayan --- 28.545111
+  Processed rahbal --- 28.545111
+  Processed darvishi --- 28.545111
+  Processed hrc --- 28.545111
+  time hotel processing completed --- 28.545111
+  time read_data_ALLDestination --- 0.194484
+  time hotel get_ALLDestination_data --- 28.74159
+  time hotel beforeSend --- 0.006989
+ "POST /build-tour/ HTTP/1.1" 200 127355
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.002992
+  time Assign tasks --- 0.061835
+  Length hotel results --- 33
+  Processed booking --- 3.744618
+  Processed dayan --- 3.744618
+  Processed moeindarbari --- 3.74562
+  Length hotel results --- 44
+  Processed eghamat --- 3.74562
+  Processed eram2mhd --- 3.74562
+  Processed iman --- 3.74562
+  Processed omid_oj --- 3.74562
+  Processed tak_setareh --- 3.74562
+  Processed hrc --- 3.74562
+  Processed hamood --- 3.74562
+  Processed shayan_gasht --- 3.74562
+  Processed flamingo --- 3.74562
+  Processed dolfin --- 3.746613
+  Processed rahbal --- 3.746613
+  Length hotel results --- 38
+  Processed snapp --- 3.746613
+  Length hotel results --- 30
+  Processed deltaban --- 3.746613
+  Processed safiran --- 3.746613
+  Processed parmis --- 3.746613
+  Processed sepid_parvaz --- 3.747612
+  Length hotel results --- 32
+  Processed alaedin --- 3.747612
+  Processed mehrab --- 3.747612
+  Processed hamsafar --- 3.747612
+  Processed darvishi --- 3.747612
+  Processed kimiya --- 3.747612
+  Length hotel results --- 37
+  Processed jimboo --- 3.747612
+  Processed yegane_fard --- 3.747612
+  time hotel processing completed --- 3.748649
+  time read_data_ALLDestination --- 0.197476
+  time hotel get_ALLDestination_data --- 3.948079
+  time hotel beforeSend --- 0.007983
+ "POST /build-tour/ HTTP/1.1" 200 142704
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.003988
+  time Assign tasks --- 0.150599
+  Processed flamingo --- 2.725348
+  Processed yegane_fard --- 2.725348
+  Processed dayan --- 2.726175
+  Length hotel results --- 32
+  Processed alaedin --- 2.726175
+  Processed kimiya --- 2.726175
+  Length hotel results --- 33
+  Processed booking --- 2.726175
+  Length hotel results --- 38
+  Processed snapp --- 2.726175
+  Processed darvishi --- 2.726175
+  Processed moeindarbari --- 2.726175
+  Processed omid_oj --- 2.726175
+  Processed rahbal --- 2.726175
+  Processed hamsafar --- 2.726175
+  Length hotel results --- 30
+  Processed deltaban --- 2.726175
+  Processed tak_setareh --- 2.726175
+  Processed sepid_parvaz --- 2.726175
+  Processed parmis --- 2.726175
+  Processed hrc --- 2.726175
+  Processed dolfin --- 2.726175
+  Length hotel results --- 44
+  Processed eghamat --- 2.726175
+  Processed mehrab --- 2.726175
+  Length hotel results --- 37
+  Processed jimboo --- 2.727173
+  Processed hamood --- 2.727173
+  Processed shayan_gasht --- 2.727173
+  Processed safiran --- 2.727173
+  Processed eram2mhd --- 2.727173
+  Processed iman --- 2.727173
+  time hotel processing completed --- 2.727173
+  time read_data_ALLDestination --- 0.085771
+  time hotel get_ALLDestination_data --- 2.812944
+  time hotel beforeSend --- 0.003989
+ "POST /build-tour/ HTTP/1.1" 200 142696
+ "POST /get-calendar/ HTTP/1.1" 200 10782
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.002992
+  time Assign tasks --- 0.059956
+  Processed parmis --- 1.787291
+  Processed omid_oj --- 1.787291
+  Processed kimiya --- 1.787291
+  Length hotel results --- 33
+  Processed booking --- 1.787291
+  Processed darvishi --- 1.787291
+  Processed flamingo --- 1.787291
+  Processed hamood --- 1.787291
+  Processed moeindarbari --- 1.787291
+  Length hotel results --- 44
+  Processed eghamat --- 1.787291
+  Processed dolfin --- 1.787291
+  Processed eram2mhd --- 1.787291
+  Processed rahbal --- 1.787291
+  Length hotel results --- 30
+  Processed deltaban --- 1.787291
+  Processed shayan_gasht --- 1.787291
+  Length hotel results --- 32
+  Processed alaedin --- 1.788288
+  Processed dayan --- 1.788288
+  Processed mehrab --- 1.788288
+  Processed yegane_fard --- 1.788288
+  Processed hrc --- 1.788288
+  Processed safiran --- 1.788288
+  Length hotel results --- 37
+  Processed jimboo --- 1.788288
+  Processed tak_setareh --- 1.788288
+  Length hotel results --- 38
+  Processed snapp --- 1.788288
+  Processed sepid_parvaz --- 1.788288
+  Processed hamsafar --- 1.788288
+  Processed iman --- 1.788288
+  time hotel processing completed --- 1.788288
+  time read_data_ALLDestination --- 0.145609
+  time hotel get_ALLDestination_data --- 1.935894
+  time hotel beforeSend --- 0.004986
+ "POST /build-tour/ HTTP/1.1" 200 488760
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.002993
+  time Assign tasks --- 0.120682
+  Processed parmis --- 2.59307
+  Processed omid_oj --- 2.59307
+  Length hotel results --- 38
+  Processed snapp --- 2.59307
+  Processed sepid_parvaz --- 2.594066
+  Processed tak_setareh --- 2.594066
+  Processed mehrab --- 2.594066
+  Processed hamood --- 2.594066
+  Length hotel results --- 44
+  Processed eghamat --- 2.594066
+  Processed kimiya --- 2.594066
+  Length hotel results --- 32
+  Processed alaedin --- 2.594066
+  Length hotel results --- 37
+  Processed jimboo --- 2.595066
+  Processed hamsafar --- 2.595066
+  Processed dayan --- 2.595066
+  Length hotel results --- 30
+  Processed deltaban --- 2.595066
+  Processed iman --- 2.595066
+  Processed moeindarbari --- 2.595066
+  Processed yegane_fard --- 2.595066
+  Processed shayan_gasht --- 2.596066
+  Processed flamingo --- 2.596066
+  Processed dolfin --- 2.596066
+  Processed eram2mhd --- 2.596066
+  Processed safiran --- 2.596066
+  Length hotel results --- 33
+  Processed booking --- 2.596066
+  Processed hrc --- 2.596066
+  Processed darvishi --- 2.596066
+  Processed rahbal --- 2.596066
+  time hotel processing completed --- 2.596066
+  time read_data_ALLDestination --- 0.202454
+  time hotel get_ALLDestination_data --- 2.800514
+  time hotel beforeSend --- 0.009976
+ "POST /build-tour/ HTTP/1.1" 200 492560
+ "POST /get-calendar/ HTTP/1.1" 200 4409
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.004987
+  time Assign tasks --- 0.209439
+  Processed rahbal --- 2.186799
+  Length hotel results --- 30
+  Processed deltaban --- 2.187803
+  Processed hamsafar --- 2.187803
+  Processed safiran --- 2.187803
+  Processed dolfin --- 2.187803
+  Length hotel results --- 32
+  Processed alaedin --- 2.187803
+  Processed eram2mhd --- 2.187803
+  Processed moeindarbari --- 2.187803
+  Processed omid_oj --- 2.187803
+  Processed iman --- 2.188799
+  Processed shayan_gasht --- 2.188799
+  Length hotel results --- 38
+  Processed snapp --- 2.188799
+  Processed hrc --- 2.188799
+  Processed sepid_parvaz --- 2.188799
+  Processed kimiya --- 2.188799
+  Processed yegane_fard --- 2.188799
+  Length hotel results --- 33
+  Processed booking --- 2.188799
+  Length hotel results --- 44
+  Processed eghamat --- 2.188799
+  Processed hamood --- 2.189795
+  Processed flamingo --- 2.189795
+  Processed dayan --- 2.189795
+  Length hotel results --- 37
+  Processed jimboo --- 2.189795
+  Processed tak_setareh --- 2.189795
+  Processed darvishi --- 2.189795
+  Processed parmis --- 2.189795
+  Processed mehrab --- 2.189795
+  time hotel processing completed --- 2.189795
+  time read_data_ALLDestination --- 0.181518
+  time hotel get_ALLDestination_data --- 2.373305
+  time hotel beforeSend --- 0.006982
+ "POST /build-tour/ HTTP/1.1" 200 168320
+ "POST /get-calendar/ HTTP/1.1" 200 11385
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.002992
+  time Assign tasks --- 0.040891
+  Processed moeindarbari --- 60.053488
+  Processed tak_setareh --- 60.053488
+  Processed yegane_fard --- 60.053488
+  Processed mehrab --- 60.053488
+  Processed eram2mhd --- 60.053488
+  Length hotel results --- 44
+  Processed eghamat --- 60.053488
+  Processed rahbal --- 60.053488
+  Processed iman --- 60.053488
+  Processed hamsafar --- 60.053488
+  Processed hrc --- 60.053488
+  Processed safiran --- 60.053488
+  Processed sepid_parvaz --- 60.053488
+  Processed shayan_gasht --- 60.053488
+  Processed snapp --- 60.053488
+  Processed darvishi --- 60.053488
+  Length hotel results --- 30
+  Processed deltaban --- 60.053488
+  Processed flamingo --- 60.054486
+  Processed parmis --- 60.054486
+  Processed kimiya --- 60.054486
+  Processed dayan --- 60.054486
+  Length hotel results --- 32
+  Processed alaedin --- 60.054486
+  Length hotel results --- 37
+  Processed jimboo --- 60.054486
+  Processed dolfin --- 60.054486
+  Processed hamood --- 60.054486
+  Processed omid_oj --- 60.054486
+ Timeout: booking did not complete within 60 seconds
+  time hotel processing completed --- 60.054486
+  time read_data_ALLDestination --- 0.27327
+  time hotel get_ALLDestination_data --- 70.246192
+  time hotel beforeSend --- 0.010969
+ "POST /build-tour/ HTTP/1.1" 200 92123
+ "POST /build-tour/ HTTP/1.1" 200 92123
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.004986
+  time Assign tasks --- 0.095744
+  Processed tak_setareh --- 2.875109
+  Processed shayan_gasht --- 2.875109
+  Length hotel results --- 34
+  Processed booking --- 2.876106
+  Processed iman --- 2.876106
+  Processed parmis --- 2.876106
+  Length hotel results --- 30
+  Processed deltaban --- 2.876106
+  Processed mehrab --- 2.876106
+  Processed kimiya --- 2.876106
+  Processed yegane_fard --- 2.876106
+  Length hotel results --- 37
+  Processed jimboo --- 2.876106
+  Processed sepid_parvaz --- 2.876106
+  Processed hamood --- 2.876106
+  Length hotel results --- 32
+  Processed alaedin --- 2.876106
+  Processed safiran --- 2.876106
+  Processed darvishi --- 2.876106
+  Processed flamingo --- 2.876106
+  Processed eram2mhd --- 2.876106
+  Processed dolfin --- 2.876106
+  Processed hamsafar --- 2.876106
+  Processed moeindarbari --- 2.876106
+  Length hotel results --- 44
+  Processed eghamat --- 2.877103
+  Length hotel results --- 38
+  Processed snapp --- 2.877103
+  Processed dayan --- 2.877103
+  Processed rahbal --- 2.877103
+  Processed hrc --- 2.877103
+  Processed omid_oj --- 2.877103
+  time hotel processing completed --- 2.877103
+  time read_data_ALLDestination --- 0.091757
+  time hotel get_ALLDestination_data --- 2.96886
+  time hotel beforeSend --- 0.002994
+ "POST /build-tour/ HTTP/1.1" 200 177006
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "POST /get-calendar/ HTTP/1.1" 200 11785
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.00499
+  time Assign tasks --- 0.038895
+  Processed omid_oj --- 23.226226
+  Processed safiran --- 23.228215
+  Processed dayan --- 23.228215
+  Processed dolfin --- 23.228215
+  Processed parmis --- 23.228215
+  Length hotel results --- 136
+  Processed booking --- 23.229207
+  Processed mehrab --- 23.229207
+  Processed hrc --- 23.229207
+  Processed tak_setareh --- 23.229207
+  Processed yegane_fard --- 23.229207
+  Length hotel results --- 47
+  Processed deltaban --- 23.229207
+  Processed snapp --- 23.229207
+  Processed iman --- 23.229207
+  Processed hamood --- 23.229207
+  Processed sepid_parvaz --- 23.229207
+  Length hotel results --- 218
+  Processed jimboo --- 23.230203
+  Processed flamingo --- 23.230203
+  Processed darvishi --- 23.230203
+  Processed eram2mhd --- 23.230203
+  Processed hamsafar --- 23.230203
+  Processed rahbal --- 23.230203
+  Processed shayan_gasht --- 23.232203
+  Length hotel results --- 203
+  Processed eghamat --- 23.232203
+  Length hotel results --- 60
+  Processed alaedin --- 23.232203
+  Processed kimiya --- 23.232203
+  Processed moeindarbari --- 23.232203
+  time hotel processing completed --- 23.232203
+  time read_data_ALLDestination --- 2.219025
+  time hotel get_ALLDestination_data --- 25.452261
+  time hotel beforeSend --- 0.010973
+ "POST /build-tour/ HTTP/1.1" 200 1114469
+ "POST /build-tour/ HTTP/1.1" 200 1114469
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "POST /get-calendar/ HTTP/1.1" 200 11785
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.004989
+  time Assign tasks --- 0.096738
+  Processed dolfin --- 17.86607
+  Length hotel results --- 85
+  Processed booking --- 17.867068
+  Length hotel results --- 70
+  Processed alaedin --- 17.867068
+  Length hotel results --- 127
+  Processed jimboo --- 17.867068
+  Processed mehrab --- 17.867068
+  Processed flamingo --- 17.867068
+  Processed hamood --- 17.867068
+  Processed omid_oj --- 17.867068
+  Processed tak_setareh --- 17.867068
+  Processed safiran --- 17.867068
+  Length hotel results --- 117
+  Processed eghamat --- 17.867068
+  Length hotel results --- 11
+  Processed deltaban --- 17.867068
+  Processed darvishi --- 17.867068
+  Processed shayan_gasht --- 17.867068
+  Processed eram2mhd --- 17.867068
+  Processed yegane_fard --- 17.867068
+  Processed sepid_parvaz --- 17.867068
+  Processed rahbal --- 17.867068
+  Processed kimiya --- 17.867068
+  Processed iman --- 17.868064
+  Processed parmis --- 17.868064
+  Processed dayan --- 17.868064
+  Processed hamsafar --- 17.868064
+  Processed moeindarbari --- 17.868064
+  Length hotel results --- 137
+  Processed snapp --- 17.868064
+  Processed hrc --- 17.868064
+  time hotel processing completed --- 17.868064
+  time read_data_ALLDestination --- 0.306182
+  time hotel get_ALLDestination_data --- 18.175243
+  time hotel beforeSend --- 0.005986
+ "POST /build-tour/ HTTP/1.1" 200 978544
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.00399
+  time Assign tasks --- 0.180513
+  Processed shayan_gasht --- 5.133702
+  Processed parmis --- 5.133702
+  Length hotel results --- 11
+  Processed deltaban --- 5.133702
+  Processed hamsafar --- 5.133702
+  Length hotel results --- 70
+  Processed alaedin --- 5.133702
+  Length hotel results --- 137
+  Processed snapp --- 5.134698
+  Length hotel results --- 117
+  Processed eghamat --- 5.134698
+  Processed omid_oj --- 5.134698
+  Processed dayan --- 5.134698
+  Processed safiran --- 5.134698
+  Processed sepid_parvaz --- 5.134698
+  Processed eram2mhd --- 5.134698
+  Processed hrc --- 5.134698
+  Processed hamood --- 5.134698
+  Processed rahbal --- 5.135694
+  Processed kimiya --- 5.135694
+  Processed yegane_fard --- 5.135694
+  Processed flamingo --- 5.135694
+  Processed mehrab --- 5.135694
+  Processed iman --- 5.135694
+  Processed darvishi --- 5.135694
+  Length hotel results --- 127
+  Processed jimboo --- 5.135694
+  Processed moeindarbari --- 5.135694
+  Processed dolfin --- 5.135694
+  Length hotel results --- 85
+  Processed booking --- 5.136693
+  Processed tak_setareh --- 5.136693
+  time hotel processing completed --- 5.136693
+  time read_data_ALLDestination --- 0.667216
+  time hotel get_ALLDestination_data --- 5.805904
+  time hotel beforeSend --- 0.01496
+ "POST /build-tour/ HTTP/1.1" 200 979177
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.00399
+  time Assign tasks --- 0.08876
+  Processed hamsafar --- 5.033864
+  Length hotel results --- 117
+  Processed eghamat --- 5.033864
+  Processed dayan --- 5.033864
+  Processed hamood --- 5.033864
+  Processed eram2mhd --- 5.033864
+  Processed moeindarbari --- 5.034859
+  Length hotel results --- 137
+  Processed snapp --- 5.034859
+  Length hotel results --- 127
+  Processed jimboo --- 5.034859
+  Length hotel results --- 11
+  Processed deltaban --- 5.034859
+  Processed safiran --- 5.034859
+  Processed flamingo --- 5.034859
+  Processed iman --- 5.034859
+  Length hotel results --- 70
+  Processed alaedin --- 5.034859
+  Processed mehrab --- 5.035858
+  Processed rahbal --- 5.035858
+  Length hotel results --- 85
+  Processed booking --- 5.035858
+  Processed parmis --- 5.035858
+  Processed omid_oj --- 5.035858
+  Processed dolfin --- 5.035858
+  Processed kimiya --- 5.035858
+  Processed darvishi --- 5.035858
+  Processed yegane_fard --- 5.035858
+  Processed hrc --- 5.035858
+  Processed sepid_parvaz --- 5.036851
+  Processed tak_setareh --- 5.036851
+  Processed shayan_gasht --- 5.036851
+  time hotel processing completed --- 5.036851
+  time read_data_ALLDestination --- 0.630319
+  time hotel get_ALLDestination_data --- 5.669166
+  time hotel beforeSend --- 0.01296
+ "POST /build-tour/ HTTP/1.1" 200 978531
+ "POST /get-calendar/ HTTP/1.1" 200 11385
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.004985
+  time Assign tasks --- 0.10572
+  Processed omid_oj --- 4.993554
+  Length hotel results --- 30
+  Processed deltaban --- 4.993554
+  Processed sepid_parvaz --- 4.993554
+  Processed tak_setareh --- 4.993554
+  Length hotel results --- 38
+  Processed snapp --- 4.993554
+  Processed yegane_fard --- 4.993554
+  Processed dolfin --- 4.994551
+  Processed moeindarbari --- 4.994551
+  Processed eram2mhd --- 4.994551
+  Length hotel results --- 32
+  Processed alaedin --- 4.994551
+  Length hotel results --- 34
+  Processed booking --- 4.994551
+  Processed mehrab --- 4.994551
+  Processed iman --- 4.994551
+  Processed darvishi --- 4.994551
+  Length hotel results --- 44
+  Processed eghamat --- 4.994551
+  Processed rahbal --- 4.994551
+  Processed hamsafar --- 4.994551
+  Processed hamood --- 4.994551
+  Processed safiran --- 4.994551
+  Processed parmis --- 4.994551
+  Processed flamingo --- 4.994551
+  Processed shayan_gasht --- 4.994551
+  Processed hrc --- 4.994551
+  Length hotel results --- 37
+  Processed jimboo --- 4.994551
+  Processed dayan --- 4.994551
+  Processed kimiya --- 4.994551
+  time hotel processing completed --- 4.994551
+  time read_data_ALLDestination --- 0.09375
+  time hotel get_ALLDestination_data --- 5.090295
+  time hotel beforeSend --- 0.002991
+ "POST /build-tour/ HTTP/1.1" 200 177003
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.021943
+  time Assign tasks --- 0.402923
+  Length hotel results --- 44
+  Processed eghamat --- 12.621013
+  Processed eram2mhd --- 12.622007
+  Processed safiran --- 12.622007
+  Processed mehrab --- 12.623007
+  Processed darvishi --- 12.623007
+  Processed sepid_parvaz --- 12.624002
+  Processed moeindarbari --- 12.624002
+  Length hotel results --- 30
+  Processed deltaban --- 12.625
+  Processed dayan --- 12.625
+  Processed kimiya --- 12.625999
+  Processed iman --- 12.625999
+  Processed dolfin --- 12.626993
+  Length hotel results --- 34
+  Processed booking --- 12.627993
+  Processed flamingo --- 12.627993
+  Processed hrc --- 12.62899
+  Length hotel results --- 37
+  Processed jimboo --- 12.62899
+  Processed rahbal --- 12.629984
+  Processed hamsafar --- 12.629984
+  Length hotel results --- 32
+  Processed alaedin --- 12.630984
+  Processed tak_setareh --- 12.630984
+  Processed parmis --- 12.630984
+  Length hotel results --- 38
+  Processed snapp --- 12.631982
+  Processed omid_oj --- 12.632979
+  Processed yegane_fard --- 12.632979
+  Processed shayan_gasht --- 12.632979
+  Processed hamood --- 12.633976
+  time hotel processing completed --- 12.633976
+  time read_data_ALLDestination --- 0.545543
+  time hotel get_ALLDestination_data --- 13.202454
+  time hotel beforeSend --- 0.017952
+ "POST /build-tour/ HTTP/1.1" 200 199726
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.009973
+  time Assign tasks --- 0.110704
+  Processed dayan --- 3.314646
+  Length hotel results --- 38
+  Processed snapp --- 3.315642
+  Processed moeindarbari --- 3.315642
+  Processed hamood --- 3.315642
+  Length hotel results --- 44
+  Processed eghamat --- 3.316635
+  Processed parmis --- 3.316635
+  Length hotel results --- 34
+  Processed booking --- 3.317636
+  Processed eram2mhd --- 3.317636
+  Processed rahbal --- 3.317636
+  Length hotel results --- 32
+  Processed alaedin --- 3.318632
+  Processed darvishi --- 3.318632
+  Processed mehrab --- 3.318632
+  Processed yegane_fard --- 3.319626
+  Processed omid_oj --- 3.319626
+  Length hotel results --- 37
+  Processed jimboo --- 3.319626
+  Processed kimiya --- 3.320623
+  Processed dolfin --- 3.320623
+  Processed sepid_parvaz --- 3.320623
+  Processed hrc --- 3.320623
+  Processed flamingo --- 3.321623
+  Processed hamsafar --- 3.321623
+  Processed safiran --- 3.321623
+  Processed tak_setareh --- 3.321623
+  Length hotel results --- 30
+  Processed deltaban --- 3.32262
+  Processed iman --- 3.323621
+  Processed shayan_gasht --- 3.323621
+  time hotel processing completed --- 3.323621
+  time read_data_ALLDestination --- 0.50764
+  time hotel get_ALLDestination_data --- 3.84522
+  time hotel beforeSend --- 0.776922
+ "POST /build-tour/ HTTP/1.1" 200 188224
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.003989
+  time Assign tasks --- 0.117684
+  Processed dolfin --- 7.653087
+  Length hotel results --- 30
+  Processed deltaban --- 7.653087
+  Processed kimiya --- 7.654084
+  Length hotel results --- 44
+  Processed eghamat --- 7.654084
+  Processed parmis --- 7.654084
+  Processed hrc --- 7.654084
+  Processed hamood --- 7.655082
+  Processed yegane_fard --- 7.655082
+  Processed moeindarbari --- 7.655082
+  Processed eram2mhd --- 7.655082
+  Processed sepid_parvaz --- 7.655082
+  Processed mehrab --- 7.656079
+  Processed tak_setareh --- 7.656079
+  Processed iman --- 7.656079
+  Processed hamsafar --- 7.656079
+  Length hotel results --- 36
+  Processed booking --- 7.656079
+  Length hotel results --- 38
+  Processed snapp --- 7.657076
+  Processed safiran --- 7.657076
+  Processed rahbal --- 7.657076
+  Processed flamingo --- 7.657076
+  Length hotel results --- 32
+  Processed alaedin --- 7.657076
+  Processed dayan --- 7.657076
+  Processed shayan_gasht --- 7.657076
+  Processed darvishi --- 7.658073
+  Length hotel results --- 37
+  Processed jimboo --- 7.658073
+  Processed omid_oj --- 7.658073
+  time hotel processing completed --- 7.658073
+  time read_data_ALLDestination --- 0.187498
+  time hotel get_ALLDestination_data --- 7.856541
+  time hotel beforeSend --- 0.004988
+ "POST /build-tour/ HTTP/1.1" 200 149434
+ "POST /get-calendar/ HTTP/1.1" 200 10782
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.008973
+  time Assign tasks --- 0.219413
+  Processed hamood --- 2.730024
+  Processed shayan_gasht --- 2.73102
+  Processed parmis --- 2.733014
+  Processed darvishi --- 2.733014
+  Length hotel results --- 30
+  Processed deltaban --- 2.735009
+  Processed yegane_fard --- 2.737005
+  Processed sepid_parvaz --- 2.738008
+  Processed safiran --- 2.739007
+  Processed hrc --- 2.740992
+  Processed rahbal --- 2.74199
+  Processed hamsafar --- 2.743985
+  Processed flamingo --- 2.744991
+  Processed dayan --- 2.746976
+  Processed iman --- 2.747975
+  Processed moeindarbari --- 2.748972
+  Processed tak_setareh --- 2.749971
+  Length hotel results --- 32
+  Processed alaedin --- 2.751964
+  Processed mehrab --- 2.751964
+  Length hotel results --- 36
+  Processed booking --- 2.753961
+  Length hotel results --- 44
+  Processed eghamat --- 2.754955
+  Length hotel results --- 37
+  Processed jimboo --- 2.755954
+  Length hotel results --- 38
+  Processed snapp --- 2.75695
+  Processed dolfin --- 2.75695
+  Processed kimiya --- 2.75695
+  Processed eram2mhd --- 2.757947
+  Processed omid_oj --- 2.757947
+  time hotel processing completed --- 2.757947
+  time read_data_ALLDestination --- 0.439827
+  time hotel get_ALLDestination_data --- 3.202757
+  time hotel beforeSend --- 0.008981
+ "POST /build-tour/ HTTP/1.1" 200 447235
+ "POST /get-calendar/ HTTP/1.1" 200 4409
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.004987
+  time Assign tasks --- 0.254913
+  Processed mehrab --- 2.834317
+  Processed moeindarbari --- 2.835321
+  Processed kimiya --- 2.836313
+  Length hotel results --- 38
+  Processed snapp --- 2.837305
+  Processed safiran --- 2.837305
+  Processed parmis --- 2.837305
+  Length hotel results --- 30
+  Processed deltaban --- 2.839304
+  Processed eram2mhd --- 2.840311
+  Length hotel results --- 32
+  Processed alaedin --- 2.841295
+  Processed rahbal --- 2.841295
+  Processed shayan_gasht --- 2.842292
+  Length hotel results --- 44
+  Processed eghamat --- 2.84329
+  Processed dayan --- 2.84329
+  Processed dolfin --- 2.84329
+  Length hotel results --- 37
+  Processed jimboo --- 2.844287
+  Processed omid_oj --- 2.844287
+  Processed flamingo --- 2.844287
+  Processed hamood --- 2.845283
+  Processed darvishi --- 2.845283
+  Processed iman --- 2.845283
+  Processed tak_setareh --- 2.845283
+  Processed hrc --- 2.846282
+  Processed hamsafar --- 2.846282
+  Processed yegane_fard --- 2.846282
+  Processed sepid_parvaz --- 2.846282
+  Length hotel results --- 36
+  Processed booking --- 2.847277
+  time hotel processing completed --- 2.848275
+  time read_data_ALLDestination --- 0.457775
+  time hotel get_ALLDestination_data --- 3.311038
+  time hotel beforeSend --- 0.008976
+ "POST /build-tour/ HTTP/1.1" 200 251823
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.010975
+  time Assign tasks --- 0.196471
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "POST /get-calendar/ HTTP/1.1" 200 6802
+  Processed dolfin --- 7.103787
+  Processed parmis --- 7.104788
+  Processed eram2mhd --- 7.104788
+  Length hotel results --- 84
+  Processed eghamat --- 7.105781
+  Processed iman --- 7.105781
+  Processed hamsafar --- 7.106783
+  Processed hamood --- 7.107776
+  Length hotel results --- 23
+  Processed alaedin --- 7.107776
+  Processed flamingo --- 7.107776
+  Processed safiran --- 7.108776
+  Processed darvishi --- 7.108776
+  Length hotel results --- 10
+  Processed deltaban --- 7.108776
+  Processed moeindarbari --- 7.109787
+  Processed rahbal --- 7.109787
+  Processed omid_oj --- 7.109787
+  Processed dayan --- 7.109787
+  Processed kimiya --- 7.110807
+  Processed mehrab --- 7.110807
+  Processed hrc --- 7.110807
+  Processed sepid_parvaz --- 7.110807
+  Length hotel results --- 42
+  Processed booking --- 7.11179
+  Processed yegane_fard --- 7.11179
+  Length hotel results --- 94
+  Processed jimboo --- 7.112764
+  Processed shayan_gasht --- 7.112764
+  Processed tak_setareh --- 7.112764
+  Length hotel results --- 80
+  Processed snapp --- 7.113761
+  time hotel processing completed --- 7.113761
+  time read_data_ALLDestination --- 1.127983
+  time hotel get_ALLDestination_data --- 8.246732
+  time hotel beforeSend --- 0.007978
+ "POST /build-tour/ HTTP/1.1" 200 144964
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.01995
+  time Assign tasks --- 0.424748
+  Processed safiran --- 4.600169
+  Length hotel results --- 108
+  Processed snapp --- 22.00027
+  Processed dayan --- 22.001278
+  Processed hamsafar --- 22.001278
+  Processed darvishi --- 22.002266
+  Length hotel results --- 23
+  Processed alaedin --- 31.528737
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.004951
+  time Assign tasks --- 0.098433
+  Processed iman --- 6.896206
+  Processed dayan --- 6.897202
+  Processed kimiya --- 6.897202
+  Processed hamood --- 6.897202
+  Processed moeindarbari --- 6.897202
+  Processed hrc --- 6.897202
+  Processed tak_setareh --- 6.897202
+  Processed parmis --- 6.897202
+  Processed jimboo --- 26.297198
+  Processed deltaban --- 26.297198
+  Processed darvishi --- 26.297198
+ Length hotel results --- 84
+  Processed eghamat --- 35.662741
+  Processed rahbal --- 35.662741
+ Length hotel results --- 42
+  Processed booking --- 38.571617
+  Processed omid_oj --- 38.571617
+  Processed dolfin --- 38.571617
+ Length hotel results --- 28
+  Processed snapp --- 40.367855
+  Processed sepid_parvaz --- 40.367855
+  Processed alaedin --- 49.437199
+  Processed safiran --- 49.437199
+  Processed shayan_gasht --- 49.437199
+  Processed hamsafar --- 49.43824
+  Processed eram2mhd --- 49.43824
+  Processed mehrab --- 49.43824
+  Processed flamingo --- 49.43824
+  Processed yegane_fard --- 49.43824
+  time hotel processing completed --- 49.43824
+  time read_data_ALLDestination --- 0.353189
+  time hotel get_ALLDestination_data --- 49.801399
+  time hotel beforeSend --- 0.00369
+ "POST /build-tour/ HTTP/1.1" 200 120475
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "POST /get-calendar/ HTTP/1.1" 200 11385
+ "POST /get-calendar/ HTTP/1.1" 200 11385
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.00457
+  time Assign tasks --- 0.09459
+  Processed iman --- 9.24004
+ Length hotel results --- 37
+  Processed jimboo --- 9.241036
+  Processed darvishi --- 9.242034
+  Processed rahbal --- 9.242034
+  Processed yegane_fard --- 9.243031
+  Processed deltaban --- 9.243031
+ Length hotel results --- 32
+  Processed alaedin --- 9.244029
+  Processed kimiya --- 9.245026
+  Processed hamsafar --- 9.245026
+  Processed tak_setareh --- 9.246023
+  Processed hamood --- 9.246023
+ Length hotel results --- 38
+  Processed snapp --- 9.24702
+ Length hotel results --- 44
+  Processed eghamat --- 9.248018
+  Processed safiran --- 9.249015
+  Processed flamingo --- 9.250014
+  Processed dolfin --- 9.250014
+  Processed parmis --- 9.250014
+  Processed sepid_parvaz --- 9.25101
+  Processed moeindarbari --- 9.252006
+  Processed hrc --- 9.253009
+  Processed eram2mhd --- 9.253009
+ Length hotel results --- 33
+  Processed booking --- 9.254044
+  Processed dayan --- 9.254044
+  Processed omid_oj --- 9.254044
+  Processed shayan_gasht --- 9.25504
+  Processed mehrab --- 9.25504
+  time hotel processing completed --- 9.25504
+  time read_data_ALLDestination --- 0.181849
+  time hotel get_ALLDestination_data --- 9.445559
+  time hotel beforeSend --- 0.004335
+ "POST /build-tour/ HTTP/1.1" 200 214747
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.003406
+  time Assign tasks --- 0.140073
+  Processed eram2mhd --- 7.366314
+  Processed shayan_gasht --- 7.367298
+  Processed dolfin --- 7.368295
+  Processed hrc --- 7.368295
+  Processed iman --- 7.369292
+  Processed tak_setareh --- 7.369292
+  Processed darvishi --- 7.37029
+ Length hotel results --- 33
+  Processed booking --- 7.371245
+  Processed yegane_fard --- 7.371245
+  Processed sepid_parvaz --- 7.372312
+  Processed mehrab --- 7.372312
+  Processed dayan --- 7.373292
+  Processed flamingo --- 7.373292
+ Length hotel results --- 38
+  Processed snapp --- 7.374241
+  Processed omid_oj --- 7.374241
+  Processed kimiya --- 7.375279
+ Length hotel results --- 37
+  Processed jimboo --- 7.376274
+ Length hotel results --- 32
+  Processed alaedin --- 7.37723
+  Processed deltaban --- 7.37723
+  Processed hamood --- 7.37723
+  Processed parmis --- 7.378228
+  Processed hamsafar --- 7.378228
+  Processed rahbal --- 7.378228
+  Processed safiran --- 7.379222
+  Processed moeindarbari --- 7.379222
+ Length hotel results --- 44
+  Processed eghamat --- 7.380224
+  time hotel processing completed --- 7.380224
+  time read_data_ALLDestination --- 0.18721
+  time hotel get_ALLDestination_data --- 7.572475
+  time hotel beforeSend --- 0.005023
+ "POST /build-tour/ HTTP/1.1" 200 214713
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.008167
+  time Assign tasks --- 0.034902
+  Processed deltaban --- 9.577081
+  Processed moeindarbari --- 9.577081
+  Processed iman --- 9.577081
+  Processed flamingo --- 9.577081
+ Length hotel results --- 33
+  Processed booking --- 9.578121
+ Length hotel results --- 37
+  Processed jimboo --- 9.578121
+ Length hotel results --- 44
+  Processed eghamat --- 9.578121
+  Processed parmis --- 9.578121
+  Processed dayan --- 9.578121
+ Length hotel results --- 38
+  Processed snapp --- 9.579121
+  Processed omid_oj --- 9.579121
+  Processed yegane_fard --- 9.579121
+  Processed sepid_parvaz --- 9.579121
+  Processed mehrab --- 9.579121
+  Processed hamood --- 9.579121
+  Processed kimiya --- 9.579121
+  Processed safiran --- 9.580114
+  Processed rahbal --- 9.580114
+  Processed hamsafar --- 9.580114
+  Processed eram2mhd --- 9.580114
+  Processed dolfin --- 9.580114
+  Processed hrc --- 9.580114
+  Processed tak_setareh --- 9.580114
+ Length hotel results --- 32
+  Processed alaedin --- 9.580114
+  Processed shayan_gasht --- 9.581068
+  Processed darvishi --- 9.581068
+  time hotel processing completed --- 9.581068
+  time read_data_ALLDestination --- 0.083638
+  time hotel get_ALLDestination_data --- 9.665704
+  time hotel beforeSend --- 0.005945
+ "POST /build-tour/ HTTP/1.1" 200 214720
+  time hotel redis_cache --- 0.0
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 16.669754
+  time Assign tasks --- 0.184944
+  Processed safiran --- 19.895871
+  Processed dolfin --- 19.895871
+ Length hotel results --- 30
+  Processed deltaban --- 19.903929
+  Processed kimiya --- 19.903929
+  Processed rahbal --- 19.903929
+ Length hotel results --- 38
+  Processed snapp --- 19.905961
+  Processed tak_setareh --- 19.905961
+ Length hotel results --- 32
+  Processed alaedin --- 19.905961
+  Processed dayan --- 19.905961
+  Processed moeindarbari --- 19.905961
+  Processed shayan_gasht --- 19.905961
+ Length hotel results --- 44
+  Processed eghamat --- 19.905961
+ Length hotel results --- 37
+  Processed jimboo --- 19.905961
+  Processed flamingo --- 19.905961
+  Processed sepid_parvaz --- 19.905961
+  Processed eram2mhd --- 19.905961
+  Processed darvishi --- 19.905961
+ Length hotel results --- 33
+  Processed booking --- 19.905961
+  Processed iman --- 19.914036
+  Processed hrc --- 19.914036
+  Processed hamood --- 19.914036
+  Processed hamsafar --- 19.914036
+  Processed parmis --- 19.914036
+  Processed mehrab --- 19.916072
+  Processed yegane_fard --- 19.916072
+  Processed omid_oj --- 19.916072
+  time hotel processing completed --- 19.916072
+  time read_data_ALLDestination --- 0.71599
+  time hotel get_ALLDestination_data --- 20.653005
+  time hotel beforeSend --- 0.03287
+ "POST /build-tour/ HTTP/1.1" 200 215945
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.016709
+  time Assign tasks --- 0.133303
+  Processed hrc --- 9.731062
+  Processed mehrab --- 9.746735
+ Length hotel results --- 38
+  Processed snapp --- 9.746735
+  Processed hamsafar --- 9.746735
+ Length hotel results --- 33
+  Processed booking --- 9.746735
+  Processed omid_oj --- 9.746735
+  Processed tak_setareh --- 9.746735
+  Processed darvishi --- 9.746735
+  Processed iman --- 9.746735
+  Processed dayan --- 9.746735
+  Processed kimiya --- 9.746735
+  Processed parmis --- 9.746735
+  Processed flamingo --- 9.746735
+  Processed eram2mhd --- 9.746735
+  Processed rahbal --- 9.746735
+  Processed dolfin --- 9.746735
+  Processed yegane_fard --- 9.746735
+  Processed shayan_gasht --- 9.746735
+  Processed hamood --- 9.746735
+ Length hotel results --- 37
+  Processed jimboo --- 9.746735
+  Processed safiran --- 9.746735
+ Length hotel results --- 44
+  Processed eghamat --- 9.746735
+ Length hotel results --- 32
+  Processed alaedin --- 9.746735
+  Processed sepid_parvaz --- 9.746735
+  Processed deltaban --- 9.746735
+  Processed moeindarbari --- 9.746735
+  time hotel processing completed --- 9.746735
+  time read_data_ALLDestination --- 0.171882
+  time hotel get_ALLDestination_data --- 9.950828
+  time hotel beforeSend --- 0.015604
+ "POST /build-tour/ HTTP/1.1" 200 214671
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.006114
+  time Assign tasks --- 0.124971
+  Processed darvishi --- 8.040747
+  Processed kimiya --- 8.040747
+  Processed omid_oj --- 8.040747
+  Processed hamsafar --- 8.040747
+  Processed moeindarbari --- 8.040747
+  Processed parmis --- 8.040747
+  Processed dayan --- 8.040747
+  Processed alaedin --- 8.040747
+  Processed iman --- 8.040747
+  Processed tak_setareh --- 8.040747
+  Processed rahbal --- 8.040747
+  Processed sepid_parvaz --- 8.040747
+  Processed eram2mhd --- 8.040747
+  Processed dolfin --- 8.040747
+ Length hotel results --- 38
+  Processed snapp --- 8.040747
+  Processed hamood --- 8.040747
+ Length hotel results --- 36
+  Processed booking --- 8.040747
+  Processed deltaban --- 8.040747
+  Processed safiran --- 8.040747
+ Length hotel results --- 44
+  Processed eghamat --- 8.040747
+  Processed mehrab --- 8.040747
+ Length hotel results --- 37
+  Processed jimboo --- 8.040747
+  Processed shayan_gasht --- 8.040747
+  Processed yegane_fard --- 8.040747
+  Processed flamingo --- 8.040747
+  Processed hrc --- 8.040747
+  time hotel processing completed --- 8.040747
+  time read_data_ALLDestination --- 0.171869
+  time hotel get_ALLDestination_data --- 8.221279
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 211233
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.101267
+  Processed shayan_gasht --- 2.382167
+ Length hotel results --- 38
+  Processed snapp --- 2.382167
+  Processed omid_oj --- 2.382167
+  Processed dolfin --- 2.382167
+  Processed hamsafar --- 2.382167
+  Processed deltaban --- 2.382167
+ Length hotel results --- 36
+  Processed booking --- 2.382167
+  Processed tak_setareh --- 2.382167
+  Processed flamingo --- 2.382167
+  Processed alaedin --- 2.382167
+  Processed hamood --- 2.382167
+  Processed iman --- 2.382167
+ Length hotel results --- 37
+  Processed jimboo --- 2.382167
+  Processed mehrab --- 2.382167
+  Processed sepid_parvaz --- 2.382167
+  Processed rahbal --- 2.382167
+  Processed safiran --- 2.382167
+  Processed kimiya --- 2.382167
+  Processed parmis --- 2.382167
+  Processed darvishi --- 2.382167
+ Length hotel results --- 44
+  Processed eghamat --- 2.382167
+  Processed hrc --- 2.382167
+  Processed yegane_fard --- 2.382167
+  Processed moeindarbari --- 2.382167
+  Processed dayan --- 2.382167
+  Processed eram2mhd --- 2.382167
+  time hotel processing completed --- 2.382167
+  time read_data_ALLDestination --- 0.200087
+  time hotel get_ALLDestination_data --- 2.592814
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 211215
+ "POST /get-calendar/ HTTP/1.1" 200 10782
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.000679
+  time Assign tasks --- 0.152671
+  Processed dolfin --- 1.871242
+  Processed rahbal --- 1.871242
+  Processed mehrab --- 1.871242
+  Processed eram2mhd --- 1.871242
+  Processed iman --- 1.871242
+ Length hotel results --- 36
+  Processed booking --- 1.871242
+  Processed flamingo --- 1.871242
+  Processed shayan_gasht --- 1.871242
+  Processed tak_setareh --- 1.871242
+ Length hotel results --- 44
+  Processed eghamat --- 1.871242
+  Processed dayan --- 1.871242
+ Length hotel results --- 38
+  Processed snapp --- 1.871242
+  Processed sepid_parvaz --- 1.871242
+  Processed deltaban --- 1.871242
+  Processed moeindarbari --- 1.871242
+  Processed darvishi --- 1.871242
+  Processed kimiya --- 1.871242
+  Processed safiran --- 1.871242
+ Length hotel results --- 37
+  Processed jimboo --- 1.871242
+  Processed hamsafar --- 1.871242
+  Processed hrc --- 1.871242
+  Processed parmis --- 1.871242
+  Processed hamood --- 1.871242
+  Processed omid_oj --- 1.871242
+  Processed alaedin --- 1.871242
+  Processed yegane_fard --- 1.871242
+  time hotel processing completed --- 1.871242
+  time read_data_ALLDestination --- 0.171834
+  time hotel get_ALLDestination_data --- 2.058694
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 454643
+ "POST /get-calendar/ HTTP/1.1" 200 6897
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.097075
+  Processed darvishi --- 2.449298
+  Processed kimiya --- 2.449298
+  Processed moeindarbari --- 2.449298
+ Length hotel results --- 37
+  Processed jimboo --- 2.449298
+  Processed flamingo --- 2.449298
+  Processed omid_oj --- 2.449298
+  Processed hrc --- 2.449298
+ Length hotel results --- 44
+  Processed eghamat --- 2.449298
+  Processed eram2mhd --- 2.449298
+  Processed alaedin --- 2.449298
+  Processed dayan --- 2.449298
+  Processed parmis --- 2.449298
+  Processed hamood --- 2.449298
+  Processed sepid_parvaz --- 2.449298
+ Length hotel results --- 38
+  Processed snapp --- 2.449298
+  Processed mehrab --- 2.449298
+  Processed iman --- 2.449298
+  Processed tak_setareh --- 2.449298
+  Processed dolfin --- 2.449298
+  Processed safiran --- 2.449298
+  Processed rahbal --- 2.449298
+  Processed yegane_fard --- 2.449298
+  Processed deltaban --- 2.449298
+  Processed shayan_gasht --- 2.449298
+ Length hotel results --- 36
+  Processed booking --- 2.449298
+  Processed hamsafar --- 2.449298
+  time hotel processing completed --- 2.449298
+  time read_data_ALLDestination --- 0.171787
+  time hotel get_ALLDestination_data --- 2.621085
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 139233
+ "POST /get-calendar/ HTTP/1.1" 200 10782
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.11466
+  Processed deltaban --- 8.1717
+  Processed safiran --- 8.1717
+  Processed darvishi --- 8.1717
+  Processed alaedin --- 8.1717
+  Processed hamood --- 8.1717
+  Processed tak_setareh --- 8.1717
+  Processed sepid_parvaz --- 8.1717
+  Processed rahbal --- 8.1717
+  Processed hamsafar --- 8.1717
+  Processed dayan --- 8.1717
+  Processed yegane_fard --- 8.1717
+  Processed omid_oj --- 8.1717
+  Processed moeindarbari --- 8.1717
+ Length hotel results --- 44
+  Processed eghamat --- 8.1717
+  Processed kimiya --- 8.1717
+  Processed parmis --- 8.1717
+  Processed iman --- 8.1717
+  Processed flamingo --- 8.1717
+  Processed eram2mhd --- 8.1717
+ Length hotel results --- 37
+  Processed jimboo --- 8.1717
+  Processed dolfin --- 8.1717
+ Length hotel results --- 35
+  Processed booking --- 8.1717
+  Processed shayan_gasht --- 8.1717
+  Processed hrc --- 8.1717
+ Length hotel results --- 38
+  Processed snapp --- 8.1717
+  Processed mehrab --- 8.1717
+  time hotel processing completed --- 8.1717
+  time read_data_ALLDestination --- 0.156215
+  time hotel get_ALLDestination_data --- 8.329957
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 472296
+ "POST /get-calendar/ HTTP/1.1" 200 11385
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.132396
+  Processed mehrab --- 6.555627
+  Processed iman --- 6.555627
+ Length hotel results --- 38
+  Processed snapp --- 6.555627
+  Processed alaedin --- 6.555627
+  Processed hamsafar --- 6.555627
+  Processed eram2mhd --- 6.555627
+  Processed darvishi --- 6.555627
+  Processed moeindarbari --- 6.555627
+  Processed omid_oj --- 6.555627
+  Processed yegane_fard --- 6.555627
+ Length hotel results --- 37
+  Processed jimboo --- 6.555627
+  Processed kimiya --- 6.555627
+  Processed shayan_gasht --- 6.555627
+ Length hotel results --- 44
+  Processed eghamat --- 6.555627
+  Processed hamood --- 6.555627
+  Processed sepid_parvaz --- 6.555627
+  Processed rahbal --- 6.555627
+ Length hotel results --- 35
+  Processed booking --- 6.555627
+  Processed dolfin --- 6.555627
+  Processed tak_setareh --- 6.555627
+  Processed parmis --- 6.555627
+  Processed dayan --- 6.555627
+ Length hotel results --- 30
+  Processed deltaban --- 6.555627
+  Processed safiran --- 6.555627
+  Processed flamingo --- 6.555627
+  Processed hrc --- 6.555627
+  time hotel processing completed --- 6.555627
+  time read_data_ALLDestination --- 0.427155
+  time hotel get_ALLDestination_data --- 7.000296
+  time hotel beforeSend --- 0.008981
+ "POST /build-tour/ HTTP/1.1" 200 158563
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.132962
+  Processed kimiya --- 60.144813
+  Processed parmis --- 60.144813
+  Processed safiran --- 60.144813
+  Processed yegane_fard --- 60.144813
+  Processed eram2mhd --- 60.144813
+  Processed dolfin --- 60.144813
+  Processed shayan_gasht --- 60.144813
+  Processed rahbal --- 60.144813
+  Processed mehrab --- 60.144813
+  Processed hrc --- 60.144813
+ Length hotel results --- 35
+  Processed booking --- 60.144813
+  Processed hamsafar --- 60.144813
+  Processed flamingo --- 60.144813
+  Processed alaedin --- 60.144813
+  Processed moeindarbari --- 60.144813
+ Length hotel results --- 44
+  Processed eghamat --- 60.144813
+  Processed dayan --- 60.144813
+  Processed omid_oj --- 60.144813
+ Length hotel results --- 38
+  Processed snapp --- 60.144813
+ Length hotel results --- 37
+  Processed jimboo --- 60.144813
+  Processed hamood --- 60.144813
+  Processed darvishi --- 60.144813
+  Processed iman --- 60.144813
+  Processed sepid_parvaz --- 60.144813
+  Processed tak_setareh --- 60.144813
+ Timeout: deltaban did not complete within 60 seconds
+  time hotel processing completed --- 60.144813
+  time read_data_ALLDestination --- 0.206291
+  time hotel get_ALLDestination_data --- 71.974923
+  time hotel beforeSend --- 0.004987
+ "POST /build-tour/ HTTP/1.1" 200 188248
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.018009
+ "POST /get-calendar/ HTTP/1.1" 200 10782
+  time Assign tasks --- 0.180875
+  Processed rahbal --- 2.56776
+  Processed dolfin --- 2.56776
+  Processed safiran --- 2.56776
+  Processed alaedin --- 2.56776
+  Processed darvishi --- 2.56776
+ Length hotel results --- 44
+  Processed eghamat --- 2.56776
+ Length hotel results --- 37
+  Processed jimboo --- 2.56776
+  Processed yegane_fard --- 2.56776
+  Processed iman --- 2.56776
+  Processed eram2mhd --- 2.56776
+ Length hotel results --- 35
+  Processed booking --- 2.56776
+  Processed parmis --- 2.56776
+  Processed hrc --- 2.56776
+  Processed sepid_parvaz --- 2.56776
+  Processed kimiya --- 2.56776
+ Length hotel results --- 38
+  Processed snapp --- 2.56776
+  Processed hamood --- 2.56776
+  Processed deltaban --- 2.56776
+  Processed moeindarbari --- 2.56776
+  Processed hamsafar --- 2.56776
+  Processed tak_setareh --- 2.56776
+  Processed mehrab --- 2.56776
+  Processed flamingo --- 2.56776
+  Processed dayan --- 2.56776
+  Processed shayan_gasht --- 2.56776
+  Processed omid_oj --- 2.56776
+  time hotel processing completed --- 2.56776
+  time read_data_ALLDestination --- 0.156256
+  time hotel get_ALLDestination_data --- 2.739598
+  time hotel beforeSend --- 0.015618
+ "POST /build-tour/ HTTP/1.1" 200 472292
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.066759
+  Processed kimiya --- 8.677166
+  Processed flamingo --- 8.677166
+  Processed tak_setareh --- 8.677166
+  Processed deltaban --- 8.677166
+  Processed iman --- 8.677166
+  Processed alaedin --- 8.677166
+  Processed mehrab --- 8.677166
+ Length hotel results --- 36
+  Processed booking --- 8.677166
+  Processed hrc --- 8.677166
+  Processed safiran --- 8.677166
+  Processed hamood --- 8.677166
+  Processed dolfin --- 8.677166
+  Processed omid_oj --- 8.677166
+  Processed shayan_gasht --- 8.677166
+  Processed parmis --- 8.677166
+ Length hotel results --- 38
+  Processed snapp --- 8.677166
+  Processed darvishi --- 8.677166
+  Processed eram2mhd --- 8.677166
+  Processed dayan --- 8.677166
+ Length hotel results --- 44
+  Processed eghamat --- 8.677166
+  Processed hamsafar --- 8.677166
+  Processed sepid_parvaz --- 8.677166
+ Length hotel results --- 37
+  Processed jimboo --- 8.677166
+  Processed yegane_fard --- 8.677166
+  Processed moeindarbari --- 8.677166
+  Processed rahbal --- 8.677166
+  time hotel processing completed --- 8.677166
+  time read_data_ALLDestination --- 0.155682
+  time hotel get_ALLDestination_data --- 8.832848
+  time hotel beforeSend --- 0.015622
+ "POST /build-tour/ HTTP/1.1" 200 454698
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.099739
+  Processed rahbal --- 12.412086
+ Length hotel results --- 33
+  Processed booking --- 12.412086
+  Processed safiran --- 12.412086
+  Processed parmis --- 12.412086
+  Processed hrc --- 12.412086
+  Processed flamingo --- 12.412086
+  Processed dayan --- 12.412086
+ Length hotel results --- 30
+  Processed deltaban --- 12.412086
+  Processed moeindarbari --- 12.412086
+  Processed omid_oj --- 12.412086
+  Processed kimiya --- 12.412086
+  Processed dolfin --- 12.412086
+  Processed sepid_parvaz --- 12.412086
+  Processed yegane_fard --- 12.412086
+  Processed mehrab --- 12.412086
+  Processed eram2mhd --- 12.412086
+  Processed shayan_gasht --- 12.412086
+ Length hotel results --- 37
+  Processed jimboo --- 12.412086
+  Processed hamsafar --- 12.412086
+ Length hotel results --- 38
+  Processed snapp --- 12.412086
+ Length hotel results --- 32
+  Processed alaedin --- 12.412086
+  Processed iman --- 12.412086
+  Processed hamood --- 12.412086
+  Processed tak_setareh --- 12.412086
+  Processed darvishi --- 12.412086
+ Length hotel results --- 44
+  Processed eghamat --- 12.412086
+  time hotel processing completed --- 12.412086
+  time read_data_ALLDestination --- 0.189857
+  time hotel get_ALLDestination_data --- 12.633865
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 661828
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.016221
+  time Assign tasks --- 0.136129
+ Length hotel results --- 38
+  Processed snapp --- 8.698681
+  Processed rahbal --- 8.698681
+  Processed hrc --- 8.698681
+  Processed flamingo --- 8.698681
+  Processed dayan --- 8.698681
+  Processed darvishi --- 8.698681
+ Length hotel results --- 37
+  Processed jimboo --- 8.698681
+  Processed omid_oj --- 8.698681
+  Processed kimiya --- 8.698681
+ Length hotel results --- 33
+  Processed booking --- 8.698681
+  Processed parmis --- 8.698681
+  Processed sepid_parvaz --- 8.698681
+ Length hotel results --- 44
+  Processed eghamat --- 8.698681
+  Processed eram2mhd --- 8.698681
+  Processed moeindarbari --- 8.698681
+  Processed mehrab --- 8.698681
+  Processed yegane_fard --- 8.698681
+  Processed deltaban --- 8.698681
+  Processed shayan_gasht --- 8.698681
+  Processed hamsafar --- 8.698681
+  Processed hamood --- 8.698681
+  Processed alaedin --- 8.698681
+  Processed tak_setareh --- 8.698681
+  Processed iman --- 8.698681
+  Processed safiran --- 8.698681
+  Processed dolfin --- 8.698681
+  time hotel processing completed --- 8.698681
+  time read_data_ALLDestination --- 0.156209
+  time hotel get_ALLDestination_data --- 8.85489
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 470302
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.115773
+  Processed sepid_parvaz --- 25.462262
+  Processed tak_setareh --- 25.462262
+  Processed hrc --- 25.462262
+  Processed parmis --- 25.462262
+  Processed moeindarbari --- 25.462262
+  Processed kimiya --- 25.462262
+  Processed rahbal --- 25.462262
+ Length hotel results --- 37
+  Processed jimboo --- 25.462262
+  Processed dayan --- 25.462262
+  Processed flamingo --- 25.462262
+  Processed mehrab --- 25.462262
+  Processed omid_oj --- 25.462262
+  Processed eram2mhd --- 25.462262
+  Processed hamsafar --- 25.462262
+  Processed yegane_fard --- 25.462262
+  Processed shayan_gasht --- 25.462262
+  Processed deltaban --- 25.462262
+  Processed hamood --- 25.462262
+  Processed iman --- 25.462262
+ Length hotel results --- 44
+  Processed eghamat --- 25.462262
+  Processed safiran --- 25.462262
+  Processed darvishi --- 25.462262
+ Length hotel results --- 33
+  Processed booking --- 25.462262
+  Processed dolfin --- 25.462262
+ Length hotel results --- 38
+  Processed snapp --- 25.462262
+ Length hotel results --- 32
+  Processed alaedin --- 25.462262
+  time hotel processing completed --- 25.462262
+  time read_data_ALLDestination --- 0.17713
+  time hotel get_ALLDestination_data --- 25.65617
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 654545
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.133247
+  Processed rahbal --- 10.519586
+ Length hotel results --- 32
+  Processed alaedin --- 10.519586
+  Processed deltaban --- 10.519586
+  Processed darvishi --- 10.519586
+  Processed shayan_gasht --- 10.519586
+  Processed omid_oj --- 10.519586
+  Processed eram2mhd --- 10.519586
+  Processed iman --- 10.519586
+  Processed dayan --- 10.519586
+  Processed dolfin --- 10.519586
+  Processed hrc --- 10.519586
+  Processed flamingo --- 10.519586
+  Processed sepid_parvaz --- 10.519586
+  Processed kimiya --- 10.519586
+  Processed moeindarbari --- 10.519586
+  Processed hamood --- 10.519586
+  Processed parmis --- 10.519586
+  Processed mehrab --- 10.519586
+ Length hotel results --- 33
+  Processed booking --- 10.519586
+  Processed tak_setareh --- 10.519586
+  Processed yegane_fard --- 10.519586
+ Length hotel results --- 44
+  Processed eghamat --- 10.519586
+ Length hotel results --- 38
+  Processed snapp --- 10.519586
+  Processed hamsafar --- 10.519586
+ Length hotel results --- 37
+  Processed jimboo --- 10.519586
+  Processed safiran --- 10.519586
+  time hotel processing completed --- 10.519586
+  time read_data_ALLDestination --- 0.182315
+  time hotel get_ALLDestination_data --- 10.713636
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 654588
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.016732
+  time Assign tasks --- 0.116537
+  Processed iman --- 60.140405
+  Processed mehrab --- 60.140405
+  Processed flamingo --- 60.140405
+  Processed safiran --- 60.140405
+  Processed hamsafar --- 60.140405
+  Processed rahbal --- 60.140405
+  Processed dolfin --- 60.140405
+  Processed tak_setareh --- 60.140405
+  Processed hrc --- 60.140405
+  Processed dayan --- 60.140405
+ Length hotel results --- 38
+  Processed snapp --- 60.140405
+ Length hotel results --- 37
+  Processed jimboo --- 60.140405
+  Processed omid_oj --- 60.140405
+  Processed sepid_parvaz --- 60.140405
+ Length hotel results --- 44
+  Processed eghamat --- 60.1444
+  Processed moeindarbari --- 60.1444
+  Processed kimiya --- 60.1444
+ Length hotel results --- 33
+  Processed booking --- 60.1444
+ Length hotel results --- 32
+  Processed alaedin --- 60.1444
+  Processed darvishi --- 60.1444
+  Processed eram2mhd --- 60.1444
+  Processed yegane_fard --- 60.1444
+  Processed shayan_gasht --- 60.1444
+  Processed parmis --- 60.1444
+  Processed hamood --- 60.1444
+ Timeout: deltaban did not complete within 60 seconds
+  time hotel processing completed --- 60.1444
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.000446
+  time Assign tasks --- 0.133294
+  Processed iman --- 60.140824
+  Processed eram2mhd --- 60.140824
+  Processed dayan --- 60.140824
+  Processed flamingo --- 60.140824
+  Processed rahbal --- 60.140824
+  Processed yegane_fard --- 60.140824
+  Processed alaedin --- 60.140824
+ Length hotel results --- 33
+  Processed booking --- 60.140824
+  Processed omid_oj --- 60.140824
+ Length hotel results --- 38
+  Processed snapp --- 60.140824
+  Processed hrc --- 60.140824
+  Processed sepid_parvaz --- 60.140824
+  Processed tak_setareh --- 60.140824
+  Processed moeindarbari --- 60.140824
+ Length hotel results --- 37
+  Processed jimboo --- 60.140824
+  Processed darvishi --- 60.140824
+  Processed parmis --- 60.140824
+  Processed hamood --- 60.140824
+  Processed safiran --- 60.140824
+  Processed kimiya --- 60.140824
+  Processed mehrab --- 60.140824
+  Processed shayan_gasht --- 60.140824
+  Processed dolfin --- 60.140824
+ Length hotel results --- 44
+  Processed eghamat --- 60.140824
+  Processed hamsafar --- 60.140824
+ Timeout: deltaban did not complete within 60 seconds
+  time hotel processing completed --- 60.140824
+  time read_data_ALLDestination --- 0.156158
+  time hotel get_ALLDestination_data --- 71.748314
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 643310
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.016906
+  time Assign tasks --- 0.150007
+  Processed yegane_fard --- 2.561865
+  Processed kimiya --- 2.561865
+  Processed hamood --- 2.561865
+  Processed tak_setareh --- 2.561865
+  Processed deltaban --- 2.561865
+ Length hotel results --- 38
+  Processed snapp --- 2.561865
+  Processed eram2mhd --- 2.561865
+  Processed safiran --- 2.561865
+ Length hotel results --- 44
+  Processed eghamat --- 2.561865
+  Processed shayan_gasht --- 2.561865
+  Processed dolfin --- 2.561865
+  Processed iman --- 2.561865
+  Processed moeindarbari --- 2.561865
+  Processed flamingo --- 2.561865
+  Processed rahbal --- 2.561865
+  Processed parmis --- 2.561865
+ Length hotel results --- 37
+  Processed jimboo --- 2.561865
+  Processed hrc --- 2.561865
+  Processed darvishi --- 2.561865
+  Processed dayan --- 2.561865
+  Processed mehrab --- 2.561865
+  Processed omid_oj --- 2.561865
+  Processed hamsafar --- 2.561865
+  Processed sepid_parvaz --- 2.561865
+  Processed alaedin --- 2.561865
+ Length hotel results --- 33
+  Processed booking --- 2.561865
+  time hotel processing completed --- 2.561865
+  time read_data_ALLDestination --- 0.202888
+  time hotel get_ALLDestination_data --- 2.764753
+  time hotel beforeSend --- 0.831825
+ "POST /build-tour/ HTTP/1.1" 200 641881
+ "POST /get-calendar/ HTTP/1.1" 200 11385
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.116657
+  Processed moeindarbari --- 2.454072
+  Processed flamingo --- 2.454072
+ Length hotel results --- 44
+  Processed eghamat --- 2.454072
+  Processed parmis --- 2.454072
+  Processed darvishi --- 2.454072
+ Length hotel results --- 38
+  Processed snapp --- 2.454072
+  Processed deltaban --- 2.454072
+  Processed mehrab --- 2.454072
+  Processed eram2mhd --- 2.469295
+  Processed shayan_gasht --- 2.469295
+  Processed kimiya --- 2.469295
+  Processed alaedin --- 2.469295
+  Processed hamood --- 2.469295
+  Processed tak_setareh --- 2.469295
+  Processed dolfin --- 2.469295
+ Length hotel results --- 33
+  Processed booking --- 2.469295
+  Processed sepid_parvaz --- 2.469295
+  Processed iman --- 2.469295
+  Processed omid_oj --- 2.469295
+  Processed rahbal --- 2.469295
+ Length hotel results --- 37
+  Processed jimboo --- 2.469295
+  Processed yegane_fard --- 2.469295
+  Processed safiran --- 2.469295
+  Processed dayan --- 2.469295
+  Processed hrc --- 2.469295
+  Processed hamsafar --- 2.469295
+  time hotel processing completed --- 2.469295
+  time read_data_ALLDestination --- 0.156167
+  time hotel get_ALLDestination_data --- 2.625462
+  time hotel beforeSend --- 0.015622
+ "POST /build-tour/ HTTP/1.1" 200 267113
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.181969
+  Processed parmis --- 17.829029
+  Processed dayan --- 17.829029
+  Processed yegane_fard --- 17.829029
+ Length hotel results --- 37
+  Processed jimboo --- 17.829029
+  Processed moeindarbari --- 17.829029
+  Processed mehrab --- 17.829029
+  Processed kimiya --- 17.829029
+  Processed hamood --- 17.829029
+  Processed darvishi --- 17.829029
+ Length hotel results --- 32
+  Processed alaedin --- 17.829029
+  Processed eram2mhd --- 17.829029
+  Processed shayan_gasht --- 17.829029
+  Processed safiran --- 17.829029
+ Length hotel results --- 36
+  Processed booking --- 17.829029
+  Processed flamingo --- 17.829029
+  Processed hrc --- 17.829029
+  Processed iman --- 17.829029
+  Processed dolfin --- 17.829029
+ Length hotel results --- 44
+  Processed eghamat --- 17.829029
+  Processed rahbal --- 17.829029
+ Length hotel results --- 38
+  Processed snapp --- 17.829029
+  Processed tak_setareh --- 17.829029
+  Processed hamsafar --- 17.829029
+  Processed deltaban --- 17.829029
+  Processed omid_oj --- 17.829029
+  Processed sepid_parvaz --- 17.829029
+  time hotel processing completed --- 17.829029
+  time read_data_ALLDestination --- 0.187409
+  time hotel get_ALLDestination_data --- 18.016438
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 140005
+ "POST /get-calendar/ HTTP/1.1" 200 10782
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.099867
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.033459
+  time Assign tasks --- 0.116276
+  Processed sepid_parvaz --- 30.314765
+  Processed hrc --- 30.314765
+  Processed yegane_fard --- 30.314765
+  Processed eram2mhd --- 30.314765
+  Processed moeindarbari --- 30.314765
+  Processed parmis --- 30.314765
+  Processed shayan_gasht --- 30.314765
+ Length hotel results --- 44
+  Processed eghamat --- 30.314765
+  Processed dolfin --- 30.314765
+  Processed rahbal --- 30.314765
+  Processed iman --- 30.314765
+ Length hotel results --- 37
+  Processed jimboo --- 30.314765
+  Processed mehrab --- 30.314765
+  Processed flamingo --- 30.314765
+  Processed hamood --- 30.314765
+ Length hotel results --- 38
+  Processed snapp --- 30.314765
+  Processed hamsafar --- 30.314765
+  Processed darvishi --- 30.314765
+  Processed tak_setareh --- 30.314765
+ Length hotel results --- 36
+  Processed booking --- 30.314765
+  Processed dayan --- 30.314765
+  Processed safiran --- 30.314765
+ Length hotel results --- 32
+  Processed alaedin --- 30.314765
+  Processed omid_oj --- 30.314765
+  Processed kimiya --- 30.314765
+  time hotel processing completed --- 30.314765
+  time read_data_ALLDestination --- 0.187454
+  time hotel get_ALLDestination_data --- 30.502219
+  time hotel beforeSend --- 0.015582
+ "POST /build-tour/ HTTP/1.1" 200 429165
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.117117
+  Processed eram2mhd --- 60.124076
+  Processed alaedin --- 60.124618
+  Processed shayan_gasht --- 60.124706
+  Processed iman --- 60.124706
+  Processed parmis --- 60.124706
+  Processed flamingo --- 60.124706
+  Processed darvishi --- 60.124706
+  Processed mehrab --- 60.124706
+  Processed rahbal --- 60.124706
+ Length hotel results --- 37
+  Processed jimboo --- 60.124706
+  Processed dayan --- 60.124706
+ Length hotel results --- 38
+  Processed snapp --- 60.124706
+  Processed hrc --- 60.124706
+  Processed hamsafar --- 60.124706
+  Processed yegane_fard --- 60.124706
+  Processed moeindarbari --- 60.124706
+  Processed tak_setareh --- 60.124706
+  Processed omid_oj --- 60.124706
+  Processed hamood --- 60.124706
+  Processed sepid_parvaz --- 60.124706
+  Processed safiran --- 60.124706
+  Processed dolfin --- 60.124706
+ Length hotel results --- 44
+  Processed eghamat --- 60.124706
+  Processed kimiya --- 60.124706
+ Length hotel results --- 31
+  Processed booking --- 60.124706
+ Timeout: deltaban did not complete within 60 seconds
+  time hotel processing completed --- 60.124706
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.013546
+  time Assign tasks --- 0.096021
+ "POST /get-calendar/ HTTP/1.1" 200 11385
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.001993
+  time Assign tasks --- 0.040381
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.001992
+  time Assign tasks --- 0.041634
+  Processed sepid_parvaz --- 60.052854
+  Processed dolfin --- 60.052854
+  Processed booking --- 60.053862
+  Processed parmis --- 60.053862
+  Processed darvishi --- 60.053862
+  Processed mehrab --- 60.053862
+  Processed iman --- 60.053862
+  Processed eghamat --- 60.053862
+  Processed rahbal --- 60.054857
+  Processed flamingo --- 60.054857
+  Processed jimboo --- 60.054857
+  Processed alaedin --- 60.054857
+  Processed hrc --- 60.054857
+  Processed omid_oj --- 60.055897
+  Processed yegane_fard --- 60.055897
+  Processed tak_setareh --- 60.055897
+  Processed kimiya --- 60.055897
+  Processed hamood --- 60.055897
+  Processed eram2mhd --- 60.055897
+  Processed shayan_gasht --- 60.056894
+  Processed safiran --- 60.056894
+  Processed hamsafar --- 60.056894
+  Processed moeindarbari --- 60.056894
+ Length hotel results --- 38
+  Processed snapp --- 60.056894
+  Processed dayan --- 60.056894
+ Timeout: deltaban did not complete within 60 seconds
+  time hotel processing completed --- 60.056894
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.00798
+  time Assign tasks --- 0.008976
+  Processed parmis --- 60.029833
+ Length hotel results --- 38
+  Processed snapp --- 60.03084
+  Processed mehrab --- 60.03084
+ Length hotel results --- 31
+  Processed booking --- 60.03084
+  Processed yegane_fard --- 60.031833
+  Processed flamingo --- 60.031833
+  Processed hamood --- 60.031833
+ Length hotel results --- 37
+  Processed jimboo --- 60.031833
+  Processed dayan --- 60.032838
+  Processed safiran --- 60.032838
+  Processed tak_setareh --- 60.032838
+  Processed hrc --- 60.032838
+  Processed omid_oj --- 60.032838
+  Processed hamsafar --- 60.032838
+  Processed alaedin --- 60.033959
+  Processed kimiya --- 60.034046
+  Processed dolfin --- 60.034046
+  Processed darvishi --- 60.034046
+  Processed eram2mhd --- 60.034046
+ Length hotel results --- 44
+  Processed eghamat --- 60.035096
+  Processed moeindarbari --- 60.035096
+  Processed shayan_gasht --- 60.035096
+  Processed iman --- 60.035096
+  Processed sepid_parvaz --- 60.035096
+  Processed rahbal --- 60.035096
+ Timeout: deltaban did not complete within 60 seconds
+  time hotel processing completed --- 60.035096
+  time read_data_ALLDestination --- 0.136089
+  time hotel get_ALLDestination_data --- 60.214459
+  time hotel beforeSend --- 0.004071
+ "POST /build-tour/ HTTP/1.1" 200 179349
+ "POST /get-calendar/ HTTP/1.1" 200 10782
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.00399
+  time Assign tasks --- 0.04414
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.021942
+  Processed darvishi --- 2.224529
+  Processed eram2mhd --- 2.224529
+  Processed shayan_gasht --- 2.224529
+  Processed iman --- 2.224529
+  Processed alaedin --- 2.224529
+ Length hotel results --- 38
+  Processed snapp --- 2.225564
+  Processed flamingo --- 2.225564
+ Length hotel results --- 37
+  Processed jimboo --- 2.225564
+  Processed yegane_fard --- 2.225564
+  Processed rahbal --- 2.225564
+  Processed parmis --- 2.225564
+ Length hotel results --- 44
+  Processed eghamat --- 2.225564
+  Processed hamood --- 2.225564
+ Length hotel results --- 31
+  Processed booking --- 2.225564
+  Processed safiran --- 2.225564
+  Processed omid_oj --- 2.225564
+  Processed hamsafar --- 2.225564
+  Processed tak_setareh --- 2.225564
+  Processed sepid_parvaz --- 2.225564
+  Processed dolfin --- 2.225564
+  Processed dayan --- 2.225564
+  Processed moeindarbari --- 2.225564
+  Processed hrc --- 2.225564
+  Processed kimiya --- 2.225564
+  Processed mehrab --- 2.225564
+  time hotel processing completed --- 2.225564
+  time read_data_ALLDestination --- 0.074708
+  time hotel get_ALLDestination_data --- 2.302268
+  time hotel beforeSend --- 0.003506
+ "POST /build-tour/ HTTP/1.1" 200 500126
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.027925
+ Length hotel results --- 44
+  Processed eghamat --- 15.509348
+  Processed kimiya --- 15.509348
+ Length hotel results --- 37
+  Processed jimboo --- 15.509348
+  Processed safiran --- 15.509348
+  Processed dolfin --- 15.509348
+  Processed hamood --- 15.509348
+  Processed rahbal --- 15.509348
+  Processed darvishi --- 15.509348
+  Processed flamingo --- 15.509348
+  Processed mehrab --- 15.509348
+  Processed hrc --- 15.509348
+ Length hotel results --- 38
+  Processed snapp --- 15.509348
+  Processed yegane_fard --- 15.510307
+  Processed sepid_parvaz --- 15.510307
+  Processed omid_oj --- 15.510307
+  Processed dayan --- 15.510307
+  Processed eram2mhd --- 15.510307
+ Length hotel results --- 29
+  Processed booking --- 15.510307
+  Processed alaedin --- 15.510307
+  Processed parmis --- 15.510307
+  Processed moeindarbari --- 15.510307
+  Processed shayan_gasht --- 15.510307
+  Processed iman --- 15.510307
+  Processed tak_setareh --- 15.510307
+  Processed hamsafar --- 15.510307
+  time hotel processing completed --- 15.510307
+  time read_data_ALLDestination --- 0.080489
+  time hotel get_ALLDestination_data --- 15.591794
+  time hotel beforeSend --- 0.002992
+ "POST /build-tour/ HTTP/1.1" 200 441252
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.131159
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.002992
+  time Assign tasks --- 0.029989
+  Processed darvishi --- 60.04422
+ Length hotel results --- 44
+  Processed eghamat --- 60.045037
+  Processed moeindarbari --- 60.045037
+  Processed tak_setareh --- 60.045037
+  Processed iman --- 60.045037
+  Processed dayan --- 60.046028
+  Processed kimiya --- 60.046028
+ Length hotel results --- 38
+  Processed snapp --- 60.046028
+  Processed eram2mhd --- 60.046028
+  Processed flamingo --- 60.046028
+  Processed omid_oj --- 60.047025
+  Processed shayan_gasht --- 60.047025
+  Processed sepid_parvaz --- 60.047025
+  Processed parmis --- 60.047025
+  Processed rahbal --- 60.047025
+  Processed yegane_fard --- 60.047025
+ Length hotel results --- 29
+  Processed booking --- 60.048029
+  Processed hrc --- 60.048029
+  Processed mehrab --- 60.048029
+  Processed hamood --- 60.048029
+ Length hotel results --- 37
+  Processed jimboo --- 60.04902
+  Processed safiran --- 60.04902
+  Processed hamsafar --- 60.04902
+  Processed alaedin --- 60.04902
+  Processed dolfin --- 60.04902
+ Timeout: deltaban did not complete within 60 seconds
+  time hotel processing completed --- 60.04902
+  time read_data_ALLDestination --- 0.070788
+  time hotel get_ALLDestination_data --- 79.651216
+  time hotel beforeSend --- 0.004027
+ "POST /build-tour/ HTTP/1.1" 200 441256
+ "POST /build-tour/ HTTP/1.1" 200 441256
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.001994
+  time Assign tasks --- 0.033689
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.010849
+  time Assign tasks --- 0.035469
+  Processed eram2mhd --- 8.125483
+  Processed safiran --- 8.125483
+  Processed mehrab --- 8.125483
+  Processed shayan_gasht --- 8.125483
+  Processed dolfin --- 8.125483
+  Processed alaedin --- 8.125483
+  Processed hamsafar --- 8.125483
+  Processed moeindarbari --- 8.125483
+  Processed iman --- 8.125483
+ Length hotel results --- 37
+  Processed jimboo --- 8.125483
+  Processed darvishi --- 8.12648
+  Processed flamingo --- 8.12648
+  Processed dayan --- 8.12648
+  Processed deltaban --- 8.12648
+  Processed yegane_fard --- 8.12648
+  Processed omid_oj --- 8.12648
+  Processed rahbal --- 8.12648
+  Processed hrc --- 8.12648
+  Processed kimiya --- 8.12648
+  Processed sepid_parvaz --- 8.12648
+  Processed hamood --- 8.12648
+  Processed tak_setareh --- 8.12648
+ Length hotel results --- 29
+  Processed booking --- 8.12648
+ Length hotel results --- 38
+  Processed snapp --- 8.12648
+  Processed parmis --- 8.12648
+ Length hotel results --- 44
+  Processed eghamat --- 8.12648
+  time hotel processing completed --- 8.12648
+  time read_data_ALLDestination --- 0.073793
+  time hotel get_ALLDestination_data --- 8.201566
+  time hotel beforeSend --- 0.004026
+ "POST /build-tour/ HTTP/1.1" 200 441366
+ "OPTIONS /get-calendar/ HTTP/1.1" 200 0
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "POST /get-calendar/ HTTP/1.1" 200 11784
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.001995
+  time Assign tasks --- 0.033087
+  Processed mehrab --- 17.675906
+  Processed dolfin --- 17.675906
+  Processed safiran --- 17.675906
+  Processed tak_setareh --- 17.675906
+  Processed hamsafar --- 17.675906
+  Processed hamood --- 17.675906
+ Length hotel results --- 84
+  Processed booking --- 17.675906
+  Processed rahbal --- 17.675906
+  Processed hrc --- 17.675906
+  Processed sepid_parvaz --- 17.675906
+  Processed jimboo --- 17.675906
+ Length hotel results --- 70
+  Processed alaedin --- 17.675906
+  Processed yegane_fard --- 17.675906
+  Processed dayan --- 17.675906
+  Processed deltaban --- 17.675906
+  Processed shayan_gasht --- 17.675906
+  Processed moeindarbari --- 17.675906
+  Processed darvishi --- 17.676906
+  Processed eram2mhd --- 17.676906
+  Processed flamingo --- 17.676906
+  Processed iman --- 17.676906
+ Length hotel results --- 117
+  Processed eghamat --- 17.676906
+ Length hotel results --- 137
+  Processed snapp --- 17.676906
+  Processed omid_oj --- 17.676906
+  Processed kimiya --- 17.676906
+  Processed parmis --- 17.676906
+  time hotel processing completed --- 17.676906
+  time read_data_ALLDestination --- 0.245133
+  time hotel get_ALLDestination_data --- 17.924031
+  time hotel beforeSend --- 0.00916
+ "POST /build-tour/ HTTP/1.1" 200 986131
+ "OPTIONS /build-tour/ HTTP/1.1" 200 0
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.001
+  time Assign tasks --- 0.034907
+  Processed omid_oj --- 7.747527
+  Processed shayan_gasht --- 7.747527
+  Processed rahbal --- 7.747527
+  Processed hrc --- 7.747527
+ Length hotel results --- 70
+  Processed alaedin --- 7.747527
+  Processed iman --- 7.747527
+  Processed mehrab --- 7.747527
+  Processed flamingo --- 7.747527
+  Processed hamsafar --- 7.747527
+  Processed sepid_parvaz --- 7.747527
+  Processed yegane_fard --- 7.748563
+  Processed tak_setareh --- 7.748563
+  Processed parmis --- 7.748563
+  Processed dolfin --- 7.748563
+  Processed hamood --- 7.748563
+  Processed kimiya --- 7.748563
+  Processed darvishi --- 7.748563
+  Processed deltaban --- 7.748563
+  Processed eram2mhd --- 7.748563
+  Processed jimboo --- 7.748563
+ Length hotel results --- 137
+  Processed snapp --- 7.748563
+ Length hotel results --- 84
+  Processed booking --- 7.748563
+  Processed moeindarbari --- 7.748563
+  Processed safiran --- 7.749558
+  Processed dayan --- 7.749558
+ Length hotel results --- 117
+  Processed eghamat --- 7.749558
+  time hotel processing completed --- 7.749558
+  time read_data_ALLDestination --- 0.28249
+  time hotel get_ALLDestination_data --- 8.033009
+  time hotel beforeSend --- 0.006916
+ "POST /build-tour/ HTTP/1.1" 200 977039
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.124971
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.015659
+  time Assign tasks --- 0.170146
+ Length hotel results --- 117
+  Processed eghamat --- 60.191735
+  Processed hrc --- 60.191735
+  Processed sepid_parvaz --- 60.191735
+  Processed shayan_gasht --- 60.191735
+  Processed parmis --- 60.191735
+  Processed darvishi --- 60.191735
+  Processed iman --- 60.191735
+  Processed mehrab --- 60.191735
+  Processed flamingo --- 60.191735
+  Processed hamsafar --- 60.191735
+  Processed tak_setareh --- 60.191735
+  Processed dolfin --- 60.191735
+  Processed hamood --- 60.191735
+ Length hotel results --- 84
+  Processed booking --- 60.191735
+  Processed moeindarbari --- 60.191735
+  Processed yegane_fard --- 60.191735
+ Length hotel results --- 137
+  Processed snapp --- 60.191735
+ Length hotel results --- 70
+  Processed alaedin --- 60.191735
+  Processed safiran --- 60.191735
+  Processed jimboo --- 60.191735
+  Processed rahbal --- 60.191735
+  Processed kimiya --- 60.191735
+  Processed dayan --- 60.191735
+  Processed omid_oj --- 60.191735
+  Processed eram2mhd --- 60.191735
+ Timeout: deltaban did not complete within 60 seconds
+  time hotel processing completed --- 60.191735
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.016661
+  time Assign tasks --- 0.15296
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.016532
+  time Assign tasks --- 0.127737
+  Processed safiran --- 15.342403
+  Processed omid_oj --- 15.342403
+ Length hotel results --- 84
+  Processed booking --- 15.342403
+ Length hotel results --- 117
+  Processed eghamat --- 15.342403
+  Processed sepid_parvaz --- 15.342403
+  Processed iman --- 15.342403
+ Length hotel results --- 80
+  Processed snapp --- 15.342403
+  Processed parmis --- 15.342403
+  Processed mehrab --- 15.342403
+  Processed rahbal --- 15.342403
+  Processed flamingo --- 15.342403
+  Processed hamsafar --- 15.342403
+  Processed darvishi --- 15.357384
+  Processed dolfin --- 15.357384
+  Processed yegane_fard --- 15.357384
+ Length hotel results --- 11
+  Processed deltaban --- 15.357384
+  Processed tak_setareh --- 15.357384
+  Processed jimboo --- 15.357384
+  Processed hamood --- 15.357384
+  Processed kimiya --- 15.357384
+  Processed eram2mhd --- 15.357384
+  Processed moeindarbari --- 15.357384
+  Processed alaedin --- 15.357384
+  Processed dayan --- 15.357384
+  Processed shayan_gasht --- 15.357384
+  Processed hrc --- 15.357384
+  time hotel processing completed --- 15.357384
+  time read_data_ALLDestination --- 0.523835
+  time hotel get_ALLDestination_data --- 15.883623
+  time hotel beforeSend --- 0.109065
+ "POST /build-tour/ HTTP/1.1" 200 966475
+ "POST /get-calendar/ HTTP/1.1" 200 21
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.004232
+  time Assign tasks --- 0.144417
+  Processed omid_oj --- 7.233925
+  Processed iman --- 7.233925
+  Processed deltaban --- 7.233925
+  Processed shayan_gasht --- 7.233925
+  Processed moeindarbari --- 7.233925
+  Processed kimiya --- 7.233925
+  Processed hamood --- 7.233925
+  Processed mehrab --- 7.233925
+  Processed hamsafar --- 7.233925
+  Processed yegane_fard --- 7.233925
+  Processed safiran --- 7.233925
+ Length hotel results --- 137
+  Processed snapp --- 7.233925
+  Processed dolfin --- 7.233925
+  Processed jimboo --- 7.233925
+  Processed flamingo --- 7.249546
+ Length hotel results --- 117
+  Processed eghamat --- 7.249546
+ Length hotel results --- 84
+  Processed booking --- 7.249546
+  Processed alaedin --- 7.249546
+  Processed dayan --- 7.249546
+  Processed darvishi --- 7.249546
+  Processed sepid_parvaz --- 7.249546
+  Processed eram2mhd --- 7.249546
+  Processed parmis --- 7.249546
+  Processed rahbal --- 7.249546
+  Processed hrc --- 7.249546
+  Processed tak_setareh --- 7.249546
+  time hotel processing completed --- 7.249546
+  time read_data_ALLDestination --- 0.546938
+  time hotel get_ALLDestination_data --- 7.796484
+  time hotel beforeSend --- 0.015622
+ "POST /build-tour/ HTTP/1.1" 200 282653
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.015624
+  time Assign tasks --- 0.109391
+ "POST /get-calendar/ HTTP/1.1" 200 11784
+ "POST /get-calendar/ HTTP/1.1" 200 11385
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.002112
+  time Assign tasks --- 0.035269
+  Processed rahbal --- 60.046446
+  Processed flamingo --- 60.046446
+  Processed darvishi --- 60.046446
+ Length hotel results --- 29
+  Processed booking --- 60.046446
+  Processed yegane_fard --- 60.046446
+ Length hotel results --- 37
+  Processed jimboo --- 60.046446
+ Length hotel results --- 32
+  Processed alaedin --- 60.046446
+  Processed kimiya --- 60.046446
+  Processed moeindarbari --- 60.046446
+  Processed hamood --- 60.047485
+  Processed hrc --- 60.047485
+  Processed eram2mhd --- 60.047485
+  Processed safiran --- 60.047485
+  Processed shayan_gasht --- 60.047485
+  Processed sepid_parvaz --- 60.047485
+ Length hotel results --- 44
+  Processed eghamat --- 60.047485
+  Processed dolfin --- 60.047485
+  Processed iman --- 60.047485
+  Processed parmis --- 60.047485
+  Processed tak_setareh --- 60.047485
+ Length hotel results --- 38
+  Processed snapp --- 60.047485
+  Processed mehrab --- 60.047485
+  Processed dayan --- 60.047485
+  Processed hamsafar --- 60.047485
+  Processed omid_oj --- 60.048476
+ Timeout: deltaban did not complete within 60 seconds
+  time hotel processing completed --- 60.048476
+  time read_data_ALLDestination --- 0.078172
+  time hotel get_ALLDestination_data --- 69.817673
+  time hotel beforeSend --- 0.004022
+ "POST /build-tour/ HTTP/1.1" 200 121387
+ "POST /build-tour/ HTTP/1.1" 200 121387
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.002993
+  time Assign tasks --- 0.086839
+  Processed parmis --- 7.70148
+  Processed yegane_fard --- 7.70148
+ Length hotel results --- 44
+  Processed eghamat --- 7.70148
+ Length hotel results --- 29
+  Processed booking --- 7.70148
+  Processed rahbal --- 7.70148
+  Processed dolfin --- 7.702513
+  Processed mehrab --- 7.702513
+  Processed hamood --- 7.702513
+  Processed hrc --- 7.702513
+  Processed hamsafar --- 7.702513
+  Processed eram2mhd --- 7.702513
+  Processed deltaban --- 7.702513
+ Length hotel results --- 32
+  Processed alaedin --- 7.702513
+  Processed moeindarbari --- 7.702513
+  Processed shayan_gasht --- 7.702513
+  Processed safiran --- 7.702513
+  Processed dayan --- 7.702513
+  Processed kimiya --- 7.702513
+  Processed tak_setareh --- 7.702513
+  Processed darvishi --- 7.702513
+ Length hotel results --- 37
+  Processed jimboo --- 7.70351
+  Processed omid_oj --- 7.70351
+  Processed iman --- 7.70351
+  Processed sepid_parvaz --- 7.70351
+ Length hotel results --- 38
+  Processed snapp --- 7.70351
+  Processed flamingo --- 7.704471
+  time hotel processing completed --- 7.704471
+  time read_data_ALLDestination --- 0.11669
+  time hotel get_ALLDestination_data --- 7.82216
+  time hotel beforeSend --- 0.003989
+ "POST /build-tour/ HTTP/1.1" 200 121487
+ "OPTIONS /build-tour/ HTTP/1.1" 200 0
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.078098
+  Processed hamood --- 60.084762
+  Processed kimiya --- 60.084762
+  Processed hamsafar --- 60.084762
+  Processed eram2mhd --- 60.084762
+  Processed safiran --- 60.084762
+  Processed rahbal --- 60.084762
+  Processed tak_setareh --- 60.084762
+  Processed shayan_gasht --- 60.084762
+  Processed dolfin --- 60.084762
+  Processed darvishi --- 60.084762
+  Processed iman --- 60.084762
+  Processed flamingo --- 60.084762
+  Processed dayan --- 60.084762
+  Processed hrc --- 60.084762
+  Processed omid_oj --- 60.084762
+  Processed sepid_parvaz --- 60.084762
+  Processed booking --- 60.084762
+ Length hotel results --- 37
+  Processed jimboo --- 60.084762
+  Processed parmis --- 60.084762
+  Processed yegane_fard --- 60.084762
+ Length hotel results --- 44
+  Processed eghamat --- 60.084762
+  Processed moeindarbari --- 60.084762
+  Processed mehrab --- 60.084762
+ Timeout: alaedin did not complete within 60 seconds
+ Timeout: deltaban did not complete within 60 seconds
+ Timeout: snapp did not complete within 60 seconds
+  time hotel processing completed --- 60.084762
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "OPTIONS /get-calendar/ HTTP/1.1" 200 0
+ "POST /get-calendar/ HTTP/1.1" 200 11285
+ "OPTIONS /build-tour/ HTTP/1.1" 200 0
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.034906
+  time Assign tasks --- 0.186501
+  Processed moeindarbari --- 60.241918
+  Processed omid_oj --- 60.241918
+  Processed kimiya --- 60.242917
+  Processed yegane_fard --- 60.242917
+ Length hotel results --- 44
+  Processed eghamat --- 60.242917
+  Processed hamood --- 60.242917
+  Processed parmis --- 60.242917
+  Processed alaedin --- 60.243913
+  Processed eram2mhd --- 60.243913
+  Processed safiran --- 60.243913
+  Processed rahbal --- 60.243913
+  Processed mehrab --- 60.243913
+  Processed hrc --- 60.243913
+  Processed hamsafar --- 60.243913
+  Processed darvishi --- 60.244911
+  Processed dayan --- 60.244911
+  Processed shayan_gasht --- 60.244911
+  Processed tak_setareh --- 60.244911
+  Processed sepid_parvaz --- 60.244911
+  Processed dolfin --- 60.244911
+ Length hotel results --- 29
+  Processed booking --- 60.244911
+ Length hotel results --- 37
+  Processed jimboo --- 60.245908
+ Length hotel results --- 38
+  Processed snapp --- 60.245908
+  Processed iman --- 60.245908
+  Processed flamingo --- 60.245908
+ Timeout: deltaban did not complete within 60 seconds
+  time hotel processing completed --- 60.245908
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.006982
+  time Assign tasks --- 0.03377
+  Processed shayan_gasht --- 36.972286
+ Length hotel results --- 37
+  Processed jimboo --- 36.973232
+ Length hotel results --- 38
+  Processed snapp --- 36.973232
+  Processed iman --- 36.973232
+  Processed darvishi --- 36.973232
+  Processed flamingo --- 36.973232
+  Processed yegane_fard --- 36.973232
+ Length hotel results --- 29
+  Processed booking --- 36.973232
+  Processed hamood --- 36.973232
+  Processed parmis --- 36.973232
+  Processed rahbal --- 36.973232
+  Processed dayan --- 36.973232
+  Processed hrc --- 36.973232
+  Processed safiran --- 36.973232
+  Processed omid_oj --- 36.973232
+  Processed mehrab --- 36.973232
+  Processed dolfin --- 36.973232
+  Processed alaedin --- 36.973232
+  Processed sepid_parvaz --- 36.973232
+  Processed hamsafar --- 36.974229
+  Processed tak_setareh --- 36.974229
+  Processed kimiya --- 36.974229
+ Length hotel results --- 44
+  Processed eghamat --- 36.974229
+  Processed eram2mhd --- 36.974229
+  Processed moeindarbari --- 36.974229
+  time hotel processing completed --- 36.974229
+  time read_data_ALLDestination --- 0.080096
+  time hotel get_ALLDestination_data --- 37.055322
+  time hotel beforeSend --- 0.004988
+ "POST /build-tour/ HTTP/1.1" 200 109049
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.005984
+  time Assign tasks --- 0.330117
+  Processed moeindarbari --- 48.534485
+  Processed yegane_fard --- 48.534485
+  Processed dayan --- 48.534485
+  Processed omid_oj --- 48.534485
+  Processed parmis --- 48.534485
+ Length hotel results --- 44
+  Processed eghamat --- 48.534485
+  Processed dolfin --- 48.534485
+  Processed hrc --- 48.534485
+  Processed iman --- 48.534485
+  Processed mehrab --- 48.534485
+  Processed safiran --- 48.535516
+  Processed flamingo --- 48.535516
+  Processed darvishi --- 48.535516
+  Processed rahbal --- 48.535516
+ Length hotel results --- 29
+  Processed booking --- 48.535516
+  Processed alaedin --- 48.535516
+  Processed tak_setareh --- 48.535516
+  Processed shayan_gasht --- 48.535516
+ Length hotel results --- 37
+  Processed jimboo --- 48.535516
+  Processed hamood --- 48.535516
+  Processed eram2mhd --- 48.535516
+  Processed sepid_parvaz --- 48.535516
+  Processed kimiya --- 48.535516
+ Length hotel results --- 38
+  Processed snapp --- 48.535516
+  Processed hamsafar --- 48.535516
+  time hotel processing completed --- 48.535516
+  time read_data_ALLDestination --- 0.127487
+  time hotel get_ALLDestination_data --- 48.663959
+  time hotel beforeSend --- 0.003032
+ "POST /build-tour/ HTTP/1.1" 200 109086
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ Unauthorized: /api/v1/user/profile/
+ "GET /api/v1/user/profile/ HTTP/1.1" 401 58
+ "OPTIONS /api/v1/user/login/ HTTP/1.1" 200 0
+ "POST /api/v1/user/login/ HTTP/1.1" 200 708
+ "POST /get-calendar/ HTTP/1.1" 200 11285
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.002993
+  time Assign tasks --- 0.022939
+ Length hotel results --- 32
+  Processed alaedin --- 60.039288
+ Length hotel results --- 44
+  Processed eghamat --- 60.039288
+  Processed darvishi --- 60.039288
+ Length hotel results --- 38
+  Processed snapp --- 60.040263
+  Processed dayan --- 60.040263
+ Length hotel results --- 37
+  Processed jimboo --- 60.040263
+  Processed rahbal --- 60.040263
+  Processed parmis --- 60.040263
+  Processed mehrab --- 60.040263
+ Length hotel results --- 31
+  Processed booking --- 60.040263
+  Processed kimiya --- 60.040263
+  Processed shayan_gasht --- 60.040263
+  Processed yegane_fard --- 60.041262
+  Processed tak_setareh --- 60.041262
+  Processed hamsafar --- 60.041262
+  Processed sepid_parvaz --- 60.041262
+  Processed iman --- 60.041262
+  Processed eram2mhd --- 60.041262
+  Processed omid_oj --- 60.041262
+  Processed hrc --- 60.041262
+  Processed safiran --- 60.041262
+  Processed dolfin --- 60.041262
+  Processed moeindarbari --- 60.041262
+  Processed flamingo --- 60.041262
+  Processed hamood --- 60.041262
+ Timeout: deltaban did not complete within 60 seconds
+  time hotel processing completed --- 60.042263
+  time read_data_ALLDestination --- 0.298202
+  time hotel get_ALLDestination_data --- 68.25623
+  time hotel beforeSend --- 0.013963
+ "POST /build-tour/ HTTP/1.1" 200 123333

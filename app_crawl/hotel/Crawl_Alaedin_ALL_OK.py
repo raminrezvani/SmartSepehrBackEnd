@@ -89,8 +89,8 @@ class Alaedin:
             json_data=json.loads(json_data)
             json_data['room']
         except Exception as e:
-            print(f'in Getting json_data === {str(e)}')
-
+            # print(f'in Getting json_data === {str(e)}')
+            return []
 
         rooms = []
         for i in range(len(json_data['room'])):

@@ -1338,12 +1338,26 @@ class Hotel:
                                     result_notExistProviders.append({'NotExistProvider': key, 'data': [], 'status': 'اتمام زمان'})
                                     # print('OLD one')
                             else:
-                                if len(result) != 0:
+                                flag_data = any(it['rooms'] and len(it['rooms']) != 0 for it in result)
+
+                                if flag_data:
                                     results.append(result)
-                                    logger.info(f' Length hotel results --- {len(result)}')
+                                    logger.info(f'Length hotel results --- {len(result)}')
                                 else:
                                     result_notExistProviders.append(
                                         {'NotExistProvider': key, 'data': [], 'status': 'اتمام زمان'})
+
+                                # flag_data=False
+                                # for it in result:
+                                #     if (it['rooms'] and len(it['rooms']) !=0):
+                                #         flag_data=True
+                                #
+                                # if flag_data :
+                                #     results.append(result)
+                                #     logger.info(f' Length hotel results --- {len(result)}')
+                                # else:
+                                #     result_notExistProviders.append(
+                                #         {'NotExistProvider': key, 'data': [], 'status': 'اتمام زمان'})
 
 
 
