@@ -28,6 +28,9 @@ class TourCollector:
         self.source=source
         self.target=target
 
+        self.redis_expire = 10 * 60  # 3 minutes
+
+
     def get_result(self, data):
         sami_result = {}
         for hotel in data:
@@ -155,7 +158,10 @@ class TourCollector:
         for future in as_completed(tasks):
             name = tasks[future]
             try:
-                result = future.result(timeout=600)  # Adjust timeout as needed
+                # result = future.result(timeout=600)  # Adjust timeout as needed
+                result = future.result()  # Adjust timeout as needed
+
+
                 results.extend(result.get('data', []))
                 spendTime=(datetime.now()-startTime).total_seconds()
                 print(f'{name} ----- > spend:  {spendTime}')
@@ -598,7 +604,13 @@ class TourCollector:
         result = self.get_result(data['data'])
         # ---
         #print('Statit Caching....')
-        add_cache(key=redis_key, data={'data': result, 'providers': data['providers']})
+        if result:
+            print('start caching ..........')
+            with ThreadPoolExecutor(max_workers=1) as executor:
+                executor.submit(add_cache, redis_key, {'data': result, 'providers': data['providers']}, self.redis_expire)
+
+        # add_cache(key=redis_key, data={'data': result, 'providers': data['providers']})
+
         #print('End Caching....')
         if show_providers:
             return {'data': result, 'providers': data['providers']}

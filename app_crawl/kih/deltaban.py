@@ -5,6 +5,7 @@ import json
 from datetime import timedelta, datetime
 from app_crawl.helpers import convert_to_tooman, convert_gregorian_date_to_persian
 import urllib3
+from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -166,10 +167,23 @@ class Deltaban:
             url = "https://api.3click.ir/api2/TourDynamic/GetSearchResult"
             self.post_header['timestamp'] = str(int(datetime.now().timestamp()))
             # ---
-            req = request("POST", url, headers=self.post_header, data=body, verify=False)
+
+            req = executeRequest(method='post',
+                                 url=url,
+                                 headers=self.post_header,
+                                 data=body,
+                                 verify=False)
+            #
+            #                           priorityTimestamp=self.priorityTimestamp,
+            #                           use_cache=self.use_cache)
+
+            req = json.loads(req)
+
+
+            # req = request("POST", url, headers=self.post_header, data=body, verify=False)
             # ---
-            if req.status_code == 200:
-                data = json.loads(req.text)
+            if req['status_code'] == 200:
+                data = json.loads(req['text'])
                 go_flights = data['wentFlight']
                 return_flights = data['returnFlight']
                 hotels = data['hotelsV2']
@@ -194,7 +208,7 @@ class Deltaban:
                                 return_flight_id = return_flights['extras']['flight_id']
                             except:
                                 pass
-            elif req.status_code == 401:
+            elif req['status_code'] == 401:
                 return {"status": False,'Message':'خطای 401 '}
             # ---
             counter += 1

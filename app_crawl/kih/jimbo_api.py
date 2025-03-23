@@ -5,6 +5,8 @@ from requests import request
 # from app_crawl.cookie.cookie_data import BOOKING as booking_cookie
 import urllib3
 import requests
+from app_crawl.hotel.Client_Dispatch_requests import executeRequest
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
@@ -112,12 +114,23 @@ class Jimbo:
     def get_data(self):
         url = f"https://www.jimbo.ir/trip/searchpackage/?sessionid={self.get_session_id()}"
 
-        req = request("GET", url, headers=self.header)
+        req = executeRequest(method='get',
+                                  url=url,
+                                  headers=self.header)
+        #
+        #                           priorityTimestamp=self.priorityTimestamp,
+        #                           use_cache=self.use_cache)
 
-        if req.status_code != 200:
+        req=json.loads(req)
+
+
+
+        # req = request("GET", url, headers=self.header)
+
+        if req['status_code'] != 200:
             self.get_data()
 
-        return json.loads(req.text)
+        return json.loads(req['text'])
 
     def get_result(self):
         try:
@@ -125,7 +138,7 @@ class Jimbo:
 
             self.call_count+=1
 
-            if (self.call_count<=3):
+            if (self.call_count<=200):
                 #==========ssssssssss
                 urll = "http://45.149.76.168:5021/jimbo_tours"
             else:

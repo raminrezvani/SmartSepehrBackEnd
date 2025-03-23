@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 import urllib3
 import json
 import redis
-
+from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -99,24 +99,43 @@ class Sepehr:
             'btnSubmit': 'جستجو',
         }
 
-        request(
-            "POST",
-            f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx",
-            params=params,
-            cookies=cookies,
-            headers=headers,
-            data=data,
-            verify=False
-        )
 
-        res = request(
-            "GET",
-            f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx?action=display&rnd={rnd}",
-            cookies=cookies,
-            verify=False
-        )
+        req = executeRequest(method='post',
+                                  url=f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx",
+                             params=params,
+                             cookies=cookies,
+                             headers=headers,
+                             data=data,
+                             verify=False)
 
-        return res.text
+        #
+        #                           priorityTimestamp=self.priorityTimestamp,
+        #                           use_cache=self.use_cache)
+
+        # req=json.loads(req)
+
+
+        # request(
+        #     "POST",
+        #     f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx",
+        #     params=params,
+        #     cookies=cookies,
+        #     headers=headers,
+        #     data=data,
+        #     verify=False
+        # )
+        res = executeRequest(method='get',
+                                  url=f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx?action=display&rnd={rnd}",
+                             cookies=cookies,
+                             verify=False)
+        # res = request(
+        #     "GET",
+        #     f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx?action=display&rnd={rnd}",
+        #     cookies=cookies,
+        #     verify=False
+        # )
+
+        return res['text']
 
     def get_static_data(self):
         with open('test.html', 'r') as html_file:
@@ -145,7 +164,7 @@ class Sepehr:
         except:
             return {'status': False, "data": [], 'message': "اتمام زمان"}
 
-        self.add_to_file(data)
+        # self.add_to_file(data)
         # --- go flight
         try:
             go_flight = soup.select_one('.df:has([name="DepartureFlight"]:checked)')

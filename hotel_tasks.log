@@ -10904,3 +10904,155 @@ IndexError: list index out of range
   time hotel get_ALLDestination_data --- 68.25623
   time hotel beforeSend --- 0.013963
  "POST /build-tour/ HTTP/1.1" 200 123333
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.046391
+  time Assign tasks --- 0.144615
+  Processed omid_oj --- 22.269556
+  Processed hamood --- 22.269556
+  Processed safiran --- 22.269556
+  Processed parmis --- 22.269556
+  Processed eram2mhd --- 22.269556
+  Processed yegane_fard --- 22.269556
+  Processed kimiya --- 22.269556
+  Processed flamingo --- 22.269556
+  Processed tak_setareh --- 22.269556
+ Length hotel results --- 38
+  Processed snapp --- 22.269556
+ Length hotel results --- 37
+  Processed jimboo --- 22.269556
+  Processed moeindarbari --- 22.269556
+  Processed hrc --- 22.269556
+  Processed shayan_gasht --- 22.269556
+ Length hotel results --- 44
+  Processed eghamat --- 22.270553
+ Length hotel results --- 35
+  Processed booking --- 22.270553
+  Processed mehrab --- 22.270553
+  Processed alaedin --- 22.270553
+  Processed hamsafar --- 22.270553
+  Processed dayan --- 22.270553
+  Processed darvishi --- 22.270553
+  Processed sepid_parvaz --- 22.270553
+  Processed rahbal --- 22.270553
+  Processed iman --- 22.270553
+  Processed dolfin --- 22.270553
+  time hotel processing completed --- 22.270553
+  time read_data_ALLDestination --- 0.08431
+  time hotel get_ALLDestination_data --- 22.355861
+  time hotel beforeSend --- 0.003337
+ "POST /build-tour/ HTTP/1.1" 200 140955
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "POST /get-calendar/ HTTP/1.1" 200 11285
+ "POST /get-calendar/ HTTP/1.1" 200 11285
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.004991
+  time Assign tasks --- 0.084771
+  Processed safiran --- 22.747341
+  Processed hamsafar --- 22.747341
+  Processed darvishi --- 22.747341
+  Processed dayan --- 22.747341
+ Length hotel results --- 37
+  Processed jimboo --- 22.747341
+  Processed mehrab --- 22.747341
+ Length hotel results --- 44
+  Processed eghamat --- 22.748339
+  Processed iman --- 22.748339
+  Processed dolfin --- 22.748339
+  Processed parmis --- 22.748339
+  Processed rahbal --- 22.748339
+ Length hotel results --- 38
+  Processed snapp --- 22.748339
+  Processed hrc --- 22.748339
+  Processed tak_setareh --- 22.748339
+  Processed omid_oj --- 22.748339
+  Processed moeindarbari --- 22.748339
+  Processed kimiya --- 22.748339
+ Length hotel results --- 34
+  Processed booking --- 22.748339
+  Processed eram2mhd --- 22.748339
+  Processed flamingo --- 22.748339
+  Processed shayan_gasht --- 22.748339
+  Processed yegane_fard --- 22.748339
+  Processed alaedin --- 22.748339
+  Processed sepid_parvaz --- 22.748339
+  Processed hamood --- 22.748339
+  time hotel processing completed --- 22.748339
+  time read_data_ALLDestination --- 0.085769
+  time hotel get_ALLDestination_data --- 22.835106
+  time hotel beforeSend --- 0.005985
+ "POST /build-tour/ HTTP/1.1" 200 180529
+ "POST /get-calendar/ HTTP/1.1" 200 11285
+ "POST /get-calendar/ HTTP/1.1" 200 11285
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.001996
+  time Assign tasks --- 0.02992
+ Length hotel results --- 35
+  Processed booking --- 11.412546
+ Length hotel results --- 32
+  Processed alaedin --- 11.412546
+  Processed hrc --- 11.412546
+  Processed dayan --- 11.412546
+  Processed omid_oj --- 11.412546
+  Processed yegane_fard --- 11.412546
+  Processed rahbal --- 11.412546
+  Processed safiran --- 11.412546
+  Processed hamsafar --- 11.412546
+  Processed dolfin --- 11.412546
+  Processed parmis --- 11.412546
+  Processed tak_setareh --- 11.413544
+  Processed eram2mhd --- 11.413544
+ Length hotel results --- 38
+  Processed snapp --- 11.413544
+  Processed hamood --- 11.413544
+  Processed darvishi --- 11.413544
+ Length hotel results --- 30
+  Processed deltaban --- 11.413544
+  Processed kimiya --- 11.413544
+  Processed shayan_gasht --- 11.413544
+  Processed moeindarbari --- 11.413544
+  Processed mehrab --- 11.413544
+  Processed iman --- 11.413544
+  Processed flamingo --- 11.413544
+  Processed sepid_parvaz --- 11.413544
+ Length hotel results --- 44
+  Processed eghamat --- 11.413544
+ Length hotel results --- 37
+  Processed jimboo --- 11.414578
+  time hotel processing completed --- 11.414578
+  time read_data_ALLDestination --- 0.159134
+  time hotel get_ALLDestination_data --- 11.574674
+  time hotel beforeSend --- 0.005984
+ "POST /build-tour/ HTTP/1.1" 200 161302
+ "POST /get-calendar/ HTTP/1.1" 200 11285
+ "POST /api/v1/user/login/ HTTP/1.1" 200 708
+ "POST /get-calendar/ HTTP/1.1" 200 11185
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "OPTIONS /get-data/ HTTP/1.1" 200 0
+ "POST /get-data/ HTTP/1.1" 200 35783
+ "OPTIONS /get-analysis/ HTTP/1.1" 200 0
+ "POST /get-analysis/ HTTP/1.1" 200 159053
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "OPTIONS /get-calendar/ HTTP/1.1" 200 0
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "POST /get-calendar/ HTTP/1.1" 200 21
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "POST /get-calendar/ HTTP/1.1" 200 11186
+ "POST /get-calendar/ HTTP/1.1" 200 11186
+ "POST /get-data/ HTTP/1.1" 200 57282
+ "POST /get-analysis/ HTTP/1.1" 200 394275
+ "POST /get-data/ HTTP/1.1" 200 57298
+ "POST /get-analysis/ HTTP/1.1" 200 394102
+ "POST /get-data/ HTTP/1.1" 200 57292
+ "POST /get-analysis/ HTTP/1.1" 200 394290
