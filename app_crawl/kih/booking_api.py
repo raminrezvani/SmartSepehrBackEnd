@@ -162,6 +162,7 @@ class Booking:
 
 
             # data = self.get_data()
+            data=json.loads(data['text'])
             if not data['isSucceed']:
                 return {'status': False, 'data': [], 'message': "داده ای یافت نشد"}
         except:

@@ -11056,3 +11056,94 @@ IndexError: list index out of range
  "POST /get-analysis/ HTTP/1.1" 200 394102
  "POST /get-data/ HTTP/1.1" 200 57292
  "POST /get-analysis/ HTTP/1.1" 200 394290
+ "GET /get-company-list/ HTTP/1.1" 200 274
+ "GET /cookie-providers/?show_company=1&company_u_id=J-23170045-96f9aa60-f1df-5263-ac28-1515a8a0dffe-83441-J HTTP/1.1" 200 2307
+ Internal Server Error: /set-cookie/
+Traceback (most recent call last):
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Project_SepehrSmart_New\LastFiles_fromAngizeh\tour-collector-back_1023\tour-collector-back\app_api\cookie\views.py", line 166, in get
+    image = instance.get_captcha_image()
+  File "C:\Project_SepehrSmart_New\LastFiles_fromAngizeh\tour-collector-back_1023\tour-collector-back\app_crawl\cookie\get_cookie.py", line 158, in get_captcha_image
+    image = self.driver.find_element(By.CSS_SELECTOR, '#imgCaptcha')
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 770, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#imgCaptcha"}
+  (Session info: chrome=134.0.6998.118); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF66D346F15+28773]
+	(No symbol) [0x00007FF66D2B2600]
+	(No symbol) [0x00007FF66D148FAA]
+	(No symbol) [0x00007FF66D19F286]
+	(No symbol) [0x00007FF66D19F4BC]
+	(No symbol) [0x00007FF66D1F2A27]
+	(No symbol) [0x00007FF66D1C728F]
+	(No symbol) [0x00007FF66D1EF6F3]
+	(No symbol) [0x00007FF66D1C7023]
+	(No symbol) [0x00007FF66D18FF5E]
+	(No symbol) [0x00007FF66D1911E3]
+	GetHandleVerifier [0x00007FF66D69425D+3490733]
+	GetHandleVerifier [0x00007FF66D6ABA43+3586963]
+	GetHandleVerifier [0x00007FF66D6A147D+3544525]
+	GetHandleVerifier [0x00007FF66D40C9DA+838442]
+	(No symbol) [0x00007FF66D2BD04F]
+	(No symbol) [0x00007FF66D2B9614]
+	(No symbol) [0x00007FF66D2B97B6]
+	(No symbol) [0x00007FF66D2A8CE9]
+	BaseThreadInitThunk [0x00007FFAC63E7374+20]
+	RtlUserThreadStart [0x00007FFAC83FCC91+33]
+
+ "GET /set-cookie/?sepehr_name=dayan HTTP/1.1" 500 138468
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "OPTIONS /get-data/ HTTP/1.1" 200 0
+ "POST /get-data/ HTTP/1.1" 200 37351
+ "OPTIONS /get-analysis/ HTTP/1.1" 200 0
+ "POST /get-analysis/ HTTP/1.1" 200 96367
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "OPTIONS /get-data/ HTTP/1.1" 200 0
+ "POST /get-data/ HTTP/1.1" 200 59266
+ "OPTIONS /get-analysis/ HTTP/1.1" 200 0
+ code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Ù´Ù\x0fÎ\x7f×')
+ You're accessing the development server over HTTPS, but it only supports HTTP.
+ "POST /get-analysis/ HTTP/1.1" 200 361736
+ "POST /get-analysis/ HTTP/1.1" 200 358102
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "OPTIONS /get-data/ HTTP/1.1" 200 0
+ "POST /get-data/ HTTP/1.1" 200 61338
+ "OPTIONS /get-analysis/ HTTP/1.1" 200 0
+ "POST /get-analysis/ HTTP/1.1" 200 367678
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "POST /get-data/ HTTP/1.1" 200 25341
+ "POST /get-analysis/ HTTP/1.1" 200 129239
+ "POST /get-data/ HTTP/1.1" 200 25341
+ "POST /get-data/ HTTP/1.1" 200 25341
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 298
+ "OPTIONS /get-data/ HTTP/1.1" 200 0
+ "POST /get-data/ HTTP/1.1" 200 1016
+ "OPTIONS /get-analysis/ HTTP/1.1" 200 0
+ "POST /get-data/ HTTP/1.1" 200 26812
+ "POST /get-analysis/ HTTP/1.1" 200 160
+ "POST /get-data/ HTTP/1.1" 200 61347
+ "POST /get-analysis/ HTTP/1.1" 200 363047
