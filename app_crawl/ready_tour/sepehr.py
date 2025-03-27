@@ -99,43 +99,45 @@ class Sepehr:
             'btnSubmit': 'جستجو',
         }
 
-
-        req = executeRequest(method='post',
-                                  url=f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx",
-                             params=params,
-                             cookies=cookies,
-                             headers=headers,
-                             data=data,
-                             verify=False)
-
         #
-        #                           priorityTimestamp=self.priorityTimestamp,
-        #                           use_cache=self.use_cache)
+        # req = executeRequest(method='post',
+        #                           url=f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx",
+        #                      params=params,
+        #                      cookies=cookies,
+        #                      headers=headers,
+        #                      data=data,
+        #                      verify=False)
+        #
+        # #
+        # #                           priorityTimestamp=self.priorityTimestamp,
+        # #                           use_cache=self.use_cache)
+        #
+        # # req=json.loads(req)
 
-        # req=json.loads(req)
 
+        request(
+            "POST",
+            f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx",
+            params=params,
+            cookies=cookies,
+            headers=headers,
+            data=data,
+            verify=False
+        )
+        # res = executeRequest(method='get',
+        #                           url=f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx?action=display&rnd={rnd}",
+        #                      cookies=cookies,
+        #                      verify=False)
+        res = request(
+            "GET",
+            f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx?action=display&rnd={rnd}",
+            cookies=cookies,
+            verify=False
+        )
 
-        # request(
-        #     "POST",
-        #     f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx",
-        #     params=params,
-        #     cookies=cookies,
-        #     headers=headers,
-        #     data=data,
-        #     verify=False
-        # )
-        res = executeRequest(method='get',
-                                  url=f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx?action=display&rnd={rnd}",
-                             cookies=cookies,
-                             verify=False)
-        # res = request(
-        #     "GET",
-        #     f"https://{self.cookies['domain']}/Systems/FA/Reservation/Tour_NewReservation_Search2.aspx?action=display&rnd={rnd}",
-        #     cookies=cookies,
-        #     verify=False
-        # )
+        # return res['text']
 
-        return res['text']
+        return res.text
 
     def get_static_data(self):
         with open('test.html', 'r') as html_file:
