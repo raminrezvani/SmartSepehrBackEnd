@@ -10,7 +10,8 @@ from app_crawl.cookie import cookie_data
 from app_crawl.kih.data import hotels
 from app_crawl.helpers import ready_sepehr_hotel_name
 from app_crawl.cache.cache import has_key_cache, get_cache, add_cache
-
+from concurrent.futures import as_completed, wait
+from datetime import datetime
 
 class TourCollector:
     def __init__(self, source, target, start_date, night_count, hotel_star, adults=2):
@@ -134,6 +135,8 @@ class TourCollector:
             provider['providers'] = sorted(provider['providers'], key=itemgetter('price'))
         return result
 
+
+
     def get_single_data(self, source, target, start_date, use_cache, iter):
         print(f"Processing data for date: {start_date}")
         print("-" * 40)
@@ -147,7 +150,11 @@ class TourCollector:
         provider_status = {}
         start_time = datetime.now()
 
-        for future in as_completed(tasks):
+        # Wait for tasks with a 60-second timeout
+        done, not_done = wait(tasks.keys(), timeout=60)
+
+        # Process only the tasks that completed within the timeout
+        for future in as_completed(done):  # Only iterate over completed tasks
             name = tasks[future]
             try:
                 result = future.result()
@@ -159,10 +166,49 @@ class TourCollector:
                 print(f"{name} failed: {str(e)}")
                 provider_status[name] = {"length": 0, "message": "Timeout/Error"}
 
+        # Mark tasks that didn’t complete within 60 seconds
+        for future in not_done:
+            name = tasks[future]
+            provider_status[name] = {"length": 0, "message": "Did not complete within 60 seconds"}
+            # Optionally cancel the task if cancellation is supported
+            future.cancel()
+
         for provider, status in provider_status.items():
             print(f"{provider}: {status}")
 
         return {'data': results, "providers": provider_status}
+
+
+    # 
+    # def get_single_data(self, source, target, start_date, use_cache, iter):
+    #     print(f"Processing data for date: {start_date}")
+    #     print("-" * 40)
+    # 
+    #     # تولید پروایدرها با استفاده از قالب تعریف‌شده
+    #     providers = [(name, factory(source, target, start_date, self.night_count, self.adults, iter))
+    #                  for name, factory in self.providers_template]
+    # 
+    #     tasks = {self.executor.submit(instance.get_result): name for name, instance in providers}
+    #     results = []
+    #     provider_status = {}
+    #     start_time = datetime.now()
+    # 
+    #     for future in as_completed(tasks):
+    #         name = tasks[future]
+    #         try:
+    #             result = future.result()
+    #             results.extend(result.get('data', []))
+    #             spend_time = (datetime.now() - start_time).total_seconds()
+    #             print(f'{name} -----> spend: {spend_time}')
+    #             provider_status[name] = {"length": len(result.get('data', [])), "message": result.get('message', '')}
+    #         except Exception as e:
+    #             print(f"{name} failed: {str(e)}")
+    #             provider_status[name] = {"length": 0, "message": "Timeout/Error"}
+    # 
+    #     for provider, status in provider_status.items():
+    #         print(f"{provider}: {status}")
+    # 
+    #     return {'data': results, "providers": provider_status}
 
     def get_single_result(self, source, target, start_date=None, show_providers=False, use_cache=True, iter=1):
         start_date = start_date or self.start_date
@@ -184,26 +230,24 @@ class TourCollector:
 
 
 
-
-
-
-
-
-
-
         return {'data': result, 'providers': data['providers']} if show_providers else result
 
     def get_analysis(self, source, target, range_number: int, use_cache=True):
         start_date = datetime.strptime(self.start_date, "%Y-%m-%d").date()
         date_range = [(start_date + timedelta(days=date)).strftime("%Y-%m-%d") for date in range(range_number)]
 
-        futures = {self.executor_analysis.submit(self.get_single_result, source, target, date, False, use_cache, iter): date
-                   for iter, date in enumerate(date_range)}
+        futures = {
+            self.executor_analysis.submit(self.get_single_result, source, target, date, False, use_cache, iter): date
+            for iter, date in enumerate(date_range)}
 
         result = {}
         start_time = datetime.now()
 
-        for future in as_completed(futures):
+        # Wait for futures with a 120-second timeout
+        done, not_done = wait(futures.keys(), timeout=120)
+
+        # Process only the tasks that completed within 120 seconds
+        for future in as_completed(done):
             date = futures[future]
             try:
                 res = future.result()
@@ -212,8 +256,36 @@ class TourCollector:
             except Exception as e:
                 print(f"An error occurred: {e}")
 
+        # Optionally log incomplete tasks
+        for future in not_done:
+            date = futures[future]
+            print(f"Task for date {date} did not complete within 120 seconds")
+
         sorted_result = {date: result[date] for date in sorted(result.keys())}
         return {'status': True, "data": sorted_result}
+
+    #
+    # def get_analysis(self, source, target, range_number: int, use_cache=True):
+    #     start_date = datetime.strptime(self.start_date, "%Y-%m-%d").date()
+    #     date_range = [(start_date + timedelta(days=date)).strftime("%Y-%m-%d") for date in range(range_number)]
+    #
+    #     futures = {self.executor_analysis.submit(self.get_single_result, source, target, date, False, use_cache, iter): date
+    #                for iter, date in enumerate(date_range)}
+    #
+    #     result = {}
+    #     start_time = datetime.now()
+    #
+    #     for future in as_completed(futures):
+    #         date = futures[future]
+    #         try:
+    #             res = future.result()
+    #             print(f'Future completed in {(datetime.now() - start_time).total_seconds()}')
+    #             result[date] = res
+    #         except Exception as e:
+    #             print(f"An error occurred: {e}")
+    #
+    #     sorted_result = {date: result[date] for date in sorted(result.keys())}
+    #     return {'status': True, "data": sorted_result}
 
     def __del__(self):
         # آزادسازی منابع ThreadPoolExecutor
