@@ -11147,3 +11147,111 @@ Stacktrace:
  "POST /get-analysis/ HTTP/1.1" 200 160
  "POST /get-data/ HTTP/1.1" 200 61347
  "POST /get-analysis/ HTTP/1.1" 200 363047
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ Unauthorized: /api/v1/user/profile/
+ "GET /api/v1/user/profile/ HTTP/1.1" 401 183
+ "OPTIONS /api/v1/user/login/ HTTP/1.1" 200 0
+ "POST /api/v1/user/login/ HTTP/1.1" 200 708
+ "OPTIONS /get-data/ HTTP/1.1" 200 0
+ "POST /get-data/ HTTP/1.1" 200 40437
+ "OPTIONS /get-analysis/ HTTP/1.1" 200 0
+ "POST /get-analysis/ HTTP/1.1" 200 256278
+ "POST /get-data/ HTTP/1.1" 200 40524
+ "POST /get-data/ HTTP/1.1" 200 60329
+ "POST /get-analysis/ HTTP/1.1" 200 331923
+ "POST /get-data/ HTTP/1.1" 200 60322
+ "POST /get-analysis/ HTTP/1.1" 200 329790
+ "POST /get-data/ HTTP/1.1" 200 60322
+ "POST /get-data/ HTTP/1.1" 200 60320
+ "POST /get-analysis/ HTTP/1.1" 200 325555
+ "POST /get-analysis/ HTTP/1.1" 200 326292
+ "POST /get-data/ HTTP/1.1" 200 60038
+ "POST /get-data/ HTTP/1.1" 200 58582
+ "POST /get-analysis/ HTTP/1.1" 200 318317
+ "POST /get-data/ HTTP/1.1" 200 64
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 299
+ "POST /get-data/ HTTP/1.1" 200 58639
+ "POST /get-data/ HTTP/1.1" 200 58639
+ "POST /get-data/ HTTP/1.1" 200 58639
+ "POST /get-data/ HTTP/1.1" 200 58639
+ "POST /get-analysis/ HTTP/1.1" 200 284307
+ "POST /get-data/ HTTP/1.1" 200 58249
+ "POST /get-analysis/ HTTP/1.1" 200 259417
+ "POST /get-data/ HTTP/1.1" 200 25848
+ "POST /get-analysis/ HTTP/1.1" 200 246124
+ "POST /get-data/ HTTP/1.1" 200 41959
+ "POST /get-analysis/ HTTP/1.1" 200 249938
+ "POST /get-data/ HTTP/1.1" 200 41944
+ "POST /get-analysis/ HTTP/1.1" 200 176918
+ "OPTIONS /get-data/ HTTP/1.1" 200 0
+ "POST /get-data/ HTTP/1.1" 200 41830
+ "OPTIONS /get-analysis/ HTTP/1.1" 200 0
+ "POST /get-analysis/ HTTP/1.1" 200 252821
+ "POST /get-data/ HTTP/1.1" 200 41853
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 299
+ "OPTIONS /get-calendar/ HTTP/1.1" 200 0
+ "POST /get-calendar/ HTTP/1.1" 200 10095
+ "OPTIONS /build-tour/ HTTP/1.1" 200 0
+  time hotel redis_cache --- 0.001995
+  time Create hotel_tasks --- 0.062833
+  time Assign tasks --- 0.053855
+ "POST /get-analysis/ HTTP/1.1" 200 260104
+  Processed shayan_gasht --- 21.21692
+ Length hotel results --- 44
+  Processed eghamat --- 21.217476
+  Processed darvishi --- 21.217476
+  Processed dayan --- 21.217476
+  Processed mehrab --- 21.217476
+  Processed safiran --- 21.217476
+ Length hotel results --- 37
+  Processed booking --- 21.217476
+  Processed hrc --- 21.217476
+  Processed sepid_parvaz --- 21.217476
+  Processed dolfin --- 21.217476
+  Processed hamood --- 21.217476
+ Length hotel results --- 32
+  Processed alaedin --- 21.217476
+  Processed jimboo --- 21.217476
+  Processed hamsafar --- 21.217476
+ Length hotel results --- 38
+  Processed snapp --- 21.217476
+ Length hotel results --- 30
+  Processed deltaban --- 21.217476
+  Processed omid_oj --- 21.217476
+  Processed eram2mhd --- 21.217476
+  Processed kimiya --- 21.217476
+  Processed moeindarbari --- 21.217476
+  Processed yegane_fard --- 21.217476
+  Processed iman --- 21.217476
+  Processed tak_setareh --- 21.21851
+  Processed flamingo --- 21.21851
+  Processed rahbal --- 21.21851
+  Processed parmis --- 21.21851
+  time hotel processing completed --- 21.21851
+  time read_data_ALLDestination --- 0.078084
+  time hotel get_ALLDestination_data --- 21.297548
+  time hotel beforeSend --- 0.005949
+ "POST /build-tour/ HTTP/1.1" 200 182459
+ "POST /build-tour/ HTTP/1.1" 200 182459
+ "POST /get-data/ HTTP/1.1" 200 41856
+ "POST /get-analysis/ HTTP/1.1" 200 249168
+ "POST /get-data/ HTTP/1.1" 200 41856
+ "POST /get-analysis/ HTTP/1.1" 200 249168
+ "POST /get-data/ HTTP/1.1" 200 41856
+ "POST /get-analysis/ HTTP/1.1" 200 249168
+ "POST /get-data/ HTTP/1.1" 200 41856
+ "POST /get-analysis/ HTTP/1.1" 200 249168
+ "POST /get-data/ HTTP/1.1" 200 41856
+ "POST /get-analysis/ HTTP/1.1" 200 249168
+ "POST /get-data/ HTTP/1.1" 200 41055
+ "POST /get-analysis/ HTTP/1.1" 200 248545
+ "POST /get-data/ HTTP/1.1" 200 41055
+ "POST /get-analysis/ HTTP/1.1" 200 248545
+ "POST /get-data/ HTTP/1.1" 200 38354
+ "POST /get-analysis/ HTTP/1.1" 200 213180
+ "POST /get-data/ HTTP/1.1" 200 38392
+ "POST /get-analysis/ HTTP/1.1" 200 198588
+ "POST /get-data/ HTTP/1.1" 200 38392
+ "POST /get-data/ HTTP/1.1" 200 35769
+ "POST /get-analysis/ HTTP/1.1" 200 224038

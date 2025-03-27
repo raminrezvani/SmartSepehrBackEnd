@@ -11,6 +11,7 @@ from app_crawl.kih.data import hotels
 from app_crawl.helpers import ready_sepehr_hotel_name
 from app_crawl.cache.cache import has_key_cache, get_cache, add_cache
 
+
 class TourCollector:
     def __init__(self, source, target, start_date, night_count, hotel_star, adults=2):
         self.start_date = start_date
@@ -27,6 +28,9 @@ class TourCollector:
         self.redis_expire = 10 * 60  # 10 minutes
         self.executor = ThreadPoolExecutor(max_workers=200)  # تنظیم تعداد کارگرها
         self.executor_analysis = ThreadPoolExecutor(max_workers=200)
+
+
+
 
         # تولید یکباره پروایدرها در زمان مقداردهی اولیه
         self.providers_template = [
@@ -165,6 +169,7 @@ class TourCollector:
         redis_key = f"ready_{source}_{target}_{start_date}_{self.night_count}_{self.adults}"
 
         if use_cache and has_key_cache(key=redis_key):
+            print('get from cache')
             data = get_cache(key=redis_key, get_time=True)
             return data if show_providers else data['data']
 
@@ -172,9 +177,19 @@ class TourCollector:
         result = self.get_result(data['data'])
 
         if result:
-            print('Start caching...')
-            with ThreadPoolExecutor(max_workers=1) as executor:
-                executor.submit(add_cache, redis_key, {'data': result, 'providers': data['providers']}, self.redis_expire)
+            # add_cache(redis_key,{'data': result, 'providers': data['providers']})
+            # print('Start caching...')
+            with ThreadPoolExecutor(max_workers=1) as executor_cache:
+                executor_cache.submit(add_cache, redis_key, {'data': result, 'providers': data['providers']})
+
+
+
+
+
+
+
+
+
 
         return {'data': result, 'providers': data['providers']} if show_providers else result
 

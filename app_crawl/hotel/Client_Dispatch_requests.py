@@ -4,6 +4,7 @@ import redis
 from itertools import cycle
 import hashlib
 
+# SSH smartland@185.252.28.58 -p 2858
 # Initialize Redis connection
 
 redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
@@ -13,6 +14,8 @@ redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=T
 servers = [
     ("45.149.76.168", [6000, 6001, 6002, 6003, 6004, 6005]),
     ("130.185.77.24", [6000, 6001, 6002, 6003, 6004, 6005]),
+    ("185.252.28.58", [6000, 6001, 6002, 6003, 6004, 6005]),
+
 ]
 
 # Round-robin cycle for selecting servers
@@ -88,6 +91,20 @@ def executeRequest(method, url,
         timestamp_server_map[priorityTimestamp] = next(server_cycle)
 
     selected_server = timestamp_server_map[priorityTimestamp]
+
+
+    # ---------------
+    # for priorityTimestamp==1: (to round robin serve)
+    #--------------
+    if (priorityTimestamp == 1 or priorityTimestamp == '1'):
+        selected_server= next(server_cycle)
+    # -----------------
+
+
+
+
+
+
 
     # Select a port from the server's round-robin port cycle
     selected_port = next(server_port_cycles[selected_server])
