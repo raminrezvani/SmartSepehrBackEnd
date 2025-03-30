@@ -9,6 +9,11 @@ from app_crawl.helpers import ready_price, convert_to_tooman, convert_gregorian_
 from bs4 import BeautifulSoup
 from app_crawl.insert_influx import Influxdb
 
+import json
+import redis
+redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -138,12 +143,49 @@ def get_result(target, start_date, end_date, adults, cookie, provider_name, isAn
 
     for hotel in hotels:
         try:
-            hotel_star = hotel.select_one('img[alt*="ستاره"]').get('alt').replace('ستاره', '').replace('هتل', '').strip()
+            # ---
+            hotel_star = hotel.select_one('img[alt*="ستاره"]').get('alt').replace('ستاره', '').replace('هتل',
+                                                                                                       '').strip()
+            hotel_name = hotel.select_one("tr.header td:nth-child(1)").text.strip()
+            # ======== Check for hotel names or star ratings
+            if isAnalysis:
+                # Create a set of all hotel names for faster lookup
+                all_hotel_names = {hotel_name for hotel in hotels}
+                selected_hotels = set()  # Using set to avoid duplicates
 
-            # ======== Check for 5-Star hotels
-            if isAnalysis and str(hotel_star) not in hotelstarAnalysis:
-                continue
-            #-----------
+                # Check Redis for hotel name mappings
+                for hotel_star in hotelstarAnalysis:
+                    redis_key = f"asli_hotel:{hotel_star}"
+                    redis_data = redis_client.get(redis_key)
+                    if redis_data:
+                        mapped_hotels = json.loads(redis_data)
+                        # Add hotels that exist in our current hotels list
+                        selected_hotels.update(hotel for hotel in mapped_hotels if hotel in all_hotel_names)
+
+                if selected_hotels:
+                    # If we found mapped hotels, filter the hotels list
+                    hotels = [hotel for hotel in hotels if hotel_name in selected_hotels]
+                else:
+                    # Fallback to original star rating and name check
+                    hotels = [hotel for hotel in hotels
+                              if (str(hotel['hotel_star']) in hotelstarAnalysis)
+                              or (hotel_name in hotelstarAnalysis)]
+
+                if (len(hotels) == 0):  # on hotel nashod!
+                    continue
+                print('Sepehr Analysis')
+            else:
+                print('Sepehr RASII')
+
+
+
+            # # ======== Check for 5-Star hotels
+            # if isAnalysis and str(hotel_star) not in hotelstarAnalysis:
+            #     continue
+            # #-----------
+
+
+
 
             appended_item = {
                 "hotel_name": hotel.select_one("tr.header td:nth-child(1)").text.strip(),

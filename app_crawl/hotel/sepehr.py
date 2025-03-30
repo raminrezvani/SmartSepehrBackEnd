@@ -3,11 +3,14 @@ import random
 import os
 from pathlib import Path
 from datetime import datetime
+import json
 
 from requests import request
 from app_crawl.helpers import ready_price, convert_to_tooman, convert_gregorian_date_to_persian
 from bs4 import BeautifulSoup
 from app_crawl.insert_influx import Influxdb
+import redis
+redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -176,13 +179,36 @@ class SepehrHotel:
 
                 #---
                 hotel_star=hotel.select_one('img[alt*="ستاره"]').get('alt').replace('ستاره','').replace('هتل','').strip()
-                # ======== Check for 5-Star hotels
+                hotel_name = hotel.select_one("tr.header td:nth-child(1)").text.strip()
+                # ======== Check for hotel names or star ratings
                 if self.isAnalysis:
-                    if (str(hotel_star) in self.hotelstarAnalysis):
-                        print('Sepehr Analysis')
+                    # Create a set of all hotel names for faster lookup
+                    all_hotel_names = {hotel_name for hotel in hotels}
+                    selected_hotels = set()  # Using set to avoid duplicates
+
+                    # Check Redis for hotel name mappings
+                    for hotel_star in self.hotelstarAnalysis:
+                        redis_key = f"asli_hotel:{hotel_star}"
+                        redis_data = redis_client.get(redis_key)
+                        if redis_data:
+                            mapped_hotels = json.loads(redis_data)
+                            # Add hotels that exist in our current hotels list
+                            selected_hotels.update(hotel for hotel in mapped_hotels if hotel in all_hotel_names)
+
+                    if selected_hotels:
+                        # If we found mapped hotels, filter the hotels list
+                        hotels = [hotel for hotel in hotels if hotel_name in selected_hotels]
                     else:
+                        # Fallback to original star rating and name check
+                        hotels = [hotel for hotel in hotels
+                                 if (str(hotel['hotel_star']) in self.hotelstarAnalysis)
+                                 or (hotel_name in self.hotelstarAnalysis)]
+
+                    if (len(hotels)==0):  # on hotel nashod!
                         continue
-                # ============
+                    print('Sepehr Analysis')
+                else:
+                    print('Sepehr RASII')
 
 
 

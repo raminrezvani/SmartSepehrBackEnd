@@ -12,6 +12,10 @@ from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 
 from app_crawl.insert_influx import Influxdb
 import traceback
+import redis
+
+redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 hotelIDs = {
@@ -166,7 +170,7 @@ class Deltaban:
         })
 
         req = request("POST", req_url, headers=self.request_header, data=req_body)
-        self.influx.capture_logs(1, 'deltaban')
+        # self.influx.capture_logs(1, 'deltaban')
 
         data = json.loads(req.text)
 
@@ -327,7 +331,7 @@ class Deltaban:
                         req = json.loads(req)
 
 
-                        self.influx.capture_logs(1, 'deltaban')
+                        # self.influx.capture_logs(1, 'deltaban')
                         data={}
                         try:
                             data = json.loads(req['text'])
@@ -373,9 +377,30 @@ class Deltaban:
             })
 
 
-        #======== Check for 5-Star hotels
+        #======== Check for hotel names or star ratings
         if self.isAnalysis:
-            hotels=[htl for htl in hotels if str(htl['hotel_star']) in self.hotelstarAnalysis]
+            # Create a set of all hotel names for faster lookup
+            all_hotel_names = {hotel['hotel_name'] for hotel in hotels}
+            selected_hotels = set()  # Using set to avoid duplicates
+
+            # Check Redis for hotel name mappings
+            for hotel_star in self.hotelstarAnalysis:
+                redis_key = f"asli_hotel:{hotel_star}"
+                redis_data = redis_client.get(redis_key)
+                if redis_data:
+                    mapped_hotels = json.loads(redis_data)
+                    # Add hotels that exist in our current hotels list
+                    selected_hotels.update(hotel for hotel in mapped_hotels if hotel in all_hotel_names)
+
+            if selected_hotels:
+                # If we found mapped hotels, filter the hotels list
+                hotels = [hotel for hotel in hotels if hotel['hotel_name'] in selected_hotels]
+            else:
+                # Fallback to original star rating and name check
+                hotels = [hotel for hotel in hotels
+                         if (str(hotel['hotel_star']) in self.hotelstarAnalysis)
+                         or (hotel['hotel_name'] in self.hotelstarAnalysis)]
+
             print(f'Deltaban Analysis')
         else:
             print(f'Deltaban RASII')
@@ -389,6 +414,8 @@ class Deltaban:
         optimal_threads = min(len(hotels), 100) if len(hotels)!=0 else 1  # Set a reasonable max limit (e.g., 10)
 
         with ThreadPoolExecutor(max_workers=optimal_threads) as executor:
+
+
             # Submit tasks and collect futures
             futures = {executor.submit(room_handler, hotel): hotel for hotel in hotels}
 

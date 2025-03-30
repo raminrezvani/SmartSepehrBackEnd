@@ -1,4 +1,3 @@
-
 from concurrent.futures import ThreadPoolExecutor, wait,as_completed
 
 
@@ -13,6 +12,7 @@ from lxml import etree
 from io import StringIO
 import requests
 from app_crawl.hotel.Client_Dispatch_requests import executeRequest
+import redis
 
 class Alaedin:
     def __init__(self, target, start_date, end_date, adults,isAnalysiss=False,hotelstarAnalysis=[]):
@@ -149,9 +149,30 @@ class Alaedin:
 
 
 
-            # ======== Check for 5-Star hotels
+            # ======== Check for hotel names or star ratings
             if self.isAnalysis:
-                parsed_hotels = [htl for htl in parsed_hotels if str(htl['hotel_star']) in self.hotelstarAnalysis]
+                # Create a set of all hotel names for faster lookup
+                all_hotel_names = {hotel['hotel_name'] for hotel in parsed_hotels}
+                selected_hotels = set()  # Using set to avoid duplicates
+
+                # Check Redis for hotel name mappings
+                for hotel_star in self.hotelstarAnalysis:
+                    redis_key = f"asli_hotel:{hotel_star}"
+                    redis_data = redis_client.get(redis_key)
+                    if redis_data:
+                        mapped_hotels = json.loads(redis_data)
+                        # Add hotels that exist in our current hotels list
+                        selected_hotels.update(hotel for hotel in mapped_hotels if hotel in all_hotel_names)
+
+                if selected_hotels:
+                    # If we found mapped hotels, filter the hotels list
+                    parsed_hotels = [hotel for hotel in parsed_hotels if hotel['hotel_name'] in selected_hotels]
+                else:
+                    # Fallback to original star rating and name check
+                    parsed_hotels = [hotel for hotel in parsed_hotels
+                                   if (str(hotel['hotel_star']) in self.hotelstarAnalysis)
+                                   or (hotel['hotel_name'] in self.hotelstarAnalysis)]
+
                 print(f'Alaedin Analysis')
             else:
                 print(f'Alaedin RASII')
