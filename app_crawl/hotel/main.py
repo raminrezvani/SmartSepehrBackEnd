@@ -1899,8 +1899,12 @@ class Hotel:
 
     def get_result(self,iter):
 
+        if (len(self.hotelstarAnalysis)!=0):
+            redis_key = f"{self.source}_{self.target}_{self.start_date}_{self.end_date}_{','.join(self.hotelstarAnalysis)}"
+        else:
+            redis_key = f"{self.source}_{self.target}_{self.start_date}_{self.end_date}_{self.adults}"
 
-        redis_key = f"{self.source}_{self.target}_{self.start_date}_{self.end_date}_{self.adults}"
+
 
         t1=datetime.now()
         # Check cache first

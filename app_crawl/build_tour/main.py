@@ -246,7 +246,7 @@ class BuildTourAnalysis():
 
 
 
-    def get_analysis_old(self,start_date,end_date,range_number=7,use_cache=True,hotelstarAnalysis=[]):
+    def get_analysis_old(self,طstart_date,end_date,range_number=7,use_cache=True,hotelstarAnalysis=[]):
 
         # return {}
 
@@ -298,7 +298,7 @@ class BuildTourAnalysis():
 
         # range_number=1
 
-        start_date = datetime.strptime(start_date, "%Y-%m-%d").date()
+        start_date = datetime.strptime(self.start_date, "%Y-%m-%d").date()
         date_range = [(start_date + timedelta(days=date)).strftime("%Y-%m-%d") for date in range(range_number)]
         # print(f'start_dateeeee ===  {str(start_date)}')
 
@@ -454,7 +454,14 @@ class BuildTourAnalysis():
         start_date_obj = datetime.strptime(start_date, "%Y-%m-%d").date()
         end_date_obj = start_date_obj + timedelta(days=self.night_count)
         end_date = end_date_obj.strftime("%Y-%m-%d")
-        redis_key = f"build_tour_{self.source}_{self.target}_{start_date}_{end_date}"
+
+        #--------
+        if (len(hotelstarAnalysis)!=0):
+            redis_key = f"build_tour_{self.source}_{self.target}_{start_date}_{end_date}_{','.join(hotelstarAnalysis)}"
+
+        else:
+            redis_key = f"build_tour_{self.source}_{self.target}_{start_date}_{end_date}"
+        #-----
 
         print(f'TimeStamp_Analysis ==== {priorityTimestamp}')
 
