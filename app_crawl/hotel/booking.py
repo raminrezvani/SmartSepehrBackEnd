@@ -6,6 +6,7 @@ import urllib3
 import requests
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+SERVER_ADD='http://localhost:3040/'
 
 import random
 class Booking:
@@ -43,19 +44,19 @@ class Booking:
 
             self.call_count+=1
 
-            if (self.call_count<=100):
-                #==========ssssssssss
-                ports =  [5040]
-                # Use round-robin selection
-                selected_port = ports[self.call_count % len(ports)]
+            # if (self.call_count<=100):
+            #     #==========ssssssssss
+            #     ports =  [5040]
+            #     # Use round-robin selection
+            #     selected_port = ports[self.call_count % len(ports)]
+            #
+            #     urll = f"http://45.149.76.168:{selected_port}/booking_hotels"
+            #
+            # else:
+            #     urll = "http://130.185.77.24:5002/booking_hotels"
 
-                urll = f"http://45.149.76.168:{selected_port}/booking_hotels"
 
-            else:
-                urll = "http://130.185.77.24:5002/booking_hotels"
-
-
-            # urll = "http://45.149.76.168:5002/booking_hotels"
+            urll = SERVER_ADD+"booking_hotels"
 
 
             params = {

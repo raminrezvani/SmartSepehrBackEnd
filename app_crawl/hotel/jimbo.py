@@ -7,7 +7,7 @@ import requests
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import random
-
+SERVER_ADD='http://localhost:3030/'
 class Jimbo:
     def __init__(self, target, start_date, end_date,
                  adults,iterr=1,isAnalysiss=False,
@@ -42,23 +42,25 @@ class Jimbo:
 
 
             self.call_count+=1
-
-            if (self.call_count<=1000):
-                #==========ssssssssss
-                # ports =  [5020,5021]
-                ports = [6060]
-                # Use round-robin selection
-                selected_port = ports[self.call_count % len(ports)]
-
-                urll = f"http://45.149.76.168:{selected_port}/Jimbo_hotels"
-
-            else:
-                urll = "http://130.185.77.24:5020/Jimbo_hotels"
+            #
+            # if (self.call_count<=1000):
+            #     #==========ssssssssss
+            #     # ports =  [5020,5021]
+            #     ports = [6060]
+            #     # Use round-robin selection
+            #     selected_port = ports[self.call_count % len(ports)]
+            #
+            #     urll = f"http://45.149.76.168:{selected_port}/Jimbo_hotels"
+            #
+            # else:
+            #     urll = "http://130.185.77.24:5020/Jimbo_hotels"
 
 
 
             #==========ssssssssss
             # urll = "http://45.149.76.168:5020/Jimbo_hotels"
+            urll = SERVER_ADD + "Jimbo_hotels"
+
             params = {
                 'start_date': self.start_date,
                 'end_date': self.end_date,

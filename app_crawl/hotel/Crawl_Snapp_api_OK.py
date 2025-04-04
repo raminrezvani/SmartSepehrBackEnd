@@ -14,6 +14,8 @@ from lxml import etree
 from io import StringIO
 import requests
 
+SERVER_ADD='http://localhost:5004/'
+
 class Snapp:
     def __init__(self, target, start_date, end_date, adults,isAnalysis=False,hotelstarAnalysis=[],
                  priorityTimestamp=1,
@@ -77,7 +79,8 @@ class Snapp:
             self.city_id=self.cityIDs[self.target]
 
             #--------- Get from Server ------------
-            url = 'http://45.149.76.168:5004/SnappTrip_Hotelrooms'
+            url = SERVER_ADD+'SnappTrip_Hotelrooms'
+
             params = {
                 # 'date_from': '2024-11-05',
                 'date_from': start_date,

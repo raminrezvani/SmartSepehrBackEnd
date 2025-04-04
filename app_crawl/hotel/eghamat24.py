@@ -9,6 +9,7 @@ from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+SERVER_ADD='http://localhost:8022/'
 
 class Eghamat24:
     def __init__(self, target, start_date, end_date, adults,isAnalysiss=False,
@@ -41,7 +42,7 @@ class Eghamat24:
 
             #==========ssssssssss
 
-            urll = "http://45.149.76.168:8022/fetch_hotels"
+            urll = SERVER_ADD+"fetch_hotels"
             params = {
                 'target': self.target,
                 'startdate': self.start_date,
