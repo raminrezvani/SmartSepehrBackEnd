@@ -14,7 +14,7 @@ import requests
 from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 import redis
 redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
-
+SERVER_ADD='http://localhost:5003/'
 
 destin_text={
             'KIH':'kish',
@@ -83,7 +83,8 @@ class Alaedin:
         }
 
         # Send a GET request to the API
-        response = requests.get("http://45.149.76.168:5003/Alaedin_rooms", params=params,timeout=3600)
+        # response = requests.get("http://45.149.76.168:5003/Alaedin_rooms", params=params,timeout=3600)
+        response = requests.get(SERVER_ADD+"Alaedin_rooms", params=params, timeout=3600)
 
         json_data={}
         try:
