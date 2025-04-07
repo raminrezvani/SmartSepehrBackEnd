@@ -126,7 +126,65 @@ def add_to_file(provider_name, start_date, data):
     except:
         return False
 
-def get_result(target, start_date, end_date, adults, cookie, provider_name, isAnalysis, hotelstarAnalysis=[],priorityTimestamp=1):
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import List, Dict
+
+def process_hotel(hotel, provider_name) -> Dict:
+    """Process a single hotel and return its data"""
+    try:
+        hotel_star = hotel.select_one('img[alt*="ستاره"]').get('alt').replace('ستاره', '').replace('هتل', '').strip()
+        hotel_name = hotel.select_one("tr.header td:nth-child(1)").text.strip()
+
+        appended_item = {
+            "hotel_name": hotel_name,
+            "hotel_star": hotel_star,
+            "min_price": None,
+            "rooms": [],
+            "provider": provider_name
+        }
+
+        rooms = hotel.select('.input_hand label')
+        room_row = hotel.select("tr[bgcolor='#EEEEEE']:has(.input_hand)")
+
+        for index, room in enumerate(rooms):
+            room_price = ready_price(room_row[index].select_one("td:nth-child(4)").text.strip())
+
+            try:
+                room_status = room_row[index].select_one("td:nth-child(7)").text.strip()
+                if 'تلفن' in room_status:
+                    continue
+
+                try:
+                    room_status = room_row[index].select_one("font[color='red']").text.strip()
+                    continue
+                except:
+                    pass
+            except:
+                continue
+
+            room_price = convert_to_tooman(room_price)
+            room_item = {
+                "name": room.text.strip(),
+                "capacity": len(room_row[index].select("td:nth-child(5) i")),
+                "price": room_price,
+                "status": room_status,
+                "provider": provider_name
+            }
+
+            if not appended_item['min_price']:
+                appended_item['min_price'] = room_price
+            if room_price < appended_item['min_price']:
+                appended_item['min_price'] = room_price
+
+            appended_item['rooms'].append(room_item)
+
+        appended_item['rooms'] = sorted(appended_item['rooms'], key=lambda k: k['price'])
+        return appended_item
+    except Exception as e:
+        print(f"{provider_name} hotel wrong: {str(e)}")
+        return None
+
+def get_result(target, start_date, end_date, adults, cookie, provider_name, isAnalysis, hotelstarAnalysis=[], priorityTimestamp=1):
     t1 = datetime.now()
     try:
         data = get_data(target, start_date, end_date, adults, cookie, provider_name)
@@ -140,112 +198,43 @@ def get_result(target, start_date, end_date, adults, cookie, provider_name, isAn
         return {'status': False, "data": [], 'message': "اتمام زمان"}
 
     hotels = soup.select("table.Table03:has(tr.header)")
+    
+    # Get list of all hotel names first
+    lst_hotel_names = [hotel.select_one("tr.header td:nth-child(1)").text.strip() for hotel in hotels]
+    
+    # Filter hotels if analysis is required
+    if isAnalysis:
+        selected_hotels = set()
+        
+        # Check Redis for hotel name mappings
+        for hotel_star in hotelstarAnalysis:
+            redis_key = f"asli_hotel:{hotel_star}"
+            redis_data = redis_client.get(redis_key)
+            if redis_data:
+                mapped_hotels = json.loads(redis_data)
+                selected_hotels.update(hotel_name for hotel_name in mapped_hotels if hotel_name in lst_hotel_names)
+        
+        if selected_hotels:
+            hotels = [hotel for hotel in hotels 
+                     if hotel.select_one("tr.header td:nth-child(1)").text.strip() in selected_hotels]
+        else:
+            hotels = []
 
-    for hotel in hotels:
-        try:
-            # ---
-            hotel_star = hotel.select_one('img[alt*="ستاره"]').get('alt').replace('ستاره', '').replace('هتل',
-                                                                                                       '').strip()
-            hotel_name = hotel.select_one("tr.header td:nth-child(1)").text.strip()
-            # ======== Check for hotel names or star ratings
-            if isAnalysis:
-                # Create a set of all hotel names for faster lookup
-                all_hotel_names = {hotel_name for hotel in hotels}
-                selected_hotels = set()  # Using set to avoid duplicates
+    # Check if hotels list is empty
+    if not hotels or len(hotels)==0:
+        return []
 
-                # Check Redis for hotel name mappings
-                for hotel_star in hotelstarAnalysis:
-                    redis_key = f"asli_hotel:{hotel_star}"
-                    redis_data = redis_client.get(redis_key)
-                    if redis_data:
-                        mapped_hotels = json.loads(redis_data)
-                        # Add hotels that exist in our current hotels list
-                        selected_hotels.update(hotel for hotel in mapped_hotels if hotel in all_hotel_names)
-
-                if selected_hotels:
-                    # If we found mapped hotels, filter the hotels list
-                    hotels = [hotel for hotel in hotels if hotel_name in selected_hotels]
-                else:
-                    # Fallback to original star rating and name check
-                    # hotels = [hotel for hotel in hotels
-                    #           if (str(hotel['hotel_star']) in hotelstarAnalysis)
-                    #           or (hotel_name in hotelstarAnalysis)]
-                    # hotels = [hotel for hotel in hotels
-                    #           if (hotel_name in hotelstarAnalysis)]
-                    hotels=[]
-
-
-                if (len(hotels) == 0):  # on hotel nashod!
-                    continue
-                print('Sepehr Analysis')
-            else:
-                print('Sepehr RASII')
-
-
-
-            # # ======== Check for 5-Star hotels
-            # if isAnalysis and str(hotel_star) not in hotelstarAnalysis:
-            #     continue
-            # #-----------
-
-
-
-
-            appended_item = {
-                "hotel_name": hotel.select_one("tr.header td:nth-child(1)").text.strip(),
-                "hotel_star": hotel_star,
-                "min_price": None,
-                "rooms": [],
-                "provider": provider_name
-            }
-
-            rooms = hotel.select('.input_hand label')
-            room_row = hotel.select("tr[bgcolor='#EEEEEE']:has(.input_hand)")
-
-            for index, room in enumerate(rooms):
-                room_price = ready_price(room_row[index].select_one("td:nth-child(4)").text.strip())
-
-                try:
-                    room_status = room_row[index].select_one("td:nth-child(7)").text.strip()
-                    if 'تلفن' in room_status:
-                        room_status = "تماس تلفنی"
-                        continue
-
-                    try:
-                        room_status = room_row[index].select_one("font[color='red']").text.strip()
-                        room_status = "تماس تلفنی"
-                        continue
-                    except:
-                        pass
-                except:
-                    room_status = "تماس تلفنی"
-                    # ===========
-                    # Skipp tamas telefoni
-                    # ============
-                    continue
-
-                room_price = convert_to_tooman(room_price)
-                room_item = {
-                    "name": room.text.strip(),
-                    "capacity": len(room_row[index].select("td:nth-child(5) i")),
-                    "price": room_price,
-                    "status": room_status,
-                    "provider": provider_name
-                }
-
-                if not appended_item['min_price']:
-                    appended_item['min_price'] = room_price
-                if room_price < appended_item['min_price']:
-                    appended_item['min_price'] = room_price
-
-                appended_item['rooms'].append(room_item)
-
-            appended_item['rooms'] = sorted(appended_item['rooms'], key=lambda k: k['price'])
-            result.append(appended_item)
-
-        except Exception as e:
-            print(f"{provider_name} hotel wrong")
-            print(str(e))
+    # Process hotels in parallel with minimum 1 worker
+    with ThreadPoolExecutor(max_workers=max(1, min(10, len(hotels)))) as executor:
+        future_to_hotel = {
+            executor.submit(process_hotel, hotel, provider_name): hotel 
+            for hotel in hotels
+        }
+        
+        for future in as_completed(future_to_hotel):
+            hotel_data = future.result()
+            if hotel_data:
+                result.append(hotel_data)
 
     spendTime = (datetime.now() - t1).total_seconds()
     print(f'{provider_name} ---- ParseData_{start_date} --- {spendTime}')
