@@ -99,7 +99,7 @@ def get_data(target, start_date, end_date, adults, cookie, provider_name):
         headers=headers,
         data=data,
     )
-    influx.capture_logs(1, 'sepehr')
+    # influx.capture_logs(1, 'sepehr')
 
     res = request(
         "GET",
@@ -107,7 +107,7 @@ def get_data(target, start_date, end_date, adults, cookie, provider_name):
         cookies=cookies,
         verify=False
     )
-    influx.capture_logs(1, 'sepehr')
+    # influx.capture_logs(1, 'sepehr')
 
     return res.text
 
@@ -167,9 +167,13 @@ def get_result(target, start_date, end_date, adults, cookie, provider_name, isAn
                     hotels = [hotel for hotel in hotels if hotel_name in selected_hotels]
                 else:
                     # Fallback to original star rating and name check
-                    hotels = [hotel for hotel in hotels
-                              if (str(hotel['hotel_star']) in hotelstarAnalysis)
-                              or (hotel_name in hotelstarAnalysis)]
+                    # hotels = [hotel for hotel in hotels
+                    #           if (str(hotel['hotel_star']) in hotelstarAnalysis)
+                    #           or (hotel_name in hotelstarAnalysis)]
+                    # hotels = [hotel for hotel in hotels
+                    #           if (hotel_name in hotelstarAnalysis)]
+                    hotels=[]
+
 
                 if (len(hotels) == 0):  # on hotel nashod!
                     continue
@@ -239,8 +243,9 @@ def get_result(target, start_date, end_date, adults, cookie, provider_name, isAn
             appended_item['rooms'] = sorted(appended_item['rooms'], key=lambda k: k['price'])
             result.append(appended_item)
 
-        except:
+        except Exception as e:
             print(f"{provider_name} hotel wrong")
+            print(str(e))
 
     spendTime = (datetime.now() - t1).total_seconds()
     print(f'{provider_name} ---- ParseData_{start_date} --- {spendTime}')
