@@ -204,9 +204,14 @@ class Hotel:
 
         def process_hotel(hotel):
             try:
-                hotel_name_redis_key = f"hotel_name:{hotel['hotel_name']}"
+
+                if ('ساسان' in hotel['hotel_name']):
+                    print('hotel sasan')
+
+                hotel_name_redis_key = f"hotel_name:{hotel['hotel_name']}_{self.target}"
                 hotel_name_redis = redis_client.get(hotel_name_redis_key)
                 if not hotel_name_redis:
+
                     hotelname, hotelStar = ds.check_hotelName(hotel['hotel_name'], self.target)
                     redis_client.set(hotel_name_redis_key, json.dumps((hotelname, hotelStar)))
 
@@ -1186,34 +1191,34 @@ class Hotel:
             # }
 
             hotel_tasks = {
-                "deltaban": Deltaban(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
-                # # # # # # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
-                "snapp" : Snapp(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
-                "alaedin": Alaedin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
-                "eghamat": Eghamat24(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
-                "booking": Booking(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
-                "jimboo": Jimbo(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
-                # # #
-                "darvishi": 1,
-                "moeindarbari": 1,
-                "rahbal":1,
-                "hrc": 1,
-                "dayan": 1,
-                "omid_oj": 1,
+                # "deltaban": Deltaban(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
+                # # # # # # # # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
+                # "snapp" : Snapp(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
+                # "alaedin": Alaedin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
+                # "eghamat": Eghamat24(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
+                # "booking": Booking(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
+                # "jimboo": Jimbo(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
+                # # # #
+                # "darvishi": 1,
+                # "moeindarbari": 1,
+                # "rahbal":1,
+                # "hrc": 1,
+                # "dayan": 1,
+                # "omid_oj": 1,
                 "sepid_parvaz":1,
-                "parmis":1,
-                "mehrab": 1,
-                "hamsafar":1,
-                "tak_setareh":1,
-                "kimiya": 1,
-                "eram2mhd": 1,
-                "shayan_gasht": 1,
-                "iman": 1,
-                "flamingo": 1,
-                "yegane_fard": 1,
-                "hamood": 1,
-                "safiran": 1,
-                "dolfin": 1
+                # "parmis":1,
+                # "mehrab": 1,
+                # "hamsafar":1,
+                # "tak_setareh":1,
+                # "kimiya": 1,
+                # "eram2mhd": 1,
+                # "shayan_gasht": 1,
+                # "iman": 1,
+                # "flamingo": 1,
+                # "yegane_fard": 1,
+                # "hamood": 1,
+                # "safiran": 1,
+                # "dolfin": 1
             }
 
             # print(f' time Create hotel_tasks --- {(datetime.now()-t1).total_seconds()} ')

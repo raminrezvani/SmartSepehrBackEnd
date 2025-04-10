@@ -16,8 +16,8 @@ servers = [
 
     ("130.185.77.24", [6000, 6001, 6002, 6003, 6004, 6005]),
     ("45.149.76.168", [6000, 6001, 6002, 6003, 6004, 6005]),
-    ("185.252.28.58", [6000, 6001, 6002, 6003, 6004, 6005]),
-    ("185.252.30.120", [6000, 6001, 6002, 6003, 6004, 6005]),
+    # ("185.252.28.58", [6000, 6001, 6002, 6003, 6004, 6005]),
+    # ("185.252.30.120", [6000, 6001, 6002, 6003, 6004, 6005]),
 
 ]
 
@@ -33,18 +33,30 @@ server_port_cycles = {
 }
 
 
-def get_cache_key(method, url, params, cookies, headers, data, json_data):
+def get_cache_key(method, url, params, cookies, headers, data, json_data,isSepehr):
     """Generate a unique Redis cache key based on request parameters."""
-    request_string = json.dumps({
-        'method': method,
-        'url': url,
-        'params': params,
-        'cookies': cookies,
-        'headers': headers,
-        'data': data,
-        'json': json_data,
-    }, sort_keys=True)
-    return "request_cache:" + hashlib.md5(request_string.encode()).hexdigest()
+    if (isSepehr=='0'):
+        request_string = json.dumps({
+            'method': method,
+            'url': url,
+            'params': params,
+            'cookies': cookies,
+            'headers': headers,
+            'data': data,
+            'json': json_data,
+        }, sort_keys=True)
+        return "request_cache:" + hashlib.md5(request_string.encode()).hexdigest()
+    if (isSepehr=='1'):
+        request_string = json.dumps({
+            'method': method,
+            'url': url,
+            'cookies': cookies,
+            'headers': headers,
+            'data': data,
+            'json': json_data,
+        }, sort_keys=True)
+        return "request_cache:" + hashlib.md5(request_string.encode()).hexdigest()
+
 
 
 def fetch_and_cache_response(full_url, serverparams, cache_key, priorityTimestamp, selected_port):
@@ -71,17 +83,18 @@ def executeRequest(method, url,
                    json_data=None,
                    verify=False,
                    priorityTimestamp=1,
-                   use_cache=1,
-                   forceGet=0):
+                   use_cache='true',
+                   forceGet=0,
+                   isSepehr='0'):
 
-    if use_cache=='False':
+    if str(use_cache).lower()=='false':
         use_cache=0
-    if use_cache=='True':
+    if str(use_cache).lower()=='true':
         use_cache=1
 
 
     """Execute a request with caching, priorityTimestamp, and forceGet logic."""
-    cache_key = get_cache_key(method, url, params, cookies, headers, data, json_data)
+    cache_key = get_cache_key(method, url, params, cookies, headers, data, json_data,isSepehr)
 
     # Check Redis for cached response
     cached_data = redis_client.get(cache_key)
