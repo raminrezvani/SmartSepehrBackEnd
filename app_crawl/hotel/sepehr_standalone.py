@@ -9,7 +9,7 @@ from requests import request
 from app_crawl.helpers import ready_price, convert_to_tooman, convert_gregorian_date_to_persian
 from bs4 import BeautifulSoup
 from app_crawl.insert_influx import Influxdb
-
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 import redis
 redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
@@ -37,6 +37,62 @@ def generate_hotels_cache_key(target, start_date, provider_name):
     key_string = f"processed_{target}_{start_date}_{provider_name}"
     return f"sepehr_processed:{hashlib.md5(key_string.encode()).hexdigest()}"
 
+# Add after generate_hotels_cache_key function and before get_data function
+def process_hotel(hotel, provider_name) -> dict:
+    """Process a single hotel and return its data"""
+    try:
+        hotel_star = hotel.select_one('img[alt*="ستاره"]').get('alt').replace('ستاره', '').replace('هتل', '').strip()
+        hotel_name = hotel.select_one("tr.header td:nth-child(1)").text.strip()
+
+        appended_item = {
+            "hotel_name": hotel_name,
+            "hotel_star": hotel_star,
+            "min_price": None,
+            "rooms": [],
+            "provider": provider_name
+        }
+
+        rooms = hotel.select('.input_hand label')
+        room_row = hotel.select("tr[bgcolor='#EEEEEE']:has(.input_hand)")
+
+        for index, room in enumerate(rooms):
+            room_price = ready_price(room_row[index].select_one("td:nth-child(4)").text.strip())
+
+            try:
+                room_status = room_row[index].select_one("td:nth-child(7)").text.strip()
+                if 'تلفن' in room_status:
+                    continue
+
+                try:
+                    room_status = room_row[index].select_one("font[color='red']").text.strip()
+                    continue
+                except:
+                    pass
+            except:
+                continue
+
+            room_price = convert_to_tooman(room_price)
+            room_item = {
+                "name": room.text.strip(),
+                "capacity": len(room_row[index].select("td:nth-child(5) i")),
+                "price": room_price,
+                "status": room_status,
+                "provider": provider_name
+            }
+
+            if not appended_item['min_price']:
+                appended_item['min_price'] = room_price
+            if room_price < appended_item['min_price']:
+                appended_item['min_price'] = room_price
+
+            appended_item['rooms'].append(room_item)
+
+        appended_item['rooms'] = sorted(appended_item['rooms'], key=lambda k: k['price'])
+        return appended_item
+    except Exception as e:
+        print(f"Error processing hotel: {str(e)}")
+        return None
+
 def get_data(target, start_date, end_date, adults, cookie, provider_name, priorityTimestamp):
     try:
         # Validate cookie structure
@@ -58,10 +114,17 @@ def get_data(target, start_date, end_date, adults, cookie, provider_name, priori
             return None
 
         # Validate required cookie fields
-        required_fields = ['domain', 'hotel', 'view_state', 'view_state_generator', 'event_validation']
+        required_fields = ['domain']  # domain in root level of cookie
+        required_hotel_fields = ['view_state', 'view_state_generator', 'event_validation']  # these fields should be in cookie['hotel']
+        
         for field in required_fields:
             if field not in cookie:
-                print(f"Missing required field: {field}")
+                print(f"Missing required field in cookie root: {field}")
+                return None
+                
+        for field in required_hotel_fields:
+            if field not in cookie['hotel']:
+                print(f"Missing required field in cookie['hotel']: {field}")
                 return None
 
         rnd = random.randint(1550000000000000, 1560000000000009)
