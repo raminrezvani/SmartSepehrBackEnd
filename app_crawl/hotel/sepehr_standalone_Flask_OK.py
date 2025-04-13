@@ -1,11 +1,12 @@
+import requests
 import urllib3
 import random
 import os
 from pathlib import Path
 from datetime import datetime
 import hashlib  # Add this import
-
 from requests import request
+
 from app_crawl.helpers import ready_price, convert_to_tooman, convert_gregorian_date_to_persian
 from bs4 import BeautifulSoup
 from app_crawl.insert_influx import Influxdb
@@ -25,6 +26,10 @@ def calculate_night_count(start_date, end_date):
 
 # Add this import at the top of the file
 from app_crawl.hotel.Client_Dispatch_requests import executeRequest
+
+# Add these imports at the top of the file
+from flask import Flask, request, jsonify
+
 
 # Add these functions after the imports and before get_data function
 def generate_redis_key(target, start_date, end_date, provider_name):
@@ -186,8 +191,7 @@ def get_data(target, start_date, end_date, adults, cookie, provider_name, priori
         }
 
         # First request
-        post_response = request(
-            "POST",
+        post_response = requests.post(
             f'https://{cookie["domain"]}/systems/FA/Reservation/Hotel_NewReservation_Search.aspx',
             params=params,
             cookies=cookies,
@@ -200,8 +204,7 @@ def get_data(target, start_date, end_date, adults, cookie, provider_name, priori
             return None
 
         # Second request
-        res = request(
-            "GET",
+        res = requests.get(
             f"https://{cookie['domain']}/systems/FA/Reservation/Hotel_NewReservation_Search.aspx?action=display&rnd={rnd}",
             cookies=cookies,
             verify=False
@@ -296,3 +299,64 @@ def get_result(target, start_date, end_date, adults, cookie, provider_name, isAn
     except Exception as e:
         print(f"Error in get_result: {str(e)}")
         return {'status': False, "data": [], 'message': "اتمام زمان"}
+
+# Add after existing imports
+app = Flask(__name__)
+
+# Add new endpoint
+@app.route('/api/hotel/search', methods=['POST'])
+def search_hotels():
+    try:
+        data = request.get_json()
+        
+        # Extract required parameters from request
+        target = data.get('target')
+        start_date = data.get('start_date')
+        end_date = data.get('end_date')
+        adults = data.get('adults')
+        cookie = data.get('cookie')
+        provider_name = data.get('provider_name')
+        is_analysis = data.get('is_analysis', False)
+        hotelstar_analysis = data.get('hotelstar_analysis', [])
+        priority_timestamp = data.get('priority_timestamp', 1)
+
+        # Validate required parameters
+        if not all([target, start_date, end_date, cookie, provider_name]):
+            return jsonify({
+                'status': False,
+                'message': 'Missing required parameters',
+                'data': []
+            }), 400
+
+        # Use existing get_result function
+        result = get_result(
+            target=target,
+            start_date=start_date,
+            end_date=end_date,
+            adults=adults,
+            cookie=cookie,
+            provider_name=provider_name,
+            isAnalysis=is_analysis,
+            hotelstarAnalysis=hotelstar_analysis,
+            priorityTimestamp=priority_timestamp
+        )
+
+        if isinstance(result, dict) and 'status' in result:
+            return jsonify(result), 400
+
+        return jsonify({
+            'status': True,
+            'data': result,
+            'message': 'Success'
+        })
+
+    except Exception as e:
+        return jsonify({
+            'status': False,
+            'message': str(e),
+            'data': []
+        }), 500
+
+# Add at the end of the file
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)

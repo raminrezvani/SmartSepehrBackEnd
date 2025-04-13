@@ -3,7 +3,7 @@ import requests
 headers = {
     'Accept': 'application/json, text/plain, */*',
     'Accept-Language': 'en-US,en;q=0.9',
-    'Authorization': 'JWT eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyNzk5NDIwLCJpYXQiOjE3NDI2MjY2MjAsImp0aSI6IjEzM2M0NjgwZGM4MTQxZWE4N2Y4ODI2YmUxOWViODMwIiwidXNlcl9pZCI6MTN9.M2A6VSP_Tm2BdgxUIAkLb7Lw3RiaJuPgPxQu7zCbaPNnoiqzusY7Nwz2F44d-QbmvbgJOwsXFnU-G4WNsXL2Lg',
+    'Authorization': 'JWT eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0NzEwMjAyLCJpYXQiOjE3NDQ1Mzc0MDIsImp0aSI6ImExNTVjZTFiYmIyNjRiMGZiMTQyZDcwMGQyYTZkMWVjIiwidXNlcl9pZCI6MTN9.E-redMcrchfQfamWgo6wb4HJ-2W29jBETm5ucFCWrmO2SSbH4yLSljLjdwwghQYMmR9Gr3KTwCJmLsQYISNE1w',
     'Connection': 'keep-alive',
     'Content-Type': 'application/json',
     'Origin': 'http://127.0.0.1:8080',
@@ -18,12 +18,12 @@ headers = {
 }
 
 json_data = {
-    'start_date': '2025-04-19',
-    'end_date': '2025-04-23',
+    'start_date': '2025-04-20',
+    'end_date': '2025-04-24',
     'night_count': 4,
     'hotel_star': 5,
     'source': 'asdsa',
-    'target': 'THR',
+    'target': 'KIH',
     'adults': 2,
     'use_cache': False,
 }

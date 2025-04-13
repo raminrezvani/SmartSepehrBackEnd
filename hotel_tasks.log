@@ -45090,3 +45090,158 @@ Stacktrace:
   time BuildTour process_providers --- 0.005981
   time BuildTour get_analysis --- 10.276845
  "POST /build-tour-analyse/ HTTP/1.1" 200 7967
+ "GET /get-company-list/ HTTP/1.1" 200 274
+ "GET /cookie-providers/?show_company=1&company_u_id=J-23170045-96f9aa60-f1df-5263-ac28-1515a8a0dffe-83441-J HTTP/1.1" 200 2321
+ "GET /set-cookie/?sepehr_name=sepid_parvaz HTTP/1.1" 200 124
+ "OPTIONS /set-cookie/ HTTP/1.1" 200 0
+ - Broken pipe from ('127.0.0.1', 54064)
+ "GET /get-company-list/ HTTP/1.1" 200 274
+ "GET /cookie-providers/?show_company=1&company_u_id=J-23170045-96f9aa60-f1df-5263-ac28-1515a8a0dffe-83441-J HTTP/1.1" 200 2317
+ Unauthorized: /build-tour/
+ "POST /build-tour/ HTTP/1.1" 401 183
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ Unauthorized: /api/v1/user/profile/
+ "GET /api/v1/user/profile/ HTTP/1.1" 401 183
+ "OPTIONS /api/v1/user/login/ HTTP/1.1" 200 0
+ "POST /api/v1/user/login/ HTTP/1.1" 200 708
+ "OPTIONS /get-data/ HTTP/1.1" 200 0
+ - Broken pipe from ('127.0.0.1', 58780)
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+ Error calling Sepehr service for sepid_parvaz: name 'requests' is not defined
+  time Assign tasks --- 0.324134
+  Processed sepid_parvaz --- 0.325131
+  time hotel processing completed --- 0.326127
+  time read_data_ALLDestination --- 2.778702
+  time hotel get_ALLDestination_data --- 3.105826
+  time hotel beforeSend --- 0.03391
+ "POST /build-tour/ HTTP/1.1" 200 140
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 3.827655
+ Error calling Sepehr service for sepid_parvaz: HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=30)
+ Timeout: sepid_parvaz did not complete within 60 seconds
+  time hotel processing completed --- 63.896207
+  time read_data_ALLDestination --- 1.462387
+  time hotel get_ALLDestination_data --- 65.704191
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 72
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.002994
+ Error calling Sepehr service for sepid_parvaz: HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=30)
+  Processed sepid_parvaz --- 59.998418
+  time hotel processing completed --- 59.999415
+  time read_data_ALLDestination --- 0.84107
+  time hotel get_ALLDestination_data --- 60.841483
+  time hotel beforeSend --- 0.004987
+ "POST /build-tour/ HTTP/1.1" 200 140
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.002993
+ Error calling Sepehr service for sepid_parvaz: HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=30)
+  Processed sepid_parvaz --- 37.420355
+  time hotel processing completed --- 37.421352
+  time read_data_ALLDestination --- 0.886593
+  time hotel get_ALLDestination_data --- 38.308945
+  time hotel beforeSend --- 0.004006
+ "POST /build-tour/ HTTP/1.1" 200 140
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.002991
+ Timeout: sepid_parvaz did not complete within 60 seconds
+  time hotel processing completed --- 60.012504
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.002994
+  Processed sepid_parvaz --- 15.312705
+  time hotel processing completed --- 15.313703
+  time read_data_ALLDestination --- 0.87249
+  time hotel get_ALLDestination_data --- 16.188187
+  time hotel beforeSend --- 0.003989
+ "POST /build-tour/ HTTP/1.1" 200 140
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.001993
+ Timeout: sepid_parvaz did not complete within 60 seconds
+  time hotel processing completed --- 60.012421
+  time read_data_ALLDestination --- 4.499112
+  time hotel get_ALLDestination_data --- 126.030875
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 72
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.00399
+ Timeout: sepid_parvaz did not complete within 60 seconds
+  time hotel processing completed --- 60.012743
+  time read_data_ALLDestination --- 2.773623
+  time hotel get_ALLDestination_data --- 152.025216
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 72
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.012962
+  Processed sepid_parvaz --- 20.757982
+  time hotel processing completed --- 20.758893
+  time read_data_ALLDestination --- 0.89026
+  time hotel get_ALLDestination_data --- 21.652144
+  time hotel beforeSend --- 0.012964
+ "POST /build-tour/ HTTP/1.1" 200 140
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.002994
+  Processed sepid_parvaz --- 5.668895
+  time hotel processing completed --- 5.669892
+  time read_data_ALLDestination --- 3.80912
+  time hotel get_ALLDestination_data --- 9.482003
+  time hotel beforeSend --- 0.072805
+ "POST /build-tour/ HTTP/1.1" 200 140
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.003953
+  Processed sepid_parvaz --- 15.663648
+  time hotel processing completed --- 15.663648
+  time read_data_ALLDestination --- 0.302156
+  time hotel get_ALLDestination_data --- 15.967821
+  time hotel beforeSend --- 0.001995
+ "POST /build-tour/ HTTP/1.1" 200 140
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000965
+  Processed sepid_parvaz --- 10.180245
+  time hotel processing completed --- 10.180245
+  time read_data_ALLDestination --- 0.639287
+  time hotel get_ALLDestination_data --- 10.822555
+  time hotel beforeSend --- 0.003959
+ "POST /build-tour/ HTTP/1.1" 200 140
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.003989
+  Processed sepid_parvaz --- 57.645297
+  time hotel processing completed --- 57.646295
+  time read_data_ALLDestination --- 0.704027
+  time hotel get_ALLDestination_data --- 58.35132
+  time hotel beforeSend --- 0.003991
+ "POST /build-tour/ HTTP/1.1" 200 140
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.002992
+ Error calling Sepehr service for sepid_parvaz: HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=30)
+  Processed sepid_parvaz --- 32.147748
+  time hotel processing completed --- 32.147748
+  time read_data_ALLDestination --- 0.689785
+  time hotel get_ALLDestination_data --- 32.839527
+  time hotel beforeSend --- 0.00399
+ "POST /build-tour/ HTTP/1.1" 200 140
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.005984
+ Length hotel results --- 5
+  Processed sepid_parvaz --- 32.898936
+  time hotel processing completed --- 32.899934
+  time read_data_ALLDestination --- 0.883078
+  time hotel get_ALLDestination_data --- 33.788998
+  time hotel beforeSend --- 0.002992
+ "POST /build-tour/ HTTP/1.1" 200 6535
