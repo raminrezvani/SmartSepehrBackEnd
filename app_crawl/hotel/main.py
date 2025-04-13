@@ -37,6 +37,9 @@ redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=T
 
 
 SEPEHR_SERVICE_URL = "http://localhost:5000/api/hotel/search"
+# Add at the top with other constants
+DELTABAN_SERVICE_URL = "http://localhost:5001/api/hotel/deltaban/search"
+
 
 class Hotel:
     def __init__(self, source, target, start_date, end_date, adults,use_cache,isAnalysiss=False,
@@ -231,6 +234,35 @@ class Hotel:
             logger.error(f"Error calling Sepehr service for {provider_name}: {str(e)}")
             return []
 
+    
+    # Add this method to Hotel class
+    def _call_deltaban_service(self):
+        try:
+            payload = {
+                "target": self.target,
+                "start_date": self.start_date,
+                "end_date": self.end_date,
+                "adults": self.adults,
+                "is_analysis": self.isAnalysis,
+                "hotelstar_analysis": self.hotelstarAnalysis,
+                "priority_timestamp": self.priorityTimestamp,
+                "use_cache": self.use_cache
+            }
+
+            response = requests.post(
+                DELTABAN_SERVICE_URL,
+                json=payload,
+                # timeout=30
+            )
+
+            if response.ok:
+                result = response.json()
+                if result.get('status'):
+                    return result.get('data', [])
+            return []
+        except Exception as e:
+            logger.error(f"Error calling Deltaban service: {str(e)}")
+            return []
 
     def read_data_ALLDestination(self, data):
         print('start mapping .....')
@@ -1226,7 +1258,7 @@ class Hotel:
             # }
 
             hotel_tasks = {
-                # "deltaban": Deltaban(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
+                "deltaban": 1,  # Change this from Deltaban class instance to 1
                 # # # # # # # # # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
                 # "snapp" : Snapp(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
                 # "alaedin": Alaedin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
@@ -1240,7 +1272,7 @@ class Hotel:
                 # "hrc": 1,
                 # "dayan": 1,
                 # "omid_oj": 1,
-                "sepid_parvaz":1,
+                # "sepid_parvaz":1,
                 # "parmis":1,
                 # "mehrab": 1,
                 # "hamsafar":1,
@@ -1387,6 +1419,11 @@ class Hotel:
                             self.DOLFIN,
                             'dolfin'
                         )]='dolfin'
+                     # And in the executor section, add a new elif condition:
+                    elif key == 'deltaban' and task == 1:
+                        fu[executor.submit(
+                            self._call_deltaban_service
+                        )] = 'deltaban'
                     else:
                         fu[executor.submit(task.get_result)]=key
 

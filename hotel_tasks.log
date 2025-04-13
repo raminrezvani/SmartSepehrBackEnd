@@ -45245,3 +45245,74 @@ Stacktrace:
   time hotel get_ALLDestination_data --- 33.788998
   time hotel beforeSend --- 0.002992
  "POST /build-tour/ HTTP/1.1" 200 6535
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.001995
+  Processed deltaban --- 2.942857
+  time hotel processing completed --- 2.943485
+  time read_data_ALLDestination --- 116.836892
+  time hotel get_ALLDestination_data --- 119.788893
+  time hotel beforeSend --- 0.013963
+ "POST /build-tour/ HTTP/1.1" 200 136
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.004028
+ Length hotel results --- 30
+  Processed deltaban --- 10.023653
+  time hotel processing completed --- 10.023653
+  time read_data_ALLDestination --- 13.466581
+  time hotel get_ALLDestination_data --- 23.491232
+  time hotel beforeSend --- 0.105233
+ "POST /build-tour/ HTTP/1.1" 200 13991
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.003991
+  Processed deltaban --- 2.139187
+  time hotel processing completed --- 2.139187
+  time read_data_ALLDestination --- 96.986349
+  time hotel get_ALLDestination_data --- 99.134514
+  time hotel beforeSend --- 0.001994
+ "POST /build-tour/ HTTP/1.1" 200 136
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000997
+  Processed deltaban --- 2.046277
+  time hotel processing completed --- 2.047249
+  time read_data_ALLDestination --- 29.203802
+  time hotel get_ALLDestination_data --- 31.252048
+  time hotel beforeSend --- 0.000997
+ "POST /build-tour/ HTTP/1.1" 200 136
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.003007
+  Processed deltaban --- 21.272853
+  time hotel processing completed --- 21.273849
+  time read_data_ALLDestination --- 2.358903
+  time hotel get_ALLDestination_data --- 23.642725
+  time hotel beforeSend --- 0.013963
+ "POST /build-tour/ HTTP/1.1" 200 136
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000997
+ Error calling Deltaban service: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+  Processed deltaban --- 44.219483
+  time hotel processing completed --- 44.219483
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.004972
+  Processed deltaban --- 6.894738
+  time hotel processing completed --- 6.894738
+  time read_data_ALLDestination --- 5.063847
+  time hotel get_ALLDestination_data --- 11.961659
+  time hotel beforeSend --- 0.001956
+ "POST /build-tour/ HTTP/1.1" 200 136
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000995
+ Length hotel results --- 30
+  Processed deltaban --- 4.771602
+  time hotel processing completed --- 4.771602
+  time read_data_ALLDestination --- 5.106344
+  time hotel get_ALLDestination_data --- 9.878944
+  time hotel beforeSend --- 0.001407
+ "POST /build-tour/ HTTP/1.1" 200 11993
