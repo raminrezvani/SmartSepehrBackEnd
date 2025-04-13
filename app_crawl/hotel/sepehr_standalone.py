@@ -244,7 +244,7 @@ def get_result(target, start_date, end_date, adults, cookie, provider_name, isAn
                 if not data:
                     return {'status': False, "data": [], 'message': "خطا در دریافت اطلاعات"}
                 # Cache raw HTML data
-                redis_client.setex(redis_key_db, 36000, json.dumps(data))
+                redis_client.setex(redis_key_db, 5*60, json.dumps(data))
 
             # Process HTML only if we don't have processed data
             soup = BeautifulSoup(data, 'html.parser')
@@ -265,7 +265,7 @@ def get_result(target, start_date, end_date, adults, cookie, provider_name, isAn
             
             # Cache processed hotels data
             if all_processed_hotels:
-                redis_client.setex(processed_hotels_key, 36000, json.dumps(all_processed_hotels))
+                redis_client.setex(processed_hotels_key, 5*60, json.dumps(all_processed_hotels))
 
         # Filter hotels based on analysis criteria
         if isAnalysis and all_processed_hotels:
