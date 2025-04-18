@@ -48,10 +48,6 @@ class Alibaba:
 
         result = []
         skip_count = 0
-        # token = None
-        # ---
-        # while True:
-        #     try:
         token = self.get_token()
         req_body = {
             "sessionId": token,
@@ -71,10 +67,6 @@ class Alibaba:
         if len(data['result']):
             result.extend([hotel['link'] for hotel in data['result']])
             skip_count += 20
-                # else:
-                #     break
-            # except:
-            #     break
         # ---
         return {'hotels': result, "session_id": token}
 
@@ -110,8 +102,3 @@ class Alibaba:
         self.executor.map(get_room, data['hotels'])
         # ---
         return result
-
-
-alibaba = Alibaba("KIH", "2023-02-10", "2023-02-14", 2)
-print("--------------------------------")
-print(alibaba.get_data())

@@ -3,12 +3,18 @@ import json
 import redis
 from itertools import cycle
 import hashlib
+from .settings_loader import load_django_settings
 
-# SSH smartland@185.252.28.58 -p 2858
+# Load Django settings
+settings = load_django_settings()
+
 # Initialize Redis connection
-
-redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
-
+redis_client = redis.Redis(
+    host=settings.REDIS_CONFIG['HOST'],
+    port=settings.REDIS_CONFIG['PORT'],
+    db=settings.REDIS_CONFIG['DB'],
+    decode_responses=settings.REDIS_CONFIG['DECODE_RESPONSES']
+)
 
 # Define servers and ports
 servers = [

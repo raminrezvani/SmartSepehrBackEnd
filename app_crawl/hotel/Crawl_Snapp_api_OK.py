@@ -1,20 +1,15 @@
 #mojalalsafarmhd@gmail.com
 #Mo@123456
 from concurrent.futures import ThreadPoolExecutor, wait,as_completed
-
-
 import urllib3
-
 from datetime import datetime
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import json
 import jdatetime
-
 from lxml import etree
 from io import StringIO
 import requests
-
-SERVER_ADD='http://localhost:5004/'
+from django.conf import settings
 
 class Snapp:
     def __init__(self, target, start_date, end_date, adults,isAnalysis=False,hotelstarAnalysis=[],
@@ -79,20 +74,20 @@ class Snapp:
             self.city_id=self.cityIDs[self.target]
 
             #--------- Get from Server ------------
-            url = SERVER_ADD+'SnappTrip_Hotelrooms'
+
+            base_url = settings.PROVIDER_SERVICES['SNAPP']['BASE_URL']
+            endpoint = settings.PROVIDER_SERVICES['SNAPP']['ENDPOINTS']['HOTELS']
+            url = base_url + endpoint
 
             params = {
-                # 'date_from': '2024-11-05',
                 'date_from': start_date,
-                # 'date_to': '2024-11-08',
                 'date_to': end_date,
-                'city_id':  self.city_id,
-                'target':self.target,
+                'city_id': self.city_id,
+                'target': self.target,
                 'isAnalysis': '1' if self.isAnalysis else '0',
-                'hotelstarAnalysis':json.dumps(self.hotelstarAnalysis),
+                'hotelstarAnalysis': json.dumps(self.hotelstarAnalysis),
                 'priorityTimestamp': self.priorityTimestamp,
-                'use_cache' : self.use_cache
-
+                'use_cache': self.use_cache
             }
 
             response = requests.get(url, params=params)

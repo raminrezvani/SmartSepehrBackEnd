@@ -4,10 +4,11 @@ from app_crawl.helpers import convert_to_tooman
 from requests import request
 import urllib3
 import requests
+from django.conf import settings
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import random
-SERVER_ADD='http://localhost:3030/'
+
 class Jimbo:
     def __init__(self, target, start_date, end_date,
                  adults,iterr=1,isAnalysiss=False,
@@ -39,33 +40,17 @@ class Jimbo:
 
     def get_result(self):
         try:
+            self.call_count += 1
 
-
-            self.call_count+=1
-            #
-            # if (self.call_count<=1000):
-            #     #==========ssssssssss
-            #     # ports =  [5020,5021]
-            #     ports = [6060]
-            #     # Use round-robin selection
-            #     selected_port = ports[self.call_count % len(ports)]
-            #
-            #     urll = f"http://45.149.76.168:{selected_port}/Jimbo_hotels"
-            #
-            # else:
-            #     urll = "http://130.185.77.24:5020/Jimbo_hotels"
-
-
-
-            #==========ssssssssss
-            # urll = "http://45.149.76.168:5020/Jimbo_hotels"
-            urll = SERVER_ADD + "Jimbo_hotels"
+            base_url = settings.PROVIDER_SERVICES['JIMBO']['BASE_URL']
+            endpoint = settings.PROVIDER_SERVICES['JIMBO']['ENDPOINTS']['HOTELS']
+            urll = base_url + endpoint
 
             params = {
                 'start_date': self.start_date,
                 'end_date': self.end_date,
-                'adults':self.adults,
-                'target':self.target,
+                'adults': self.adults,
+                'target': self.target,
                 'isAnalysis': '1' if self.isAnalysis else '0',
                 'hotelstarAnalysis': json.dumps(self.hotelstarAnalysis),
                 'priorityTimestamp': self.priorityTimestamp,

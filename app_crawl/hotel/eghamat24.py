@@ -6,10 +6,9 @@ import urllib3
 import requests
 from datetime import datetime
 from app_crawl.hotel.Client_Dispatch_requests import executeRequest
+from django.conf import settings
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
-SERVER_ADD='http://localhost:8022/'
 
 class Eghamat24:
     def __init__(self, target, start_date, end_date, adults,isAnalysiss=False,
@@ -40,18 +39,18 @@ class Eghamat24:
             end_date = datetime.strptime(self.end_date, '%Y-%m-%d').date()
             stay_duration = (end_date - start_date).days
 
-            #==========ssssssssss
+            base_url = settings.PROVIDER_SERVICES['EGHAMAT24']['BASE_URL']
+            endpoint = settings.PROVIDER_SERVICES['EGHAMAT24']['ENDPOINTS']['HOTELS']
+            urll = base_url + endpoint
 
-            urll = SERVER_ADD+"fetch_hotels"
             params = {
                 'target': self.target,
                 'startdate': self.start_date,
                 'stay': stay_duration,
                 'isAnalysis': '1' if self.isAnalysis else '0',
-                'hotelstarAnalysis':json.dumps(self.hotelstarAnalysis),
-                'priorityTimestamp':self.priorityTimestamp,
+                'hotelstarAnalysis': json.dumps(self.hotelstarAnalysis),
+                'priorityTimestamp': self.priorityTimestamp,
                 'use_cache': self.use_cache
-
             }
             response = requests.get(urll, params=params)
             data=response.json()

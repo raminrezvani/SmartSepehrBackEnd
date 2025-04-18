@@ -33,30 +33,6 @@ class Jimbo:
             "Cookie": ""
         }
 
-    # def get_basic_cookies(self):
-    #     driver = get_driver()
-    #     driver.get(self.url)
-    #
-    #     self.cookies = [f"{cookie['name']}={cookie['value']}" for cookie in driver.get_cookies()]
-    #
-    #     driver.close()
-
-    # def get_authorization(self):
-    #     self.get_basic_cookies()
-    #     url = "https://www.jimbo.ir/fa/v2/signinbymobile/"
-    #
-    #     payload = 'mobile=09153148721&password=MST1231020'
-    #     headers = {
-    #         'Content-Type': 'application/x-www-form-urlencoded'
-    #     }
-    #
-    #     req = request("POST", url, headers=headers, data=payload, verify=False)
-    #
-    #     cookies = [f"{key}={value}" for key, value in req.cookies.get_dict().items()]
-    #
-    #     self.cookies.extend(cookies)
-    #     self.header['Cookie'] = '; '.join(self.cookies)
-    #     return req.cookies.get_dict()
 
     def get_auth(self):
         url = "https://www.jimbo.ir/fa/v2/signinbymobile/"
@@ -132,34 +108,29 @@ class Jimbo:
 
         return json.loads(req['text'])
 
+    # Add this import at the top with other imports
+    from django.conf import settings
+
     def get_result(self):
         try:
-            #==========ssssssssss
-
-            self.call_count+=1
-
-            if (self.call_count<=200):
-                #==========ssssssssss
-                urll = "http://45.149.76.168:5021/jimbo_tours"
-            else:
-                urll = "http://130.185.77.24:5021/jimbo_tours"
-
-
-            # urll = "http://45.149.76.168:5021/jimbo_tours"
+            self.call_count += 1
+            
+            # Select server based on call count using settings
+            server_url = (settings.PROVIDER_SERVICES['JIMBO_READYTOUR']['PRIMARY_SERVER'] 
+                         if self.call_count <= settings.PROVIDER_SERVICES['JIMBO_READYTOUR']['THRESHOLD'] 
+                         else settings.PROVIDER_SERVICES['JIMBO_READYTOUR']['SECONDARY_SERVER'])
+            
+            # Prepare request parameters
             params = {
                 'start_date': self.start_date,
                 'night_count': self.night_count,
-                'adults':self.adults,
-                'source':self.source,
-                'target':self.target
-
+                'adults': self.adults,
+                'source': self.source,
+                'target': self.target
             }
-            response = requests.get(urll, params=params)
-            data=response.json()
 
-            #=============
-
-
+            response = requests.get(server_url, params=params)
+            data = response.json()
 
             # data = self.get_data()
             data = json.loads(data['text'])

@@ -226,3 +226,9 @@ hotel_providers_api/__pycache__/urls.cpython-311.pyc
 hotel_providers_api/__pycache__/wsgi.cpython-38.pyc
 hotel_providers_api/__pycache__/wsgi.cpython-310.pyc
 hotel_providers_api/__pycache__/wsgi.cpython-311.pyc
+app_api/__pycache__/__init__.cpython-312.pyc
+app_api/__pycache__/__init__.cpython-313.pyc
+app_api/__pycache__/urls.cpython-312.pyc
+app_api/__pycache__/urls.cpython-313.pyc
+app_api/ready_tour/__pycache__/views.cpython-312.pyc
+app_api/ready_tour/__pycache__/views.cpython-313.pyc

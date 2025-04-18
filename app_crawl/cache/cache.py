@@ -1,10 +1,17 @@
 import json
 from requests import request
 import redis
-r = redis.Redis(host='localhost', port=6379, db=0)
+from django.conf import settings
+
+r = redis.Redis(
+    host=settings.REDIS_CONFIG['HOST'],
+    port=settings.REDIS_CONFIG['PORT'],
+    db=settings.REDIS_CONFIG['DB'],
+    decode_responses=settings.REDIS_CONFIG['DECODE_RESPONSES']
+)
 
 #BASE_URL = "http://94.74.182.183:6886/"
-BASE_URL = "http://localhost:6379/"
+# BASE_URL = "http://localhost:6379/"
 
 def has_key_cache(key: str) -> bool:
     """

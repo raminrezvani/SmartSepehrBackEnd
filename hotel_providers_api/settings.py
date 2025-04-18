@@ -250,3 +250,67 @@ SIMPLE_JWT = {
     "SLIDING_TOKEN_OBTAIN_SERIALIZER": "rest_framework_simplejwt.serializers.TokenObtainSlidingSerializer",
     "SLIDING_TOKEN_REFRESH_SERIALIZER": "rest_framework_simplejwt.serializers.TokenRefreshSlidingSerializer",
 }
+
+# Provider Service URLs
+PROVIDER_SERVICES = {
+    'BOOKING': {
+        'BASE_URL': 'http://localhost:3040/',
+        'ENDPOINTS': {
+            'HOTELS': 'booking_hotels'
+        }
+    },
+    'BOOKING_READYTOUR': {
+        'PRIMARY_SERVER': 'http://45.149.76.168:5001/booking_tours',
+        'SECONDARY_SERVER': 'http://130.185.77.24:5001/booking_tours',
+        'THRESHOLD': 200
+    },
+    'ALAEDIN': {
+        'BASE_URL': 'http://localhost:5003/',
+        'ENDPOINTS': {
+            'ROOMS': 'Alaedin_rooms'
+        }
+    },
+    'SNAPP': {
+        'BASE_URL': 'http://localhost:5004/',
+        'ENDPOINTS': {
+            'HOTELS': 'SnappTrip_Hotelrooms'
+        }
+    },
+    'EGHAMAT24': {
+        'BASE_URL': 'http://localhost:8022/',
+        'ENDPOINTS': {
+            'HOTELS': 'fetch_hotels'
+        }
+    },
+    'JIMBO': {
+        'BASE_URL': 'http://localhost:3030/',
+        'ENDPOINTS': {
+            'HOTELS': 'Jimbo_hotels'
+        }
+    },
+    'JIMBO_READYTOUR': {
+        'PRIMARY_SERVER': 'http://45.149.76.168:5021/jimbo_tours',
+        'SECONDARY_SERVER': 'http://130.185.77.24:5021/jimbo_tours',
+        'THRESHOLD': 200
+    },
+    'SEPEHR': {
+        'BASE_URL': 'http://localhost:5000',
+        'ENDPOINTS': {
+            'HOTEL_SEARCH': '/api/hotel/search'
+        }
+    },
+    'DELTABAN': {
+        'BASE_URL': 'http://localhost:5001',
+        'ENDPOINTS': {
+            'HOTEL_SEARCH': '/api/hotel/deltaban/search'
+        }
+    }
+}
+
+# Redis Configuration
+REDIS_CONFIG = {
+    'HOST': 'localhost',
+    'PORT': 6379,
+    'DB': 0,
+    'DECODE_RESPONSES': True
+}

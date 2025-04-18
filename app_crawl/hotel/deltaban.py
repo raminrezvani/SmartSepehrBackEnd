@@ -9,12 +9,17 @@ from requests import request
 from app_crawl.helpers import convert_to_tooman
 import urllib3
 from app_crawl.hotel.Client_Dispatch_requests import executeRequest
-
-from app_crawl.insert_influx import Influxdb
+# from app_crawl.insert_influx import Influxdb
 import traceback
 import redis
+from django.conf import settings
 
-redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+redis_client = redis.Redis(
+    host=settings.REDIS_CONFIG['HOST'],
+    port=settings.REDIS_CONFIG['PORT'],
+    db=settings.REDIS_CONFIG['DB'],
+    decode_responses=settings.REDIS_CONFIG['DECODE_RESPONSES']
+)
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -61,7 +66,7 @@ class Deltaban:
         self.hotelstarAnalysis=hotelstarAnalysis
         self.priorityTimestamp=priorityTimestamp
         self.use_cache=use_cache
-        self.influx = Influxdb()
+        # self.influx = Influxdb()
 
         # self.executor = ThreadPoolExecutor(max_workers=50)
         self.request_header = {
@@ -113,7 +118,7 @@ class Deltaban:
 
 
 
-        self.influx.capture_logs(1, 'deltaban')
+        # self.influx.capture_logs(1, 'deltaban')
 
         if response['status_code'] != 200:
             print(f"Deltaban Failed to authenticate: {response['status_code']}, {response['text']}")
@@ -132,27 +137,6 @@ class Deltaban:
         # Update the request header
         self.request_header['authorization'] = access_token
         return access_token
-
-    #
-    # def get_authorization_OLD(self):
-    #     url = "https://api.3click.com/auth/Login"
-    #     headers = {
-    #         'provider-code': 'deltaban',
-    #         'Content-Type': 'application/json',
-    #     }
-    #     tryed=0
-    #     response = request("POST", url, headers=headers, data=json.dumps(self.login), verify=False)
-    #     if response.status_code != 200:
-    #         # if (tryed==3):
-    #         #     return ''
-    #         self.get_authorization_OLD()
-    #
-    #     data = json.loads(response.text)
-    #
-    #     access_token = f"JWT {data['access_token']}"
-    #
-    #     self.request_header['authorization'] = access_token
-    #     return access_token
 
     def get_token(self):
 
@@ -193,7 +177,7 @@ class Deltaban:
         }
 
         req = request("POST", req_url, json=req_body, headers=self.request_header)
-        self.influx.capture_logs(1, 'deltaban')
+        # self.influx.capture_logs(1, 'deltaban')
 
         return json.loads(req.text)['searchToken']
 
@@ -215,7 +199,7 @@ class Deltaban:
             # req=req.json()
             req = json.loads(req)
 
-            self.influx.capture_logs(1,'deltaban')
+            # self.influx.capture_logs(1,'deltaban')
 
             data = json.loads(req['text'])
 
@@ -237,7 +221,7 @@ class Deltaban:
             req = json.loads(req)
 
 
-            self.influx.capture_logs(1, 'deltaban')
+            # self.influx.capture_logs(1, 'deltaban')
 
             data = json.loads(req['text'])
 
@@ -273,15 +257,12 @@ class Deltaban:
             htl_info['min_price']=convert_to_tooman(htl['minimumPackagePrice'])
             lst_res_hotels.append(htl_info)
 
-
         # ------------ save hotesl into file
         if not os.path.exists('Deltaban_hotels'):
             os.makedirs('Deltaban_hotels')  # Creates the folder
 
         json.dump(lst_res_hotels, open(f'Deltaban_hotels/Deltaban_hotels_info_{self.target}.json', 'w'))
         # --------------
-
-
     def get_result(self):
 
         # ---- Load hotels info from Json
@@ -300,26 +281,6 @@ class Deltaban:
 
             counter = 0
             rooms = []
-
-            # #================ NEW CODE ===================
-            # rooms = []
-            # req_urls = [req_url for i in range(5)]  # Create 20 unique request URLs
-            #
-            # with ThreadPoolExecutor(max_workers=20) as executor:
-            #     futures = [executor.submit(self.fetch_data, req_url, self.request_header) for url in req_urls]
-            #
-            #     for future in as_completed(futures):
-            #         try:
-            #             result, is_finish = future.result()
-            #             rooms.extend(result)
-            #             if is_finish:
-            #                 print("Final data fetched.")
-            #                 # return rooms
-            #         except Exception as e:
-            #             print(f"Error occurred: {e}")
-
-
-            # #=========== OLD ===========================
             # while counter < 2:
             while (True):
                 try:

@@ -8,6 +8,10 @@ import requests
 from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 
 
+# Add this import at the top with other imports
+from django.conf import settings
+
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
@@ -135,92 +139,97 @@ class Booking:
 
     def get_result(self):
         try:
-
-            self.call_count+=1
-
-            if (self.call_count<=200):
-                #==========ssssssssss
-                urll = "http://45.149.76.168:5001/booking_tours"
-            else:
-                urll = "http://130.185.77.24:5001/booking_tours"
-
-
+            # Select server based on call count using settings
+            server_url = (settings.PROVIDER_SERVICES['BOOKING_READYTOUR']['PRIMARY_SERVER'] 
+                         if self.call_count <= settings.PROVIDER_SERVICES['BOOKING_READYTOUR']['THRESHOLD'] 
+                         else settings.PROVIDER_SERVICES['BOOKING_READYTOUR']['SECONDARY_SERVER'])
+            
+            # Prepare request parameters
             params = {
                 'start_date': self.start_date,
                 'night_count': self.night_count,
-                'adults':self.adults,
-                'source':self.source,
-                'target':self.target
-
+                'adults': self.adults,
+                'source': self.source,
+                'target': self.target
             }
-            response = requests.get(urll, params=params)
-            data=response.json()
-
-            #=============
-
-
-
-
-            # data = self.get_data()
-            data=json.loads(data['text'])
-            if not data['isSucceed']:
+    
+            # Make request with timeout and error handling
+            try:
+                response = requests.get(server_url, params=params, timeout=30)
+                response.raise_for_status()  # Raise exception for bad status codes
+                data = response.json()
+                data = json.loads(data['text'])
+            except (requests.RequestException, json.JSONDecodeError) as e:
+                return {'status': False, "data": [], 'message': f"خطا در دریافت اطلاعات: {str(e)}"}
+    
+            if not data.get('isSucceed', False):
                 return {'status': False, 'data': [], 'message': "داده ای یافت نشد"}
-        except:
-            return {'status': False, "data": [], 'message': "اتمام زمان"}
-        # ---
+    
+            # Extract flight and hotel data
+            try:
+                itineraries = data['model']['hotelBookingSearchResult']['hotelBookingItineraries']
+                if not itineraries:
+                    return {'status': False, 'data': [], 'message': "اطلاعات پرواز و هتل یافت نشد"}
+    
+                first_itinerary = itineraries[0]
+                
+                # Get go flight details
+                go_flight = self._extract_flight_details(
+                    first_itinerary['flightItineraries'][0]['flights'][0]
+                )
+                if not go_flight:
+                    return {'status': False, "data": [], "message": "پرواز رفت یافت نشد"}
+    
+                # Get return flight details
+                return_flight = self._extract_flight_details(
+                    first_itinerary['flightItineraries'][1]['flights'][0]
+                )
+                if not return_flight:
+                    return {'status': False, 'data': [], 'message': "پرواز برگشت یافت نشد"}
+    
+                # Process hotel results
+                result = self._process_hotel_results(itineraries, go_flight, return_flight)
+                return {"status": True, "data": result, 'message': ""}
+    
+            except Exception as e:
+                return {'status': False, 'data': [], 'message': f"خطا در پردازش اطلاعات: {str(e)}"}
+    
+        except Exception as e:
+            return {'status': False, "data": [], 'message': f"خطای سیستمی: {str(e)}"}
+    
+    def _extract_flight_details(self, flight_data):
+        """Helper method to extract flight details"""
         try:
-            go_flight = data['model']['hotelBookingSearchResult']['hotelBookingItineraries'][0]['flightItineraries'][0]['flights'][0]
-            go_flight_departure_date = datetime.strptime(go_flight['departureDateTime'], '%Y-%m-%dT%H:%M:%S')
-            go_flight = {
-                "airline": go_flight['flightsSegments'][0]['airlineTitle'],
-                "airline_english": go_flight['flightsSegments'][0]['airlineCode'],
-                "flight_number": go_flight['flightsSegments'][0]['flightNumber'],
-                "departure_date": go_flight_departure_date.strftime("%Y-%m-%d"),
-                "departure_time": go_flight_departure_date.strftime("%H:%M"),
-                "arrive_time": go_flight_departure_date.strftime("%H:%M"),
+            departure_date = datetime.strptime(flight_data['departureDateTime'], '%Y-%m-%dT%H:%M:%S')
+            return {
+                "airline": flight_data['flightsSegments'][0]['airlineTitle'],
+                "airline_english": flight_data['flightsSegments'][0]['airlineCode'],
+                "flight_number": flight_data['flightsSegments'][0]['flightNumber'],
+                "departure_date": departure_date.strftime("%Y-%m-%d"),
+                "departure_time": departure_date.strftime("%H:%M"),
+                "arrive_time": departure_date.strftime("%H:%M"),
                 "price": 0
             }
         except:
-            return {'status': False, "data": [], "message": "پرواز رفت یافت نشد"}
-        # ---
-        try:
-            return_flight = data['model']['hotelBookingSearchResult']['hotelBookingItineraries'][0]['flightItineraries'][1]['flights'][0]
-            return_flight_departure_date = datetime.strptime(return_flight['departureDateTime'], '%Y-%m-%dT%H:%M:%S')
-            return_flight = {
-                "airline": return_flight['flightsSegments'][0]['airlineTitle'],
-                "airline_english": return_flight['flightsSegments'][0]['airlineCode'],
-                "flight_number": return_flight['flightsSegments'][0]['flightNumber'],
-                "departure_date": return_flight_departure_date.strftime("%Y-%m-%d"),
-                "departure_time": return_flight_departure_date.strftime("%H:%M"),
-                "arrive_time": return_flight_departure_date.strftime("%H:%M"),
-                "price": 0
-            }
-        except:
-            return {'status': False, 'data': [], 'message': "پرواز برگشت یافت نشد"}
-        # ---
-        try:
-            result = [
-                {
-
-                    "hotel_english_name": hotel['hotel']['slug'],
-                    "hotel_name": hotel['hotel']['title'],
-                    "hotel_star": hotel['hotel']['rating'],
-                    "hotel_rooms": [hotel['bestPackage']['packages'][0]['rooms'][0]['roomTypeTitle']],
-                    "room_name": hotel['bestPackage']['packages'][0]['rooms'][0]['roomTypeTitle'],
-                    "hotel_price": 0,
-                    "commission": 0,
-                    "status": "تایید شده",
-                    "go_flight": go_flight,
-                    "return_flight": return_flight,
-                    "total_price": int(hotel['bestPackage']['totalPrice']) / 10,
-                    "system_provider": "booking",
-                    "redirect_link": f"https://www.booking.ir/trip/?i={self.start_date}&o={self.end_date}&r=1&n=&a={self.adults}&c=0#/"
-                } for hotel in data['model']['hotelBookingSearchResult']['hotelBookingItineraries']
-            ]
-            # ---
-            return {"status": True, "data": result, 'message': ""}
-        except:
-            return {'status': False, 'data': [], 'message': "هتل یافت نشد"}
+            return None
+    
+    def _process_hotel_results(self, itineraries, go_flight, return_flight):
+        """Helper method to process hotel results"""
+        return [{
+            "hotel_english_name": hotel['hotel']['slug'],
+            "hotel_name": hotel['hotel']['title'],
+            "hotel_star": hotel['hotel']['rating'],
+            "hotel_rooms": [hotel['bestPackage']['packages'][0]['rooms'][0]['roomTypeTitle']],
+            "room_name": hotel['bestPackage']['packages'][0]['rooms'][0]['roomTypeTitle'],
+            "hotel_price": 0,
+            "commission": 0,
+            "status": "تایید شده",
+            "go_flight": go_flight,
+            "return_flight": return_flight,
+            "total_price": int(hotel['bestPackage']['totalPrice']) / 10,
+            "system_provider": "booking",
+            "redirect_link": f"https://www.booking.ir/trip/?i={self.start_date}&o={self.end_date}&r=1&n=&a={self.adults}&c=0#/"
+        } for hotel in itineraries]
 
 
 # booking = Booking("2024-08-15", 3,)

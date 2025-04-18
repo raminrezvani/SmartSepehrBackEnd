@@ -13,8 +13,14 @@ from io import StringIO
 import requests
 from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 import redis
-redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
-SERVER_ADD='http://localhost:5003/'
+from django.conf import settings
+
+redis_client = redis.Redis(
+    host=settings.REDIS_CONFIG['HOST'],
+    port=settings.REDIS_CONFIG['PORT'],
+    db=settings.REDIS_CONFIG['DB'],
+    decode_responses=settings.REDIS_CONFIG['DECODE_RESPONSES']
+)
 
 destin_text={
             'KIH':'kish',
@@ -71,20 +77,17 @@ class Alaedin:
         self.cookies = []
 
     def get_rooms(self,hotelCod, start_date, stay):
-        # Define the parameters
-
         params = {
-            # 'hotelCod': '1006',  # Example hotel code
-            'hotelCod': hotelCod,  # Example hotel code
-            'start_date': start_date,  # Example Shamsi date in 'yyyyMMdd' format
-            'stay': stay,  # Example stay duration in nights
-            'priorityTimestamp':self.priorityTimestamp,
-            'use_cache' : self.use_cache
+            'hotelCod': hotelCod,
+            'start_date': start_date,
+            'stay': stay,
+            'priorityTimestamp': self.priorityTimestamp,
+            'use_cache': self.use_cache
         }
 
-        # Send a GET request to the API
-        # response = requests.get("http://45.149.76.168:5003/Alaedin_rooms", params=params,timeout=3600)
-        response = requests.get(SERVER_ADD+"Alaedin_rooms", params=params, timeout=3600)
+        base_url = settings.PROVIDER_SERVICES['ALAEDIN']['BASE_URL']
+        endpoint = settings.PROVIDER_SERVICES['ALAEDIN']['ENDPOINTS']['ROOMS']
+        response = requests.get(f"{base_url}{endpoint}", params=params, timeout=3600)
 
         json_data={}
         try:

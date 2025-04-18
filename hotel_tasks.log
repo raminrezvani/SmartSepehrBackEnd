@@ -45316,3 +45316,143 @@ Stacktrace:
   time hotel get_ALLDestination_data --- 9.878944
   time hotel beforeSend --- 0.001407
  "POST /build-tour/ HTTP/1.1" 200 11993
+ Unauthorized: /build-tour/
+ "POST /build-tour/ HTTP/1.1" 401 183
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ Unauthorized: /api/v1/user/profile/
+ "GET /api/v1/user/profile/ HTTP/1.1" 401 183
+ "OPTIONS /api/v1/user/login/ HTTP/1.1" 200 0
+ "POST /api/v1/user/login/ HTTP/1.1" 200 708
+ "OPTIONS /get-calendar/ HTTP/1.1" 200 0
+ "POST /get-calendar/ HTTP/1.1" 200 6102
+ "OPTIONS /build-tour/ HTTP/1.1" 200 0
+  time hotel redis_cache --- 0.012676
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.0
+ Error calling Deltaban service: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: /api/hotel/deltaban/search (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021BBBF1B0D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+  Processed deltaban --- 4.088293
+  time hotel processing completed --- 4.089244
+  time read_data_ALLDestination --- 0.053855
+  time hotel get_ALLDestination_data --- 4.143099
+  time hotel beforeSend --- 0.002034
+ "POST /build-tour/ HTTP/1.1" 200 32235
+ Unauthorized: /build-tour/
+ "POST /build-tour/ HTTP/1.1" 401 183
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 299
+ "OPTIONS /get-calendar/ HTTP/1.1" 200 0
+ "POST /get-calendar/ HTTP/1.1" 200 6102
+ "OPTIONS /build-tour/ HTTP/1.1" 200 0
+  time hotel redis_cache --- 0.014958
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000998
+  Processed deltaban --- 3.846792
+  time hotel processing completed --- 3.846792
+  time read_data_ALLDestination --- 0.167551
+  time hotel get_ALLDestination_data --- 4.014343
+  time hotel beforeSend --- 0.001997
+ "POST /build-tour/ HTTP/1.1" 200 4805
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000995
+  Processed deltaban --- 4.04359
+  time hotel processing completed --- 4.044584
+  time read_data_ALLDestination --- 0.098744
+  time hotel get_ALLDestination_data --- 4.14432
+  time hotel beforeSend --- 0.000997
+ "POST /build-tour/ HTTP/1.1" 200 4805
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.0
+  Processed deltaban --- 3.129122
+  time hotel processing completed --- 3.130119
+  time read_data_ALLDestination --- 0.173539
+  time hotel get_ALLDestination_data --- 3.304654
+  time hotel beforeSend --- 0.001995
+ "POST /build-tour/ HTTP/1.1" 200 98466
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000999
+ Error calling Deltaban service: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+  Processed deltaban --- 42.001681
+  time hotel processing completed --- 42.001798
+  time read_data_ALLDestination --- 0.06598
+  time hotel get_ALLDestination_data --- 42.067778
+  time hotel beforeSend --- 0.000998
+ "POST /build-tour/ HTTP/1.1" 200 98466
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000965
+  Processed deltaban --- 36.716426
+  time hotel processing completed --- 36.716426
+  time read_data_ALLDestination --- 0.302177
+  time hotel get_ALLDestination_data --- 37.026582
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 98466
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.001
+  Processed deltaban --- 9.266694
+  time hotel processing completed --- 9.266694
+  time read_data_ALLDestination --- 0.170424
+  time hotel get_ALLDestination_data --- 9.438116
+  time hotel beforeSend --- 0.002992
+ "POST /build-tour/ HTTP/1.1" 200 98466
+ "POST /get-calendar/ HTTP/1.1" 200 6997
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000993
+  Processed deltaban --- 3.222793
+  time hotel processing completed --- 3.222793
+  time read_data_ALLDestination --- 0.052857
+  time hotel get_ALLDestination_data --- 3.277647
+  time hotel beforeSend --- 0.000997
+ "POST /build-tour/ HTTP/1.1" 200 399461
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.0
+  Processed deltaban --- 6.442245
+  time hotel processing completed --- 6.443244
+  time read_data_ALLDestination --- 0.048868
+  time hotel get_ALLDestination_data --- 6.492112
+  time hotel beforeSend --- 0.000998
+ "POST /build-tour/ HTTP/1.1" 200 398979
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000997
+  Processed deltaban --- 4.406337
+  time hotel processing completed --- 4.406337
+  time read_data_ALLDestination --- 0.138698
+  time hotel get_ALLDestination_data --- 4.545035
+  time hotel beforeSend --- 0.000996
+ "POST /build-tour/ HTTP/1.1" 200 328213
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000997
+ Timeout: deltaban did not complete within 60 seconds
+  time hotel processing completed --- 60.009695
+ Error calling Deltaban service: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+  time read_data_ALLDestination --- 0.176889
+  time hotel get_ALLDestination_data --- 83.943308
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 328149
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000999
+  Processed deltaban --- 54.751733
+  time hotel processing completed --- 54.751733
+  time read_data_ALLDestination --- 0.073903
+  time hotel get_ALLDestination_data --- 54.825636
+  time hotel beforeSend --- 0.000997
+ "POST /build-tour/ HTTP/1.1" 200 328213
+ Watching for file changes with StatReloader
+ Watching for file changes with StatReloader
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 299
+ "OPTIONS /get-data/ HTTP/1.1" 200 0
+ "POST /get-data/ HTTP/1.1" 200 1062
+ "OPTIONS /get-analysis/ HTTP/1.1" 200 0
+ "POST /get-data/ HTTP/1.1" 200 18853
+ "POST /get-analysis/ HTTP/1.1" 200 328380
+ "POST /get-data/ HTTP/1.1" 200 18853
+ "POST /get-data/ HTTP/1.1" 200 59202

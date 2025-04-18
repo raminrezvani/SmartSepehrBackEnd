@@ -9,8 +9,14 @@ from requests import request
 from app_crawl.helpers import ready_price, convert_to_tooman, convert_gregorian_date_to_persian
 from bs4 import BeautifulSoup
 from app_crawl.insert_influx import Influxdb
+from django.conf import settings
 import redis
-redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+redis_client = redis.Redis(
+    host=settings.REDIS_CONFIG['HOST'],
+    port=settings.REDIS_CONFIG['PORT'],
+    db=settings.REDIS_CONFIG['DB'],
+    decode_responses=settings.REDIS_CONFIG['DECODE_RESPONSES']
+)
 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)

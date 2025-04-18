@@ -326,28 +326,6 @@ class DNS_mapping:
 
         #===========
         ###?????????????????????????????????????????????????
-        #=== Preprocess === ???????????============????????????================
-        #
-        # for iter in range(0,len(yazd_hotels)):
-        #     yazd_hotels[iter]['title']=self.preprocess_text(yazd_hotels[iter]['title'])
-        # for iter in range(0,len(gheshm_hotels)):
-        #     gheshm_hotels[iter]['title']=self.preprocess_text(gheshm_hotels[iter]['title'])
-        #
-        # for iter in range(0,len(isfahan_hotels)):
-        #     isfahan_hotels[iter]['title']=self.preprocess_text(isfahan_hotels[iter]['title'])
-        #
-        # for iter in range(0,len(kish_hotels)):
-        #     kish_hotels[iter]['title']=self.preprocess_text(kish_hotels[iter]['title'])
-        # for iter in range(0,len(mashhad_hotels)):
-        #     mashhad_hotels[iter]['title']=self.preprocess_text(mashhad_hotels[iter]['title'])
-        # for iter in range(0,len(shiraz_hotels)):
-        #     shiraz_hotels[iter]['title']=self.preprocess_text(shiraz_hotels[iter]['title'])
-        # for iter in range(0,len(tabriz_hotels)):
-        #     tabriz_hotels[iter]['title']=self.preprocess_text(tabriz_hotels[iter]['title'])
-        # for iter in range(0,len(tehran_hotels)):
-        #     tehran_hotels[iter]['title']=self.preprocess_text(tehran_hotels[iter]['title'])
-        #
-
         #=========================================================================
 
 
@@ -873,7 +851,6 @@ class DNS_mapping:
 
                 #=================
 
-
                 text = ' ' + text + ' '
                 spl=dns_text.split(' ')
                 cnt=0
@@ -891,158 +868,9 @@ class DNS_mapping:
                             continue
                     #===================
 
-                    #==== New Code ===
-                    # if (text.strip()=='اریان'):
-                    #     print('asdasdasdfvefr')
-
                     #+==
                     return self.lst_hotels_mojalal_asli['hotels'][i],self.lst_hotels_mojalal_asli['stars'][i]
             #========================================
         if text.strip()=='':
             return False,False
         return text,'X'
-
-
-
-    #
-    # def check_roomName(self,text):
-    #     text=self.preprocess_text(text)
-    #     # if ('(' in  text):
-    #     #     text=text.split('(')[0]
-    #     #     # return ""
-    #
-    #     text=text.replace('  ',' ')
-    #
-    #     if ('اتاق یک تخت' in text):
-    #         parsed='اتاق یک تخت'
-    #         parsed=parsed.replace('  ',' ')
-    #         return parsed
-    #
-    #     if ('سوییت' in text or 'سویت' in text):
-    #         parsed = self.process_sweetRoom(text)
-    #         parsed = parsed.replace('  ', ' ')
-    #         return parsed
-    #
-    #     if ('ویلا ' in text):
-    #         parsed = self.process_villaRoom(text)
-    #         parsed = parsed.replace('  ', ' ')
-    #         return parsed
-    #
-    #
-    #     # if ('سوییت' not in text or 'کانکت' not in text or 'کابانا' not in text):
-    #     # if ('سوییت' not in text):
-    #     parsed=self.process_standardRoom(text)
-    #     parsed = parsed.replace('  ', ' ')
-    #     return parsed
-
-
-#
-# #
-# # # --- read result as Json
-# # import json
-# #
-# #
-# # # file='SYZ__jsondata.json'
-# # # file='GBT__jsondata.json'
-# # # file='ADU__jsondata.json'
-# # # file='BND__jsondata.json'
-# # # file='BUZ__jsondata.json'
-# # # file='KSH__jsondata.json'
-# # # file='RAS__jsondata.json'
-# # # file='SRY__jsondata.json'
-# # # file='ZBR__jsondata.json'
-# # # file='ABD__jsondata.json'
-# #
-# #
-# # #--------------
-# # # file='RZR__jsondata.json'
-# # # file='OMH__jsondata.json'
-# # # file='KHD__jsondata.json'
-# # # file='KER__jsondata.json'
-# # # file='KIH__jsondata.json'
-# # # file='AWZ__jsondata.json'
-# # # file='AZD__jsondata.json'
-# # # file='TBZ__jsondata.json'
-# # # file='IFN__jsondata.json'
-# #
-# #
-# #
-# # # file='GSM__jsondata.json'
-# # # file='THR__jsondata.json'
-# file='KIH__jsondata_NEWWWWWW.json'
-# #
-# #
-# # # BND
-# # #--- test
-# ds = DNS_mapping(file.split('__')[0])
-# #
-# #
-# fp = open(file,'r', encoding='utf8')
-# readedd=fp.read()
-# jsonData = json.loads(readedd)
-# fp.close()
-#
-# fp1=open('natayej.txt','w',encoding='utf8')
-# fp2=open('hotels_mande.txt','w',encoding='utf8')
-# #
-# # # --------
-# # # --
-# import concurrent.futures
-# def process_item(item, fp1, fp2, ds, file):
-#     try:
-#         # print(item['hotel_name'])
-#         hotel_name, hotel_star = ds.check_hotelName(item['hotel_name'], file.split('__')[0])
-#         # print(hotel_star)
-#         if hotel_star == 'X':
-#             fp1.write(f'{item["hotel_name"]}    --->  {hotel_name.strip()} \n')
-#             fp2.write(f'{item["hotel_name"]}  \n')
-#             # print(f'{item["hotel_name"]}    --->  {hotel_name.strip()}')
-#     except Exception as e:
-#         print(f"Error processing item: {item}. Error: {e}")
-#
-# def main(jsonData, fp1, fp2, ds, file):
-#     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-#         futures = [
-#             executor.submit(process_item, item, fp1, fp2, ds, file)
-#             for item in jsonData
-#         ]
-#         concurrent.futures.wait(futures)
-#     fp1.close()
-#     fp2.close()
-#
-#
-#
-# main(jsonData, fp1, fp2, ds, file)
-
-
-# # for item in jsonData:
-# #     try:
-# #         print(item['hotel_name'])
-# #         hotel_name,hotel_star=ds.check_hotelName(item['hotel_name'], file.split('__')[0])
-# #         # print(hotel_star)
-# #         if (hotel_star=='X'):
-# #             fp1.write(f'{item["hotel_name"]}    --->  {hotel_name.strip()} \n')
-# #             fp2.write(f'{item["hotel_name"]}  \n' )
-# #             print(f'{item["hotel_name"]}    --->  {hotel_name.strip()}')
-# #     except:
-# #         continue
-# # fp1.close()
-# # fp2.close()
-# #-------
-# # #
-# # # #====Main
-# # ds=DNS_mapping()
-# # htl_provider='ان کيش(5ستاره)====ایران'
-# # htl_correct=ds.check_hotelName(htl_provider,'KIH')
-# #
-# # htl_provider='هتل آتامان قشم'
-# # htl_correct=ds.check_hotelName(htl_provider,'GSM')
-#
-# # print(htl_correct)
-# # #
-# # room_provider='اتاق سه تخته لوکس روو به دریا'
-# # room_provider='دو تخته دبل کابانا گاردن (هتل3ستاره)(اقامت صبحانه)'
-# # room_provider='اتاق دو تخته'
-# # room_provider='اتاق دبل استاندارد'
-# # room_correct=ds.check_roomName(room_provider)
-# # print(room_correct)
