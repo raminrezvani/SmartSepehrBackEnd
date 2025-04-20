@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from concurrent.futures import ThreadPoolExecutor
 from flask import Flask, request, jsonify
 import traceback
-from Client_Dispatch_requests import executeRequest
+from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 
 # Initialize Flask app
 app = Flask(__name__)

@@ -3,7 +3,7 @@
 from .Crawl_Snapp_api_OK import Snapp
 from .DNS_utls import DNS_mapping
 # from .Hotel_flytoday import FlyToday
-from .deltaban import Deltaban
+# from app_crawl.hotel.deltaban import Deltaban
 from .booking import Booking
 # from .alwin import Alwin24
 from .alwin_calling_OK import Alwin
@@ -14,7 +14,7 @@ from app_crawl.helpers import (add_dict_to_redis, get_dict_to_redis, check_redis
                                ready_sepehr_hotel_name)
 from app_crawl.gsm.data import hotels_GSM
 from concurrent.futures import ThreadPoolExecutor
-from app_crawl.hotel.sepehr import SepehrHotel
+# from app_crawl.hotel.sepehr import SepehrHotel
 from app_crawl.cookie.cookie_data import (RAHBAL, HRC, DAYAN, OMID_OJ, SEPID_PARVAZ, PARMIS, HAMSAFAR, MEHRAB,
                                           TAK_SETAREH, IMAN, FLAMINGO, SHAYAN_GASHT, DOLFIN, YEGANE_FARD,ERAM2MHD,TOURISTKISH,SAFIRAN,HAMOOD,MOEINDARBARI,DARVISHI)
 from app_crawl.kih.data import hotels
@@ -24,7 +24,7 @@ from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, wait
 # from concurrent.futures import ProcessPoolExecutor
 from datetime import datetime
-from app_crawl.hotel.sepehr_standalone_Flask_OK import get_result as sepehr_get_result
+# from app_crawl.hotel.sepehr_standalone_Flask_OK import get_result as sepehr_get_result
 import requests
 import json
 import traceback
@@ -360,13 +360,13 @@ class Hotel:
 
 
             hotel_tasks = {
-                "deltaban": 1,  # Change this from Deltaban class instance to 1
+                # "deltaban": 1,  # Change this from Deltaban class instance to 1
                 # # # # # # # # # "alwin": Alwin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
                 # "snapp" : Snapp(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
                 # "alaedin": Alaedin(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
                 # "eghamat": Eghamat24(self.target, self.start_date, self.end_date, self.adults,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
                 # "booking": Booking(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
-                # "jimboo": Jimbo(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
+                "jimboo": Jimbo(self.target, self.start_date, self.end_date, self.adults,iter,self.isAnalysis,self.hotelstarAnalysis,self.priorityTimestamp,self.use_cache),
                 # # # #
                 # "darvishi": 1,
                 # "moeindarbari": 1,

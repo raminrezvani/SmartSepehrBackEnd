@@ -6,6 +6,7 @@ from requests import request
 import urllib3
 import requests
 from app_crawl.hotel.Client_Dispatch_requests import executeRequest
+from django.conf import settings
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 

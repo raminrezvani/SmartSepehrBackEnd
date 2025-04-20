@@ -260,7 +260,8 @@ PROVIDER_SERVICES = {
         }
     },
     'BOOKING_READYTOUR': {
-        'PRIMARY_SERVER': 'http://45.149.76.168:5001/booking_tours',
+        # 'PRIMARY_SERVER': 'http://45.149.76.168:5001/booking_tours',
+        'PRIMARY_SERVER': 'http://127.0.0.1:5001/booking_tours',
         'SECONDARY_SERVER': 'http://130.185.77.24:5001/booking_tours',
         'THRESHOLD': 200
     },
@@ -289,7 +290,7 @@ PROVIDER_SERVICES = {
         }
     },
     'JIMBO_READYTOUR': {
-        'PRIMARY_SERVER': 'http://45.149.76.168:5021/jimbo_tours',
+        'PRIMARY_SERVER': 'http://127.0.0.1:5021/jimbo_tours',
         'SECONDARY_SERVER': 'http://130.185.77.24:5021/jimbo_tours',
         'THRESHOLD': 200
     },

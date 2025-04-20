@@ -451,6 +451,7 @@ for tg in lst_targets1:
     else:
 
         ins = Deltaban(tg, start_date1, end_date1, adults, isAnalysiss, hotelstarAnalysis=[])
+
         ins.get_hotels_info_writeJson()
         print(f'Deltaban_hotels/Deltaban_hotels_info_{tg}.json  is created!')
 

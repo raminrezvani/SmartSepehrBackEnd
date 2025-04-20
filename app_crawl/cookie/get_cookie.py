@@ -53,7 +53,7 @@ class GetSepehrCaptcha:
         else:
             self.driver = driver_path()
             # ===
-            self.driver.set_page_load_timeout(5)  # Time in seconds
+            self.driver.set_page_load_timeout(60)  # Time in seconds
             # ====
             try:
                 self.driver.get(f'https://{domain}')

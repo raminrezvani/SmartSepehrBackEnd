@@ -13,7 +13,7 @@ from concurrent.futures import ThreadPoolExecutor, wait
 from requests import request
 import urllib3
 import  requests
-from Client_Dispatch_requests import executeRequest
+from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 import time
 import os
 from selenium import webdriver

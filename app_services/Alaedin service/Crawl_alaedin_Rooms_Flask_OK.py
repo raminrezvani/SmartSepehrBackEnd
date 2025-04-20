@@ -13,7 +13,7 @@ from concurrent.futures import ThreadPoolExecutor
 from seleniumwire import webdriver
 from selenium.webdriver.common.by import By
 import jdatetime
-from ..Client_Dispatch_requests import executeRequest
+from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 
 # urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # from insert_influx import Influxdb

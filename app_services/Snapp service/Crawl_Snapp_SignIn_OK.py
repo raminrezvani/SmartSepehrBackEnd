@@ -9,7 +9,7 @@ from flask import Flask, request, jsonify
 from concurrent.futures import ThreadPoolExecutor, as_completed
 # from insert_influx import Influxdb
 
-from Client_Dispatch_requests import executeRequest
+from app_crawl.hotel.Client_Dispatch_requests import executeRequest
 import redis
 
 redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)

@@ -45456,3 +45456,678 @@ Stacktrace:
  "POST /get-analysis/ HTTP/1.1" 200 328380
  "POST /get-data/ HTTP/1.1" 200 18853
  "POST /get-data/ HTTP/1.1" 200 59202
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.0
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.479492
+  Processed alaedin --- 13.421826
+  time hotel processing completed --- 13.421826
+  time read_data_ALLDestination --- 0.049161
+  time hotel get_ALLDestination_data --- 13.470987
+  time hotel beforeSend --- 0.001953
+ "POST /build-tour/ HTTP/1.1" 200 135
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.0
+  Processed alaedin --- 2.531088
+  time hotel processing completed --- 2.531088
+  time read_data_ALLDestination --- 0.052518
+  time hotel get_ALLDestination_data --- 2.583606
+  time hotel beforeSend --- 0.001993
+ "POST /build-tour/ HTTP/1.1" 200 135
+ Timeout: alaedin did not complete within 60 seconds
+  time hotel processing completed --- 60.000018
+  time read_data_ALLDestination --- 0.064825
+  time hotel get_ALLDestination_data --- 69.524882
+  time hotel beforeSend --- 0.0
+ - Broken pipe from ('127.0.0.1', 57631)
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000997
+  Processed alaedin --- 2.132777
+  time hotel processing completed --- 2.132777
+  time read_data_ALLDestination --- 0.052859
+  time hotel get_ALLDestination_data --- 2.185636
+  time hotel beforeSend --- 0.000997
+ "POST /build-tour/ HTTP/1.1" 200 135
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000999
+  Processed alaedin --- 2.160815
+  time hotel processing completed --- 2.160815
+  time read_data_ALLDestination --- 0.061466
+  time hotel get_ALLDestination_data --- 2.222281
+  time hotel beforeSend --- 0.001683
+ "POST /build-tour/ HTTP/1.1" 200 135
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000998
+  Processed alaedin --- 46.081138
+  time hotel processing completed --- 46.081138
+  time read_data_ALLDestination --- 0.114316
+  time hotel get_ALLDestination_data --- 46.196453
+  time hotel beforeSend --- 0.00252
+ "POST /build-tour/ HTTP/1.1" 200 135
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.004956
+ Timeout: alaedin did not complete within 60 seconds
+  time hotel processing completed --- 60.018792
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.007019
+ Length hotel results --- 35
+  Processed alaedin --- 14.858383
+  time hotel processing completed --- 14.858383
+  time read_data_ALLDestination --- 0.330876
+  time hotel get_ALLDestination_data --- 15.189259
+  time hotel beforeSend --- 0.004986
+ "POST /build-tour/ HTTP/1.1" 200 16577
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ Unauthorized: /api/v1/user/profile/
+ "GET /api/v1/user/profile/ HTTP/1.1" 401 183
+ "OPTIONS /api/v1/user/login/ HTTP/1.1" 200 0
+ "POST /api/v1/user/login/ HTTP/1.1" 200 708
+ "OPTIONS /get-calendar/ HTTP/1.1" 200 0
+ "POST /get-calendar/ HTTP/1.1" 200 5406
+ "OPTIONS /build-tour/ HTTP/1.1" 200 0
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000996
+  Processed alaedin --- 4.12506
+  time hotel processing completed --- 4.12506
+  time read_data_ALLDestination --- 0.059874
+  time hotel get_ALLDestination_data --- 4.184934
+  time hotel beforeSend --- 0.001967
+ "POST /build-tour/ HTTP/1.1" 200 56374
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.009966
+ Length hotel results --- 35
+  Processed alaedin --- 12.916519
+  time hotel processing completed --- 12.916519
+  time read_data_ALLDestination --- 0.093751
+  time hotel get_ALLDestination_data --- 13.01027
+  time hotel beforeSend --- 0.000998
+ "POST /build-tour/ HTTP/1.1" 200 73356
+ "OPTIONS /build-tour-analyse/ HTTP/1.1" 200 0
+  time hotel redis_cache --- 0.009013
+  time Create hotel_tasks --- 0.0
+  time hotel redis_cache --- 0.016005
+  time Create hotel_tasks --- 0.0
+  time hotel redis_cache --- 0.020949
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.011934
+  time hotel redis_cache --- 0.01696
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.013923
+  time hotel redis_cache --- 0.010971
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.016955
+  time Assign tasks --- 0.001995
+  time hotel redis_cache --- 0.007978
+  time Assign tasks --- 0.008975
+  time hotel redis_cache --- 0.011967
+  time Create hotel_tasks --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.001994
+  time Assign tasks --- 0.000997
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 2.066508
+  time hotel as_completed --- 2.066508
+  time read_data_ALLDestination --- 0.066819
+  time hotel get_ALLDestination_data --- 2.148248
+  time hotel beforeSend --- 0.000997
+  time BuildTour get_result --- 2.216149
+  time BuildTour process_providers --- 0.0
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 2.907547
+  time hotel as_completed --- 2.907547
+  time read_data_ALLDestination --- 0.065907
+  time hotel get_ALLDestination_data --- 2.99639
+  time hotel beforeSend --- 0.000997
+  time BuildTour get_result --- 3.062219
+  time BuildTour process_providers --- 0.0
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 3.06022
+  time hotel as_completed --- 3.06022
+  time read_data_ALLDestination --- 0.051859
+  time hotel get_ALLDestination_data --- 3.125011
+  time hotel beforeSend --- 0.000998
+  time BuildTour get_result --- 3.175915
+  time BuildTour process_providers --- 0.000811
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 3.923668
+  time hotel as_completed --- 3.923668
+  time read_data_ALLDestination --- 0.061852
+  time hotel get_ALLDestination_data --- 3.994499
+  time hotel beforeSend --- 0.000977
+  time BuildTour get_result --- 4.071277
+  time BuildTour process_providers --- 0.0
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 4.052698
+  time hotel as_completed --- 4.052698
+  time read_data_ALLDestination --- 0.055784
+  time hotel get_ALLDestination_data --- 4.12444
+  time hotel beforeSend --- 0.000996
+  time BuildTour get_result --- 4.199243
+  time BuildTour process_providers --- 0.000998
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 4.501477
+  time hotel as_completed --- 4.501477
+  time read_data_ALLDestination --- 0.069378
+  time hotel get_ALLDestination_data --- 4.578834
+  time hotel beforeSend --- 0.000967
+  time BuildTour get_result --- 4.673602
+  time BuildTour process_providers --- 0.000953
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 5.220783
+  time hotel as_completed --- 5.22177
+  time read_data_ALLDestination --- 0.071809
+  time hotel get_ALLDestination_data --- 5.302555
+  time hotel beforeSend --- 0.001045
+  time BuildTour get_result --- 5.389376
+  time BuildTour process_providers --- 0.000947
+  time BuildTour get_analysis --- 5.399337
+ "POST /build-tour-analyse/ HTTP/1.1" 200 1531
+  time hotel redis_cache --- 0.004903
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000997
+  time hotel redis_cache --- 0.007981
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.001993
+  time hotel redis_cache --- 0.008975
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.003991
+  time hotel redis_cache --- 0.012007
+  time hotel redis_cache --- 0.014997
+  time hotel redis_cache --- 0.021942
+  time Create hotel_tasks --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Create hotel_tasks --- 0.0
+  time hotel redis_cache --- 0.025932
+  time Assign tasks --- 0.005986
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.003993
+  time Assign tasks --- 0.004985
+  time Assign tasks --- 0.014964
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 2.087361
+  time hotel as_completed --- 2.087361
+  time read_data_ALLDestination --- 0.079791
+  time hotel get_ALLDestination_data --- 2.169155
+  time hotel beforeSend --- 0.001981
+  time BuildTour get_result --- 2.219189
+  time BuildTour process_providers --- 0.000998
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 2.629166
+  time hotel as_completed --- 2.629166
+  time read_data_ALLDestination --- 0.059872
+  time hotel get_ALLDestination_data --- 2.693027
+  time hotel beforeSend --- 0.000965
+  time BuildTour get_result --- 2.746037
+  time BuildTour process_providers --- 0.000995
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 3.032203
+  time hotel as_completed --- 3.032203
+  time read_data_ALLDestination --- 0.072826
+  time hotel get_ALLDestination_data --- 3.126521
+  time hotel beforeSend --- 0.000997
+  time BuildTour get_result --- 3.204498
+  time BuildTour process_providers --- 0.0
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 3.581366
+  time hotel as_completed --- 3.581366
+  time read_data_ALLDestination --- 0.074095
+  time hotel get_ALLDestination_data --- 3.669976
+  time hotel beforeSend --- 0.000991
+  time BuildTour get_result --- 3.739964
+  time BuildTour process_providers --- 0.0
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 4.079208
+  time hotel as_completed --- 4.079208
+  time read_data_ALLDestination --- 0.069969
+  time hotel get_ALLDestination_data --- 4.164136
+  time hotel beforeSend --- 0.000995
+  time BuildTour get_result --- 4.232136
+  time BuildTour process_providers --- 0.0
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 4.61999
+  time hotel as_completed --- 4.61999
+  time read_data_ALLDestination --- 0.063827
+  time hotel get_ALLDestination_data --- 4.700286
+  time hotel beforeSend --- 0.001996
+  time BuildTour get_result --- 4.766296
+  time BuildTour process_providers --- 0.0
+  Length hotel results --- 1
+  time hotel isinstance(result, dict) --- 5.101271
+  time hotel as_completed --- 5.101271
+  time read_data_ALLDestination --- 0.102725
+  time hotel get_ALLDestination_data --- 5.213011
+  time hotel beforeSend --- 0.001996
+  time BuildTour get_result --- 5.272036
+  time BuildTour process_providers --- 0.000996
+  time BuildTour get_analysis --- 5.27898
+ "POST /build-tour-analyse/ HTTP/1.1" 200 4348
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000998
+ Length hotel results --- 38
+  Processed booking --- 10.671279
+  time hotel processing completed --- 10.671279
+  time read_data_ALLDestination --- 0.08605
+  time hotel get_ALLDestination_data --- 10.757329
+  time hotel beforeSend --- 0.013004
+ "POST /build-tour/ HTTP/1.1" 200 176834
+ "OPTIONS /get-data/ HTTP/1.1" 200 0
+ "POST /get-data/ HTTP/1.1" 200 25361
+ "OPTIONS /get-analysis/ HTTP/1.1" 200 0
+ "POST /get-analysis/ HTTP/1.1" 200 169156
+ "POST /get-calendar/ HTTP/1.1" 200 5406
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000997
+  Processed deltaban --- 2.043951
+  time hotel processing completed --- 2.044948
+  time read_data_ALLDestination --- 0.046329
+  time hotel get_ALLDestination_data --- 2.091277
+  time hotel beforeSend --- 0.001995
+ "POST /build-tour/ HTTP/1.1" 200 63425
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.0
+  Processed deltaban --- 2.050019
+  time hotel processing completed --- 2.050019
+  time read_data_ALLDestination --- 0.050108
+  time hotel get_ALLDestination_data --- 2.100127
+  time hotel beforeSend --- 0.001848
+ "POST /build-tour/ HTTP/1.1" 200 80144
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000996
+ Timeout: deltaban did not complete within 60 seconds
+  time hotel processing completed --- 60.013308
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000997
+ Error calling Deltaban service: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+  Processed deltaban --- 35.228647
+  time hotel processing completed --- 35.228647
+ Error calling Deltaban service: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+  time read_data_ALLDestination --- 0.114487
+  time hotel get_ALLDestination_data --- 108.76673
+  time hotel beforeSend --- 0.0
+  time read_data_ALLDestination --- 0.122427
+  time hotel get_ALLDestination_data --- 35.351074
+  time hotel beforeSend --- 0.001994
+ "POST /build-tour/ HTTP/1.1" 200 80080
+ "POST /build-tour/ HTTP/1.1" 200 80144
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000997
+ Length hotel results --- 26
+  Processed deltaban --- 30.195737
+  time hotel processing completed --- 30.195737
+  time read_data_ALLDestination --- 0.066136
+  time hotel get_ALLDestination_data --- 30.261873
+  time hotel beforeSend --- 0.000999
+ "POST /build-tour/ HTTP/1.1" 200 91672
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000872
+ Length hotel results --- 44
+  Processed eghamat --- 4.286936
+  time hotel processing completed --- 4.286936
+  time read_data_ALLDestination --- 0.063929
+  time hotel get_ALLDestination_data --- 4.351864
+  time hotel beforeSend --- 0.001994
+ "POST /build-tour/ HTTP/1.1" 200 125474
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.00101
+ Length hotel results --- 38
+  Processed snapp --- 7.265388
+  time hotel processing completed --- 7.265388
+  time read_data_ALLDestination --- 0.071807
+  time hotel get_ALLDestination_data --- 7.337195
+  time hotel beforeSend --- 0.001993
+ "POST /build-tour/ HTTP/1.1" 200 103572
+ "GET /get-company-list/ HTTP/1.1" 200 274
+ "GET /cookie-providers/?show_company=1&company_u_id=J-23170045-96f9aa60-f1df-5263-ac28-1515a8a0dffe-83441-J HTTP/1.1" 200 2277
+ Internal Server Error: /set-cookie/
+Traceback (most recent call last):
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Project_SepehrSmart_New\LastFiles_fromAngizeh\tour-collector-back_1023\tour-collector-back\app_api\cookie\views.py", line 166, in get
+    image = instance.get_captcha_image()
+  File "C:\Project_SepehrSmart_New\LastFiles_fromAngizeh\tour-collector-back_1023\tour-collector-back\app_crawl\cookie\get_cookie.py", line 158, in get_captcha_image
+    image = self.driver.find_element(By.CSS_SELECTOR, '#imgCaptcha')
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 770, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#imgCaptcha"}
+  (Session info: chrome=135.0.7049.96); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF646251F55+78133]
+	GetHandleVerifier [0x00007FF646251FB0+78224]
+	(No symbol) [0x00007FF6460191BA]
+	(No symbol) [0x00007FF64606F19D]
+	(No symbol) [0x00007FF64606F44C]
+	(No symbol) [0x00007FF6460C23D7]
+	(No symbol) [0x00007FF64609719F]
+	(No symbol) [0x00007FF6460BF21F]
+	(No symbol) [0x00007FF646096F33]
+	(No symbol) [0x00007FF646060358]
+	(No symbol) [0x00007FF6460610C3]
+	GetHandleVerifier [0x00007FF64651BA8D+3001453]
+	GetHandleVerifier [0x00007FF646515E72+2977874]
+	GetHandleVerifier [0x00007FF64653497D+3103581]
+	GetHandleVerifier [0x00007FF64626C7EA+186826]
+	GetHandleVerifier [0x00007FF6462743FF+218591]
+	GetHandleVerifier [0x00007FF646259D94+110452]
+	GetHandleVerifier [0x00007FF646259F42+110882]
+	GetHandleVerifier [0x00007FF646240379+5465]
+	BaseThreadInitThunk [0x00007FF9970F7374+20]
+	RtlUserThreadStart [0x00007FF997F9CC91+33]
+
+ "GET /set-cookie/?sepehr_name=sepid_parvaz HTTP/1.1" 500 141548
+ Internal Server Error: /set-cookie/
+Traceback (most recent call last):
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Project_SepehrSmart_New\LastFiles_fromAngizeh\tour-collector-back_1023\tour-collector-back\app_api\cookie\views.py", line 166, in get
+    image = instance.get_captcha_image()
+  File "C:\Project_SepehrSmart_New\LastFiles_fromAngizeh\tour-collector-back_1023\tour-collector-back\app_crawl\cookie\get_cookie.py", line 158, in get_captcha_image
+    image = self.driver.find_element(By.CSS_SELECTOR, '#imgCaptcha')
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 770, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#imgCaptcha"}
+  (Session info: chrome=135.0.7049.96); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF646251F55+78133]
+	GetHandleVerifier [0x00007FF646251FB0+78224]
+	(No symbol) [0x00007FF6460191BA]
+	(No symbol) [0x00007FF64606F19D]
+	(No symbol) [0x00007FF64606F44C]
+	(No symbol) [0x00007FF6460C23D7]
+	(No symbol) [0x00007FF64609719F]
+	(No symbol) [0x00007FF6460BF21F]
+	(No symbol) [0x00007FF646096F33]
+	(No symbol) [0x00007FF646060358]
+	(No symbol) [0x00007FF6460610C3]
+	GetHandleVerifier [0x00007FF64651BA8D+3001453]
+	GetHandleVerifier [0x00007FF646515E72+2977874]
+	GetHandleVerifier [0x00007FF64653497D+3103581]
+	GetHandleVerifier [0x00007FF64626C7EA+186826]
+	GetHandleVerifier [0x00007FF6462743FF+218591]
+	GetHandleVerifier [0x00007FF646259D94+110452]
+	GetHandleVerifier [0x00007FF646259F42+110882]
+	GetHandleVerifier [0x00007FF646240379+5465]
+	BaseThreadInitThunk [0x00007FF9970F7374+20]
+	RtlUserThreadStart [0x00007FF997F9CC91+33]
+
+ "GET /set-cookie/?sepehr_name=sepid_parvaz HTTP/1.1" 500 141548
+ "GET /get-company-list/ HTTP/1.1" 200 274
+ "GET /cookie-providers/?show_company=1&company_u_id=J-23170045-96f9aa60-f1df-5263-ac28-1515a8a0dffe-83441-J HTTP/1.1" 200 2277
+ Internal Server Error: /set-cookie/
+Traceback (most recent call last):
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Project_SepehrSmart_New\LastFiles_fromAngizeh\tour-collector-back_1023\tour-collector-back\app_api\cookie\views.py", line 166, in get
+    image = instance.get_captcha_image()
+  File "C:\Project_SepehrSmart_New\LastFiles_fromAngizeh\tour-collector-back_1023\tour-collector-back\app_crawl\cookie\get_cookie.py", line 158, in get_captcha_image
+    image = self.driver.find_element(By.CSS_SELECTOR, '#imgCaptcha')
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 770, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#imgCaptcha"}
+  (Session info: chrome=135.0.7049.96); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF646251F55+78133]
+	GetHandleVerifier [0x00007FF646251FB0+78224]
+	(No symbol) [0x00007FF6460191BA]
+	(No symbol) [0x00007FF64606F19D]
+	(No symbol) [0x00007FF64606F44C]
+	(No symbol) [0x00007FF6460C23D7]
+	(No symbol) [0x00007FF64609719F]
+	(No symbol) [0x00007FF6460BF21F]
+	(No symbol) [0x00007FF646096F33]
+	(No symbol) [0x00007FF646060358]
+	(No symbol) [0x00007FF6460610C3]
+	GetHandleVerifier [0x00007FF64651BA8D+3001453]
+	GetHandleVerifier [0x00007FF646515E72+2977874]
+	GetHandleVerifier [0x00007FF64653497D+3103581]
+	GetHandleVerifier [0x00007FF64626C7EA+186826]
+	GetHandleVerifier [0x00007FF6462743FF+218591]
+	GetHandleVerifier [0x00007FF646259D94+110452]
+	GetHandleVerifier [0x00007FF646259F42+110882]
+	GetHandleVerifier [0x00007FF646240379+5465]
+	BaseThreadInitThunk [0x00007FF9970F7374+20]
+	RtlUserThreadStart [0x00007FF997F9CC91+33]
+
+ "GET /set-cookie/?sepehr_name=sepid_parvaz HTTP/1.1" 500 141548
+ Internal Server Error: /set-cookie/
+Traceback (most recent call last):
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Project_SepehrSmart_New\LastFiles_fromAngizeh\tour-collector-back_1023\tour-collector-back\app_api\cookie\views.py", line 166, in get
+    image = instance.get_captcha_image()
+  File "C:\Project_SepehrSmart_New\LastFiles_fromAngizeh\tour-collector-back_1023\tour-collector-back\app_crawl\cookie\get_cookie.py", line 158, in get_captcha_image
+    image = self.driver.find_element(By.CSS_SELECTOR, '#imgCaptcha')
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 770, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#imgCaptcha"}
+  (Session info: chrome=135.0.7049.96); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF646251F55+78133]
+	GetHandleVerifier [0x00007FF646251FB0+78224]
+	(No symbol) [0x00007FF6460191BA]
+	(No symbol) [0x00007FF64606F19D]
+	(No symbol) [0x00007FF64606F44C]
+	(No symbol) [0x00007FF6460C23D7]
+	(No symbol) [0x00007FF64609719F]
+	(No symbol) [0x00007FF6460BF21F]
+	(No symbol) [0x00007FF646096F33]
+	(No symbol) [0x00007FF646060358]
+	(No symbol) [0x00007FF6460610C3]
+	GetHandleVerifier [0x00007FF64651BA8D+3001453]
+	GetHandleVerifier [0x00007FF646515E72+2977874]
+	GetHandleVerifier [0x00007FF64653497D+3103581]
+	GetHandleVerifier [0x00007FF64626C7EA+186826]
+	GetHandleVerifier [0x00007FF6462743FF+218591]
+	GetHandleVerifier [0x00007FF646259D94+110452]
+	GetHandleVerifier [0x00007FF646259F42+110882]
+	GetHandleVerifier [0x00007FF646240379+5465]
+	BaseThreadInitThunk [0x00007FF9970F7374+20]
+	RtlUserThreadStart [0x00007FF997F9CC91+33]
+
+ "GET /set-cookie/?sepehr_name=sepid_parvaz HTTP/1.1" 500 141548
+ Internal Server Error: /set-cookie/
+Traceback (most recent call last):
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Project_SepehrSmart_New\LastFiles_fromAngizeh\tour-collector-back_1023\tour-collector-back\app_api\cookie\views.py", line 166, in get
+    image = instance.get_captcha_image()
+  File "C:\Project_SepehrSmart_New\LastFiles_fromAngizeh\tour-collector-back_1023\tour-collector-back\app_crawl\cookie\get_cookie.py", line 158, in get_captcha_image
+    image = self.driver.find_element(By.CSS_SELECTOR, '#imgCaptcha')
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 770, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "C:\Project_SepehrSmart_New\Collector_Build_14030918\tour-collector-back\venv_labtop\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#imgCaptcha"}
+  (Session info: chrome=135.0.7049.96); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF646251F55+78133]
+	GetHandleVerifier [0x00007FF646251FB0+78224]
+	(No symbol) [0x00007FF6460191BA]
+	(No symbol) [0x00007FF64606F19D]
+	(No symbol) [0x00007FF64606F44C]
+	(No symbol) [0x00007FF6460C23D7]
+	(No symbol) [0x00007FF64609719F]
+	(No symbol) [0x00007FF6460BF21F]
+	(No symbol) [0x00007FF646096F33]
+	(No symbol) [0x00007FF646060358]
+	(No symbol) [0x00007FF6460610C3]
+	GetHandleVerifier [0x00007FF64651BA8D+3001453]
+	GetHandleVerifier [0x00007FF646515E72+2977874]
+	GetHandleVerifier [0x00007FF64653497D+3103581]
+	GetHandleVerifier [0x00007FF64626C7EA+186826]
+	GetHandleVerifier [0x00007FF6462743FF+218591]
+	GetHandleVerifier [0x00007FF646259D94+110452]
+	GetHandleVerifier [0x00007FF646259F42+110882]
+	GetHandleVerifier [0x00007FF646240379+5465]
+	BaseThreadInitThunk [0x00007FF9970F7374+20]
+	RtlUserThreadStart [0x00007FF997F9CC91+33]
+
+ "GET /set-cookie/?sepehr_name=sepid_parvaz HTTP/1.1" 500 164675
+ "GET /set-cookie/?sepehr_name=sepid_parvaz HTTP/1.1" 200 124
+ "OPTIONS /set-cookie/ HTTP/1.1" 200 0
+ "POST /set-cookie/ HTTP/1.1" 200 20
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000961
+ Length hotel results --- 5
+  Processed sepid_parvaz --- 3.762619
+  time hotel processing completed --- 3.762619
+  time read_data_ALLDestination --- 0.058382
+  time hotel get_ALLDestination_data --- 3.821001
+  time hotel beforeSend --- 0.001026
+ "POST /build-tour/ HTTP/1.1" 200 82880
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000999
+ Error calling Sepehr service for sepid_parvaz: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/hotel/search (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016213020E80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+  Processed sepid_parvaz --- 5.289005
+  time hotel processing completed --- 5.289005
+  time read_data_ALLDestination --- 0.071814
+  time hotel get_ALLDestination_data --- 5.360819
+  time hotel beforeSend --- 0.001993
+ "POST /build-tour/ HTTP/1.1" 200 78283
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 299
+ "POST /get-calendar/ HTTP/1.1" 200 5406
+ "POST /get-data/ HTTP/1.1" 200 31848
+ "POST /get-analysis/ HTTP/1.1" 200 239261
+ "POST /get-data/ HTTP/1.1" 200 31848
+ "POST /get-analysis/ HTTP/1.1" 200 256187
+ "POST /get-data/ HTTP/1.1" 200 28973
+ "POST /get-analysis/ HTTP/1.1" 200 301087
+ "POST /get-data/ HTTP/1.1" 200 55123
+ "POST /get-data/ HTTP/1.1" 200 55627
+ "POST /get-analysis/ HTTP/1.1" 200 306062
+ "POST /get-analysis/ HTTP/1.1" 200 319110
+ "POST /get-data/ HTTP/1.1" 200 54040
+ "POST /get-analysis/ HTTP/1.1" 200 318371
+ "POST /get-data/ HTTP/1.1" 200 34218
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 299
+ "OPTIONS /get-calendar/ HTTP/1.1" 200 0
+ "POST /get-calendar/ HTTP/1.1" 200 5406
+ "OPTIONS /build-tour/ HTTP/1.1" 200 0
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.001001
+ Error calling Sepehr service for sepid_parvaz: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/hotel/search (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000018E10DB5880>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+  Processed sepid_parvaz --- 4.096246
+  time hotel processing completed --- 4.096246
+  time read_data_ALLDestination --- 0.064935
+  time hotel get_ALLDestination_data --- 4.161655
+  time hotel beforeSend --- 0.000998
+ "POST /build-tour/ HTTP/1.1" 200 36784
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.001003
+ Length hotel results --- 37
+  Processed jimboo --- 5.125072
+  time hotel processing completed --- 5.125072
+  time read_data_ALLDestination --- 0.080369
+  time hotel get_ALLDestination_data --- 5.206337
+  time hotel beforeSend --- 0.000998
+ "POST /build-tour/ HTTP/1.1" 200 40251

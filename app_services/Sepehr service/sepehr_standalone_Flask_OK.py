@@ -12,16 +12,17 @@ from bs4 import BeautifulSoup
 # from app_crawl.insert_influx import Influxdb
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
-from django.conf import settings
+# from django.conf import settings
 import redis
 
-redis_client = redis.Redis(
-    host=settings.REDIS_CONFIG['HOST'],
-    port=settings.REDIS_CONFIG['PORT'],
-    db=settings.REDIS_CONFIG['DB'],
-    decode_responses=settings.REDIS_CONFIG['DECODE_RESPONSES']
-)
+# redis_client = redis.Redis(
+#     host=settings.REDIS_CONFIG['HOST'],
+#     port=settings.REDIS_CONFIG['PORT'],
+#     db=settings.REDIS_CONFIG['DB'],
+#     decode_responses=settings.REDIS_CONFIG['DECODE_RESPONSES']
+# )
 
+redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
