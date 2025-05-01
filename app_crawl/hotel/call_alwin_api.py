@@ -42,11 +42,11 @@ def main():
     # Example parameters (replace with actual values)
     parameters = {
         'startdate': '2025-05-13', # Example start date
-        'end_date': '2025-05-16',   # Example end date
+        'end_date': '2025-05-17',   # Example end date
         'adults': 2,               # Example number of adults
         'target': 'KIH',           # Example target (e.g., city or hotel code)
         'isAnalysis': '1' ,
-        'hotelstarAnalysis': json.dumps(['فلامینگو']),
+        'hotelstarAnalysis': json.dumps(['ترنج']),
         'priorityTimestamp': 1,
         'use_cache': True,
 
