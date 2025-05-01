@@ -41,14 +41,14 @@ def main():
     # --- Define your parameters here ---
     # Example parameters (replace with actual values)
     parameters = {
-        'startdate': '2025-05-10', # Example start date
-        'end_date': '2025-05-13',   # Example end date
+        'startdate': '2025-05-13', # Example start date
+        'end_date': '2025-05-16',   # Example end date
         'adults': 2,               # Example number of adults
         'target': 'KIH',           # Example target (e.g., city or hotel code)
-        'isAnalysis': '0' ,
-        'hotelstarAnalysis': json.dumps([]),
+        'isAnalysis': '1' ,
+        'hotelstarAnalysis': json.dumps(['فلامینگو']),
         'priorityTimestamp': 1,
-        'use_cache': False
+        'use_cache': True,
 
         # Add any other required parameters
     }

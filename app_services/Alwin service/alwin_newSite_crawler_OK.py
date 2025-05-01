@@ -218,11 +218,21 @@ def getHotelData(cookies,cityid,start_date,end_date,adultcount,
     }
 
     query_string=create_data_forHotel(data_json)
-    response = requests.post('https://www.allwin24.ir/Client_Hotel_Json.bc', cookies=cookies, headers=headers,
-                             data=query_string)
 
-    corrected_str = response.text.replace("'", '"')
-    res=json.loads(corrected_str)
+    #---
+
+    # --- With Execute Requests---
+    req = executeRequest(method='post', url='https://www.allwin24.ir/Client_Hotel_Json.bc',
+                         headers=headers,
+                         cookies=cookies,
+                         data=query_string,
+                        priorityTimestamp=priorityTimestamp,
+                        use_cache=use_cache)
+                        # forceGet=1)
+    req = json.loads(req)
+    corrected_str = req['text'].replace("'", '"')
+    res = json.loads(corrected_str)
+    #_--
     return res
 
 import re
@@ -552,12 +562,13 @@ def get_hotels(cityid, start_date, end_date, adultcount, isAnalysis, hotelstarAn
         return []
 
     hotels_info = []
-    redis_key_pattern = f"alwin:hotel:{cityid}:*"
+    # Include more parameters in Redis key pattern
+    redis_key_pattern = f"alwin:hotel:{cityid}:{start_date}:{end_date}:{adultcount}:*"
 
     # Different behavior based on isAnalysis
     if isAnalysis == '1' or isAnalysis is True:
         print("Analysis mode: Using cached hotel data from Redis")
-        # Get all hotel keys for this city
+        # Get all hotel keys for this city and parameters
         all_keys = redis_client.keys(redis_key_pattern)
         
         for key in all_keys:
@@ -571,11 +582,58 @@ def get_hotels(cityid, start_date, end_date, adultcount, isAnalysis, hotelstarAn
                 continue
                 
         if not hotels_info:
-            print("No cached hotel data found in Redis")
-            return []
+            print("No cached hotel data found in Redis, fetching fresh data...")
+            try:
+                hotels_data = getHotelData(
+                    cookies=cookies,
+                    cityid=cityid,
+                    start_date=start_date,
+                    end_date=end_date,
+                    adultcount=adultcount,
+                    isAnalysis=isAnalysis,
+                    hotelstarAnalysis=hotelstarAnalysis,
+                    priorityTimestamp=priorityTimestamp,
+                    use_cache=use_cache
+                )
+
+                # Process hotels and store in Redis
+                redis_pipe = redis_client.pipeline()
+                
+                for hotel in hotels_data:
+                    try:
+                        hotel_info = {
+                            'hotelId': hotel['id']['hotelId'],
+                            'hotel_name': hotel['hotelinfo']['name'],
+                            'hotel_star': int(hotel['hotelinfo']['hotelsearch']['star']),
+                            'provider': 'alwin',
+                            'min_price': 0,
+                            'rooms': [],
+                            'provider_id': hotel['id']['provider']['provider_id'],
+                            'dmnid': hotel['id']['provider']['dmnid'],
+                            'optionId': hotel['families'][0]['optionId'] if hotel.get('families') else None
+                        }
+                        
+                        # Store complete hotel info in Redis with new key pattern
+                        redis_key = f"alwin:hotel:{cityid}:{start_date}:{end_date}:{adultcount}:{hotel_info['hotelId']}"
+                        redis_pipe.set(redis_key, json.dumps(hotel_info), ex=3600)  # expire in 1 hour
+                        hotels_info.append(hotel_info)
+                        
+                    except Exception as e:
+                        print(f"Error processing hotel: {e}")
+                        continue
+
+                # Execute Redis pipeline
+                try:
+                    redis_pipe.execute()
+                except Exception as e:
+                    print(f"Error storing hotel data in Redis: {e}")
+                    
+            except Exception as e:
+                print(f"Error fetching hotel data: {e}")
+                return []
     else:
         print("Normal (RAASII) mode: Fetching fresh hotel data")
-        # Fetch hotels  directly using getHotelData
+        # Fetch hotels directly using getHotelData
         try:
             hotels_data = getHotelData(
                 cookies=cookies,
@@ -610,7 +668,7 @@ def get_hotels(cityid, start_date, end_date, adultcount, isAnalysis, hotelstarAn
                 }
                 
                 # Store complete hotel info in Redis
-                redis_key = f"alwin:hotel:{cityid}:{hotel_info['hotelId']}"
+                redis_key = f"alwin:hotel:{cityid}:{start_date}:{end_date}:{adultcount}:{hotel_info['hotelId']}"
                 redis_pipe.set(redis_key, json.dumps(hotel_info), ex=3600)  # expire in 1 hour
                 hotels_info.append(hotel_info)
                 
