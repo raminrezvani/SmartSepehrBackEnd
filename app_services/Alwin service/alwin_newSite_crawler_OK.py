@@ -617,7 +617,7 @@ def get_hotels(cityid, start_date, end_date, adultcount, isAnalysis, hotelstarAn
                         
                         # Store complete hotel info in Redis with new key pattern
                         redis_key = f"alwin:hotel:{cityid}:{start_date}:{end_date}:{adultcount}:{hotel_info['hotelId']}"
-                        redis_pipe.set(redis_key, json.dumps(hotel_info), ex=3600)  # expire in 1 hour
+                        redis_pipe.set(redis_key, json.dumps(hotel_info), ex=10*60)  # expire in 1 hour
                         hotels_info.append(hotel_info)
                         
                     except Exception as e:
@@ -671,7 +671,7 @@ def get_hotels(cityid, start_date, end_date, adultcount, isAnalysis, hotelstarAn
                 
                 # Store complete hotel info in Redis
                 redis_key = f"alwin:hotel:{cityid}:{start_date}:{end_date}:{adultcount}:{hotel_info['hotelId']}"
-                redis_pipe.set(redis_key, json.dumps(hotel_info), ex=3600)  # expire in 1 hour
+                redis_pipe.set(redis_key, json.dumps(hotel_info), ex=10*60)  # expire in 1 hour
                 hotels_info.append(hotel_info)
                 
             except Exception as e:
