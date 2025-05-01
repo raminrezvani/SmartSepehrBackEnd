@@ -1,0 +1,62 @@
+[
+    {
+        "hotel_name": "هتل آپارتمان 3ستاره ساینا",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyMTMwOjQxNDMwMDoyNTA3OmRvbWVzdGljOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiAyMTMwfSwgJ2hvdGVsX2lkJzogMjEzMCwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogMjEzMH0sICcxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxMjY3NywgJ2hvdGVsX25hbWUnOiAxOTU4LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMTk1OH0sICdob3RlbF9pZCc6ICcxOTU4JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMzg2ODA4MDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6IDIxMzB9LCAnMjktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnNjFlYmYwMzA2MzZjOGM4NDQ0MWNiZWY4JywgJ3JhdGVfcGxhbl9pZCc6ICc1MjhfNjUzJywgJ3dzX2hvdGVsaWQnOiAnNjFlN2Y3YjA0YzJmZWFiMTQxZjRjYzViJ30sICdob3RlbF9pZCc6ICc2MWU3ZjdiMDRjMmZlYWIxNDFmNGNjNWInLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAyMTMwfX0="
+    },
+    {
+        "hotel_name": "جهانگردی چلندر",
+        "hotel_star": 2,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxNTE5LCAnaG90ZWxfbmFtZSc6IDQxMywgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDQxM30sICdob3RlbF9pZCc6ICc0MTMnLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiA2MTYzMDIwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XX19"
+    },
+    {
+        "hotel_name": "عرش",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiA3NjU0LCAnaG90ZWxfbmFtZSc6IDQ4MiwgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDQ4Mn0sICdob3RlbF9pZCc6ICc0ODInLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiA2NjY2MDAwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzQ4Mid9LCAnNDYtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnMjE0OjgwODo0MjAxOmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDIxNH0sICdob3RlbF9pZCc6IDIxNCwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzQ4Mid9fQ=="
+    },
+    {
+        "hotel_name": "پرشیا 3",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxMjk5NSwgJ2hvdGVsX25hbWUnOiAyMDI3LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjAyN30sICdob3RlbF9pZCc6ICcyMDI3JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogNjY2NjAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcyMDI3J30sICc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxOTM1OjQxMTQ0NToxMjQ0OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDE5MzV9LCAnaG90ZWxfaWQnOiAxOTM1LCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMjAyNyd9fQ=="
+    },
+    {
+        "hotel_name": "ساختمان عبداللهی",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxMDYzMiwgJ2hvdGVsX25hbWUnOiAxNjY3LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMTY2N30sICdob3RlbF9pZCc6ICcxNjY3JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogNjgxMDAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV19fQ=="
+    },
+    {
+        "hotel_name": "هتل 2ستاره صحرا",
+        "hotel_star": 2,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyMTU5OjQxNDQ5MjoyNTUyOmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDIxNTl9LCAnaG90ZWxfaWQnOiAyMTU5fX0="
+    }
+]

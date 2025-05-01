@@ -1,0 +1,32 @@
+[
+    {
+        "hotel_name": "مهمانپذیر 0ستاره طهران",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyMTYyOjQxNDU0ODoyNTY3OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDIxNjJ9LCAnaG90ZWxfaWQnOiAyMTYyfX0="
+    },
+    {
+        "hotel_name": "نخل",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiA3MTMzLCAnaG90ZWxfbmFtZSc6IDExOTIsICdleHRyYV9jb3VudCc6IDAsICdhX2MnOiAyLCAnY19jJzogMCwgJ2NfaSc6IDB9XSwgJ3dzX2hvdGVsaWQnOiAxMTkyfSwgJ2hvdGVsX2lkJzogJzExOTInLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiA1NDU0MDAwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzExOTInfSwgJzQ2LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsnUm9vbUlkJzogJzEyODE6NDA3ODIxOjY1NTpib3RoOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiAxMjgxfSwgJ2hvdGVsX2lkJzogMTI4MSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzExOTInfX0="
+    },
+    {
+        "hotel_name": "درکا",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxODA4NCwgJ2hvdGVsX25hbWUnOiAyNzEyLCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjcxMn0sICdob3RlbF9pZCc6ICcyNzEyJywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMjEwNjE1MzAwLjAsICdyb29tc19zZWFyY2gnOiBbeydhZHVsdGNvdW50JzogJzInLCAnY2hpbGRjb3VudGFuZGFnZSc6ICcwJ31dfX0="
+    }
+]

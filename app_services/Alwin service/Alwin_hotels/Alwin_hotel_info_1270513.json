@@ -1,0 +1,72 @@
+[
+    {
+        "hotel_name": "قربانی",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxNTA4NiwgJ2hvdGVsX25hbWUnOiAyMzQ0LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjM0NH0sICdob3RlbF9pZCc6ICcyMzQ0JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMjA0MzAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV19fQ=="
+    },
+    {
+        "hotel_name": "نوید",
+        "hotel_star": 4,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxMTQ4LCAnaG90ZWxfbmFtZSc6IDI3NywgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDI3N30sICdob3RlbF9pZCc6ICcyNzcnLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiA0MzU4NDAwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XX19"
+    },
+    {
+        "hotel_name": "کاسپین",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxOTk3OCwgJ2hvdGVsX25hbWUnOiAyOTI5LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjkyOX0sICdob3RlbF9pZCc6ICcyOTI5JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogNDU0NTAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV19fQ=="
+    },
+    {
+        "hotel_name": "نارنج",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAyNjc4LCAnaG90ZWxfbmFtZSc6IDMyMCwgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDMyMH0sICdob3RlbF9pZCc6ICczMjAnLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiA2MDYwMDAwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzMyMCd9LCAnNDYtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnMTIxODo0MDc0MDI6NDI3MTpib3RoOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiAxMjE4fSwgJ2hvdGVsX2lkJzogMTIxOCwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzMyMCd9fQ=="
+    },
+    {
+        "hotel_name": "اسرم",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiA0NzI3LCAnaG90ZWxfbmFtZSc6IDMyMiwgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDMyMn0sICdob3RlbF9pZCc6ICczMjInLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiA2NDEyOTk1MC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzMyMid9LCAnNDYtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnMjA5Ojc5MDoxMTE3OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDIwOX0sICdob3RlbF9pZCc6IDIwOSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzMyMid9LCAnMjktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnNjMxZjFkMDZkMmQ3Y2Y2MzlhYjZjZmJlJywgJ3JhdGVfcGxhbl9pZCc6ICcxMDZfMTcyJywgJ3dzX2hvdGVsaWQnOiAnNjMxZjA5YWMwYjcxMDEwOWEwYWVkNDFhJ30sICdob3RlbF9pZCc6ICc2MzFmMDlhYzBiNzEwMTA5YTBhZWQ0MWEnLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMzIyJ319"
+    },
+    {
+        "hotel_name": "آسمان شهر",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxNzI1MiwgJ2hvdGVsX25hbWUnOiAyMzYyLCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjM2Mn0sICdob3RlbF9pZCc6ICcyMzYyJywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogNjY2NjAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcyMzYyJ30sICc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyMDU5OjQxNzk0NjoyMDkwOmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDIwNTl9LCAnaG90ZWxfaWQnOiAyMDU5LCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMjM2Mid9fQ=="
+    },
+    {
+        "hotel_name": "هتل 4ستاره بادله",
+        "hotel_star": 4,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICczNzI6MTQyNDoxMTE5OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDM3Mn0sICdob3RlbF9pZCc6IDM3Mn19"
+    }
+]

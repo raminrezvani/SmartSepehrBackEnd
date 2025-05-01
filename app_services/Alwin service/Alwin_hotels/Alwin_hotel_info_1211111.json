@@ -1,0 +1,642 @@
+[
+    {
+        "hotel_name": "آدینه",
+        "hotel_star": 2,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxNTE2MywgJ2hvdGVsX25hbWUnOiAxMTI1LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMTEyNX0sICdob3RlbF9pZCc6ICcxMTI1JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMTIyMzY0MDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcxMTI1J30sICc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxNDAyOjQwODE1Mjo0ODA5OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDE0MDJ9LCAnaG90ZWxfaWQnOiAxNDAyLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMTEyNSd9LCAnNzUtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnODEyNjsnLCAncm9vbXNfaW5mb3MnOiBbeydyb29tJzogODEyNiwgJ3Jvb21fbmFtZSc6ICfYr9mIINiq2K7YqtmHICcsICdhZHVsdF9jb3VudCc6IDIsICdjaGlsZF9saXN0JzogW10sICdjaGlsZF9hZ2VfbGltaXQnOiA1LCAnVG90YWxQYXlhYmxlJzogMTY1MDAwMDAuMCwgJ25lZWRlZF9iZWRzJzogMH1dLCAncm9vbV90eXBlX25hbWUnOiAn2K/ZiCDYqtiu2KrZhyA7JywgJ2RhdGVfZGljdCc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICdwb2xpY3lfaW5mbyc6ICcnLCAncmF0ZV9wbGFuX2lkJzogJycsICdkYXRhX2FnZW5jeSc6IHsnbmFtZSc6ICdEVid9LCAnd3NfaG90ZWxpZCc6IDE0MzMsICdjaXR5aWF0YV9jb2RlJzogJ0dTTSd9LCAnaG90ZWxfaWQnOiAnMTQzMycsICd0b3RhbF9jb3N0JzogMTY1MDAwMDAuMCwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzExMjUnfX0="
+    },
+    {
+        "hotel_name": "هتل 3ستاره بهشت",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICczNjI6MTM5MDoxNDQyOmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDM2Mn0sICdob3RlbF9pZCc6IDM2MiwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogMzYyfSwgJzEwOS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3Jvb21zX2luZm9zJzogW3sncm9vbV9udW1iZXInOiAwLCAncm9vbSc6IDYyMjQsICdob3RlbF9uYW1lJzogMjkxLCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjkxfSwgJ2hvdGVsX2lkJzogJzI5MScsICdkaWN0X3RpbWUnOiB7J2luZGF0ZSc6ICcyMDI1LTA1LTExJywgJ3RvZGF0ZSc6ICcyMDI1LTA1LTE0JywgJ25pZ2h0cyc6IDN9LCAndG90YWxfY29zdCc6IDEzNjM1MDAwLjAsICdyb29tc19zZWFyY2gnOiBbeydhZHVsdGNvdW50JzogJzInLCAnY2hpbGRjb3VudGFuZGFnZSc6ICcwJ31dLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAzNjJ9LCAnNzAtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeyd3c19ob3RlbGlkJzogJ0JFSEVTSFRHJywgJ3RyYW5zZmVyX3RvJzogJ2ZhbHNlJywgJ3RyYW5zZmVyX2Zyb20nOiAnZmFsc2UnfSwgJ1Jvb21JZCc6ICcyYTVjMGZiYS05NmQ5LTQ0ZjktYTMxZC0zODBiNTc2YTBkMGQ6MicsICdob3RlbF9pZCc6ICdCRUhFU0hURycsICdzZWxlY3RlZF9ob3RlbF9pZCc6IDM2Mn0sICc3NS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc2MjUwOycsICdyb29tc19pbmZvcyc6IFt7J3Jvb20nOiA2MjUwLCAncm9vbV9uYW1lJzogJzIg2KrYrtiqICgg2K/YqNmEICknLCAnYWR1bHRfY291bnQnOiAyLCAnY2hpbGRfbGlzdCc6IFtdLCAnY2hpbGRfYWdlX2xpbWl0JzogNSwgJ1RvdGFsUGF5YWJsZSc6IDQ1MDAwMDAwLjAsICduZWVkZWRfYmVkcyc6IDB9XSwgJ3Jvb21fdHlwZV9uYW1lJzogJzIg2KrYrtiqICgg2K/YqNmEICk7JywgJ2RhdGVfZGljdCc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICdwb2xpY3lfaW5mbyc6ICcnLCAncmF0ZV9wbGFuX2lkJzogJycsICdkYXRhX2FnZW5jeSc6IHsnbmFtZSc6ICdSQid9LCAnd3NfaG90ZWxpZCc6IDEwNDQsICdjaXR5aWF0YV9jb2RlJzogJ0dTTSd9LCAnaG90ZWxfaWQnOiAnMTA0NCcsICd0b3RhbF9jb3N0JzogNDUwMDAwMDAuMCwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogMzYyfX0="
+    },
+    {
+        "hotel_name": "هتل 3ستاره کیمیا 4",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc5OTI6NDE5NTc2OjI4MzY6Ym90aDoyOjA6OicsICd3c19ob3RlbGlkJzogOTkyfSwgJ2hvdGVsX2lkJzogOTkyLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiA5OTJ9LCAnMTA5LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsncm9vbXNfaW5mb3MnOiBbeydyb29tX251bWJlcic6IDAsICdyb29tJzogMTg2MjgsICdob3RlbF9uYW1lJzogMjcyMCwgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDI3MjB9LCAnaG90ZWxfaWQnOiAnMjcyMCcsICdkaWN0X3RpbWUnOiB7J2luZGF0ZSc6ICcyMDI1LTA1LTExJywgJ3RvZGF0ZSc6ICcyMDI1LTA1LTE0JywgJ25pZ2h0cyc6IDN9LCAndG90YWxfY29zdCc6IDE1Mjk1NTAwLjAsICdyb29tc19zZWFyY2gnOiBbeydhZHVsdGNvdW50JzogJzInLCAnY2hpbGRjb3VudGFuZGFnZSc6ICcwJ31dLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiA5OTJ9LCAnNzAtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeyd3c19ob3RlbGlkJzogJ0tJTUlZQTRHU00nLCAndHJhbnNmZXJfdG8nOiAnZmFsc2UnLCAndHJhbnNmZXJfZnJvbSc6ICdmYWxzZSd9LCAnUm9vbUlkJzogJ2E4OTNhZDkxLTUxN2MtNDJhMi05Zjk2LTg3NjIxNTBjNmQ4NToyJywgJ2hvdGVsX2lkJzogJ0tJTUlZQTRHU00nLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiA5OTJ9LCAnNzUtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnNjQxNzsnLCAncm9vbXNfaW5mb3MnOiBbeydyb29tJzogNjQxNywgJ3Jvb21fbmFtZSc6ICfYr9mI2KrYrtiq2Ycg2K/YqNmEJywgJ2FkdWx0X2NvdW50JzogMiwgJ2NoaWxkX2xpc3QnOiBbXSwgJ2NoaWxkX2FnZV9saW1pdCc6IDUsICdUb3RhbFBheWFibGUnOiA0NTAwMDAwMC4wLCAnbmVlZGVkX2JlZHMnOiAwfV0sICdyb29tX3R5cGVfbmFtZSc6ICfYr9mI2KrYrtiq2Ycg2K/YqNmEOycsICdkYXRlX2RpY3QnOiB7J2luZGF0ZSc6ICcyMDI1LTA1LTExJywgJ3RvZGF0ZSc6ICcyMDI1LTA1LTE0JywgJ25pZ2h0cyc6IDN9LCAncG9saWN5X2luZm8nOiAnJywgJ3JhdGVfcGxhbl9pZCc6ICcnLCAnZGF0YV9hZ2VuY3knOiB7J25hbWUnOiAnUkInfSwgJ3dzX2hvdGVsaWQnOiAxMDgyLCAnY2l0eWlhdGFfY29kZSc6ICdHU00nfSwgJ2hvdGVsX2lkJzogJzEwODInLCAndG90YWxfY29zdCc6IDQ1MDAwMDAwLjAsICdzZWxlY3RlZF9ob3RlbF9pZCc6IDk5Mn19"
+    },
+    {
+        "hotel_name": "آرامون",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAyMTIwOSwgJ2hvdGVsX25hbWUnOiAzMDg4LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMzA4OH0sICdob3RlbF9pZCc6ICczMDg4JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMTUxNTAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICczMDg4J30sICc3NS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc4MjM3OycsICdyb29tc19pbmZvcyc6IFt7J3Jvb20nOiA4MjM3LCAncm9vbV9uYW1lJzogJ9in2KrYp9mCINiv2YjYqtiu2KrZhyDYqNinINmC2KfYqNmE2YrYqjLYs9ix2YjZitizINin2LbYp9mB2Yco2KLYsdin2YXZiNmGIDEpJywgJ2FkdWx0X2NvdW50JzogMiwgJ2NoaWxkX2xpc3QnOiBbXSwgJ2NoaWxkX2FnZV9saW1pdCc6IDUsICdUb3RhbFBheWFibGUnOiAyMjgwMDAwMC4wLCAnbmVlZGVkX2JlZHMnOiAwfV0sICdyb29tX3R5cGVfbmFtZSc6ICfYp9iq2KfZgiDYr9mI2KrYrtiq2Ycg2KjYpyDZgtin2KjZhNmK2Koy2LPYsdmI2YrYsyDYp9i22KfZgdmHKNii2LHYp9mF2YjZhiAxKTsnLCAnZGF0ZV9kaWN0JzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3BvbGljeV9pbmZvJzogJycsICdyYXRlX3BsYW5faWQnOiAnJywgJ2RhdGFfYWdlbmN5JzogeyduYW1lJzogJ0lBJ30sICd3c19ob3RlbGlkJzogMTQ2MSwgJ2NpdHlpYXRhX2NvZGUnOiAnR1NNJ30sICdob3RlbF9pZCc6ICcxNDYxJywgJ3RvdGFsX2Nvc3QnOiAyMjgwMDAwMC4wLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMzA4OCd9LCAnNzAtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeyd3c19ob3RlbGlkJzogJ0hBUkFNT05HU00nLCAndHJhbnNmZXJfdG8nOiAnZmFsc2UnLCAndHJhbnNmZXJfZnJvbSc6ICdmYWxzZSd9LCAnUm9vbUlkJzogJ2VhZjViZTNiLTg0ZjktNGZmYi1hY2U4LTAxMWJhMTc1NjJlNToyJywgJ2hvdGVsX2lkJzogJ0hBUkFNT05HU00nLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMzA4OCd9fQ=="
+    },
+    {
+        "hotel_name": "ساحلی خلیج فارس",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiA3NjM4LCAnaG90ZWxfbmFtZSc6IDUzMCwgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDUzMH0sICdob3RlbF9pZCc6ICc1MzAnLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiAxNTQ1MzAwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzUzMCd9LCAnNzUtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnODUwMjsnLCAncm9vbXNfaW5mb3MnOiBbeydyb29tJzogODUwMiwgJ3Jvb21fbmFtZSc6ICcyINiq2K7YqtmHINiv2KjZhCDYrNiy2YrYsdmHJywgJ2FkdWx0X2NvdW50JzogMiwgJ2NoaWxkX2xpc3QnOiBbXSwgJ2NoaWxkX2FnZV9saW1pdCc6IDUsICdUb3RhbFBheWFibGUnOiAxNjM4MDAwMC4wLCAnbmVlZGVkX2JlZHMnOiAwfV0sICdyb29tX3R5cGVfbmFtZSc6ICcyINiq2K7YqtmHINiv2KjZhCDYrNiy2YrYsdmHOycsICdkYXRlX2RpY3QnOiB7J2luZGF0ZSc6ICcyMDI1LTA1LTExJywgJ3RvZGF0ZSc6ICcyMDI1LTA1LTE0JywgJ25pZ2h0cyc6IDN9LCAncG9saWN5X2luZm8nOiAnJywgJ3JhdGVfcGxhbl9pZCc6ICcnLCAnZGF0YV9hZ2VuY3knOiB7J25hbWUnOiAnYXAnfSwgJ3dzX2hvdGVsaWQnOiAxMTc5LCAnY2l0eWlhdGFfY29kZSc6ICdHU00nfSwgJ2hvdGVsX2lkJzogJzExNzknLCAndG90YWxfY29zdCc6IDE2MzgwMDAwLjAsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICc1MzAnfX0="
+    },
+    {
+        "hotel_name": "لاچین",
+        "hotel_star": 2,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxODQ2MSwgJ2hvdGVsX25hbWUnOiAyNzQzLCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjc0M30sICdob3RlbF9pZCc6ICcyNzQzJywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMTY3Nzk4NDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV19fQ=="
+    },
+    {
+        "hotel_name": "هتل آلاله قشم",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "29",
+        "dmnid": 4889,
+        "optionId": "eycyOS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc2NGVmMjA1ODUwMjE1ODYxNGQ2MzhkYmMnLCAncmF0ZV9wbGFuX2lkJzogJzg0M18zODEzJywgJ3dzX2hvdGVsaWQnOiAnNjRlZWU1NTgwOTIxYzQwZDQwMGE5YTkxJ30sICdob3RlbF9pZCc6ICc2NGVlZTU1ODA5MjFjNDBkNDAwYTlhOTEnLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnNjRlZWU1NTgwOTIxYzQwZDQwMGE5YTkxJ30sICc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxMjYyOjQwODk4OToyMTk0OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDEyNjJ9LCAnaG90ZWxfaWQnOiAxMjYyLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnNjRlZWU1NTgwOTIxYzQwZDQwMGE5YTkxJ319"
+    },
+    {
+        "hotel_name": "هتل آلاله سام و زال",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "70",
+        "dmnid": 4889,
+        "optionId": "eyc3MC00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3dzX2hvdGVsaWQnOiAnQUxBTEVIU01aTCcsICd0cmFuc2Zlcl90byc6ICdmYWxzZScsICd0cmFuc2Zlcl9mcm9tJzogJ2ZhbHNlJ30sICdSb29tSWQnOiAnN2RlMTJkYzctMDMyZC00ZWE1LTk0NmEtYjRjMGQ4ZWVjNjA5OjInLCAnaG90ZWxfaWQnOiAnQUxBTEVIU01aTCcsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICdBTEFMRUhTTVpMJ30sICc3NS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc2NjY1OycsICdyb29tc19pbmZvcyc6IFt7J3Jvb20nOiA2NjY1LCAncm9vbV9uYW1lJzogJyDYr9mIINiq2K7YqtmHJywgJ2FkdWx0X2NvdW50JzogMiwgJ2NoaWxkX2xpc3QnOiBbXSwgJ2NoaWxkX2FnZV9saW1pdCc6IDUsICdUb3RhbFBheWFibGUnOiAyMTAwMDAwMC4wLCAnbmVlZGVkX2JlZHMnOiAwfV0sICdyb29tX3R5cGVfbmFtZSc6ICcg2K/ZiCDYqtiu2KrZhzsnLCAnZGF0ZV9kaWN0JzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3BvbGljeV9pbmZvJzogJycsICdyYXRlX3BsYW5faWQnOiAnJywgJ2RhdGFfYWdlbmN5JzogeyduYW1lJzogJ0RWJ30sICd3c19ob3RlbGlkJzogMTEyNCwgJ2NpdHlpYXRhX2NvZGUnOiAnR1NNJ30sICdob3RlbF9pZCc6ICcxMTI0JywgJ3RvdGFsX2Nvc3QnOiAyMTAwMDAwMC4wLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnQUxBTEVIU01aTCd9fQ=="
+    },
+    {
+        "hotel_name": "هتل آپارتمان 2ستاره کاوان",
+        "hotel_star": 2,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxMTE0OjQyMDAyMTozMzc4OmRvbWVzdGljOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiAxMTE0fSwgJ2hvdGVsX2lkJzogMTExNCwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogMTExNH0sICcxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxMzA0OCwgJ2hvdGVsX25hbWUnOiAxOTA5LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMTkwOX0sICdob3RlbF9pZCc6ICcxOTA5JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMjEyMTAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6IDExMTR9LCAnNzAtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeyd3c19ob3RlbGlkJzogJ0tBVkFOR1NNJywgJ3RyYW5zZmVyX3RvJzogJ2ZhbHNlJywgJ3RyYW5zZmVyX2Zyb20nOiAnZmFsc2UnfSwgJ1Jvb21JZCc6ICc1ZmIxN2RkYi1kYzQ3LTQwMzQtOTc3YS05OTM1N2IzNzYyYzc6MicsICdob3RlbF9pZCc6ICdLQVZBTkdTTScsICdzZWxlY3RlZF9ob3RlbF9pZCc6IDExMTR9fQ=="
+    },
+    {
+        "hotel_name": "هتل 3ستاره شمس",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICczOTc6NDEzNDAzOjIwMDY6Ym90aDoyOjA6OicsICd3c19ob3RlbGlkJzogMzk3fSwgJ2hvdGVsX2lkJzogMzk3LCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAzOTd9LCAnMTA5LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsncm9vbXNfaW5mb3MnOiBbeydyb29tX251bWJlcic6IDAsICdyb29tJzogNTU0MCwgJ2hvdGVsX25hbWUnOiAzMDksICdleHRyYV9jb3VudCc6IDAsICdhX2MnOiAyLCAnY19jJzogMCwgJ2NfaSc6IDB9XSwgJ3dzX2hvdGVsaWQnOiAzMDl9LCAnaG90ZWxfaWQnOiAnMzA5JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMjI3MjUwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6IDM5N319"
+    },
+    {
+        "hotel_name": "لوکس پرشیا قشم",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "70",
+        "dmnid": 4889,
+        "optionId": "eyc3MC00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3dzX2hvdGVsaWQnOiAnUEVSU0lBR1NNJywgJ3RyYW5zZmVyX3RvJzogJ2ZhbHNlJywgJ3RyYW5zZmVyX2Zyb20nOiAnZmFsc2UnfSwgJ1Jvb21JZCc6ICc5M2IwZGU4Yy1iOTQ3LTRiZTktODQ4My0wZmJlYjlmZjhkYzU6MicsICdob3RlbF9pZCc6ICdQRVJTSUFHU00nLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnUEVSU0lBR1NNJ30sICc3NS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc4NTQwOycsICdyb29tc19pbmZvcyc6IFt7J3Jvb20nOiA4NTQwLCAncm9vbV9uYW1lJzogJ9iz2YjYptmK2Kog2b7Ysdiy2YrYr9mG2Kog2K/ZiCDYrtmI2KfYqNmHINiv2YjYqtiu2KrZhyAo2LHZiCDYqNmHINis2LLZitix2YcpJywgJ2FkdWx0X2NvdW50JzogMiwgJ2NoaWxkX2xpc3QnOiBbXSwgJ2NoaWxkX2FnZV9saW1pdCc6IDUsICdUb3RhbFBheWFibGUnOiAyMjgwMDAwMC4wLCAnbmVlZGVkX2JlZHMnOiAwfV0sICdyb29tX3R5cGVfbmFtZSc6ICfYs9mI2KbZitiqINm+2LHYstmK2K/ZhtiqINiv2Ygg2K7ZiNin2KjZhyDYr9mI2KrYrtiq2YcgKNix2Ygg2KjZhyDYrNiy2YrYsdmHKTsnLCAnZGF0ZV9kaWN0JzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3BvbGljeV9pbmZvJzogJycsICdyYXRlX3BsYW5faWQnOiAnJywgJ2RhdGFfYWdlbmN5JzogeyduYW1lJzogJ1NQJ30sICd3c19ob3RlbGlkJzogMTE2OCwgJ2NpdHlpYXRhX2NvZGUnOiAnR1NNJ30sICdob3RlbF9pZCc6ICcxMTY4JywgJ3RvdGFsX2Nvc3QnOiAyMjgwMDAwMC4wLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnUEVSU0lBR1NNJ319"
+    },
+    {
+        "hotel_name": "هتل 1ستاره توس",
+        "hotel_star": 1,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxNjQzOjQwOTM5MTo2MjY6Ym90aDoyOjA6OicsICd3c19ob3RlbGlkJzogMTY0M30sICdob3RlbF9pZCc6IDE2NDN9fQ=="
+    },
+    {
+        "hotel_name": "توس",
+        "hotel_star": 1,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxMjc2MywgJ2hvdGVsX25hbWUnOiAxOTczLCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMTk3M30sICdob3RlbF9pZCc6ICcxOTczJywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMjM1MDgxMjAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV19fQ=="
+    },
+    {
+        "hotel_name": "سلطان",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxNDg4NywgJ2hvdGVsX25hbWUnOiAyMDk5LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjA5OX0sICdob3RlbF9pZCc6ICcyMDk5JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMjQwMjU2ODAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV19fQ=="
+    },
+    {
+        "hotel_name": "هتل 3ستاره آرمان",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxMzczOjQwODAyNjoxNDM5OmRvbWVzdGljOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiAxMzczfSwgJ2hvdGVsX2lkJzogMTM3MywgJ3NlbGVjdGVkX2hvdGVsX2lkJzogMTM3M30sICc3MC00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3dzX2hvdGVsaWQnOiAnQVJNQU5HU00nLCAndHJhbnNmZXJfdG8nOiAnZmFsc2UnLCAndHJhbnNmZXJfZnJvbSc6ICdmYWxzZSd9LCAnUm9vbUlkJzogJzY2ZmQ3ZThjLWQ1ZGQtNDE2Ni1hOWExLTQ0NTQ4ODQ4ZmJhNzoyJywgJ2hvdGVsX2lkJzogJ0FSTUFOR1NNJywgJ3NlbGVjdGVkX2hvdGVsX2lkJzogMTM3M319"
+    },
+    {
+        "hotel_name": "هتل آپارتمان 1ستاره پلاس",
+        "hotel_star": 1,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc3MDc6NDE5MjcxOjM4MTk6ZG9tZXN0aWM6MjowOjonLCAnd3NfaG90ZWxpZCc6IDcwN30sICdob3RlbF9pZCc6IDcwN319"
+    },
+    {
+        "hotel_name": "سان سيتي قشم***",
+        "hotel_star": 2,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "75",
+        "dmnid": 4889,
+        "optionId": "eyc3NS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc2NTAwOycsICdyb29tc19pbmZvcyc6IFt7J3Jvb20nOiA2NTAwLCAncm9vbV9uYW1lJzogJ9in2KrYp9mCINiv2YjYqtiu2KrZhyDZhdmF2KrYp9iyKG92ZXJoYXVsKScsICdhZHVsdF9jb3VudCc6IDIsICdjaGlsZF9saXN0JzogW10sICdjaGlsZF9hZ2VfbGltaXQnOiA1LCAnVG90YWxQYXlhYmxlJzogMjUyNDUwMDAuMCwgJ25lZWRlZF9iZWRzJzogMH1dLCAncm9vbV90eXBlX25hbWUnOiAn2KfYqtin2YIg2K/ZiNiq2K7YqtmHINmF2YXYqtin2LIob3ZlcmhhdWwpOycsICdkYXRlX2RpY3QnOiB7J2luZGF0ZSc6ICcyMDI1LTA1LTExJywgJ3RvZGF0ZSc6ICcyMDI1LTA1LTE0JywgJ25pZ2h0cyc6IDN9LCAncG9saWN5X2luZm8nOiAnJywgJ3JhdGVfcGxhbl9pZCc6ICcnLCAnZGF0YV9hZ2VuY3knOiB7J25hbWUnOiAnU0cnfSwgJ3dzX2hvdGVsaWQnOiAxMTAyLCAnY2l0eWlhdGFfY29kZSc6ICdHU00nfSwgJ2hvdGVsX2lkJzogJzExMDInLCAndG90YWxfY29zdCc6IDI1MjQ1MDAwLjAsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcxMTAyJ30sICc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxMDY1OjQwNjEyMjoyMjIxOmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDEwNjV9LCAnaG90ZWxfaWQnOiAxMDY1LCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMTEwMid9LCAnMTA5LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsncm9vbXNfaW5mb3MnOiBbeydyb29tX251bWJlcic6IDAsICdyb29tJzogMTIwNSwgJ2hvdGVsX25hbWUnOiAzMTEsICdleHRyYV9jb3VudCc6IDAsICdhX2MnOiAyLCAnY19jJzogMCwgJ2NfaSc6IDB9XSwgJ3dzX2hvdGVsaWQnOiAzMTF9LCAnaG90ZWxfaWQnOiAnMzExJywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMjY5Njc2MDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcxMTAyJ319"
+    },
+    {
+        "hotel_name": "هتل نخل هنگام قشم",
+        "hotel_star": 2,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "70",
+        "dmnid": 4889,
+        "optionId": "eyc3MC00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3dzX2hvdGVsaWQnOiAnSFBBTE1IRUdTTScsICd0cmFuc2Zlcl90byc6ICdmYWxzZScsICd0cmFuc2Zlcl9mcm9tJzogJ2ZhbHNlJ30sICdSb29tSWQnOiAnNGZlNmQ3NjEtNTY3ZS00MWQxLTlmOWEtYWJjYTNmOWJlNjY0OjInLCAnaG90ZWxfaWQnOiAnSFBBTE1IRUdTTScsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICdIUEFMTUhFR1NNJ30sICcxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxMjgzNCwgJ2hvdGVsX25hbWUnOiAxOTg0LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMTk4NH0sICdob3RlbF9pZCc6ICcxOTg0JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMjcyNDAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICdIUEFMTUhFR1NNJ319"
+    },
+    {
+        "hotel_name": "هتل 3ستاره الوند 1",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxMDcxOjQwNzI4Nzo2MTU6Ym90aDoyOjA6OicsICd3c19ob3RlbGlkJzogMTA3MX0sICdob3RlbF9pZCc6IDEwNzEsICdzZWxlY3RlZF9ob3RlbF9pZCc6IDEwNzF9LCAnNzAtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeyd3c19ob3RlbGlkJzogJ0FMVkFORDFHU00nLCAndHJhbnNmZXJfdG8nOiAnZmFsc2UnLCAndHJhbnNmZXJfZnJvbSc6ICdmYWxzZSd9LCAnUm9vbUlkJzogJ2IxYTg5N2YwLWU3OGEtNDI0MC1iNDI4LTlmMjAyM2VlNGRmZToyJywgJ2hvdGVsX2lkJzogJ0FMVkFORDFHU00nLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAxMDcxfSwgJzEwOS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3Jvb21zX2luZm9zJzogW3sncm9vbV9udW1iZXInOiAwLCAncm9vbSc6IDYzODAsICdob3RlbF9uYW1lJzogMTExMywgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDExMTN9LCAnaG90ZWxfaWQnOiAnMTExMycsICdkaWN0X3RpbWUnOiB7J2luZGF0ZSc6ICcyMDI1LTA1LTExJywgJ3RvZGF0ZSc6ICcyMDI1LTA1LTE0JywgJ25pZ2h0cyc6IDN9LCAndG90YWxfY29zdCc6IDQwOTA1MDAwLjAsICdyb29tc19zZWFyY2gnOiBbeydhZHVsdGNvdW50JzogJzInLCAnY2hpbGRjb3VudGFuZGFnZSc6ICcwJ31dLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAxMDcxfX0="
+    },
+    {
+        "hotel_name": "هتل دیاموند قشم",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "29",
+        "dmnid": 4889,
+        "optionId": "eycyOS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc2MjFiMTc1MmI1ZjNiNmU2OGUwYjIzNGYnLCAncmF0ZV9wbGFuX2lkJzogJzQ2XzQxMzMnLCAnd3NfaG90ZWxpZCc6ICc2MjFhM2E5ODRjMmZlYWIxNDEzYTVlZDEnfSwgJ2hvdGVsX2lkJzogJzYyMWEzYTk4NGMyZmVhYjE0MTNhNWVkMSd9fQ=="
+    },
+    {
+        "hotel_name": "قباد",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiA3MTg3LCAnaG90ZWxfbmFtZSc6IDEyMjUsICdleHRyYV9jb3VudCc6IDAsICdhX2MnOiAyLCAnY19jJzogMCwgJ2NfaSc6IDB9XSwgJ3dzX2hvdGVsaWQnOiAxMjI1fSwgJ2hvdGVsX2lkJzogJzEyMjUnLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiAzMDMwMDAwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzEyMjUnfSwgJzQ2LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsnUm9vbUlkJzogJzEzNzc6NDA4MDEzOjE3MzI6Ym90aDoyOjA6OicsICd3c19ob3RlbGlkJzogMTM3N30sICdob3RlbF9pZCc6IDEzNzcsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcxMjI1J319"
+    },
+    {
+        "hotel_name": "هتل 3ستاره مارینا 1",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc1Mzk6NDEyMzYxOjEyODU6ZG9tZXN0aWM6MjowOjonLCAnd3NfaG90ZWxpZCc6IDUzOX0sICdob3RlbF9pZCc6IDUzOSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogNTM5fSwgJzEwOS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3Jvb21zX2luZm9zJzogW3sncm9vbV9udW1iZXInOiAwLCAncm9vbSc6IDc3MjUsICdob3RlbF9uYW1lJzogMjk5LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjk5fSwgJ2hvdGVsX2lkJzogJzI5OScsICdkaWN0X3RpbWUnOiB7J2luZGF0ZSc6ICcyMDI1LTA1LTExJywgJ3RvZGF0ZSc6ICcyMDI1LTA1LTE0JywgJ25pZ2h0cyc6IDN9LCAndG90YWxfY29zdCc6IDMyNjg4MDAwLjAsICdyb29tc19zZWFyY2gnOiBbeydhZHVsdGNvdW50JzogJzInLCAnY2hpbGRjb3VudGFuZGFnZSc6ICcwJ31dLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiA1Mzl9LCAnNzUtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnODEwODsnLCAncm9vbXNfaW5mb3MnOiBbeydyb29tJzogODEwOCwgJ3Jvb21fbmFtZSc6ICfYp9iq2KfZgiDYr9mIINiq2K7YqtmHJywgJ2FkdWx0X2NvdW50JzogMiwgJ2NoaWxkX2xpc3QnOiBbXSwgJ2NoaWxkX2FnZV9saW1pdCc6IDUsICdUb3RhbFBheWFibGUnOiAzNjAwMDAwMC4wLCAnbmVlZGVkX2JlZHMnOiAwfV0sICdyb29tX3R5cGVfbmFtZSc6ICfYp9iq2KfZgiDYr9mIINiq2K7YqtmHOycsICdkYXRlX2RpY3QnOiB7J2luZGF0ZSc6ICcyMDI1LTA1LTExJywgJ3RvZGF0ZSc6ICcyMDI1LTA1LTE0JywgJ25pZ2h0cyc6IDN9LCAncG9saWN5X2luZm8nOiAnJywgJ3JhdGVfcGxhbl9pZCc6ICcnLCAnZGF0YV9hZ2VuY3knOiB7J25hbWUnOiAnRFYnfSwgJ3dzX2hvdGVsaWQnOiAxNDMwLCAnY2l0eWlhdGFfY29kZSc6ICdHU00nfSwgJ2hvdGVsX2lkJzogJzE0MzAnLCAndG90YWxfY29zdCc6IDM2MDAwMDAwLjAsICdzZWxlY3RlZF9ob3RlbF9pZCc6IDUzOX19"
+    },
+    {
+        "hotel_name": "هتل 3ستاره مارینا2",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc1NDM6NDA1Njk2OjE0MDE6Ym90aDoyOjA6OicsICd3c19ob3RlbGlkJzogNTQzfSwgJ2hvdGVsX2lkJzogNTQzLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiA1NDN9LCAnNzAtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeyd3c19ob3RlbGlkJzogJ01BUklOQTJHU00nLCAndHJhbnNmZXJfdG8nOiAnZmFsc2UnLCAndHJhbnNmZXJfZnJvbSc6ICdmYWxzZSd9LCAnUm9vbUlkJzogJzk0OTc5YjliLWI2YTQtNGFhNy04OTQ4LTg0NjI4YTMzNWQxYzoyJywgJ2hvdGVsX2lkJzogJ01BUklOQTJHU00nLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiA1NDN9fQ=="
+    },
+    {
+        "hotel_name": "پرشين گلف درگهان***",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "75",
+        "dmnid": 4889,
+        "optionId": "eyc3NS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc2MjMxOycsICdyb29tc19pbmZvcyc6IFt7J3Jvb20nOiA2MjMxLCAncm9vbV9uYW1lJzogJ9iv2YjYqtiu2KrZhyhvdmVyaGF1bCknLCAnYWR1bHRfY291bnQnOiAyLCAnY2hpbGRfbGlzdCc6IFtdLCAnY2hpbGRfYWdlX2xpbWl0JzogNSwgJ1RvdGFsUGF5YWJsZSc6IDMwMzQ1MDAwLjAsICduZWVkZWRfYmVkcyc6IDB9XSwgJ3Jvb21fdHlwZV9uYW1lJzogJ9iv2YjYqtiu2KrZhyhvdmVyaGF1bCk7JywgJ2RhdGVfZGljdCc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICdwb2xpY3lfaW5mbyc6ICcnLCAncmF0ZV9wbGFuX2lkJzogJycsICdkYXRhX2FnZW5jeSc6IHsnbmFtZSc6ICdTRyd9LCAnd3NfaG90ZWxpZCc6IDEwNDAsICdjaXR5aWF0YV9jb2RlJzogJ0dTTSd9LCAnaG90ZWxfaWQnOiAnMTA0MCcsICd0b3RhbF9jb3N0JzogMzAzNDUwMDAuMCwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzEwNDAnfSwgJzQ2LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsnUm9vbUlkJzogJzYyMjo0MTkyODE6MTQwMDpib3RoOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiA2MjJ9LCAnaG90ZWxfaWQnOiA2MjIsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcxMDQwJ319"
+    },
+    {
+        "hotel_name": "پرشين گلف",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "70",
+        "dmnid": 4889,
+        "optionId": "eyc3MC00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3dzX2hvdGVsaWQnOiAnUFJTSUFOR0xGRycsICd0cmFuc2Zlcl90byc6ICdmYWxzZScsICd0cmFuc2Zlcl9mcm9tJzogJ2ZhbHNlJ30sICdSb29tSWQnOiAnY2UzNjdjYzYtZmRhYi00M2Y1LWJjNGUtNTdjYTM5ZjhhZDZkOjInLCAnaG90ZWxfaWQnOiAnUFJTSUFOR0xGRyd9fQ=="
+    },
+    {
+        "hotel_name": "مارینا 2",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxMTk1LCAnaG90ZWxfbmFtZSc6IDMwMCwgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDMwMH0sICdob3RlbF9pZCc6ICczMDAnLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiAzMjY4ODAwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzMwMCd9LCAnNzUtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnNjQ0MzsnLCAncm9vbXNfaW5mb3MnOiBbeydyb29tJzogNjQ0MywgJ3Jvb21fbmFtZSc6ICfYr9mIINiq2K7YqtmHJywgJ2FkdWx0X2NvdW50JzogMiwgJ2NoaWxkX2xpc3QnOiBbXSwgJ2NoaWxkX2FnZV9saW1pdCc6IDUsICdUb3RhbFBheWFibGUnOiAzNjAwMDAwMC4wLCAnbmVlZGVkX2JlZHMnOiAwfV0sICdyb29tX3R5cGVfbmFtZSc6ICfYr9mIINiq2K7YqtmHOycsICdkYXRlX2RpY3QnOiB7J2luZGF0ZSc6ICcyMDI1LTA1LTExJywgJ3RvZGF0ZSc6ICcyMDI1LTA1LTE0JywgJ25pZ2h0cyc6IDN9LCAncG9saWN5X2luZm8nOiAnJywgJ3JhdGVfcGxhbl9pZCc6ICcnLCAnZGF0YV9hZ2VuY3knOiB7J25hbWUnOiAnRFYnfSwgJ3dzX2hvdGVsaWQnOiAxMDg5LCAnY2l0eWlhdGFfY29kZSc6ICdHU00nfSwgJ2hvdGVsX2lkJzogJzEwODknLCAndG90YWxfY29zdCc6IDM2MDAwMDAwLjAsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICczMDAnfX0="
+    },
+    {
+        "hotel_name": "دنیز",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAyMjE0NSwgJ2hvdGVsX25hbWUnOiAyODA2LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjgwNn0sICdob3RlbF9pZCc6ICcyODA2JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMzI3MjQwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcyODA2J30sICc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyNzQyOjQyMzc5OTozNjg5OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDI3NDJ9LCAnaG90ZWxfaWQnOiAyNzQyLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMjgwNid9fQ=="
+    },
+    {
+        "hotel_name": "هتل 3ستاره ویهان",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyNDUwOjQxNjg2NTozMTkyOmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDI0NTB9LCAnaG90ZWxfaWQnOiAyNDUwLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAyNDUwfSwgJzc1LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsnUm9vbUlkJzogJzY4ODc7JywgJ3Jvb21zX2luZm9zJzogW3sncm9vbSc6IDY4ODcsICdyb29tX25hbWUnOiAn2K/ZiCDYqtiu2KrZhyAnLCAnYWR1bHRfY291bnQnOiAyLCAnY2hpbGRfbGlzdCc6IFtdLCAnY2hpbGRfYWdlX2xpbWl0JzogNSwgJ1RvdGFsUGF5YWJsZSc6IDUxMDAwMDAwLjAsICduZWVkZWRfYmVkcyc6IDB9XSwgJ3Jvb21fdHlwZV9uYW1lJzogJ9iv2Ygg2KrYrtiq2YcgOycsICdkYXRlX2RpY3QnOiB7J2luZGF0ZSc6ICcyMDI1LTA1LTExJywgJ3RvZGF0ZSc6ICcyMDI1LTA1LTE0JywgJ25pZ2h0cyc6IDN9LCAncG9saWN5X2luZm8nOiAnJywgJ3JhdGVfcGxhbl9pZCc6ICcnLCAnZGF0YV9hZ2VuY3knOiB7J25hbWUnOiAnRFYnfSwgJ3dzX2hvdGVsaWQnOiAxMTY1LCAnY2l0eWlhdGFfY29kZSc6ICdHU00nfSwgJ2hvdGVsX2lkJzogJzExNjUnLCAndG90YWxfY29zdCc6IDUxMDAwMDAwLjAsICdzZWxlY3RlZF9ob3RlbF9pZCc6IDI0NTB9LCAnMTA5LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsncm9vbXNfaW5mb3MnOiBbeydyb29tX251bWJlcic6IDAsICdyb29tJzogMTcyNDYsICdob3RlbF9uYW1lJzogMjY0OCwgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDI2NDh9LCAnaG90ZWxfaWQnOiAnMjY0OCcsICdkaWN0X3RpbWUnOiB7J2luZGF0ZSc6ICcyMDI1LTA1LTExJywgJ3RvZGF0ZSc6ICcyMDI1LTA1LTE0JywgJ25pZ2h0cyc6IDN9LCAndG90YWxfY29zdCc6IDU2OTMxNjAwLjAsICdyb29tc19zZWFyY2gnOiBbeydhZHVsdGNvdW50JzogJzInLCAnY2hpbGRjb3VudGFuZGFnZSc6ICcwJ31dLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAyNDUwfX0="
+    },
+    {
+        "hotel_name": "ریحان قشم",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "70",
+        "dmnid": 4889,
+        "optionId": "eyc3MC00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3dzX2hvdGVsaWQnOiAnUkVZSEFOR1NNJywgJ3RyYW5zZmVyX3RvJzogJ2ZhbHNlJywgJ3RyYW5zZmVyX2Zyb20nOiAnZmFsc2UnfSwgJ1Jvb21JZCc6ICcyYTNhZWM4OC03NjBlLTRlMWEtOTc3NS01MjA0OWU0YjhkMTk6MicsICdob3RlbF9pZCc6ICdSRVlIQU5HU00nLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnUkVZSEFOR1NNJ30sICc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxMzc1OjQxNjYyOToxNDA0OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDEzNzV9LCAnaG90ZWxfaWQnOiAxMzc1LCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnUkVZSEFOR1NNJ30sICcxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiA2MjY0LCAnaG90ZWxfbmFtZSc6IDEwOTIsICdleHRyYV9jb3VudCc6IDAsICdhX2MnOiAyLCAnY19jJzogMCwgJ2NfaSc6IDB9XSwgJ3dzX2hvdGVsaWQnOiAxMDkyfSwgJ2hvdGVsX2lkJzogJzEwOTInLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiA0MDg2MDAwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJ1JFWUhBTkdTTSd9fQ=="
+    },
+    {
+        "hotel_name": "با محمود (مغ)",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAyMTM5MCwgJ2hvdGVsX25hbWUnOiAzMTA4LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMzEwOH0sICdob3RlbF9pZCc6ICczMTA4JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMzYzNjAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV19fQ=="
+    },
+    {
+        "hotel_name": "هتل ریحان قشم",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "29",
+        "dmnid": 4889,
+        "optionId": "eycyOS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc2MzI3ZmY2YTMyNjAxNGEwZTkxN2NmZTgnLCAncmF0ZV9wbGFuX2lkJzogJzc5OV8zMTEyJywgJ3dzX2hvdGVsaWQnOiAnNjMyMWIwYTcwYjcxMDEwOWEwZWI2OGE4J30sICdob3RlbF9pZCc6ICc2MzIxYjBhNzBiNzEwMTA5YTBlYjY4YTgnfX0="
+    },
+    {
+        "hotel_name": "سما 1",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAyMTY1MywgJ2hvdGVsX25hbWUnOiAzMDQsICdleHRyYV9jb3VudCc6IDAsICdhX2MnOiAyLCAnY19jJzogMCwgJ2NfaSc6IDB9XSwgJ3dzX2hvdGVsaWQnOiAzMDR9LCAnaG90ZWxfaWQnOiAnMzA0JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMzgxNzgwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICczMDQnfSwgJzQ2LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsnUm9vbUlkJzogJzc4Njo0MDQ5NjU6NjEyOmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDc4Nn0sICdob3RlbF9pZCc6IDc4NiwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzMwNCd9LCAnNzAtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeyd3c19ob3RlbGlkJzogJ1NBTUExR1NNJywgJ3RyYW5zZmVyX3RvJzogJ2ZhbHNlJywgJ3RyYW5zZmVyX2Zyb20nOiAnZmFsc2UnfSwgJ1Jvb21JZCc6ICc3ODc5MGM2MC1jNmFiLTQ0ODgtYTQ2NS0yOGQyMDcxYjBkMTM6MicsICdob3RlbF9pZCc6ICdTQU1BMUdTTScsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICczMDQnfX0="
+    },
+    {
+        "hotel_name": "فلامینگو",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "70",
+        "dmnid": 4889,
+        "optionId": "eyc3MC00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3dzX2hvdGVsaWQnOiAnSEZMQU1JTkdPJywgJ3RyYW5zZmVyX3RvJzogJ2ZhbHNlJywgJ3RyYW5zZmVyX2Zyb20nOiAnZmFsc2UnfSwgJ1Jvb21JZCc6ICdjZjk3YmRkYy05NDQ3LTQxNWQtYTExNy01NDM0M2JkYTU3YjU6MicsICdob3RlbF9pZCc6ICdIRkxBTUlOR08nLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnSEZMQU1JTkdPJ30sICcxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAyMDcyMSwgJ2hvdGVsX25hbWUnOiAzMDMzLCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMzAzM30sICdob3RlbF9pZCc6ICczMDMzJywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMzkwMjY0MDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICdIRkxBTUlOR08nfSwgJzQ2LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsnUm9vbUlkJzogJzMwMjU6NDIwOTE3OjQzNzQ6Ym90aDoyOjA6OicsICd3c19ob3RlbGlkJzogMzAyNX0sICdob3RlbF9pZCc6IDMwMjUsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICdIRkxBTUlOR08nfSwgJzc1LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsnUm9vbUlkJzogJzcxMzM7JywgJ3Jvb21zX2luZm9zJzogW3sncm9vbSc6IDcxMzMsICdyb29tX25hbWUnOiAn2K/YqNmEINix2Ygg2KjZhyDZvtin2LPZitmIJywgJ2FkdWx0X2NvdW50JzogMiwgJ2NoaWxkX2xpc3QnOiBbXSwgJ2NoaWxkX2FnZV9saW1pdCc6IDUsICdUb3RhbFBheWFibGUnOiA0MjAwMDAwMC4wLCAnbmVlZGVkX2JlZHMnOiAwfV0sICdyb29tX3R5cGVfbmFtZSc6ICfYr9io2YQg2LHZiCDYqNmHINm+2KfYs9mK2Yg7JywgJ2RhdGVfZGljdCc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICdwb2xpY3lfaW5mbyc6ICcnLCAncmF0ZV9wbGFuX2lkJzogJycsICdkYXRhX2FnZW5jeSc6IHsnbmFtZSc6ICdEVid9LCAnd3NfaG90ZWxpZCc6IDEyMTIsICdjaXR5aWF0YV9jb2RlJzogJ0dTTSd9LCAnaG90ZWxfaWQnOiAnMTIxMicsICd0b3RhbF9jb3N0JzogNDIwMDAwMDAuMCwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJ0hGTEFNSU5HTyd9fQ=="
+    },
+    {
+        "hotel_name": "هتل 2ستاره قصر الوند",
+        "hotel_star": 2,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxMzY2OjQyMjQzODoxNzM5OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDEzNjZ9LCAnaG90ZWxfaWQnOiAxMzY2LCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAxMzY2fX0="
+    },
+    {
+        "hotel_name": "شادناز ۱",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiA2MDcwLCAnaG90ZWxfbmFtZSc6IDM3MCwgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDM3MH0sICdob3RlbF9pZCc6ICczNzAnLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiAzOTM5MDAwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzM3MCd9LCAnNDYtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnMzg1OjQxMDkwMzo0MzczOmRvbWVzdGljOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiAzODV9LCAnaG90ZWxfaWQnOiAzODUsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICczNzAnfX0="
+    },
+    {
+        "hotel_name": "هتل 3ستاره رویال",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxMzgzOjQyMjgyMToxMzk5OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDEzODN9LCAnaG90ZWxfaWQnOiAxMzgzLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAxMzgzfSwgJzEwOS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3Jvb21zX2luZm9zJzogW3sncm9vbV9udW1iZXInOiAwLCAncm9vbSc6IDE4Mzc4LCAnaG90ZWxfbmFtZSc6IDEyNTUsICdleHRyYV9jb3VudCc6IDAsICdhX2MnOiAyLCAnY19jJzogMCwgJ2NfaSc6IDB9XSwgJ3dzX2hvdGVsaWQnOiAxMjU1fSwgJ2hvdGVsX2lkJzogJzEyNTUnLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiA0MzU4NDAwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogMTM4M30sICc3MC00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3dzX2hvdGVsaWQnOiAnUk9ZQUxHU00nLCAndHJhbnNmZXJfdG8nOiAnZmFsc2UnLCAndHJhbnNmZXJfZnJvbSc6ICdmYWxzZSd9LCAnUm9vbUlkJzogJ2I0MzAzZmQ1LWFiOTgtNGI2OS1hYmExLWUwY2IyMzYwZGJkMToyJywgJ2hvdGVsX2lkJzogJ1JPWUFMR1NNJywgJ3NlbGVjdGVkX2hvdGVsX2lkJzogMTM4M319"
+    },
+    {
+        "hotel_name": "هتل آپارتمان 2ستاره شادناز 2",
+        "hotel_star": 2,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxMzY5OjQwNzk4Nzo1MDA3OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDEzNjl9LCAnaG90ZWxfaWQnOiAxMzY5fX0="
+    },
+    {
+        "hotel_name": "هتل 1ستاره رخسار",
+        "hotel_star": 1,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxODM4OjQxMjczNToyNDgzOmRvbWVzdGljOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiAxODM4fSwgJ2hvdGVsX2lkJzogMTgzOH19"
+    },
+    {
+        "hotel_name": "هتل 1ستاره آتا",
+        "hotel_star": 1,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyNzUxOjQxOTg5Mzo1MDQxOmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDI3NTF9LCAnaG90ZWxfaWQnOiAyNzUxfX0="
+    },
+    {
+        "hotel_name": "هتل 2ستاره امیر",
+        "hotel_star": 2,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxOTAzOjQxOTQxODozOTI4OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDE5MDN9LCAnaG90ZWxfaWQnOiAxOTAzfX0="
+    },
+    {
+        "hotel_name": "هتل 3ستاره شهریار",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyMTA4OjQxNDEwMDo0MDMzOmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDIxMDh9LCAnaG90ZWxfaWQnOiAyMTA4fX0="
+    },
+    {
+        "hotel_name": "ایران زمین",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxODIwMCwgJ2hvdGVsX25hbWUnOiAyNzIxLCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjcyMX0sICdob3RlbF9pZCc6ICcyNzIxJywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogNDg0ODAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcyNzIxJ30sICc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxNTk2OjQwOTAxNzo2MjU6Ym90aDoyOjA6OicsICd3c19ob3RlbGlkJzogMTU5Nn0sICdob3RlbF9pZCc6IDE1OTYsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcyNzIxJ319"
+    },
+    {
+        "hotel_name": "غواصی",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxODcxMywgJ2hvdGVsX25hbWUnOiAyNzc2LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjc3Nn0sICdob3RlbF9pZCc6ICcyNzc2JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogNTE1MTAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV19fQ=="
+    },
+    {
+        "hotel_name": "اقامتگاه بوم گردی 0ستاره گل ابریشم",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICczMDY5OjQyMTQ0MDo0NzQ2OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDMwNjl9LCAnaG90ZWxfaWQnOiAzMDY5fX0="
+    },
+    {
+        "hotel_name": "هتل سارینا",
+        "hotel_star": 4,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "70",
+        "dmnid": 4889,
+        "optionId": "eyc3MC00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3dzX2hvdGVsaWQnOiAnU0FSSU5BR1NNJywgJ3RyYW5zZmVyX3RvJzogJ2ZhbHNlJywgJ3RyYW5zZmVyX2Zyb20nOiAnZmFsc2UnfSwgJ1Jvb21JZCc6ICc4ZmIzYmI0MS01NTdjLTQ1NGItOWRjMi00MzU4MWU2ZTk5NWU6MicsICdob3RlbF9pZCc6ICdTQVJJTkFHU00nfX0="
+    },
+    {
+        "hotel_name": "فولتون",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiA0ODQ0LCAnaG90ZWxfbmFtZSc6IDg3NSwgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDg3NX0sICdob3RlbF9pZCc6ICc4NzUnLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiA1OTk5NDAwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzg3NSd9LCAnMjktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnNjFjYzRhZTQ2ODJhYTVkOTBmYjBiNmI0JywgJ3JhdGVfcGxhbl9pZCc6ICc4OTNfMzQ4NCcsICd3c19ob3RlbGlkJzogJzYxY2FiNjgzNGMyZmVhYjE0MTViNzBhNid9LCAnaG90ZWxfaWQnOiAnNjFjYWI2ODM0YzJmZWFiMTQxNWI3MGE2JywgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzg3NSd9fQ=="
+    },
+    {
+        "hotel_name": "عارف",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAyMTM5MywgJ2hvdGVsX25hbWUnOiAzMTEwLCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMzExMH0sICdob3RlbF9pZCc6ICczMTEwJywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogNjA2MDAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV19fQ=="
+    },
+    {
+        "hotel_name": "هتل 4ستاره سارینا",
+        "hotel_star": 4,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyOTM3OjQyMjE2NTo0NDEzOmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDI5Mzd9LCAnaG90ZWxfaWQnOiAyOTM3LCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAyOTM3fSwgJzI5LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsnUm9vbUlkJzogJzY2ZjQwODQwMTA3YTk4ZTJkNWFiZTc2MScsICdyYXRlX3BsYW5faWQnOiAnMTg2OV80MjUxJywgJ3dzX2hvdGVsaWQnOiAnNjZmNDAwZjE0OTdlYzQyMjRmMDdmOGIwJ30sICdob3RlbF9pZCc6ICc2NmY0MDBmMTQ5N2VjNDIyNGYwN2Y4YjAnLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAyOTM3fSwgJzc1LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsnUm9vbUlkJzogJzY0MjA7JywgJ3Jvb21zX2luZm9zJzogW3sncm9vbSc6IDY0MjAsICdyb29tX25hbWUnOiAnINin2KrYp9mCINiv2YjYqtiu2KrZhyDZvtin2LPZitmIJywgJ2FkdWx0X2NvdW50JzogMiwgJ2NoaWxkX2xpc3QnOiBbXSwgJ2NoaWxkX2FnZV9saW1pdCc6IDUsICdUb3RhbFBheWFibGUnOiA2OTAwMDAwMC4wLCAnbmVlZGVkX2JlZHMnOiAwfV0sICdyb29tX3R5cGVfbmFtZSc6ICcg2KfYqtin2YIg2K/ZiNiq2K7YqtmHINm+2KfYs9mK2Yg7JywgJ2RhdGVfZGljdCc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICdwb2xpY3lfaW5mbyc6ICcnLCAncmF0ZV9wbGFuX2lkJzogJycsICdkYXRhX2FnZW5jeSc6IHsnbmFtZSc6ICdEVid9LCAnd3NfaG90ZWxpZCc6IDEwODMsICdjaXR5aWF0YV9jb2RlJzogJ0dTTSd9LCAnaG90ZWxfaWQnOiAnMTA4MycsICd0b3RhbF9jb3N0JzogNjkwMDAwMDAuMCwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogMjkzN319"
+    },
+    {
+        "hotel_name": "هتل 2ستاره کارا",
+        "hotel_star": 2,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyODY2OjQxOTY2ODozOTkzOmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDI4NjZ9LCAnaG90ZWxfaWQnOiAyODY2LCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAyODY2fSwgJzEwOS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3Jvb21zX2luZm9zJzogW3sncm9vbV9udW1iZXInOiAwLCAncm9vbSc6IDE4Mzg0LCAnaG90ZWxfbmFtZSc6IDI3MzgsICdleHRyYV9jb3VudCc6IDAsICdhX2MnOiAyLCAnY19jJzogMCwgJ2NfaSc6IDB9XSwgJ3dzX2hvdGVsaWQnOiAyNzM4fSwgJ2hvdGVsX2lkJzogJzI3MzgnLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiA2NDAxNDAwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogMjg2Nn19"
+    },
+    {
+        "hotel_name": "آتامان",
+        "hotel_star": 4,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxNTEwNiwgJ2hvdGVsX25hbWUnOiAxNDYyLCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMTQ2Mn0sICdob3RlbF9pZCc6ICcxNDYyJywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogNjUzNzYwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcxNDYyJ30sICcyOS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc2NjFlNWQ5NmU5MDE1MWQzOGEyYWU0MzInLCAncmF0ZV9wbGFuX2lkJzogJzgzOV8zMDY5JywgJ3dzX2hvdGVsaWQnOiAnNjYxZTVjN2QzNTg5NjVlODUwNzhiNzEwJ30sICdob3RlbF9pZCc6ICc2NjFlNWM3ZDM1ODk2NWU4NTA3OGI3MTAnLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMTQ2Mid9LCAnNzAtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeyd3c19ob3RlbGlkJzogJ0FUQU1BTkdTTScsICd0cmFuc2Zlcl90byc6ICdmYWxzZScsICd0cmFuc2Zlcl9mcm9tJzogJ2ZhbHNlJ30sICdSb29tSWQnOiAnZTg4NmU3NDQtMWE1OC00ZTZhLTgxMzAtODE1NzY4ZGFiYjVlOjInLCAnaG90ZWxfaWQnOiAnQVRBTUFOR1NNJywgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzE0NjInfSwgJzc1LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsnUm9vbUlkJzogJzY0Nzc7JywgJ3Jvb21zX2luZm9zJzogW3sncm9vbSc6IDY0NzcsICdyb29tX25hbWUnOiAn2K/ZiCDYqtiu2KrZhyDYr9io2YQg2LHZiCDYqNmHINm+2KfYs9mK2YgnLCAnYWR1bHRfY291bnQnOiAyLCAnY2hpbGRfbGlzdCc6IFtdLCAnY2hpbGRfYWdlX2xpbWl0JzogNSwgJ1RvdGFsUGF5YWJsZSc6IDcyMDAwMDAwLjAsICduZWVkZWRfYmVkcyc6IDB9XSwgJ3Jvb21fdHlwZV9uYW1lJzogJ9iv2Ygg2KrYrtiq2Ycg2K/YqNmEINix2Ygg2KjZhyDZvtin2LPZitmIOycsICdkYXRlX2RpY3QnOiB7J2luZGF0ZSc6ICcyMDI1LTA1LTExJywgJ3RvZGF0ZSc6ICcyMDI1LTA1LTE0JywgJ25pZ2h0cyc6IDN9LCAncG9saWN5X2luZm8nOiAnJywgJ3JhdGVfcGxhbl9pZCc6ICcnLCAnZGF0YV9hZ2VuY3knOiB7J25hbWUnOiAnRFYnfSwgJ3dzX2hvdGVsaWQnOiAxMDk3LCAnY2l0eWlhdGFfY29kZSc6ICdHU00nfSwgJ2hvdGVsX2lkJzogJzEwOTcnLCAndG90YWxfY29zdCc6IDcyMDAwMDAwLjAsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcxNDYyJ319"
+    },
+    {
+        "hotel_name": "رامش",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAyMDc4OSwgJ2hvdGVsX25hbWUnOiAzMDQxLCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMzA0MX0sICdob3RlbF9pZCc6ICczMDQxJywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogNjUzNzYwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV19fQ=="
+    },
+    {
+        "hotel_name": "آسانا",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAyMDg1OSwgJ2hvdGVsX25hbWUnOiAzMDUxLCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMzA1MX0sICdob3RlbF9pZCc6ICczMDUxJywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogNjg3NjczODAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICczMDUxJ30sICc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyMjM4OjQxNTM1NDoyNzA1OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDIyMzh9LCAnaG90ZWxfaWQnOiAyMjM4LCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMzA1MSd9LCAnNzUtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnNzkyODsnLCAncm9vbXNfaW5mb3MnOiBbeydyb29tJzogNzkyOCwgJ3Jvb21fbmFtZSc6ICfYr9mIINiq2K7YqtmHJywgJ2FkdWx0X2NvdW50JzogMiwgJ2NoaWxkX2xpc3QnOiBbXSwgJ2NoaWxkX2FnZV9saW1pdCc6IDUsICdUb3RhbFBheWFibGUnOiAxMjYwMDAwMDAuMCwgJ25lZWRlZF9iZWRzJzogMH1dLCAncm9vbV90eXBlX25hbWUnOiAn2K/ZiCDYqtiu2KrZhzsnLCAnZGF0ZV9kaWN0JzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3BvbGljeV9pbmZvJzogJycsICdyYXRlX3BsYW5faWQnOiAnJywgJ2RhdGFfYWdlbmN5JzogeyduYW1lJzogJ0RWJ30sICd3c19ob3RlbGlkJzogMTM3MCwgJ2NpdHlpYXRhX2NvZGUnOiAnR1NNJ30sICdob3RlbF9pZCc6ICcxMzcwJywgJ3RvdGFsX2Nvc3QnOiAxMjYwMDAwMDAuMCwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzMwNTEnfX0="
+    },
+    {
+        "hotel_name": "هتل 3ستاره سینگو",
+        "hotel_star": 3,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxMDc4OjQxMzMzNDo2MTY6Ym90aDoyOjA6OicsICd3c19ob3RlbGlkJzogMTA3OH0sICdob3RlbF9pZCc6IDEwNzgsICdzZWxlY3RlZF9ob3RlbF9pZCc6IDEwNzh9fQ=="
+    },
+    {
+        "hotel_name": "هتل دریتا قشم",
+        "hotel_star": 4,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "29",
+        "dmnid": 4889,
+        "optionId": "eycyOS00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICc2NGVlZWQ3MDJhYTc1MDI2OGVjMTg0MzEnLCAncmF0ZV9wbGFuX2lkJzogJzE1ODNfMjUzNycsICd3c19ob3RlbGlkJzogJzY0ZWVlNTU4MDkyMWM0MGQ0MDBhOWE5Mid9LCAnaG90ZWxfaWQnOiAnNjRlZWU1NTgwOTIxYzQwZDQwMGE5YTkyJywgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzY0ZWVlNTU4MDkyMWM0MGQ0MDBhOWE5Mid9LCAnNzUtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnNjY2MzsnLCAncm9vbXNfaW5mb3MnOiBbeydyb29tJzogNjY2MywgJ3Jvb21fbmFtZSc6ICfYr9mIINiq2K7YqtmHINiq2YjZitmK2YYg2b7Yp9iz2YrZiCcsICdhZHVsdF9jb3VudCc6IDIsICdjaGlsZF9saXN0JzogW10sICdjaGlsZF9hZ2VfbGltaXQnOiA1LCAnVG90YWxQYXlhYmxlJzogODEwMDAwMDAuMCwgJ25lZWRlZF9iZWRzJzogMH1dLCAncm9vbV90eXBlX25hbWUnOiAn2K/ZiCDYqtiu2KrZhyDYqtmI2YrZitmGINm+2KfYs9mK2Yg7JywgJ2RhdGVfZGljdCc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICdwb2xpY3lfaW5mbyc6ICcnLCAncmF0ZV9wbGFuX2lkJzogJycsICdkYXRhX2FnZW5jeSc6IHsnbmFtZSc6ICdEVid9LCAnd3NfaG90ZWxpZCc6IDEwOTQsICdjaXR5aWF0YV9jb2RlJzogJ0dTTSd9LCAnaG90ZWxfaWQnOiAnMTA5NCcsICd0b3RhbF9jb3N0JzogODEwMDAwMDAuMCwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzY0ZWVlNTU4MDkyMWM0MGQ0MDBhOWE5Mid9fQ=="
+    },
+    {
+        "hotel_name": "ارم",
+        "hotel_star": 4,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "70",
+        "dmnid": 4889,
+        "optionId": "eyc3MC00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J3dzX2hvdGVsaWQnOiAnRVJBTUdIJywgJ3RyYW5zZmVyX3RvJzogJ2ZhbHNlJywgJ3RyYW5zZmVyX2Zyb20nOiAnZmFsc2UnfSwgJ1Jvb21JZCc6ICdhN2JmYTFhMC05Mzg3LTRjZGYtYTVkMC1lY2YxYTJiYzNhOWY6MicsICdob3RlbF9pZCc6ICdFUkFNR0gnLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnRVJBTUdIJ30sICcxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiA3MzgzLCAnaG90ZWxfbmFtZSc6IDQ3MywgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDQ3M30sICdob3RlbF9pZCc6ICc0NzMnLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiA3OTA4MzAwMC4wLCAncm9vbXNfc2VhcmNoJzogW3snYWR1bHRjb3VudCc6ICcyJywgJ2NoaWxkY291bnRhbmRhZ2UnOiAnMCd9XSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJ0VSQU1HSCd9LCAnNDYtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnMTE5OTo0MTM1MjA6MjQ1Mjpib3RoOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiAxMTk5fSwgJ2hvdGVsX2lkJzogMTE5OSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJ0VSQU1HSCd9LCAnNzUtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnNjQzNDsnLCAncm9vbXNfaW5mb3MnOiBbeydyb29tJzogNjQzNCwgJ3Jvb21fbmFtZSc6ICfYr9io2YQg2qnZhNin2LMgQiAoINmH2YXaqdmBKScsICdhZHVsdF9jb3VudCc6IDIsICdjaGlsZF9saXN0JzogW10sICdjaGlsZF9hZ2VfbGltaXQnOiA1LCAnVG90YWxQYXlhYmxlJzogODcwMDAwMDAuMCwgJ25lZWRlZF9iZWRzJzogMH1dLCAncm9vbV90eXBlX25hbWUnOiAn2K/YqNmEINqp2YTYp9izIEIgKCDZh9mF2qnZgSk7JywgJ2RhdGVfZGljdCc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICdwb2xpY3lfaW5mbyc6ICcnLCAncmF0ZV9wbGFuX2lkJzogJycsICdkYXRhX2FnZW5jeSc6IHsnbmFtZSc6ICdEVid9LCAnd3NfaG90ZWxpZCc6IDEwODYsICdjaXR5aWF0YV9jb2RlJzogJ0dTTSd9LCAnaG90ZWxfaWQnOiAnMTA4NicsICd0b3RhbF9jb3N0JzogODcwMDAwMDAuMCwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJ0VSQU1HSCd9fQ=="
+    },
+    {
+        "hotel_name": "الیت",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxOTUzOSwgJ2hvdGVsX25hbWUnOiAyODc1LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjg3NX0sICdob3RlbF9pZCc6ICcyODc1JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogNzYyNzIwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcyODc1J30sICc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyNjU2OjQxNzk2NjozNTY3OmRvbWVzdGljOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiAyNjU2fSwgJ2hvdGVsX2lkJzogMjY1NiwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzI4NzUnfX0="
+    },
+    {
+        "hotel_name": "آرتا",
+        "hotel_star": 4,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAyMjI2NSwgJ2hvdGVsX25hbWUnOiAxOTg2LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMTk4Nn0sICdob3RlbF9pZCc6ICcxOTg2JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogODE4MTAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcxOTg2J30sICc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxNTY3OjQwOTAzMzoxNDMzOmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDE1Njd9LCAnaG90ZWxfaWQnOiAxNTY3LCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMTk4Nid9LCAnNzAtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeyd3c19ob3RlbGlkJzogJ0FSVEFHU00nLCAndHJhbnNmZXJfdG8nOiAnZmFsc2UnLCAndHJhbnNmZXJfZnJvbSc6ICdmYWxzZSd9LCAnUm9vbUlkJzogJ2IxZWJiNmRhLTE3ZDQtNGU4ZS05Zjk0LTkyZGM0NDgzYjExYToyJywgJ2hvdGVsX2lkJzogJ0FSVEFHU00nLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMTk4Nid9fQ=="
+    },
+    {
+        "hotel_name": "هتل 4ستاره آرتمیس",
+        "hotel_star": 4,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyNjg1OjQxOTkzNjozNTMyOmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDI2ODV9LCAnaG90ZWxfaWQnOiAyNjg1LCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAyNjg1fSwgJzcwLTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsnd3NfaG90ZWxpZCc6ICdIQVJUTUlTR1NNJywgJ3RyYW5zZmVyX3RvJzogJ2ZhbHNlJywgJ3RyYW5zZmVyX2Zyb20nOiAnZmFsc2UnfSwgJ1Jvb21JZCc6ICdhYjJiOTc5ZC01ZjkyLTRmYzEtYjcwZS02YTYwZjQyNTlmMzI6MicsICdob3RlbF9pZCc6ICdIQVJUTUlTR1NNJywgJ3NlbGVjdGVkX2hvdGVsX2lkJzogMjY4NX19"
+    },
+    {
+        "hotel_name": "باراکودا",
+        "hotel_star": 4,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxOTg0NywgJ2hvdGVsX25hbWUnOiAyOTE0LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjkxNH0sICdob3RlbF9pZCc6ICcyOTE0JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMTA2MzUzMDAwLjAsICdyb29tc19zZWFyY2gnOiBbeydhZHVsdGNvdW50JzogJzInLCAnY2hpbGRjb3VudGFuZGFnZSc6ICcwJ31dLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMjkxNCd9LCAnNDYtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnMzE5Mzo0MjIzMTM6NDc2Mjpib3RoOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiAzMTkzfSwgJ2hvdGVsX2lkJzogMzE5MywgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzI5MTQnfX0="
+    },
+    {
+        "hotel_name": "ایرمان",
+        "hotel_star": 0,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiA4MTU3LCAnaG90ZWxfbmFtZSc6IDEzNTAsICdleHRyYV9jb3VudCc6IDAsICdhX2MnOiAyLCAnY19jJzogMCwgJ2NfaSc6IDB9XSwgJ3dzX2hvdGVsaWQnOiAxMzUwfSwgJ2hvdGVsX2lkJzogJzEzNTAnLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiAxMTgxNzAwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcxMzUwJ30sICc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcxNzMzOjQyMzE0Njo2Mjc6Ym90aDoyOjA6OicsICd3c19ob3RlbGlkJzogMTczM30sICdob3RlbF9pZCc6IDE3MzMsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICcxMzUwJ319"
+    },
+    {
+        "hotel_name": "هتل 5ستاره آراکتا",
+        "hotel_star": 5,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "46",
+        "dmnid": 4889,
+        "optionId": "eyc0Ni00ODg5JzogeydvcHRpb25faWRfdmFsdWUnOiB7J1Jvb21JZCc6ICcyODU5OjQyMzM4MDozOTk4OmJvdGg6MjowOjonLCAnd3NfaG90ZWxpZCc6IDI4NTl9LCAnaG90ZWxfaWQnOiAyODU5LCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAyODU5fSwgJzc1LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsnUm9vbUlkJzogJzgxNTM7JywgJ3Jvb21zX2luZm9zJzogW3sncm9vbSc6IDgxNTMsICdyb29tX25hbWUnOiAn2K/YqNmEINin2LPYqtin2YbYr9in2LHYrycsICdhZHVsdF9jb3VudCc6IDIsICdjaGlsZF9saXN0JzogW10sICdjaGlsZF9hZ2VfbGltaXQnOiA1LCAnVG90YWxQYXlhYmxlJzogMzE1MDAwMDAwLjAsICduZWVkZWRfYmVkcyc6IDB9XSwgJ3Jvb21fdHlwZV9uYW1lJzogJ9iv2KjZhCDYp9iz2KrYp9mG2K/Yp9ix2K87JywgJ2RhdGVfZGljdCc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICdwb2xpY3lfaW5mbyc6ICcnLCAncmF0ZV9wbGFuX2lkJzogJycsICdkYXRhX2FnZW5jeSc6IHsnbmFtZSc6ICdEVid9LCAnd3NfaG90ZWxpZCc6IDEyMjAsICdjaXR5aWF0YV9jb2RlJzogJ0dTTSd9LCAnaG90ZWxfaWQnOiAnMTIyMCcsICd0b3RhbF9jb3N0JzogMzE1MDAwMDAwLjAsICdzZWxlY3RlZF9ob3RlbF9pZCc6IDI4NTl9fQ=="
+    },
+    {
+        "hotel_name": "آوینا",
+        "hotel_star": 4,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAxNDg5OCwgJ2hvdGVsX25hbWUnOiAyMzQyLCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMjM0Mn0sICdob3RlbF9pZCc6ICcyMzQyJywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMTI2NjU0MDAwLjAsICdyb29tc19zZWFyY2gnOiBbeydhZHVsdGNvdW50JzogJzInLCAnY2hpbGRjb3VudGFuZGFnZSc6ICcwJ31dLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMjM0Mid9LCAnNDYtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnMjA2MTo0MTMzMDc6MjA5NDpib3RoOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiAyMDYxfSwgJ2hvdGVsX2lkJzogMjA2MSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzIzNDInfX0="
+    },
+    {
+        "hotel_name": "ساحل طلایی",
+        "hotel_star": 4,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiA3NDI4LCAnaG90ZWxfbmFtZSc6IDMwMiwgJ2V4dHJhX2NvdW50JzogMCwgJ2FfYyc6IDIsICdjX2MnOiAwLCAnY19pJzogMH1dLCAnd3NfaG90ZWxpZCc6IDMwMn0sICdob3RlbF9pZCc6ICczMDInLCAnZGljdF90aW1lJzogeydpbmRhdGUnOiAnMjAyNS0wNS0xMScsICd0b2RhdGUnOiAnMjAyNS0wNS0xNCcsICduaWdodHMnOiAzfSwgJ3RvdGFsX2Nvc3QnOiAxNDY5NTUwMDAuMCwgJ3Jvb21zX3NlYXJjaCc6IFt7J2FkdWx0Y291bnQnOiAnMicsICdjaGlsZGNvdW50YW5kYWdlJzogJzAnfV0sICdzZWxlY3RlZF9ob3RlbF9pZCc6ICczMDInfSwgJzQ2LTQ4ODknOiB7J29wdGlvbl9pZF92YWx1ZSc6IHsnUm9vbUlkJzogJzM2Njo0MjM0MTU6MTQzNTpib3RoOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiAzNjZ9LCAnaG90ZWxfaWQnOiAzNjYsICdzZWxlY3RlZF9ob3RlbF9pZCc6ICczMDInfX0="
+    },
+    {
+        "hotel_name": "ساحل سیمین",
+        "hotel_star": 4,
+        "provider": "alwin",
+        "min_price": 0,
+        "rooms": [],
+        "provider_id": "109",
+        "dmnid": 4889,
+        "optionId": "eycxMDktNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydyb29tc19pbmZvcyc6IFt7J3Jvb21fbnVtYmVyJzogMCwgJ3Jvb20nOiAyMDYzMywgJ2hvdGVsX25hbWUnOiAzMDE0LCAnZXh0cmFfY291bnQnOiAwLCAnYV9jJzogMiwgJ2NfYyc6IDAsICdjX2knOiAwfV0sICd3c19ob3RlbGlkJzogMzAxNH0sICdob3RlbF9pZCc6ICczMDE0JywgJ2RpY3RfdGltZSc6IHsnaW5kYXRlJzogJzIwMjUtMDUtMTEnLCAndG9kYXRlJzogJzIwMjUtMDUtMTQnLCAnbmlnaHRzJzogM30sICd0b3RhbF9jb3N0JzogMTc5OTgyMDAwLjAsICdyb29tc19zZWFyY2gnOiBbeydhZHVsdGNvdW50JzogJzInLCAnY2hpbGRjb3VudGFuZGFnZSc6ICcwJ31dLCAnc2VsZWN0ZWRfaG90ZWxfaWQnOiAnMzAxNCd9LCAnNDYtNDg4OSc6IHsnb3B0aW9uX2lkX3ZhbHVlJzogeydSb29tSWQnOiAnMjcxOTo0MTgzODc6MzYyNTpib3RoOjI6MDo6JywgJ3dzX2hvdGVsaWQnOiAyNzE5fSwgJ2hvdGVsX2lkJzogMjcxOSwgJ3NlbGVjdGVkX2hvdGVsX2lkJzogJzMwMTQnfX0="
+    }
+]
