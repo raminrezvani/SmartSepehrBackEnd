@@ -47,7 +47,9 @@ import requests
 import random
 from concurrent.futures.thread import ThreadPoolExecutor
 import redis
-redis_client = redis.Redis(host='localhost', port=6379, db=0)
+
+redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+
 app = Flask(__name__)
 executor=ThreadPoolExecutor(max_workers=50)
 #==== capture captua ======

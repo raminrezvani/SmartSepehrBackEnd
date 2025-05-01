@@ -5,6 +5,7 @@ from requests import request
 import urllib3
 import requests
 from datetime import datetime
+from django.conf import settings
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -39,7 +40,9 @@ class Alwin:
 
             # ==========ssssssssss
 
-            urll = "http://45.149.76.168:5053/alwin_hotels"
+            base_url = settings.PROVIDER_SERVICES['ALWIN']['BASE_URL']
+            endpoint = settings.PROVIDER_SERVICES['ALWIN']['ENDPOINTS']['HOTELS']
+            urll = f"{base_url}/{endpoint}"
 
             params = {
                 'start_date': self.start_date,

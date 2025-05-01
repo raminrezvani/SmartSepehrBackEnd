@@ -305,6 +305,12 @@ PROVIDER_SERVICES = {
         'ENDPOINTS': {
             'HOTEL_SEARCH': '/api/hotel/deltaban/search'
         }
+    },
+    'ALWIN': {
+        'BASE_URL': 'http://45.149.76.168:5055',
+        'ENDPOINTS': {
+            'HOTELS': 'alwin_hotels'
+        }
     }
 }
 
