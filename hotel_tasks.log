@@ -46131,3 +46131,124 @@ Stacktrace:
   time hotel get_ALLDestination_data --- 5.206337
   time hotel beforeSend --- 0.000998
  "POST /build-tour/ HTTP/1.1" 200 40251
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 299
+ "OPTIONS /get-calendar/ HTTP/1.1" 200 0
+ "POST /get-calendar/ HTTP/1.1" 200 6803
+ "OPTIONS /build-tour/ HTTP/1.1" 200 0
+  time hotel redis_cache --- 0.001997
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000997
+  Processed alwin --- 3.17694
+  time hotel processing completed --- 3.17694
+  time read_data_ALLDestination --- 0.05186
+  time hotel get_ALLDestination_data --- 3.2288
+  time hotel beforeSend --- 0.000997
+ "POST /build-tour/ HTTP/1.1" 200 136390
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000996
+  Processed alwin --- 3.210384
+  time hotel processing completed --- 3.210384
+  time read_data_ALLDestination --- 0.114694
+  time hotel get_ALLDestination_data --- 3.32706
+  time hotel beforeSend --- 0.001997
+ "POST /build-tour/ HTTP/1.1" 200 136390
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.0
+  Processed alwin --- 2.060557
+  time hotel processing completed --- 2.060557
+  time read_data_ALLDestination --- 0.046913
+  time hotel get_ALLDestination_data --- 2.10747
+  time hotel beforeSend --- 0.001959
+ "POST /build-tour/ HTTP/1.1" 200 136390
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.001
+  Processed alwin --- 4.061162
+  time hotel processing completed --- 4.061162
+  time read_data_ALLDestination --- 0.048844
+  time hotel get_ALLDestination_data --- 4.111056
+  time hotel beforeSend --- 0.000964
+ "POST /build-tour/ HTTP/1.1" 200 135930
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000995
+  Processed alwin --- 2.074861
+  time hotel processing completed --- 2.074861
+  time read_data_ALLDestination --- 0.051862
+  time hotel get_ALLDestination_data --- 2.126723
+  time hotel beforeSend --- 0.001954
+ "POST /build-tour/ HTTP/1.1" 200 135930
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.001
+  Processed alwin --- 33.847529
+  time hotel processing completed --- 33.847529
+  time read_data_ALLDestination --- 0.136637
+  time hotel get_ALLDestination_data --- 33.985164
+  time hotel beforeSend --- 0.000997
+ "POST /build-tour/ HTTP/1.1" 200 134512
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000985
+  Processed alwin --- 16.951978
+  time hotel processing completed --- 16.951978
+  time read_data_ALLDestination --- 0.050864
+  time hotel get_ALLDestination_data --- 17.003815
+  time hotel beforeSend --- 0.000998
+ "POST /build-tour/ HTTP/1.1" 200 134972
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.004987
+  Processed alwin --- 11.963604
+  time hotel processing completed --- 11.963604
+  time read_data_ALLDestination --- 0.047911
+  time hotel get_ALLDestination_data --- 12.011515
+  time hotel beforeSend --- 0.001954
+ "POST /build-tour/ HTTP/1.1" 200 136390
+ "OPTIONS /api/v1/user/profile/ HTTP/1.1" 200 0
+ "GET /api/v1/user/profile/ HTTP/1.1" 200 299
+ "OPTIONS /get-calendar/ HTTP/1.1" 200 0
+ "POST /get-calendar/ HTTP/1.1" 200 6803
+ "OPTIONS /build-tour/ HTTP/1.1" 200 0
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.0
+  Processed alwin --- 32.6503
+  time hotel processing completed --- 32.651298
+  time read_data_ALLDestination --- 0.11872
+  time hotel get_ALLDestination_data --- 32.771014
+  time hotel beforeSend --- 0.001957
+ "POST /build-tour/ HTTP/1.1" 200 136390
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000999
+ Timeout: alwin did not complete within 60 seconds
+  time hotel processing completed --- 60.007428
+  time read_data_ALLDestination --- 0.052859
+  time hotel get_ALLDestination_data --- 76.056096
+  time hotel beforeSend --- 0.0
+ "POST /build-tour/ HTTP/1.1" 200 136329
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000998
+  Processed alwin --- 23.712037
+  time hotel processing completed --- 23.712037
+  time read_data_ALLDestination --- 0.18351
+  time hotel get_ALLDestination_data --- 23.896544
+  time hotel beforeSend --- 0.001995
+ "POST /build-tour/ HTTP/1.1" 200 136390
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.0
+  Processed alwin --- 33.125786
+  time hotel processing completed --- 33.125786
+  time read_data_ALLDestination --- 0.069814
+  time hotel get_ALLDestination_data --- 33.1956
+  time hotel beforeSend --- 0.000998
+ "POST /build-tour/ HTTP/1.1" 200 136390
+  time hotel redis_cache --- 0.0
+  time Create hotel_tasks --- 0.0
+  time Assign tasks --- 0.000995

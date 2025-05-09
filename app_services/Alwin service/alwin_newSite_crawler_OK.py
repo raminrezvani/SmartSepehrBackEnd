@@ -385,6 +385,7 @@ def get_room_data(start_date,end_date,hotelName,cookies,provider_id,dmnid,option
 
         #-- check cookie is valid:
         if (roomItem['totalCom']==roomItem['totalPrice']):
+            print('Cookie is Not valid---- Expired!!!')
             return False,hotelName,[],0
 
         room['capacity']=roomItem['availablerooms'][0]['info']['adults']
@@ -749,7 +750,7 @@ def get_hotels(cityid, start_date, end_date, adultcount, isAnalysis, hotelstarAn
 
 @app.route('/alwin_hotels', methods=['GET'])
 def alwin_hotels():
-    start_date = request.args.get('startdate')
+    start_date = request.args.get('start_date')
     end_date = request.args.get('end_date')
     adults = request.args.get('adults')
     destination = request.args.get('target')

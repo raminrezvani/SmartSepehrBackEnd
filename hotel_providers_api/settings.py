@@ -307,7 +307,8 @@ PROVIDER_SERVICES = {
         }
     },
     'ALWIN': {
-        'BASE_URL': 'http://45.149.76.168:5055',
+        # 'BASE_URL': 'http://45.149.76.168:5055',
+        'BASE_URL': 'http://localhost:5055',
         'ENDPOINTS': {
             'HOTELS': 'alwin_hotels'
         }
